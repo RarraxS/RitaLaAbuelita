@@ -17,8 +17,6 @@ public class MinijuegoManager : MonoBehaviour
     [SerializeField] float maximoValorEjeY;
     float valorEjeX, valorEjeY;
 
-    FollowMouse Mouse;
-
     int nivel = 0;
 
     int objeto;
@@ -28,6 +26,17 @@ public class MinijuegoManager : MonoBehaviour
     {
         get { return instance; }
     }
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(this);
+
+        DontDestroyOnLoad(this);
+    }
+
     void Start()
     {
         NumeroTotalDeIngredientes = NumeroTotalDeIngredientes - 1;
