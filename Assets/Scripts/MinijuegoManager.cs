@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MinijuegoManager : MonoBehaviour
 {
@@ -11,11 +13,13 @@ public class MinijuegoManager : MonoBehaviour
     [SerializeField] int numeroDeNiveles;
     [SerializeField] int[] numeroDeObjetosPorNivel;
     [SerializeField] int NumeroTotalDeIngredientes;
+    //[SerializeField]  textNivel, textTiempo;
     [SerializeField] float minimoValorEjeX;
     [SerializeField] float maximoValorEjeX;
     [SerializeField] float minimoValorEjeY;
     [SerializeField] float maximoValorEjeY;
     float valorEjeX, valorEjeY;
+
 
     int nivel = 0;
 
