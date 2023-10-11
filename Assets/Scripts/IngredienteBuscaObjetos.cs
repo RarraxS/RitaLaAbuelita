@@ -24,16 +24,14 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (tag == "Buscando")
+        if (tag == "Buscando" && MinijuegoManager.Instance.timer > 0)
         {
-            Debug.Log("Dado");
             MinijuegoManager.Instance.timer += MinijuegoManager.Instance.tiempoGanadoPorAcertar;
             MinijuegoManager.Instance.DestructorNiveles();
         }
 
-        if (tag == "No buscando")
+        if (tag == "No buscando" && MinijuegoManager.Instance.timer > 0)
         {
-            Debug.Log("Fallo");
             MinijuegoManager.Instance.timer -= MinijuegoManager.Instance.tiempoPerdidoPorFallar;
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class MinijuegoManager : MonoBehaviour
     [SerializeField] public float tiempoPerdidoPorFallar;
     [SerializeField] public float tiempoGanadoPorAcertar;
     [SerializeField] GameObject[] prefabIngrediente;
+    [SerializeField] GameObject canvasGameOver;
     [SerializeField] int numeroDeNiveles;
     [SerializeField] int[] numeroDeObjetosPorNivel;
     [SerializeField] int NumeroTotalDeIngredientes;
@@ -19,10 +21,10 @@ public class MinijuegoManager : MonoBehaviour
     [SerializeField] float minimoValorEjeY;
     [SerializeField] float maximoValorEjeY;
     float valorEjeX, valorEjeY;
-    
-    bool gameOver;
 
     int nivel = 0;
+
+    float timerInicio;
 
     int objeto;
 
@@ -44,17 +46,19 @@ public class MinijuegoManager : MonoBehaviour
 
     void Start()
     {
+        timerInicio = timer;
+
         NumeroTotalDeIngredientes = NumeroTotalDeIngredientes - 1;
 
         CreadorNiveles();
 
-        gameOver = false;
+        canvasGameOver.SetActive(false);
     }
 
     void Update()
     {
         ActualizarHUD();
-        if (gameOver == false)
+        if (timer > 0)
         {
             timer = timer - Time.deltaTime;
         }
@@ -98,8 +102,6 @@ public class MinijuegoManager : MonoBehaviour
 
         nivel++;
 
-        Debug.Log(nivel);
-
         CreadorNiveles();
     }
 
@@ -114,6 +116,17 @@ public class MinijuegoManager : MonoBehaviour
 
     void GamerOver()
     {
-        gameOver = true;
+        canvasGameOver.SetActive(true);
+    }
+
+    public void Reintentar()
+    {
+        nivel = -1;
+
+        DestructorNiveles();
+
+        timer = timerInicio;
+
+        canvasGameOver.SetActive(false);
     }
 }
