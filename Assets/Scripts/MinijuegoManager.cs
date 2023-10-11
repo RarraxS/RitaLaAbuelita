@@ -19,7 +19,8 @@ public class MinijuegoManager : MonoBehaviour
     [SerializeField] float minimoValorEjeY;
     [SerializeField] float maximoValorEjeY;
     float valorEjeX, valorEjeY;
-
+    
+    bool gameOver;
 
     int nivel = 0;
 
@@ -46,12 +47,22 @@ public class MinijuegoManager : MonoBehaviour
         NumeroTotalDeIngredientes = NumeroTotalDeIngredientes - 1;
 
         CreadorNiveles();
+
+        gameOver = false;
     }
 
     void Update()
     {
         ActualizarHUD();
-        timer = timer - Time.deltaTime;
+        if (gameOver == false)
+        {
+            timer = timer - Time.deltaTime;
+        }
+
+        if (timer <= 0)
+        {
+            GamerOver();
+        }
     }
 
     //Esta función es la encargada de crear niveles
@@ -99,5 +110,10 @@ public class MinijuegoManager : MonoBehaviour
 
         //Actualiza en el HUD el tiempo que te queda en cada momento
         textTiempo.text = "Tiempo: " + timer.ToString("0");
+    }
+
+    void GamerOver()
+    {
+        gameOver = true;
     }
 }

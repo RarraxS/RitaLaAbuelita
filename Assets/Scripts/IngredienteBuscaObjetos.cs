@@ -24,7 +24,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (tag == "Buscando" )
+        if (tag == "Buscando")
         {
             Debug.Log("Dado");
             MinijuegoManager.Instance.timer += MinijuegoManager.Instance.tiempoGanadoPorAcertar;
