@@ -13,7 +13,7 @@ public class MinijuegoManager : MonoBehaviour
     [SerializeField] int numeroDeNiveles;
     [SerializeField] int[] numeroDeObjetosPorNivel;
     [SerializeField] int NumeroTotalDeIngredientes;
-    //[SerializeField]  textNivel, textTiempo;
+    [SerializeField] TMP_Text textNivel, textTiempo;
     [SerializeField] float minimoValorEjeX;
     [SerializeField] float maximoValorEjeX;
     [SerializeField] float minimoValorEjeY;
@@ -50,12 +50,8 @@ public class MinijuegoManager : MonoBehaviour
 
     void Update()
     {
+        ActualizarHUD();
         timer = timer - Time.deltaTime;
-
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            DestructorNiveles();
-        }
     }
 
     //Esta función es la encargada de crear niveles
@@ -94,5 +90,14 @@ public class MinijuegoManager : MonoBehaviour
         Debug.Log(nivel);
 
         CreadorNiveles();
+    }
+
+    void ActualizarHUD()
+    {
+        //Actualiza en el HUD el nivel en el que te encuentras
+        textNivel.text = "Nivel: " + (nivel + 1).ToString("0");
+
+        //Actualiza en el HUD el tiempo que te queda en cada momento
+        textTiempo.text = "Tiempo: " + timer.ToString("0");
     }
 }
