@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
+public class MinijuegoManager : MonoBehaviour
 {
     [SerializeField] public float timer;
     [SerializeField] public float tiempoPerdidoPorFallar;
