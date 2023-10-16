@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MinijuegoManager : MonoBehaviour
+public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 {
     [SerializeField] public float timer;
     [SerializeField] public float tiempoPerdidoPorFallar;
@@ -28,8 +28,8 @@ public class MinijuegoManager : MonoBehaviour
 
     int objeto;
 
-    private static MinijuegoManager instance;
-    public static MinijuegoManager Instance
+    private static MinijuegoManagerBuscaIngredientes instance;
+    public static MinijuegoManagerBuscaIngredientes Instance
     {
         get { return instance; }
     }
