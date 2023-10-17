@@ -24,13 +24,13 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (tag == "Buscando" && MinijuegoManagerBuscaIngredientes.Instance.timer > 0)
+        if (tag == "Buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
         {
             MinijuegoManagerBuscaIngredientes.Instance.timer += MinijuegoManagerBuscaIngredientes.Instance.tiempoGanadoPorAcertar;
             MinijuegoManagerBuscaIngredientes.Instance.DestructorNiveles();
         }
 
-        if (tag == "No buscando" && MinijuegoManagerBuscaIngredientes.Instance.timer > 0)
+        if (tag == "No buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
         {
             MinijuegoManagerBuscaIngredientes.Instance.timer -= MinijuegoManagerBuscaIngredientes.Instance.tiempoPerdidoPorFallar;
         }

@@ -7,24 +7,21 @@ using UnityEngine.UI;
 
 public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 {
-    [SerializeField] public float timer;
-    [SerializeField] public float tiempoPerdidoPorFallar;
-    [SerializeField] public float tiempoGanadoPorAcertar;
+    [SerializeField] public float timer, tiempoPerdidoPorFallar, tiempoGanadoPorAcertar;
     [SerializeField] GameObject[] prefabIngrediente;
-    [SerializeField] GameObject canvasGameOver;
-    [SerializeField] int numeroDeNiveles;
+    [SerializeField] GameObject canvasGameOver, canvasVictoria;
+    [SerializeField] int numeroDeNiveles, nivelFinal;
     [SerializeField] int[] numeroDeObjetosPorNivel;
     [SerializeField] int NumeroTotalDeIngredientes;
     [SerializeField] TMP_Text textNivel, textTiempo;
-    [SerializeField] float minimoValorEjeX;
-    [SerializeField] float maximoValorEjeX;
-    [SerializeField] float minimoValorEjeY;
-    [SerializeField] float maximoValorEjeY;
+    [SerializeField] float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
     float valorEjeX, valorEjeY;
 
     int nivel = 0;
 
     float timerInicio;
+
+    public bool jugar = true;
 
     int objeto;
 
@@ -53,20 +50,30 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         CreadorNiveles();
 
         canvasGameOver.SetActive(false);
+
+        canvasVictoria.SetActive(false);
     }
 
     void Update()
     {
         ActualizarHUD();
-        if (timer > 0)
+        if (timer > 0 && jugar == true)
         {
             timer = timer - Time.deltaTime;
         }
 
         if (timer <= 0)
         {
+            timer = 0;
+            jugar = false;
             GamerOver();
         }
+
+        if(nivel == nivelFinal)
+        {
+            Victoria();
+        }
+
     }
 
     //Esta función es la encargada de crear niveles
@@ -127,6 +134,14 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 
         timer = timerInicio;
 
+        jugar = true;
+
         canvasGameOver.SetActive(false);
+    }
+
+    void Victoria()
+    {
+        jugar = false;
+        canvasVictoria.SetActive(true);
     }
 }
