@@ -481,7 +481,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 624879336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31174ebc3ea8f2f42a0044bc7320c78e, type: 3}
+  m_Script: {fileID: 11500000, guid: 59c3ce70859da3440a5a0f9f6b863071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 20
@@ -494,14 +494,14 @@ MonoBehaviour:
   - {fileID: 6392281883984217491, guid: 72ae11cc743b62041bad9a050bbefc2d, type: 3}
   canvasGameOver: {fileID: 758529815}
   numeroDeNiveles: 3
-  numeroDeObjetosPorNivel: 050000000a00000014000000
+  numeroDeObjetosPorNivel: 04000000080000000c000000
   NumeroTotalDeIngredientes: 4
   textNivel: {fileID: 669647740}
   textTiempo: {fileID: 1479159436}
-  minimoValorEjeX: -7.86
-  maximoValorEjeX: 7.97
-  minimoValorEjeY: -4.05
-  maximoValorEjeY: 4.09
+  minimoValorEjeX: -7.8
+  maximoValorEjeX: 7.8
+  minimoValorEjeY: -3.7
+  maximoValorEjeY: 3.2
 --- !u!4 &624879338
 Transform:
   m_ObjectHideFlags: 0
@@ -930,6 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1172,7 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
