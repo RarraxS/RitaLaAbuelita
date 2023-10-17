@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
@@ -38,7 +39,6 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         else
             Destroy(this);
 
-        DontDestroyOnLoad(this);
     }
 
     void Start()
@@ -143,5 +143,10 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     {
         jugar = false;
         canvasVictoria.SetActive(true);
+    }
+
+    public void CambiarEscena()
+    {
+        SceneManager.LoadScene("JuegoPrincipal");
     }
 }
