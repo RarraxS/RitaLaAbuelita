@@ -17,6 +17,6 @@ public class GameManager : MonoBehaviour
 
     public void MinijuegoPulsarIngredientes()
     {
-        SceneManager.LoadScene("MinijuegoPulsarIngredientes");
+        SceneManager.LoadScene("PulsarIngredientes");
     }
 }
