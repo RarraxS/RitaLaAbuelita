@@ -6,11 +6,12 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 {
     
     [SerializeField] private int[] _velocidad;
+    [SerializeField] private float XFinalIzquierda, XFinalDerecha, YFinalAbajo, YFinalArriba;
     private Vector3 _direction;
+    Vector2 randomCircle = Random.insideUnitCircle;
 
     void Start()
     {
-        Vector2 randomCircle = Random.insideUnitCircle;
         Vector3 randomPosition = new(randomCircle.x, randomCircle.y, 0);
         _direction = (randomPosition - transform.position).normalized;
     }
@@ -18,6 +19,8 @@ public class IngredienteBuscaObjetos : MonoBehaviour
     void Update()
     {
         transform.Translate(Time.deltaTime * _velocidad[MinijuegoManagerBuscaIngredientes.Instance.Nivel] * _direction);
+
+        CorregirPosicion();
     }
     
 
@@ -33,5 +36,10 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         {
             MinijuegoManagerBuscaIngredientes.Instance.timer -= MinijuegoManagerBuscaIngredientes.Instance.tiempoPerdidoPorFallar;
         }
+    }
+
+    void CorregirPosicion()
+    {
+        //if (randomCircle.x == ) 
     }
 }

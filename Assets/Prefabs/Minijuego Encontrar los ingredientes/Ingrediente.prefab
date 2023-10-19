@@ -125,3 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocidad: 000000000200000005000000
+  XFinalIzquierda: -9.5
+  XFinalDerecha: 9.5
+  YFinalAbajo: -5.6
+  YFinalArriba: 5.6
