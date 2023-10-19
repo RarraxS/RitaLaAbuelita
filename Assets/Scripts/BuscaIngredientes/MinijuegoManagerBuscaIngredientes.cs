@@ -18,7 +18,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     [SerializeField] float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
     float valorEjeX, valorEjeY;
 
-    int nivel = 0;
+    private int nivel = 0;
+    public int Nivel { get { return nivel; } }
 
     float timerInicio;
 

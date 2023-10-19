@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class IngredienteBuscaObjetos : MonoBehaviour
 {
-    /*
-    [SerializeField] int[] velocidadMaxima;
-    [SerializeField] int[] velocidadMinima;
-
-    int velocidadX, velocidadY;
+    
+    [SerializeField] private int[] _velocidad;
+    private Vector3 _direction;
 
     void Start()
     {
-        velocidadX = Random.Range(velocidadMinima[MinijuegoManager.Instance.nivel], (velocidadMaxima[MinijuegoManager.Instance.nivel] + 1));
-        velocidadY = Random.Range(velocidadMinima[MinijuegoManager.Instance.nivel], (velocidadMaxima[MinijuegoManager.Instance.nivel] + 1));
+        Vector2 randomCircle = Random.insideUnitCircle;
+        Vector3 randomPosition = new(randomCircle.x, randomCircle.y, 0);
+        _direction = (randomPosition - transform.position).normalized;
     }
 
     void Update()
     {
-        transform.position += new Vector3(velocidadX, velocidadY, 0) * Time.deltaTime;
+        transform.Translate(Time.deltaTime * _velocidad[MinijuegoManagerBuscaIngredientes.Instance.Nivel] * _direction);
     }
-    */
+    
 
     void OnMouseDown()
     {
