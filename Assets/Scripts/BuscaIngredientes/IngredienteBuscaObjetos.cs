@@ -6,7 +6,6 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 {
     
     [SerializeField] private int[] _velocidad;
-    [SerializeField] private float XFinalIzquierda, XFinalDerecha, YFinalAbajo, YFinalArriba;
     private Vector3 _direction;
     Vector2 randomCircle = Random.insideUnitCircle;
 
@@ -40,6 +39,28 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     void CorregirPosicion()
     {
-        //if (randomCircle.x == ) 
+        if (randomCircle.x <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX)
+        {
+            randomCircle.x = MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX;
+            Debug.Log("Derecha");
+        }
+
+        if (randomCircle.x >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX)
+        {
+            randomCircle.x = MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX;
+            Debug.Log("Izquierda");
+        }
+
+        if (randomCircle.y <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY)
+        {
+            randomCircle.y = MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY;
+            Debug.Log("Abajo");
+        }
+
+        if (randomCircle.y >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY)
+        {
+            randomCircle.y = MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY;
+            Debug.Log("Arriba");
+        }
     }
 }

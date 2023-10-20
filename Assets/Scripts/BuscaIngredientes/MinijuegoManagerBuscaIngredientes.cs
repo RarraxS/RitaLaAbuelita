@@ -15,7 +15,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     [SerializeField] int[] numeroDeObjetosPorNivel;
     [SerializeField] int NumeroTotalDeIngredientes;
     [SerializeField] TMP_Text textNivel, textTiempo;
-    [SerializeField] float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
+    [SerializeField] public float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
     float valorEjeX, valorEjeY;
 
     private int nivel = 0;
