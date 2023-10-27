@@ -39,27 +39,31 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     void CorregirPosicion()
     {
-        if (randomCircle.x <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX)
+        if (transform.position.x <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX)
         {
-            randomCircle.x = MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX;
+            transform.position = new Vector3(MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX, transform.position.y, transform.position.z);
+            //randomCircle.x = MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX;
             Debug.Log("Derecha");
         }
 
-        if (randomCircle.x >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX)
+        if (transform.position.x >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX)
         {
-            randomCircle.x = MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX;
+            transform.position = new Vector3(MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX, transform.position.y, transform.position.z);
+            //randomCircle.x = MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX;
             Debug.Log("Izquierda");
         }
 
-        if (randomCircle.y <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY)
+        if (transform.position.y <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY)
         {
-            randomCircle.y = MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY;
+            transform.position = new Vector3(transform.position.x, MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY, transform.position.z);
+            //randomCircle.y = MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY;
             Debug.Log("Abajo");
         }
 
-        if (randomCircle.y >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY)
+        if (transform.position.y >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY)
         {
-            randomCircle.y = MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY;
+            transform.position = new Vector3(transform.position.x, MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY, transform.position.z);
+            //randomCircle.y = MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY;
             Debug.Log("Arriba");
         }
     }
