@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class Rita : MonoBehaviour
 {
-    // Start is called before the first frame update
-    Rigidbody2D rb;
+    [SerializeField] private float velocidad;
+
+    private Rigidbody2D rb;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Movimiento();
     }
     void Movimiento()
     {
-<<<<<<< HEAD:Assets/Scripts/Pueblo/Rita.cs
         if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
             (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
         {
@@ -42,8 +43,5 @@ public class Rita : MonoBehaviour
         {
             rb.position += (Vector2)(transform.right * velocidad * Time.deltaTime);//Derecha
         }
-=======
-
->>>>>>> parent of f50ee36 (V 0.1):Assets/Scripts/Rita.cs
     }
 }

@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D.Path.GUIFramework;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-<<<<<<< HEAD
     public string controles;
     public bool permitirAbrirMenuControles = true;
 
@@ -23,20 +23,5 @@ public class GameManager : MonoBehaviour
             Destroy(this);
 
         DontDestroyOnLoad(this);
-=======
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
-
-    public void MinijuegoPulsarIngredientes()
-    {
-        SceneManager.LoadScene("PulsarIngredientes");
->>>>>>> parent of f50ee36 (V 0.1)
     }
 }
