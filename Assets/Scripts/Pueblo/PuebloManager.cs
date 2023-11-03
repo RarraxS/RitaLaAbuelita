@@ -15,12 +15,18 @@ public class PuebloManager : MonoBehaviour
 
     void Start()
     {
-        canvasControles.SetActive(true);
+        if (GameManager.Instance.permitirAbrirMenuControles == true)
+        {
+            canvasControles.SetActive(true);
+            GameManager.Instance.permitirAbrirMenuControles = false;
+        }
     }
 
     void Update()
     {
         MenuDebug();
+
+        CambioEscenaDemo();
     }
 
     public void MinijuegoPulsarIngredientes()
@@ -53,9 +59,17 @@ public class PuebloManager : MonoBehaviour
             canvasDebug.SetActive(true);
         }
 
-        else if((Input.GetKeyDown(KeyCode.Escape)) && canvasDebug.activeSelf)
+        else if ((Input.GetKeyDown(KeyCode.Escape)) && canvasDebug.activeSelf)
         {
             canvasDebug.SetActive(false);
+        }
+    }
+
+    void CambioEscenaDemo()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            SceneManager.LoadScene("PulsarIngredientes");
         }
     }
 }

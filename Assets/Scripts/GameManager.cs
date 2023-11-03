@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public string controles;
+    public bool permitirAbrirMenuControles = true;
 
     private static GameManager instance;
     public static GameManager Instance
