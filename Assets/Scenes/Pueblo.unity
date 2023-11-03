@@ -3256,7 +3256,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1519641771}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: MinijuegoPulsarIngredientes
         m_Mode: 1
@@ -4140,7 +4140,7 @@ Transform:
   - {fileID: 1463006522}
   - {fileID: 1353801141}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1019925715
 PrefabInstance:
@@ -4519,7 +4519,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1519641771}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PuebloManager, Assembly-CSharp
         m_MethodName: botonZurdo
         m_Mode: 1
         m_Arguments:
@@ -4581,12 +4581,12 @@ GameObject:
   - component: {fileID: 1125820104}
   - component: {fileID: 1125820103}
   m_Layer: 0
-  m_Name: Canvas Selector Minijuego
+  m_Name: Canvas Selector Minijuego (Debug)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1125820102
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5254,7 +5254,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1256989031
 PrefabInstance:
@@ -5881,7 +5881,7 @@ Transform:
   - {fileID: 344568803}
   - {fileID: 1611932433}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1437801596
 GameObject:
@@ -5968,7 +5968,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1519641771}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PuebloManager, Assembly-CSharp
         m_MethodName: botonDiestro
         m_Mode: 1
         m_Arguments:
@@ -6804,7 +6804,7 @@ GameObject:
   - component: {fileID: 1519641770}
   - component: {fileID: 1519641771}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: PuebloManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6817,7 +6817,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519641769}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 422.8452, y: 167.75006, z: 3.9739156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6836,7 +6836,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1519641769}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f41f7cc934c4c6c44a1799ac45dbeb34, type: 3}
+  m_Script: {fileID: 11500000, guid: 1183969cd2e1ed24c905de83bdb6b52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvasDebug: {fileID: 1125820101}
@@ -7550,7 +7550,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1519641771}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: PuebloManager, Assembly-CSharp
         m_MethodName: MinijuegoPulsarIngredientes
         m_Mode: 1
         m_Arguments:
@@ -7864,7 +7864,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1792661667
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7970,7 +7970,7 @@ Transform:
   m_Children:
   - {fileID: 1838910342}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1820715096
 PrefabInstance:
@@ -8034,6 +8034,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8994179163369260390, guid: 53ee880de72696545861c3d11fd095e1, type: 3}
   m_PrefabInstance: {fileID: 1820715096}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1821700079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1821700080}
+  - component: {fileID: 1821700081}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1821700080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821700079}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 812.28613, y: 273.55524, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821700081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821700079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41f7cc934c4c6c44a1799ac45dbeb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controles: 
 --- !u!1 &1838910339
 GameObject:
   m_ObjectHideFlags: 0

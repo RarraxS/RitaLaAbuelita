@@ -20,26 +20,26 @@ public class Rita : MonoBehaviour
     }
     void Movimiento()
     {
-        if ((Input.GetKey(KeyCode.I) && GameManager.controles == "zurdo") ||
-            (Input.GetKey(KeyCode.W) && GameManager.controles == "diestro"))
+        if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
+            (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
         {
             rb.position += (Vector2)(Time.deltaTime * velocidad * transform.up);//Alante
         }
 
-        if ((Input.GetKey(KeyCode.K) && GameManager.controles == "zurdo") ||
-            (Input.GetKey(KeyCode.S) && GameManager.controles == "diestro"))
+        if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
+            (Input.GetKey(KeyCode.S) && GameManager.Instance.controles == "diestro"))
         {
             rb.position += (Vector2)(-transform.up * velocidad * Time.deltaTime);//Atrás
         }
 
-        if ((Input.GetKey(KeyCode.J) && GameManager.controles == "zurdo") ||
-            (Input.GetKey(KeyCode.A) && GameManager.controles == "diestro"))
+        if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
+            (Input.GetKey(KeyCode.A) && GameManager.Instance.controles == "diestro"))
         {
             rb.position += (Vector2)(-transform.right * velocidad * Time.deltaTime);//Izquierda
         }
 
-        if ((Input.GetKey(KeyCode.L) && GameManager.controles == "zurdo") ||
-            (Input.GetKey(KeyCode.D) && GameManager.controles == "diestro"))
+        if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
+            (Input.GetKey(KeyCode.D) && GameManager.Instance.controles == "diestro"))
         {
             rb.position += (Vector2)(transform.right * velocidad * Time.deltaTime);//Derecha
         }
