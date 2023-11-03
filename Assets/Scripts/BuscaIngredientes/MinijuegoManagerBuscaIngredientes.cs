@@ -148,6 +148,6 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 
     public void CambiarEscena()
     {
-        SceneManager.LoadScene("Pueblo");
+        SceneManager.LoadScene("JuegoPrincipal");
     }
 }
