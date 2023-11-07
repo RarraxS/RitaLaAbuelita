@@ -129,15 +129,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 
     public void Reintentar()
     {
-        nivel = -1;
-
-        DestructorNiveles();
-
-        timer = timerInicio;
-
-        jugar = true;
-
-        canvasGameOver.SetActive(false);
+        SceneManager.LoadScene("PulsarIngredientes");
     }
 
     void Victoria()

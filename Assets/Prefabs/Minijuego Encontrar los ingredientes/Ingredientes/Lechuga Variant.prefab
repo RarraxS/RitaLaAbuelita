@@ -33,7 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1394530257129061325, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Name
-      value: Lechuga
+      value: Lechuga Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394530257129061325, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
+      propertyPath: m_TagString
+      value: No buscando
       objectReference: {fileID: 0}
     - target: {fileID: 2374226584299621887, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Sprite

@@ -977,9 +977,9 @@ MonoBehaviour:
   - {fileID: 456199842935192642, guid: 29e88ffd606b1a34c82f647a8c74ca55, type: 3}
   canvasGameOver: {fileID: 758529815}
   canvasVictoria: {fileID: 52406416}
-  numeroDeNiveles: 3
-  nivelFinal: 3
-  numeroDeObjetosPorNivel: 04000000080000000c000000
+  numeroDeNiveles: 6
+  nivelFinal: 6
+  numeroDeObjetosPorNivel: 080000000c00000010000000160000001c00000023000000
   NumeroTotalDeIngredientes: 5
   textNivel: {fileID: 669647740}
   textTiempo: {fileID: 1479159436}

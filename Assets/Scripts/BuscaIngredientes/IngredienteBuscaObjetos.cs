@@ -7,12 +7,10 @@ public class IngredienteBuscaObjetos : MonoBehaviour
     
     [SerializeField] private int[] _velocidad;
     private Vector3 _direction;
-    Vector2 randomCircle = Random.insideUnitCircle;
 
     void Start()
     {
-        Vector3 randomPosition = new(randomCircle.x, randomCircle.y, 0);
-        _direction = (randomPosition - transform.position).normalized;
+        RandomizarPosicion();
     }
 
     void Update()
@@ -37,30 +35,21 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         }
     }
 
+    void RandomizarPosicion()
+    {
+        Vector2 randomCircle = Random.insideUnitCircle;
+        Vector3 randomPosition = new(randomCircle.x, randomCircle.y, 0);
+        _direction = (randomPosition - transform.position).normalized;
+    }
+
     void CorregirPosicion()
     {
-        if (transform.position.x <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX)
+        if (transform.position.x <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX ||
+            transform.position.x >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX ||
+            transform.position.y <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY ||
+            transform.position.y >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY)
         {
-            transform.position = new Vector3(MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX, transform.position.y, transform.position.z);
-            Debug.Log("Izquierda");
-        }
-
-        if (transform.position.x >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX)
-        {
-            transform.position = new Vector3(MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX, transform.position.y, transform.position.z);
-            //Debug.Log("Derecha");
-        }
-
-        if (transform.position.y <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY)
-        {
-            transform.position = new Vector3(transform.position.x, MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY, transform.position.z);
-            Debug.Log("Abajo");
-        }
-
-        if (transform.position.y >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY)
-        {
-            transform.position = new Vector3(transform.position.x, MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY, transform.position.z);
-            //Debug.Log("Arriba");
+            RandomizarPosicion();
         }
     }
 }
