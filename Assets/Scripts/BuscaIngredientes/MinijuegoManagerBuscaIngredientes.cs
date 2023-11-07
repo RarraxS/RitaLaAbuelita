@@ -83,8 +83,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         objeto = 0;
         for (int i = numeroDeObjetosPorNivel[nivel]; i > 0; i--)
         {
-            valorEjeX = Random.Range(minimoValorEjeX, (maximoValorEjeX + 0.1f));
-            valorEjeY = Random.Range(minimoValorEjeY, (maximoValorEjeY + 0.1f));
+            valorEjeX = Random.Range(minimoValorEjeX, maximoValorEjeX);
+            valorEjeY = Random.Range(minimoValorEjeY, maximoValorEjeY);
             GameObject clon = Instantiate(prefabIngrediente[objeto]);
             clon.transform.position = new Vector3(valorEjeX, valorEjeY, 0);
             objeto = Random.Range(1, (NumeroTotalDeIngredientes + 1));

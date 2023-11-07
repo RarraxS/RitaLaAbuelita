@@ -54,7 +54,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         if (transform.position.y <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY)
         {
             transform.position = new Vector3(transform.position.x, MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY, transform.position.z);
-            // Puedes agregar aquí cualquier lógica adicional que desees ejecutar al pasar del mínimo al máximo.
+            Debug.Log("Abajo");
         }
 
         if (transform.position.y >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeY)
