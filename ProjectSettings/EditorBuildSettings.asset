@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JuegoPrincipal.unity
+    path: Assets/Scenes/Titulo.unity
+    guid: 530b4794bc2d49149a271bfe9fcef502
+  - enabled: 1
+    path: Assets/Scenes/Pueblo.unity
     guid: 8b3224de64343db43b6bc8a1f10d3ea5
   - enabled: 1
     path: Assets/Scenes/PulsarIngredientes.unity
