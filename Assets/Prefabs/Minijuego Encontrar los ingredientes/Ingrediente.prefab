@@ -125,3 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocidad: 010000000300000005000000070000000800000009000000
+  timerPausa: 1
+  _parpadeos: 2

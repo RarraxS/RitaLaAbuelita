@@ -14,8 +14,10 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     [SerializeField] int numeroDeNiveles, nivelFinal;
     [SerializeField] int[] numeroDeObjetosPorNivel;
     [SerializeField] int NumeroTotalDeIngredientes;
-    [SerializeField] TMP_Text textNivel, textTiempo;
     [SerializeField] float timerEspera;
+    [SerializeField] TMP_Text textNivel;
+    public TMP_Text textTiempo
+        ;
     public float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
     public bool timerEsperaEnabled = false, jugar = true, DestruirNivelEnabled = false;
     float valorEjeX, valorEjeY;
@@ -25,7 +27,6 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 
     float timerInicio, timerEsperaInicial;
     
-
     int objeto;
 
     private static MinijuegoManagerBuscaIngredientes instance;
@@ -78,7 +79,6 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         {
             Victoria();
         }
-
     }
 
     //Esta función es la encargada de crear niveles
@@ -100,6 +100,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     {
         if (DestruirNivelEnabled == true)
         {
+            jugar = false;
+
             GameObject[] objetosNoBuscar = GameObject.FindGameObjectsWithTag("No buscando");
 
             foreach (GameObject objeto in objetosNoBuscar)
@@ -127,6 +129,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
                     CreadorNiveles();
 
                     DestruirNivelEnabled = false;
+                    
+                    jugar = true;
                 }
             }
         }
