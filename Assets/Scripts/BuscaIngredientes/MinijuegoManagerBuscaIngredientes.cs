@@ -16,8 +16,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     [SerializeField] int NumeroTotalDeIngredientes;
     [SerializeField] TMP_Text textNivel, textTiempo;
     [SerializeField] float timerEspera;
-    public bool timerEsperaEnabled = false;
     public float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
+    public bool timerEsperaEnabled = false, jugar = true, DestruirNivelEnabled = false;
     float valorEjeX, valorEjeY;
 
     private int nivel = 0;
@@ -25,7 +25,6 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 
     float timerInicio, timerEsperaInicial;
     
-    public bool jugar = true;
 
     int objeto;
 
@@ -61,7 +60,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     void Update()
     {
         ActualizarHUD();
-        PausaGanar();
+        DestructorNiveles();
+
         if (timer > 0 && jugar == true)
         {
             timer = timer - Time.deltaTime;
@@ -98,34 +98,36 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     // Esta función destruirá los objetos con los tags "Buscando" y "No buscando"
     public void DestructorNiveles()
     {
-        GameObject[] objetosABuscar = GameObject.FindGameObjectsWithTag("Buscando");
-        GameObject[] objetosNoBuscar = GameObject.FindGameObjectsWithTag("No buscando");
-
-        foreach (GameObject objeto in objetosNoBuscar)
+        if (DestruirNivelEnabled == true)
         {
-            Destroy(objeto);
-        }
+            GameObject[] objetosNoBuscar = GameObject.FindGameObjectsWithTag("No buscando");
 
-        foreach (GameObject objeto in objetosABuscar)
-        {
-            Destroy(objeto);
-        }
-
-
-        nivel++;
-
-        CreadorNiveles();
-    }
-
-    void PausaGanar()
-    {
-        if (timerEsperaEnabled == true)
-        {
-            timerEspera -= Time.deltaTime;
-            if(timerEspera <= 0)
+            foreach (GameObject objeto in objetosNoBuscar)
             {
-                timerEspera = ;
-                DestructorNiveles();
+                Destroy(objeto);
+            }
+
+            if (timerEsperaEnabled == true)
+            {
+                timerEspera -= Time.deltaTime;
+                if (timerEspera <= 0)
+                {
+                    timerEsperaEnabled = false;
+                    timerEspera = timerEsperaInicial;
+
+                    GameObject[] objetosABuscar = GameObject.FindGameObjectsWithTag("Buscando");
+
+                    foreach (GameObject objeto in objetosABuscar)
+                    {
+                        Destroy(objeto);
+                    }
+
+                    nivel++;
+
+                    CreadorNiveles();
+
+                    DestruirNivelEnabled = false;
+                }
             }
         }
     }

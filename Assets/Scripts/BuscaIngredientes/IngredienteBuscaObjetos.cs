@@ -26,7 +26,8 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         if (tag == "Buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
         {
             MinijuegoManagerBuscaIngredientes.Instance.timer += MinijuegoManagerBuscaIngredientes.Instance.tiempoGanadoPorAcertar;
-            MinijuegoManagerBuscaIngredientes.Instance.DestructorNiveles();
+            MinijuegoManagerBuscaIngredientes.Instance.DestruirNivelEnabled = true;
+            MinijuegoManagerBuscaIngredientes.Instance.timerEsperaEnabled = true;
         }
 
         if (tag == "No buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
@@ -51,5 +52,6 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         {
             RandomizarPosicion();
         }
+        
     }
 }
