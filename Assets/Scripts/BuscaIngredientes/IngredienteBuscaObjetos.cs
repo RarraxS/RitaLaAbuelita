@@ -83,7 +83,6 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
             timerPausa -= Time.deltaTime;
 
-            MinijuegoManagerBuscaIngredientes.Instance.textTiempo
 
             for (int i = 0; i < _numParpadeos; i++)
             {
