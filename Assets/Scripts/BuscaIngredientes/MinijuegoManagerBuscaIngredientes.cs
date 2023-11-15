@@ -8,21 +8,23 @@ using UnityEngine.UI;
 
 public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 {
-    [SerializeField] public float timer, tiempoPerdidoPorFallar, tiempoGanadoPorAcertar;
+    public float timer, tiempoPerdidoPorFallar, tiempoGanadoPorAcertar;
     [SerializeField] GameObject[] prefabIngrediente;
     [SerializeField] GameObject canvasGameOver, canvasVictoria;
     [SerializeField] int numeroDeNiveles, nivelFinal;
     [SerializeField] int[] numeroDeObjetosPorNivel;
     [SerializeField] int NumeroTotalDeIngredientes;
     [SerializeField] TMP_Text textNivel, textTiempo;
-    [SerializeField] public float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
+    [SerializeField] float timerEspera;
+    public bool timerEsperaEnabled = false;
+    public float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
     float valorEjeX, valorEjeY;
 
     private int nivel = 0;
     public int Nivel { get { return nivel; } }
 
-    float timerInicio;
-
+    float timerInicio, timerEsperaInicial;
+    
     public bool jugar = true;
 
     int objeto;
@@ -45,6 +47,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     void Start()
     {
         timerInicio = timer;
+        timerEsperaInicial = timerEspera;
 
         NumeroTotalDeIngredientes = NumeroTotalDeIngredientes - 1;
 
@@ -58,6 +61,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     void Update()
     {
         ActualizarHUD();
+        PausaGanar();
         if (timer > 0 && jugar == true)
         {
             timer = timer - Time.deltaTime;
@@ -97,12 +101,12 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         GameObject[] objetosABuscar = GameObject.FindGameObjectsWithTag("Buscando");
         GameObject[] objetosNoBuscar = GameObject.FindGameObjectsWithTag("No buscando");
 
-        foreach (GameObject objeto in objetosABuscar)
+        foreach (GameObject objeto in objetosNoBuscar)
         {
             Destroy(objeto);
         }
 
-        foreach (GameObject objeto in objetosNoBuscar)
+        foreach (GameObject objeto in objetosABuscar)
         {
             Destroy(objeto);
         }
@@ -111,6 +115,19 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         nivel++;
 
         CreadorNiveles();
+    }
+
+    void PausaGanar()
+    {
+        if (timerEsperaEnabled == true)
+        {
+            timerEspera -= Time.deltaTime;
+            if(timerEspera <= 0)
+            {
+                timerEspera = ;
+                DestructorNiveles();
+            }
+        }
     }
 
     void ActualizarHUD()
