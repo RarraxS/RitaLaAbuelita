@@ -88,6 +88,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
             _colorDeFallo = textTiempo.GetComponent<TextMeshProUGUI>().color;
             textTiempo.GetComponent<TextMeshProUGUI>().color = Color.red;
             Vector3 scaleOfText = textTiempo.GetComponent<RectTransform>().localScale;
+            textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1.5f, 1.5f, 1.5f);
 
             for (int i = 0; i < _numParpadeos; i++)
             {
@@ -117,6 +118,8 @@ public class IngredienteBuscaObjetos : MonoBehaviour
                 MinijuegoManagerBuscaIngredientes.Instance.jugar = true;
                 timerPausa = _timerPausaInicial;
                 fallado = false;
+                textTiempo.GetComponent<TextMeshProUGUI>().color = Color.white;
+                textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
                 sr.color = new Color(255, 255, 255, 255);
             }
         }
