@@ -55,10 +55,22 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Titulo");
     }
 
+    public void PuebloDebug()
+    {
+        canvasDebug.SetActive(false);
+        SceneManager.LoadScene("Pueblo");
+    }
+
     public void MinijuegoPulsarIngredientesDebug()
     {
         canvasDebug.SetActive(false);
         SceneManager.LoadScene("PulsarIngredientes");
+    }
+
+    public void MinijuegoPulsarQuizDebug()
+    {
+        canvasDebug.SetActive(false);
+        SceneManager.LoadScene("Quiz");
     }
 
     //Fin Debug

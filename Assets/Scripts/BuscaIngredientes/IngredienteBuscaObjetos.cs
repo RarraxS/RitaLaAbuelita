@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class IngredienteBuscaObjetos : MonoBehaviour
@@ -7,7 +8,8 @@ public class IngredienteBuscaObjetos : MonoBehaviour
     [SerializeField] private int[] _velocidad;
     [SerializeField] float timerPausa;
     [SerializeField] private int _parpadeos;
-
+    public TMP_Text textTiempo;
+    private Color _colorDeFallo;
     SpriteRenderer sr;
 
     private Vector3 _direction;
@@ -83,6 +85,9 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
             timerPausa -= Time.deltaTime;
 
+            _colorDeFallo = textTiempo.GetComponent<TextMeshProUGUI>().color;
+            textTiempo.GetComponent<TextMeshProUGUI>().color = Color.red;
+            Vector3 scaleOfText = textTiempo.GetComponent<RectTransform>().localScale;
 
             for (int i = 0; i < _numParpadeos; i++)
             {
