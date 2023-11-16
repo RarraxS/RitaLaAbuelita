@@ -61,7 +61,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1394530257129061325, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_TagString
-      value: No buscando
+      value: Buscando
       objectReference: {fileID: 0}
     - target: {fileID: 2374226584299621887, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Size.x
