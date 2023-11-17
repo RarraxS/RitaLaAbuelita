@@ -16,7 +16,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     float _timerPausaInicial, _timepoPorParpadeo, _tiempoParpadeo;
     int _numParpadeos;
-    bool _spriteOn = true, fallado = false;
+    bool _spriteOn = true;
 
     void Start()
     {
@@ -28,9 +28,12 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
         _timepoPorParpadeo = _timerPausaInicial / _parpadeos;
 
-        _tiempoParpadeo = _timepoPorParpadeo;
-
         RandomizarPosicion();
+
+        if (tag == "Buscando")
+        {
+            //transform.localScale.z = 
+        }
     }
 
     void Update()
@@ -50,12 +53,13 @@ public class IngredienteBuscaObjetos : MonoBehaviour
             MinijuegoManagerBuscaIngredientes.Instance.timer += MinijuegoManagerBuscaIngredientes.Instance.tiempoGanadoPorAcertar;
             MinijuegoManagerBuscaIngredientes.Instance.DestruirNivelEnabled = true;
             MinijuegoManagerBuscaIngredientes.Instance.timerEsperaEnabled = true;
+            StartCoroutine(Acertar());
         }
 
         if (tag == "No buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
         {
             MinijuegoManagerBuscaIngredientes.Instance.timer -= MinijuegoManagerBuscaIngredientes.Instance.tiempoPerdidoPorFallar;
-            fallado = true;
+            StartCoroutine(Fallar());
         }
     }
 
@@ -77,51 +81,55 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         }
     }
 
-    void Fallar()
+    IEnumerator Acertar()
     {
-        if (fallado == true)
+        while (transform.localScale.x < 0.1f)
         {
-            MinijuegoManagerBuscaIngredientes.Instance.jugar = false;
-
-            timerPausa -= Time.deltaTime;
-
-            _colorDeFallo = textTiempo.GetComponent<TextMeshProUGUI>().color;
-            textTiempo.GetComponent<TextMeshProUGUI>().color = Color.red;
-            Vector3 scaleOfText = textTiempo.GetComponent<RectTransform>().localScale;
-            textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1.5f, 1.5f, 1.5f);
-
-            for (int i = 0; i < _numParpadeos; i++)
-            {
-                _tiempoParpadeo -= Time.deltaTime;
-
-                if (_tiempoParpadeo <= 0)
-                {
-                    switch (_spriteOn)
-                    {
-                        case true:
-                            sr.color = new Color(255, 255, 255, 0);
-                            _spriteOn = false;
-                            break;
-
-                        case false:
-                            sr.color = new Color(255, 255, 255, 255);
-                            _spriteOn = true;
-                            break;
-                    }
-
-                    _tiempoParpadeo = _timepoPorParpadeo;
-                }
-            }
-
-            if (timerPausa <= 0)
-            {
-                MinijuegoManagerBuscaIngredientes.Instance.jugar = true;
-                timerPausa = _timerPausaInicial;
-                fallado = false;
-                textTiempo.GetComponent<TextMeshProUGUI>().color = Color.white;
-                textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
-                sr.color = new Color(255, 255, 255, 255);
-            }
+            transform.localScale += new Vector3(0.1f, 0.1f, 0.1f) * Time.deltaTime;
+            yield return null;
         }
+        _direction *= 0;
+    }
+
+    IEnumerator Fallar()
+    {
+        MinijuegoManagerBuscaIngredientes.Instance.jugar = false;
+
+        _colorDeFallo = textTiempo.GetComponent<TextMeshProUGUI>().color;
+        textTiempo.GetComponent<TextMeshProUGUI>().color = Color.red;
+        Vector3 scaleOfText = textTiempo.GetComponent<RectTransform>().localScale;
+        textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1.5f, 1.5f, 1.5f);
+        _numParpadeos = _parpadeos * 2;
+
+        while (_numParpadeos >0)
+        {
+            _tiempoParpadeo -= Time.deltaTime;
+
+            if (_tiempoParpadeo <= 0)
+            {
+                _numParpadeos--;
+                switch (_spriteOn)
+                {
+                    case true:
+                        sr.color = new Color(255, 255, 255, 0);
+                        _spriteOn = false;
+                        break;
+
+                    case false:
+                        sr.color = new Color(255, 255, 255, 255);
+                        _spriteOn = true;
+                        break;
+                }
+                _tiempoParpadeo = _timepoPorParpadeo;
+            }
+            yield return null;
+        }
+
+            MinijuegoManagerBuscaIngredientes.Instance.jugar = true;
+            timerPausa = _timerPausaInicial;
+            textTiempo.GetComponent<TextMeshProUGUI>().color = Color.white;
+            textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            sr.color = new Color(255, 255, 255, 255);
+
     }
 }

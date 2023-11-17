@@ -28,11 +28,11 @@ public class QuizManager : MonoBehaviour
     {
         quizUI.Construct(quizDB.GetRandom(), GiveAnswer);
     }
-    private void GiveAnswer(BotonOpcion optionbutton)
+    public void GiveAnswer(BotonOpcion optionbutton)
     {
-        
+        StartCoroutine(GiveAnswerRoutine(optionbutton));
     }
-    public IEnumerator GiveAnswerRoutine(BotonOpcion optionbutton) 
+    private IEnumerator GiveAnswerRoutine(BotonOpcion optionbutton) 
     { 
         if (quizAudioSource.isPlaying)
         {
