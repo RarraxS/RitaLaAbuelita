@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogoNpc : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+[CreateAssetMenu(menuName = "Diálogos/Diálogos con NPC")]
+public class DialogoNpc : ScriptableObject
+{
+    public GameObject npc;
+    public string dialogo;
+    public GameObject canvasDialogo;
 }
