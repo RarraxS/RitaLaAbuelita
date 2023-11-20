@@ -5,14 +5,15 @@ using UnityEngine;
 public class Rita : MonoBehaviour
 {
     [SerializeField] private float velocidad;
+    private Rigidbody2D rb;
+
+    [SerializeField] ScriptableObject[] interaccion;
 
     //Raycast
     RaycastHit2D informacionRaycast;
     public float distanciaRaycast;
     [SerializeField] LayerMask mascara;
-    Vector2 direccionRaycast = new Vector2(0, 1);
-
-    private Rigidbody2D rb;
+    public Vector2 direccionRaycast = new Vector2(0, 1);
 
     void Start()
     {
@@ -73,14 +74,20 @@ public class Rita : MonoBehaviour
 
     void LanzarRaycast()
     {
+        // Realiza el raycast
         informacionRaycast = Physics2D.Raycast(transform.position, direccionRaycast, distanciaRaycast, mascara);
+
+        // Dibuja el rayo en la escena para propósitos de depuración
         Debug.DrawRay(transform.position, direccionRaycast * distanciaRaycast, Color.red);
 
-        // Verificar si el raycast colisionó con algo
+        // Verifica si el raycast colisionó con algo
         if (informacionRaycast.collider != null)
         {
-            // Imprimir el nombre del objeto con el que colisionó
-            Debug.Log("Colisionado con: " + informacionRaycast.collider.gameObject.name);
+            // Accede al GameObject con el que ha colisionado
+            GameObject collidedObject = informacionRaycast.collider.gameObject;
+
+            // Imprime el nombre del GameObject por consola
+            Debug.Log("Colisionado con: " + collidedObject.name);
         }
     }
 }
