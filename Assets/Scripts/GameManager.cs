@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void TituloDebug()
     {
         canvasDebug.SetActive(false);
+        canvasInicio.SetActive(true);
         SceneManager.LoadScene("Titulo");
     }
 
@@ -77,6 +78,7 @@ public class GameManager : MonoBehaviour
 
     public void Jugar()
     {
+        canvasInicio.SetActive(false);
         SceneManager.LoadScene("Pueblo");
     }
 

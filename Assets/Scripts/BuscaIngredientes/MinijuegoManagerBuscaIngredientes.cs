@@ -90,7 +90,14 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
             valorEjeX = Random.Range(minimoValorEjeX, maximoValorEjeX);
             valorEjeY = Random.Range(minimoValorEjeY, maximoValorEjeY);
             GameObject clon = Instantiate(prefabIngrediente[objeto]);
-            clon.transform.position = new Vector3(valorEjeX, valorEjeY, 0);
+            if (objeto == 0)
+            {
+                clon.transform.position = new Vector3(valorEjeX, valorEjeY, 0.1f);
+            }
+            else
+            {
+                clon.transform.position = new Vector3(valorEjeX, valorEjeY, 0);
+            }
             clon.GetComponent<IngredienteBuscaObjetos>().textTiempo = textTiempo;
             objeto = Random.Range(1, (NumeroTotalDeIngredientes + 1));
         }

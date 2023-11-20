@@ -6,8 +6,13 @@ public class Rita : MonoBehaviour
 {
     [SerializeField] private float velocidad;
 
-    private Rigidbody2D rb;
+    //Raycast
+    RaycastHit2D informacionRaycast;
+    public float distanciaRaycast;
+    [SerializeField] LayerMask mascara;
+    Vector2 direccionRaycast = new Vector2(0, 1);
 
+    private Rigidbody2D rb;
 
     void Start()
     {
@@ -17,6 +22,7 @@ public class Rita : MonoBehaviour
     void Update()
     {
         Movimiento();
+        LanzarRaycast();
     }
 
     void Movimiento()
@@ -27,24 +33,28 @@ public class Rita : MonoBehaviour
             (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
         {
             direccion += new Vector2(transform.up.x, transform.up.y); // Alante
+            direccionRaycast = new Vector2(0, 1);
         }
 
         if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
             (Input.GetKey(KeyCode.S) && GameManager.Instance.controles == "diestro"))
         {
             direccion += new Vector2(-transform.up.x, -transform.up.y); // Atrás
+            direccionRaycast = new Vector2(0, -1);
         }
 
         if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
             (Input.GetKey(KeyCode.A) && GameManager.Instance.controles == "diestro"))
         {
             direccion += new Vector2(-transform.right.x, -transform.right.y); // Izquierda
+            direccionRaycast = new Vector2(-1, 0);
         }
 
         if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
             (Input.GetKey(KeyCode.D) && GameManager.Instance.controles == "diestro"))
         {
             direccion += new Vector2(transform.right.x, transform.right.y); // Derecha
+            direccionRaycast = new Vector2(1, 0);
         }
 
         // Normalizar el vector de dirección si es diferente de cero
@@ -61,17 +71,16 @@ public class Rita : MonoBehaviour
         rb.position = nuevaPosicion;
     }
 
-    void ApuntarConRaycast()
+    void LanzarRaycast()
     {
-        // Lanzar un rayo en la dirección del movimiento
-        RaycastHit2D hit = Physics2D.Raycast(rb.position, rb.velocity.normalized);
+        informacionRaycast = Physics2D.Raycast(transform.position, direccionRaycast, distanciaRaycast, mascara);
+        Debug.DrawRay(transform.position, direccionRaycast * distanciaRaycast, Color.red);
 
-        // Puedes realizar acciones basadas en la información del rayo, por ejemplo, imprimir el objeto golpeado
-        if (hit.collider != null)
+        // Verificar si el raycast colisionó con algo
+        if (informacionRaycast.collider != null)
         {
-            Debug.Log("Objeto golpeado: " + hit.collider.name);
+            // Imprimir el nombre del objeto con el que colisionó
+            Debug.Log("Colisionado con: " + informacionRaycast.collider.gameObject.name);
         }
-
-        // Aquí puedes hacer más cosas con la información del rayo si es necesario
     }
 }
