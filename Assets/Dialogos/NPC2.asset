@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4965cbca72ee447ba7bb8ef1da247c, type: 3}
   m_Name: NPC2
   m_EditorClassIdentifier: 
-  npc: Alejandro
-  dialogoNpc: En mis tiempos las cosas eran distintas
-  dialogoRita: Que si, que si, abuelo
+  npc: Paca
+  dialogoNpc: "Buenos d\xEDas Paca, que tal los tobillos"
+  dialogoRita: Mejor que la espalda, Rita

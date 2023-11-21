@@ -29,11 +29,6 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         _timepoPorParpadeo = _timerPausaInicial / _parpadeos;
 
         RandomizarPosicion();
-
-        if (tag == "Buscando")
-        {
-            //transform.localScale.z = 
-        }
     }
 
     void Update()
@@ -83,12 +78,12 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     IEnumerator Acertar()
     {
+        _direction *= 0;
         while (transform.localScale.x < 0.1f)
         {
-            transform.localScale += new Vector3(0.1f, 0.1f, 0.1f) * Time.deltaTime;
+            transform.localScale += new Vector3(0.03f, 0.03f, 0.03f) * Time.deltaTime;
             yield return null;
         }
-        _direction *= 0;
     }
 
     IEnumerator Fallar()
@@ -101,7 +96,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1.5f, 1.5f, 1.5f);
         _numParpadeos = _parpadeos * 2;
 
-        while (_numParpadeos >0)
+        while (_numParpadeos > 0)
         {
             _tiempoParpadeo -= Time.deltaTime;
 
