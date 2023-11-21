@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4965cbca72ee447ba7bb8ef1da247c, type: 3}
   m_Name: NPC1
   m_EditorClassIdentifier: 
-  npc: {fileID: 0}
-  dialogo: 
-  canvasDialogo: {fileID: 0}
+  npc: Maite
+  dialogoNpc: "\xBFQue tal est\xE1s Rita?"
+  dialogoRita: "Muy bien Maite, \xBFy t\xFA?"

@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Rita : MonoBehaviour
 {
     [SerializeField] private float velocidad;
-    private Rigidbody2D rb;
-
     [SerializeField] ScriptableObject[] interaccion;
+    [SerializeField] GameObject canvasDialogo;
+    [SerializeField] TMP_Text textRita, textNpc;
+
+    GameObject collidedObject;
+
+    private Rigidbody2D rb;
 
     //Raycast
     RaycastHit2D informacionRaycast;
@@ -18,12 +23,17 @@ public class Rita : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        canvasDialogo.SetActive(false);
     }
 
     void Update()
     {
         Movimiento();
         LanzarRaycast();
+        AccederInteractuable();
+
+        DebugRita();
     }
 
     void Movimiento()
@@ -84,10 +94,44 @@ public class Rita : MonoBehaviour
         if (informacionRaycast.collider != null)
         {
             // Accede al GameObject con el que ha colisionado
-            GameObject collidedObject = informacionRaycast.collider.gameObject;
+            collidedObject = informacionRaycast.collider.gameObject;
+        }
+        else
+        {
+            collidedObject = null;
+        }
 
-            // Imprime el nombre del GameObject por consola
-            Debug.Log("Colisionado con: " + collidedObject.name);
+        // Imprime el nombre del GameObject por consola
+        Debug.Log(collidedObject);
+    }
+
+    void AccederInteractuable()
+    {
+        for (int i = 0; i < interaccion.Length; i++)
+        {
+            if (collidedObject.name == interaccion[i].name)
+            {
+                string DialogoNpc = ((DialogoNpc)interaccion[i]).dialogoNpc;
+                string DialogoRita = ((DialogoNpc)interaccion[i]).dialogoRita;
+                string npc = ((DialogoNpc)interaccion[i]).npc;
+
+                textNpc.text = DialogoNpc;
+                textRita.text = DialogoRita;
+            }
+        }
+    }
+
+
+    void DebugRita()
+    {
+        if(Input.GetKeyDown(KeyCode.U) && !canvasDialogo.activeSelf)
+        {
+            canvasDialogo.SetActive(true);
+        }
+
+        else if(Input.GetKeyDown(KeyCode.U) && canvasDialogo.activeSelf)
+        {
+            canvasDialogo.SetActive(false);
         }
     }
 }
