@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using TMPro;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class Rita : MonoBehaviour
     GameObject collidedObject;
 
     private Rigidbody2D rb;
+    Animator animator;
 
     //Raycast
     RaycastHit2D informacionRaycast;
@@ -32,8 +34,7 @@ public class Rita : MonoBehaviour
         Movimiento();
         LanzarRaycast();
         AccederInteractuable();
-
-        DebugRita();
+        Interactuar();
     }
 
     void Movimiento()
@@ -113,16 +114,17 @@ public class Rita : MonoBehaviour
             {
                 string DialogoNpc = ((DialogoNpc)interaccion[i]).dialogoNpc;
                 string DialogoRita = ((DialogoNpc)interaccion[i]).dialogoRita;
-                string npc = ((DialogoNpc)interaccion[i]).npc;
+                int numNpc = ((DialogoNpc)interaccion[i]).numNpc;
 
                 textNpc.text = DialogoNpc;
                 textRita.text = DialogoRita;
+                //animator.SetInteger("npc", numNpc);
             }
         }
     }
 
 
-    void DebugRita()
+    void Interactuar()
     {
         if(Input.GetKeyDown(KeyCode.U) && !canvasDialogo.activeSelf)
         {
@@ -132,6 +134,8 @@ public class Rita : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.U) && canvasDialogo.activeSelf)
         {
             canvasDialogo.SetActive(false);
+            animator.SetInteger("npc", 0);
+            Debug.Log("None");
         }
     }
 }

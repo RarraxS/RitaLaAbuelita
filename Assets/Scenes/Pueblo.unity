@@ -820,6 +820,7 @@ GameObject:
   - component: {fileID: 306076673}
   - component: {fileID: 306076675}
   - component: {fileID: 306076674}
+  - component: {fileID: 306076676}
   m_Layer: 5
   m_Name: NPC (Dialogo)
   m_TagString: Untagged
@@ -885,6 +886,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306076672}
   m_CullTransparentMesh: 1
+--- !u!95 &306076676
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306076672}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c887d1b0a7f107b47934effe44c7f782, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &376526169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4380,7 +4401,7 @@ GameObject:
   - component: {fileID: 1467362969}
   - component: {fileID: 1467362968}
   m_Layer: 6
-  m_Name: NPC2
+  m_Name: Paca
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6875,8 +6896,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidad: 2
   interaccion:
-  - {fileID: 11400000, guid: dde40c42f80579b4dbbf69e06d044cc1, type: 2}
   - {fileID: 11400000, guid: cf3b1427a21bda04ebceffd1734e315a, type: 2}
+  - {fileID: 11400000, guid: dde40c42f80579b4dbbf69e06d044cc1, type: 2}
   canvasDialogo: {fileID: 217599278}
   textRita: {fileID: 1377808502}
   textNpc: {fileID: 2096488725}
