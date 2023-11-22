@@ -3,9 +3,11 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 public class QuizUI : MonoBehaviour
 {
-    [SerializeField] private Text pregunta = null;
+    [SerializeField] private TMP_Text pregunta = null;
     [SerializeField] private List<BotonOpcion> botones = null;
 
     public void Construct(Preguntas preguntas, Action<BotonOpcion> callback)

@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(Button))] //Obligo al objeto ser una imagen y un botón
 [RequireComponent(typeof(Image))]
 public class BotonOpcion : MonoBehaviour
 {
-    private Text texto = null;
+    private TMP_Text texto = null;
     private Button boton = null;
     private Image imagen = null;
     private Color colorOGimagen = Color.black;
@@ -15,7 +16,7 @@ public class BotonOpcion : MonoBehaviour
     {
         boton = GetComponent<Button>();
         imagen = GetComponent<Image>();
-        texto = transform.GetChild(0).GetComponent<Text>();
+        texto = transform.GetChild(0).GetComponent<TMP_Text>();
         colorOGimagen = imagen.color;
     }
     public void Construct(Opciones opciones, Action<BotonOpcion> callback)
