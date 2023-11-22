@@ -14,7 +14,6 @@ public class Rita : MonoBehaviour
     GameObject collidedObject;
 
     private Rigidbody2D rb;
-    Animator animator;
 
     //Raycast
     RaycastHit2D informacionRaycast;
@@ -118,7 +117,7 @@ public class Rita : MonoBehaviour
 
                 textNpc.text = DialogoNpc;
                 textRita.text = DialogoRita;
-                //animator.SetInteger("npc", numNpc);
+                UiDialogo.Instance.animator.SetInteger("numNpc",1);
             }
         }
     }
@@ -134,8 +133,6 @@ public class Rita : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.U) && canvasDialogo.activeSelf)
         {
             canvasDialogo.SetActive(false);
-            animator.SetInteger("npc", 0);
-            Debug.Log("None");
         }
     }
 }
