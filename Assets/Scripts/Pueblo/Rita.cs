@@ -7,11 +7,7 @@ using UnityEngine;
 public class Rita : MonoBehaviour
 {
     [SerializeField] private float velocidad;
-    [SerializeField] ScriptableObject[] interaccion;
     [SerializeField] GameObject canvasDialogo;
-    [SerializeField] TMP_Text textRita, textNpc;
-
-    GameObject collidedObject;
 
     private Rigidbody2D rb;
 
@@ -32,7 +28,6 @@ public class Rita : MonoBehaviour
     {
         Movimiento();
         LanzarRaycast();
-        AccederInteractuable();
         Interactuar();
     }
 
@@ -94,43 +89,27 @@ public class Rita : MonoBehaviour
         if (informacionRaycast.collider != null)
         {
             // Accede al GameObject con el que ha colisionado
-            collidedObject = informacionRaycast.collider.gameObject;
+            PuebloManager.Instance.collidedObject = informacionRaycast.collider.gameObject;
         }
         else
         {
-            collidedObject = null;
+            PuebloManager.Instance.collidedObject = null;
         }
 
         // Imprime el nombre del GameObject por consola
-        Debug.Log(collidedObject);
+        Debug.Log(PuebloManager.Instance.collidedObject);
     }
-
-    void AccederInteractuable()
-    {
-        for (int i = 0; i < interaccion.Length; i++)
-        {
-            if (collidedObject.name == interaccion[i].name)
-            {
-                string DialogoNpc = ((DialogoNpc)interaccion[i]).dialogoNpc;
-                string DialogoRita = ((DialogoNpc)interaccion[i]).dialogoRita;
-                int numNpc = ((DialogoNpc)interaccion[i]).numNpc;
-
-                textNpc.text = DialogoNpc;
-                textRita.text = DialogoRita;
-                UiDialogo.Instance.animator.SetInteger("numNpc",1);
-            }
-        }
-    }
-
 
     void Interactuar()
     {
-        if(Input.GetKeyDown(KeyCode.U) && !canvasDialogo.activeSelf)
+        if ((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo") ||
+            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro") && !canvasDialogo.activeSelf)
         {
             canvasDialogo.SetActive(true);
         }
 
-        else if(Input.GetKeyDown(KeyCode.U) && canvasDialogo.activeSelf)
+        else if((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo") || 
+            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro") && canvasDialogo.activeSelf)
         {
             canvasDialogo.SetActive(false);
         }

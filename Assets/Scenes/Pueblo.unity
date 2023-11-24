@@ -1106,6 +1106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d82664c9153af7141843e24793ef4f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interaccion:
+  - {fileID: 11400000, guid: cf3b1427a21bda04ebceffd1734e315a, type: 2}
+  - {fileID: 11400000, guid: 50a221f21359c654d9754ff973828622, type: 2}
+  - {fileID: 11400000, guid: dde40c42f80579b4dbbf69e06d044cc1, type: 2}
+  textRita: {fileID: 1377808502}
+  textNpc: {fileID: 2096488725}
   animator: {fileID: 392473815}
 --- !u!1 &408486064
 GameObject:
@@ -4863,6 +4869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1183969cd2e1ed24c905de83bdb6b52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collidedObject: {fileID: 0}
 --- !u!1 &1531156793
 GameObject:
   m_ObjectHideFlags: 0
@@ -7027,13 +7034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
-  interaccion:
-  - {fileID: 11400000, guid: cf3b1427a21bda04ebceffd1734e315a, type: 2}
-  - {fileID: 11400000, guid: 50a221f21359c654d9754ff973828622, type: 2}
-  - {fileID: 11400000, guid: dde40c42f80579b4dbbf69e06d044cc1, type: 2}
   canvasDialogo: {fileID: 217599278}
-  textRita: {fileID: 1377808502}
-  textNpc: {fileID: 2096488725}
   distanciaRaycast: 0.75
   mascara:
     serializedVersion: 2

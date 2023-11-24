@@ -5,6 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class PuebloManager : MonoBehaviour
 {
+    public GameObject collidedObject;
+
+    private static PuebloManager instance;
+    public static PuebloManager Instance
+    {
+        get { return instance; }
+    }
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     void Update()
     {
