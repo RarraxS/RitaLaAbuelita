@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Video;
 
 [RequireComponent(typeof(AudioSource))]
 public class QuizManager : MonoBehaviour
@@ -11,6 +12,10 @@ public class QuizManager : MonoBehaviour
     [SerializeField] private Color colorcorrecto = Color.black;
     [SerializeField] private Color colorincorrecto = Color.black;
     [SerializeField] private float esperartiempo = 0.0f;
+    [SerializeField] public int vidas = 1;
+    [SerializeField] GameObject canvasGameOver;
+    [SerializeField] GameObject Reiniciar;
+    [SerializeField] GameObject VolverPueblo;
 
     private Quiz quizDB = null;
     private QuizUI quizUI = null;
@@ -21,6 +26,7 @@ public class QuizManager : MonoBehaviour
         quizDB = GameObject.FindObjectOfType<Quiz>();
         quizUI = GameObject.FindObjectOfType<QuizUI>();
         quizAudioSource = GetComponent<AudioSource>();
+        canvasGameOver.SetActive(false);
 
         NextQuestion();
     }
@@ -50,11 +56,11 @@ public class QuizManager : MonoBehaviour
         {
             NextQuestion();
         }
-        //else
-            //GameOver();
+        if (!optionbutton.Opciones.correcta)
+        {
+           vidas -= 1;
+            if (vidas == 0)
+                canvasGameOver.SetActive(true);
+        }
     }
-    //private GameOver()
-    //{
-    //    SceneManager.LoadScene()
-    //}
 }
