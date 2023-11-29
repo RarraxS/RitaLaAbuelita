@@ -43,6 +43,7 @@ public class UiDialogo : MonoBehaviour
                     textNpc.text = DialogoNpc;
                     textRita.text = DialogoRita;
                     animator.SetInteger("numNpc", numNpc);
+                    Debug.Log(numNpc);
                 }
             }
         }

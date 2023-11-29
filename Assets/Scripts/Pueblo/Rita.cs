@@ -102,16 +102,17 @@ public class Rita : MonoBehaviour
 
     void Interactuar()
     {
-        if ((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo") ||
-            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro") && !canvasDialogo.activeSelf)
+        if ((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo" && !canvasDialogo.activeInHierarchy) ||
+            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro" && !canvasDialogo.activeInHierarchy))
         {
             canvasDialogo.SetActive(true);
         }
 
-        else if((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo") || 
-            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro") && canvasDialogo.activeSelf)
+        else if((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo" && canvasDialogo.activeInHierarchy) || 
+            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro" && canvasDialogo.activeInHierarchy))
         {
             canvasDialogo.SetActive(false);
         }
+
     }
 }
