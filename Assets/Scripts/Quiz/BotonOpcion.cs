@@ -22,9 +22,9 @@ public class BotonOpcion : MonoBehaviour
     public void Construct(Opciones opciones, Action<BotonOpcion> callback)
     {
         texto.text = opciones.text;
+        boton.onClick.RemoveAllListeners();
         boton.enabled = true;
         imagen.color = colorOGimagen;
-        boton.onClick.RemoveAllListeners();
 
         Opciones = opciones;
 

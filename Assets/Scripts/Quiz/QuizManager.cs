@@ -15,7 +15,6 @@ public class QuizManager : MonoBehaviour
     [SerializeField] public int vidas = 1;
     [SerializeField] GameObject canvasGameOver;
     [SerializeField] GameObject Reiniciar;
-    [SerializeField] GameObject VolverPueblo;
 
     private Quiz quizDB = null;
     private QuizUI quizUI = null;
@@ -27,7 +26,7 @@ public class QuizManager : MonoBehaviour
         quizUI = GameObject.FindObjectOfType<QuizUI>();
         quizAudioSource = GetComponent<AudioSource>();
         canvasGameOver.SetActive(false);
-
+        Reiniciar.gameObject.SetActive(false);
         NextQuestion();
     }
     private void NextQuestion()
@@ -38,8 +37,8 @@ public class QuizManager : MonoBehaviour
     {
         StartCoroutine(GiveAnswerRoutine(optionbutton));
     }
-    private IEnumerator GiveAnswerRoutine(BotonOpcion optionbutton) 
-    { 
+    private IEnumerator GiveAnswerRoutine(BotonOpcion optionbutton)
+    {
         if (quizAudioSource.isPlaying)
         {
             quizAudioSource.Stop();
@@ -52,15 +51,28 @@ public class QuizManager : MonoBehaviour
         yield return new WaitForSeconds(esperartiempo);
         NextQuestion();
 
-        if (optionbutton.Opciones.correcta)
+        if (optionbutton.Opciones.correcta == true)
         {
             NextQuestion();
+            Debug.Log("Acertaste");
         }
-        if (!optionbutton.Opciones.correcta)
+
+        if (optionbutton.Opciones.correcta == false)
         {
-           vidas -= 1;
+            vidas -= 1;
+            Debug.Log("Fallaste");
             if (vidas == 0)
+            {
                 canvasGameOver.SetActive(true);
+                Reiniciar.gameObject.SetActive(true);
+            }
         }
+
     }
+    public void CambiarEscena()
+    {
+        Debug.Log("Cambio de escena");
+        SceneManager.LoadScene("Pueblo");
+    }
+
 }
