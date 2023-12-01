@@ -248,23 +248,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "6 letras \u201CTierra de Tutankam\xF3n\u201D"
+      value: "Dia y mes del levantamiento espa\xF1ol hacia el ejercito franc\xE9s"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: pito
+      value: 2 de marzo
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: pito
+      value: 3 de mayo
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: pito
+      value: 3 de marzo
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: Egipto
+      value: 2 de mayo
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].correcta
@@ -372,23 +372,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "5 letras \u201CA\xF1adido, extra\u201D"
+      value: Cual de estos pintores utilizaba el cubismo en sus obras
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: Bonus
+      value: Picasso
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: pito
+      value: Velazquez
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: pito
+      value: Goya
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: pito
+      value: Sorolla
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].correcta
@@ -469,23 +469,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "5 letras \u201CPlanta de tallo comestible\u201D "
+      value: Cual de estas actores tiene un Oscar
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: pito
+      value: "Jos\xE9 Coronado"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: pito
+      value: Antonio Banderas
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: Apio
+      value: Javier Bardem
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: pito
+      value: "Jos\xE9 Sacrist\xE1n"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].correcta
@@ -566,23 +566,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "4 letras \u201CAnuncio publicitario\u201D"
+      value: "Invento espa\xF1ol"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: pito
+      value: Recogedor
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: Spot
+      value: Fregona
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: pito
+      value: Toalla
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: pito
+      value: Escoba
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].correcta
@@ -1286,7 +1286,9 @@ MonoBehaviour:
   sonidoincorrecto: {fileID: 0}
   colorcorrecto: {r: 0.42745098, g: 0.9056604, b: 0.5339979, a: 1}
   colorincorrecto: {r: 0.9150943, g: 0.36419344, b: 0.2719384, a: 1}
-  esperartiempo: 1.5
+  esperartiempo: 0.5
+  preguntacorrecta: 1
+  preguntaincorrecta: 0
   vidas: 1
   canvasGameOver: {fileID: 1314406121}
   Reiniciar: {fileID: 838278249}
@@ -1705,23 +1707,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: " 7 letras \u201CSegundo al trono\u201D "
+      value: "Estrecho que separa la Pen\xEDnsula Ib\xE9rica del continente Africano"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: pito
+      value: Hudson
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: pito
+      value: Bering
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: Infante
+      value: Gibraltar
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: pito
+      value: Mesina
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].correcta
@@ -1802,23 +1804,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "7 letras \u201CL\xE1minas de peces y reptiles\u201D "
+      value: "Moneda espa\xF1ola que se utilizaba antes del Euro "
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: Escamas
+      value: Peseta
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: pito
+      value: Corona
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: pito
+      value: Duro
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: pito
+      value: Peso
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].correcta
