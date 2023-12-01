@@ -16,7 +16,7 @@ public class Quiz : MonoBehaviour
 
     public Preguntas GetRandom(bool remove = true)
     {
-        if (preguntas.Count == 0)
+        if (preguntas.Count <= 0)
         {
             RestoreBackup();
         }

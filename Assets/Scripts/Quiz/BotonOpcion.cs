@@ -28,10 +28,10 @@ public class BotonOpcion : MonoBehaviour
 
         Opciones = opciones;
 
-        boton.onClick.AddListener(delegate
-        {
-            callback(this); // Cuando selecionemos esta opcion le estamos mandando este a opciones para ver si es la correcta
-        });
+        //boton.onClick.AddListener(delegate //Se borro por error
+        //{
+        //    callback(this); // Cuando selecionemos esta opcion le estamos mandando este a opciones para ver si es la correcta
+        //});
     }
 
     public void SetColor(Color color)
