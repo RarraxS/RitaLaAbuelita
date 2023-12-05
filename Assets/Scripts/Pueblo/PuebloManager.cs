@@ -30,6 +30,7 @@ public class PuebloManager : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene("PulsarIngredientes");
+            GameManager.Instance.SonidoStop();
         }
     }
 }

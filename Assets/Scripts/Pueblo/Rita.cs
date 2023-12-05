@@ -10,6 +10,7 @@ public class Rita : MonoBehaviour
     [SerializeField] GameObject canvasDialogo;
 
     private Rigidbody2D rb;
+    bool moviendo = false;
 
     //Raycast
     RaycastHit2D informacionRaycast;
@@ -34,6 +35,19 @@ public class Rita : MonoBehaviour
     void Movimiento()
     {
         Vector2 direccion = Vector2.zero;
+
+        if (((Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.L) 
+            || Input.GetKey(KeyCode.J)) && GameManager.Instance.controles == "zurdo") ||
+            ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)
+            || Input.GetKey(KeyCode.D)) && GameManager.Instance.controles == "diestro"))
+        {
+            GameManager.Instance.SonidoPlay(1);
+        }
+
+        else
+        {
+            GameManager.Instance.SonidoStop();
+        }
 
         if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
             (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))

@@ -9,9 +9,11 @@ public class GameManager : MonoBehaviour
     public string controles;
     public bool permitirAbrirMenuControles = true;
 
+    [SerializeField] AudioClip[] Sonidos;
+
     public Toggle toggleZurdo, toggleDiestro;
 
-    public AudioSource audiosource;
+    public AudioSource audioSourceMusica, audioSourceSonidos;
 
     private static GameManager instance;
     public static GameManager Instance
@@ -33,6 +35,9 @@ public class GameManager : MonoBehaviour
         canvasControles.SetActive(false);
 
         toggleZurdo.isOn = false;
+
+
+        Debug.Log("Les dedico este juego a Carlitos Martín, Mauricio Gavidia, Guilermo Pérez y Lola Fernandez");
     }
 
     void Update()
@@ -87,12 +92,14 @@ public class GameManager : MonoBehaviour
     public void Jugar()
     {
         canvasInicio.SetActive(false);
+        SonidoPlay(0);
         SceneManager.LoadScene("Pueblo");
     }
 
     public void AbrirMenuControles()
     {
         canvasInicio.SetActive(false);
+        SonidoPlay(0);
         canvasControles.SetActive(true);
     }
 
@@ -100,6 +107,7 @@ public class GameManager : MonoBehaviour
     {
         canvasControles.SetActive(false);
         canvasInicio.SetActive(true);
+        SonidoPlay(0);
     }
 
     public void ToggleZurdo()
@@ -109,12 +117,14 @@ public class GameManager : MonoBehaviour
             //El toggle está activado
             controles = "zurdo";
             toggleDiestro.isOn = false;
+            SonidoPlay(0);
         }
         else
         {
             //El toggle está desactivado
             controles = "diestro";
             toggleDiestro.isOn = true;
+            SonidoPlay(0);
         }
     }
 
@@ -125,17 +135,37 @@ public class GameManager : MonoBehaviour
             //El toggle está activado
             controles = "diestro";
             toggleZurdo.isOn = false;
+            SonidoPlay(0);
         }
         else
         {
             //El toggle está desactivado
             controles = "zurdo";
             toggleZurdo.isOn = true;
+            SonidoPlay(0);
         }
     }
 
-    public void SliderMusica()
+   public void SonidoPlay(int num)
     {
-        audiosource.volume = 0.2f;
+        if(!audioSourceSonidos.isPlaying)
+            audioSourceSonidos.PlayOneShot(Sonidos[num]);
+    }
+
+    public void SonidoStop()
+    {
+        if (audioSourceSonidos.isPlaying)
+            audioSourceSonidos.Stop();
+    }
+
+    public void SliderMusica(float valor)
+    {
+        audioSourceMusica.volume = valor;
+    }
+
+    public void SliderSonidos(float valor)
+    {
+        audioSourceSonidos.volume = valor;
+        SonidoPlay(0);
     }
 }
