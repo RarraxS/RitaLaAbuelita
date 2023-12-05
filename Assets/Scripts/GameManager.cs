@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     public string controles;
     public bool permitirAbrirMenuControles = true;
+
+    public Toggle toggleZurdo, toggleDiestro;
 
     private static GameManager instance;
     public static GameManager Instance
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
         canvasDebug.SetActive(false);
         canvasInicio.SetActive(true);
         canvasControles.SetActive(false);
+
+        toggleZurdo.isOn = false;
     }
 
     void Update()
@@ -91,21 +94,41 @@ public class GameManager : MonoBehaviour
         canvasControles.SetActive(true);
     }
 
-    void CerrarMenuControles()
+    public void CerrarMenuControles()
     {
         canvasControles.SetActive(false);
         canvasInicio.SetActive(true);
     }
 
-    public void botonDiestro()
+    public void ToggleZurdo()
     {
-        GameManager.Instance.controles = "diestro";
-        CerrarMenuControles();
+        if (toggleZurdo.isOn)
+        {
+            //El toggle está activado
+            controles = "zurdo";
+            toggleDiestro.isOn = false;
+        }
+        else
+        {
+            //El toggle está desactivado
+            controles = "diestro";
+            toggleDiestro.isOn = true;
+        }
     }
 
-    public void botonZurdo()
+    public void ToggleDiestro()
     {
-        GameManager.Instance.controles = "zurdo";
-        CerrarMenuControles();
+        if (toggleDiestro.isOn)
+        {
+            //El toggle está activado
+            controles = "diestro";
+            toggleZurdo.isOn = false;
+        }
+        else
+        {
+            //El toggle está desactivado
+            controles = "zurdo";
+            toggleZurdo.isOn = true;
+        }
     }
 }
