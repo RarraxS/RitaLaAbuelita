@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4965cbca72ee447ba7bb8ef1da247c, type: 3}
   m_Name: "To\xF1o"
   m_EditorClassIdentifier: 
-  dialogoNpc: Me cago en tus muertos, pedazo de vago
-  dialogoRita: Hola buenos dias, ponme un cafe
+  dialogoNpc: Hola buenos dias, ponme un cafe
+  dialogoRita: Me cago en tus muertos, pedazo de vago
   numNpc: 2

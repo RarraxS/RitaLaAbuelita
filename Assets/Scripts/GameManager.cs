@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     public Toggle toggleZurdo, toggleDiestro;
 
+    public AudioSource audiosource;
+
     private static GameManager instance;
     public static GameManager Instance
     {
@@ -130,5 +132,10 @@ public class GameManager : MonoBehaviour
             controles = "zurdo";
             toggleZurdo.isOn = true;
         }
+    }
+
+    public void SliderMusica()
+    {
+        audiosource.volume = 0.2f;
     }
 }
