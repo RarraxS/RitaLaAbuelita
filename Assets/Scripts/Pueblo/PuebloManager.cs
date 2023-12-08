@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PuebloManager : MonoBehaviour
 {
-    public GameObject collidedObject;
+    public GameObject collidedObject, cambioBuscaObjetos;
 
     private static PuebloManager instance;
     public static PuebloManager Instance
@@ -22,15 +22,15 @@ public class PuebloManager : MonoBehaviour
 
     void Update()
     {
-        CambioEscenaDemo();
+        CmabioBuscaObjetos();
     }
 
-    void CambioEscenaDemo()
+    void CmabioBuscaObjetos()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (PuebloManager.Instance.collidedObject == PuebloManager.Instance.cambioBuscaObjetos && Input.GetKey(KeyCode.Space))
         {
-            SceneManager.LoadScene("PulsarIngredientes");
-            GameManager.Instance.SonidoStop();
+            GameManager.Instance.escena = "PulsarIngredientes";
+            SceneManager.LoadScene("PantallaCarga");
         }
     }
 }

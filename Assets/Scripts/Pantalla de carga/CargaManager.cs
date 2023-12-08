@@ -19,6 +19,8 @@ public class CargaManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+
+        GameManager.Instance.SonidoStop();
     }
 
     void Update()

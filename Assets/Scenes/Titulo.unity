@@ -617,6 +617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6ab1a7710f6614a8e2bd47505fb38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerActivado: 0
   animator: {fileID: 484602706}
 --- !u!1 &491257963
 GameObject:
@@ -1138,6 +1139,7 @@ MonoBehaviour:
   canvasDebug: {fileID: 1416832352}
   canvasInicio: {fileID: 2058617349}
   canvasControles: {fileID: 1540973482}
+  escena: 
   controles: diestro
   permitirAbrirMenuControles: 1
   Sonidos:
@@ -3205,7 +3207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47.9, y: -175}
+  m_AnchoredPosition: {x: -47.9, y: -185}
   m_SizeDelta: {x: 63.8355, y: 63.8355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2270141908263040896
@@ -3295,7 +3297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47, y: -175}
+  m_AnchoredPosition: {x: 47, y: -185}
   m_SizeDelta: {x: 63.835, y: 63.833}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2270141909189161615
