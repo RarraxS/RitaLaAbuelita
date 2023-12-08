@@ -8,7 +8,7 @@ public class UiDialogo : MonoBehaviour
     [SerializeField] ScriptableObject[] interaccion;
     [SerializeField] TMP_Text textRita, textNpc;
 
-    public Animator animator;
+    [SerializeField] Animator animator;
 
     private static UiDialogo instance;
     public static UiDialogo Instance

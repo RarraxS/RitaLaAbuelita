@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject canvasDebug, canvasInicio, canvasControles;
 
-    public string controles;
+    public string escena, controles;
     public bool permitirAbrirMenuControles = true;
 
     [SerializeField] AudioClip[] Sonidos;
@@ -93,7 +93,8 @@ public class GameManager : MonoBehaviour
     {
         canvasInicio.SetActive(false);
         SonidoPlay(0);
-        SceneManager.LoadScene("Pueblo");
+        FondoInicio.Instance.animator.SetBool("Jugar", true);
+        FondoInicio.Instance.timerActivado = true;
     }
 
     public void AbrirMenuControles()
