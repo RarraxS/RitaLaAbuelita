@@ -17,6 +17,7 @@ public class QuizManager : MonoBehaviour
     [SerializeField] public int vidas = 1;
     [SerializeField] GameObject canvasGameOver;
     [SerializeField] GameObject Reiniciar;
+    public int VolverAlPueblo = 0;
    // [SerializeField] private List<Preguntas> preguntas = null;
 
     private Quiz quizDB = null;
@@ -59,6 +60,7 @@ public class QuizManager : MonoBehaviour
         {
             Debug.Log("Acertaste " + optionbutton.name);
             NextQuestion();
+            VolverAlPueblo++;
         }
         else
         {
@@ -71,6 +73,10 @@ public class QuizManager : MonoBehaviour
                 Reiniciar.gameObject.SetActive(true);
             }
 
+        }
+        if (VolverAlPueblo == 7) 
+        {
+            CambiarEscena();
         }
 
     }
