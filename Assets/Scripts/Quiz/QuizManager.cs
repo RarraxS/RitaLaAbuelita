@@ -11,13 +11,20 @@ public class QuizManager : MonoBehaviour
     [SerializeField] private AudioClip sonidoincorrecto = null;
     [SerializeField] private Color colorcorrecto = Color.black;
     [SerializeField] private Color colorincorrecto = Color.black;
+
     [SerializeField] private float esperartiempo = 0.0f;
+    [SerializeField] public int vidas = 1;
+
     public bool preguntacorrecta = true;
     public bool preguntaincorrecta = false;
-    [SerializeField] public int vidas = 1;
+
     [SerializeField] GameObject canvasGameOver;
     [SerializeField] GameObject Reiniciar;
+    [SerializeField] GameObject canvasWinGame;
+    [SerializeField] GameObject Continuar;
+
     public int VolverAlPueblo = 0;
+
    // [SerializeField] private List<Preguntas> preguntas = null;
 
     private Quiz quizDB = null;
@@ -31,6 +38,8 @@ public class QuizManager : MonoBehaviour
         quizAudioSource = GetComponent<AudioSource>();
         canvasGameOver.SetActive(false);
         Reiniciar.gameObject.SetActive(false);
+        canvasWinGame.SetActive(false);
+        Continuar.gameObject.SetActive(false);
         NextQuestion();
     }
     private void NextQuestion()
@@ -76,14 +85,15 @@ public class QuizManager : MonoBehaviour
         }
         if (VolverAlPueblo == 7) 
         {
-            CambiarEscena();
+            canvasWinGame.SetActive(true);
+            Continuar.gameObject.SetActive(true);
         }
 
     }
-    public void CambiarEscena()
-    {
-        Debug.Log("Cambio de escena");
-        SceneManager.LoadScene("Pueblo");
-    }
+    //public void CambiarEscena()
+    //{
+    //    Debug.Log("Cambio de escena");
+    //    SceneManager.LoadScene("Pueblo");
+    //}
 
 }

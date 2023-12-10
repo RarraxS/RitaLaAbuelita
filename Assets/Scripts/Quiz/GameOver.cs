@@ -10,6 +10,11 @@ public class GameOver : MonoBehaviour
     {
         SceneManager.LoadScene("Quiz");
     }
+    public void Ganar()
+    {
+        Debug.Log("Cambio de escena");
+        SceneManager.LoadScene("Pueblo");
+    }
 
     // Update is called once per frame
     void Update()
