@@ -13,6 +13,7 @@ public class Rita : MonoBehaviour
 
     private Rigidbody2D rb;
     bool moviendo = false;
+    Scene currentScene;
 
     //Raycast
     RaycastHit2D informacionRaycast;
@@ -23,6 +24,8 @@ public class Rita : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        currentScene = GetComponent<Scene>();
 
         canvasDialogo.SetActive(false);
     }
