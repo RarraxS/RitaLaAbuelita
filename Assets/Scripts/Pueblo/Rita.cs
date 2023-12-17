@@ -12,22 +12,22 @@ public class Rita : MonoBehaviour
     [SerializeField] GameObject canvasDialogo;
 
     private Rigidbody2D rb;
-    bool moviendo = false;
+    bool permitirMovimiento = true;
     Scene currentScene;
 
     //Raycast
-    RaycastHit2D informacionRaycast;
+    public RaycastHit2D informacionRaycast;
     public float distanciaRaycast;
     [SerializeField] LayerMask mascara;
     public Vector2 direccionRaycast = new Vector2(0, 1);
 
     void Start()
     {
+        canvasDialogo.SetActive(false);
+
         rb = GetComponent<Rigidbody2D>();
 
         currentScene = GetComponent<Scene>();
-
-        canvasDialogo.SetActive(false);
     }
 
     void Update()
@@ -41,45 +41,48 @@ public class Rita : MonoBehaviour
     {
         Vector2 direccion = Vector2.zero;
 
-        if (((Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.L) 
-            || Input.GetKey(KeyCode.J)) && GameManager.Instance.controles == "zurdo") ||
-            ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)
-            || Input.GetKey(KeyCode.D)) && GameManager.Instance.controles == "diestro"))
+        if (permitirMovimiento == true)
         {
-            GameManager.Instance.SonidoPlay(1);
-        }
+            if (((Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.L)
+                || Input.GetKey(KeyCode.J)) && GameManager.Instance.controles == "zurdo") ||
+                ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)
+                || Input.GetKey(KeyCode.D)) && GameManager.Instance.controles == "diestro"))
+            {
+                GameManager.Instance.SonidoPlay(1);
+            }
 
-        else
-        {
-            GameManager.Instance.SonidoStop();
-        }
+            else
+            {
+                GameManager.Instance.SonidoStop();
+            }
 
-        if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
-            (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
-        {
-            direccion += new Vector2(transform.up.x, transform.up.y); // Alante
-            direccionRaycast = new Vector2(0, 1);
-        }
+            if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
+                (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
+            {
+                direccion += new Vector2(transform.up.x, transform.up.y); // Alante
+                direccionRaycast = new Vector2(0, 1);
+            }
 
-        if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
-            (Input.GetKey(KeyCode.S) && GameManager.Instance.controles == "diestro"))
-        {
-            direccion += new Vector2(-transform.up.x, -transform.up.y); // Atrás
-            direccionRaycast = new Vector2(0, -1);
-        }
+            if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
+                (Input.GetKey(KeyCode.S) && GameManager.Instance.controles == "diestro"))
+            {
+                direccion += new Vector2(-transform.up.x, -transform.up.y); // Atrás
+                direccionRaycast = new Vector2(0, -1);
+            }
 
-        if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
-            (Input.GetKey(KeyCode.A) && GameManager.Instance.controles == "diestro"))
-        {
-            direccion += new Vector2(-transform.right.x, -transform.right.y); // Izquierda
-            direccionRaycast = new Vector2(-1, 0);
-        }
+            if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
+                (Input.GetKey(KeyCode.A) && GameManager.Instance.controles == "diestro"))
+            {
+                direccion += new Vector2(-transform.right.x, -transform.right.y); // Izquierda
+                direccionRaycast = new Vector2(-1, 0);
+            }
 
-        if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
-            (Input.GetKey(KeyCode.D) && GameManager.Instance.controles == "diestro"))
-        {
-            direccion += new Vector2(transform.right.x, transform.right.y); // Derecha
-            direccionRaycast = new Vector2(1, 0);
+            if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
+                (Input.GetKey(KeyCode.D) && GameManager.Instance.controles == "diestro"))
+            {
+                direccion += new Vector2(transform.right.x, transform.right.y); // Derecha
+                direccionRaycast = new Vector2(1, 0);
+            }
         }
 
         // Normalizar el vector de dirección si es diferente de cero
@@ -121,16 +124,19 @@ public class Rita : MonoBehaviour
 
     void Interactuar()
     {
-        if ((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo" && !canvasDialogo.activeInHierarchy) ||
-            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro" && !canvasDialogo.activeInHierarchy))
+        if (((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo" && !canvasDialogo.activeInHierarchy) ||
+            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro" && !canvasDialogo.activeInHierarchy)) && 
+            PuebloManager.Instance.collidedObject.tag == "NPC")
         {
             canvasDialogo.SetActive(true);
+            permitirMovimiento = false;
         }
 
         else if((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo" && canvasDialogo.activeInHierarchy) || 
             (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro" && canvasDialogo.activeInHierarchy))
         {
             canvasDialogo.SetActive(false);
+            permitirMovimiento = true;
         }
     }
 }

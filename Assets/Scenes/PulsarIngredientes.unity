@@ -734,6 +734,7 @@ MonoBehaviour:
   timerEspera: 2
   textNivel: {fileID: 669647740}
   textTiempo: {fileID: 705591630563222188}
+  objetoSuperpuesto: {fileID: 0}
   minimoValorEjeX: -6.8
   maximoValorEjeX: 6.8
   minimoValorEjeY: -3.92
@@ -2435,8 +2436,14 @@ MonoBehaviour:
   canvasDebug: {fileID: 3616186611677058820}
   canvasInicio: {fileID: 0}
   canvasControles: {fileID: 0}
+  escena: 
   controles: diestro
   permitirAbrirMenuControles: 1
+  Sonidos: []
+  toggleZurdo: {fileID: 0}
+  toggleDiestro: {fileID: 0}
+  audioSourceMusica: {fileID: 0}
+  audioSourceSonidos: {fileID: 0}
 --- !u!4 &3616186611412720039
 Transform:
   m_ObjectHideFlags: 0

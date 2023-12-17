@@ -1,31 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1517399397058185103
+--- !u!1001 &5471784899864002142
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3924563466491963735, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3924563466491963735, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3924563466491963735, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1054404479559142688, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Size.x
-      value: 22.481499
+      value: 19.50708
       objectReference: {fileID: 0}
     - target: {fileID: 1054404479559142688, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Size.y
-      value: 22.4815
+      value: 19.507055
       objectReference: {fileID: 0}
     - target: {fileID: 1054404479559142688, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Offset.x
-      value: -0.5297909
+      value: -0.0000052452087
       objectReference: {fileID: 0}
     - target: {fileID: 1054404479559142688, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Offset.y
-      value: 0.04816532
+      value: -0.18026257
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054404479559142688, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1054404479559142688, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 23.050085
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1054404479559142688, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
@@ -33,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1054404479559142688, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 23.050085
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1054404479559142688, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
@@ -41,15 +57,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1394530257129061325, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Name
-      value: Lechuga Variant
+      value: Jamon Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394530257129061325, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1394530257129061325, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_TagString
-      value: No buscando
+      value: Buscando
       objectReference: {fileID: 0}
     - target: {fileID: 2374226584299621887, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Size.x
-      value: 23.050085
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2374226584299621887, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Size.y
@@ -58,30 +78,42 @@ PrefabInstance:
     - target: {fileID: 2374226584299621887, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ee97d2b5196b72748bf7d0538c97981f, type: 3}
+      objectReference: {fileID: 21300000, guid: 856288fd62f2f314d9d131e11dc66e71, type: 3}
+    - target: {fileID: 2374226584299621887, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374226584299621887, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374226584299621887, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4404125622327451371, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4404125622327451371, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.044405345
+      value: 0.0508662
       objectReference: {fileID: 0}
     - target: {fileID: 4404125622327451371, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.044405345
+      value: 0.0508662
       objectReference: {fileID: 0}
     - target: {fileID: 4404125622327451371, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.044405345
+      value: 0.0508662
       objectReference: {fileID: 0}
     - target: {fileID: 4404125622327451371, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.355
+      value: -13.5658
       objectReference: {fileID: 0}
     - target: {fileID: 4404125622327451371, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.645
+      value: 0.9458
       objectReference: {fileID: 0}
     - target: {fileID: 4404125622327451371, guid: dcbcc2d45e0479d408908c36448010ef, type: 3}
       propertyPath: m_LocalPosition.z

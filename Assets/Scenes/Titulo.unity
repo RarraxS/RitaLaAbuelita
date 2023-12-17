@@ -230,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581943253766511819, guid: 58dfe9d147bb8e343bc26f44750d4fbf, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4581943253766511819, guid: 58dfe9d147bb8e343bc26f44750d4fbf, type: 3}
       propertyPath: m_Colors.m_ColorMultiplier
@@ -587,7 +587,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &484602706
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -604,8 +604,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &484602707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,7 +649,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1145,8 +1143,8 @@ MonoBehaviour:
   controles: diestro
   permitirAbrirMenuControles: 1
   Sonidos:
-  - {fileID: 8300000, guid: ca8b227c292f1bc4f9d54fe3fc2ccf39, type: 3}
-  - {fileID: 8300000, guid: 230ca0818dce856419fcf2da22d8d8c5, type: 3}
+  - {fileID: 8300000, guid: a2bbbf60789cf1d468a00ad1a675c2ae, type: 3}
+  - {fileID: 8300000, guid: 651c4980d37adfb40a395f3a32c6b6c6, type: 3}
   - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
   - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
   - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
@@ -1198,7 +1196,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 274331d3afdd87a4a8185dd36be91669, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6294096d17a378c4ca0b089da7d85a65, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1206,7 +1204,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 525.2653
@@ -1302,7 +1300,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 10
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -3587,7 +3585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581943253766511819, guid: 58dfe9d147bb8e343bc26f44750d4fbf, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4581943253766511819, guid: 58dfe9d147bb8e343bc26f44750d4fbf, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size

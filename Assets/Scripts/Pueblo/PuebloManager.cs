@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PuebloManager : MonoBehaviour
 {
-    public GameObject collidedObject, cambioBuscaObjetos;
+    public GameObject collidedObject, cambioBuscaObjetos, cambioQuiz;
 
     private static PuebloManager instance;
     public static PuebloManager Instance
@@ -18,18 +17,32 @@ public class PuebloManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+
+
     }
 
     void Update()
     {
-        CmabioBuscaObjetos();
+        CambioBuscaObjetos();
+        CambioQuiz();
     }
 
-    void CmabioBuscaObjetos()
+    void CambioBuscaObjetos()
     {
         if (PuebloManager.Instance.collidedObject == PuebloManager.Instance.cambioBuscaObjetos && Input.GetKey(KeyCode.Space))
         {
             GameManager.Instance.escena = "PulsarIngredientes";
+            SceneManager.LoadScene("PantallaCarga");
+        }
+    }
+
+    void CambioQuiz()
+    {
+        if (PuebloManager.Instance.collidedObject == PuebloManager.Instance.cambioQuiz && 
+            ((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo") ||
+            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro")))
+        {
+            GameManager.Instance.escena = "Quiz";
             SceneManager.LoadScene("PantallaCarga");
         }
     }

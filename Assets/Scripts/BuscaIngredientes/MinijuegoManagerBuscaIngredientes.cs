@@ -16,8 +16,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     [SerializeField] int NumeroTotalDeIngredientes;
     [SerializeField] float timerEspera;
     [SerializeField] TMP_Text textNivel;
-    public TMP_Text textTiempo
-        ;
+    public TMP_Text textTiempo;
+    public GameObject objetoSuperpuesto;
     public float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
     public bool timerEsperaEnabled = false, jugar = true, DestruirNivelEnabled = false;
     float valorEjeX, valorEjeY;
@@ -92,7 +92,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
             GameObject clon = Instantiate(prefabIngrediente[objeto]);
             if (objeto == 0)
             {
-                clon.transform.position = new Vector3(valorEjeX, valorEjeY, 0.1f);
+                clon.transform.position = new Vector3(valorEjeX, valorEjeY, -0.1f);
             }
             else
             {

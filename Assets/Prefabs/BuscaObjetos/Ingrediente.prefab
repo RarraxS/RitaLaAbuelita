@@ -128,3 +128,8 @@ MonoBehaviour:
   timerPausa: 1
   _parpadeos: 2
   textTiempo: {fileID: 0}
+  distanciaRaycast: 3
+  mascara:
+    serializedVersion: 2
+    m_Bits: 64
+  direccionRaycast: {x: 0, y: 0}
