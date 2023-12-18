@@ -1143,8 +1143,8 @@ MonoBehaviour:
   controles: diestro
   permitirAbrirMenuControles: 1
   Sonidos:
-  - {fileID: 8300000, guid: a2bbbf60789cf1d468a00ad1a675c2ae, type: 3}
-  - {fileID: 8300000, guid: 651c4980d37adfb40a395f3a32c6b6c6, type: 3}
+  - {fileID: 8300000, guid: 13003e0732f21b241a079ecfaa8585b0, type: 3}
+  - {fileID: 8300000, guid: dc2a837a8a5e27c42a64de58b349404c, type: 3}
   - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
   - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
   - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
@@ -1196,7 +1196,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6294096d17a378c4ca0b089da7d85a65, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9dc7aec27e7e84a40beb9f14f6710f3a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1300,7 +1300,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 10
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

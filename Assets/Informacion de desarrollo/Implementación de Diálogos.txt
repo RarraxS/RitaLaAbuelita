@@ -1,0 +1,23 @@
+1. Ir a la carpeta "Diálogos" en Unity
+
+2. Click derecho en el menú de proyecto (donde se encuentran los demas diálogos de los NPC)
+
+3. Seguir la siguiente secuencia: "Create" --> "Diálogos" --> "Diálogos con NPC"
+
+4. Llamar al nuevo objeto creado EXACTAMENTE IGUAL que al NPC al cual se le quiere adjuntar (respetar mayúsculas y espacios, MUY IMPORTANTE)
+
+5. Introducir tanto el diálogo de Rita como el del NPC en los campos correspondientes para ello
+
+6. Introducir el número de NPC, teniendo en cuenta a los NPC anteriores, si es el primero, introducir "1" en este campo, si es el segundo "2", etc. <-- Muy importante que esta parte esté bien configurada
+
+7. En el "Inspector" seguir la siguiente secuencia de pasos: Desplegar donde dice "PuebloManager" --> dentro de este, desplegar donde dice "Canvas Dialogo" --> dentro de este, pinchar en donde dice "NPC (Dialogo)"
+
+8. Bajar hasta donde está adjuntado el llamado "Ui Dialogo"
+
+9. En ese componente de Unity desplegar en donde pone "Interaccion"
+
+10. Ahí aparecerán varios elementos, dentro de este menú se le debe dar al "+", lo que creara un nuevo elemento
+
+11. Arrastrar el diálogo creado anteriormente al nuevo elemento creado en la lista de "Interaccion"
+
+*Nota: para comprobar que todo el proceso se hizo bien, a la izquierda de donde se ha adjuntado el elemento aparecerá un "Elemento" seguido de un número, este número debe ser una unidad inferior al cual debe tener configurado en la variable "Num Npc" del diálogo creado*
