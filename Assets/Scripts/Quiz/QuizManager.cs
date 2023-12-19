@@ -67,16 +67,16 @@ public class QuizManager : MonoBehaviour
 
         if (optionbutton.Opciones.correcta)
         {
-            //GameManager.Instance.SonidoPlay(15);
             Debug.Log("Acertaste " + optionbutton.name);
             NextQuestion();
+            //GameManager.Instance.SonidoPlay(15);
             VolverAlPueblo++;
         }
         else
         {
-            //GameManager.Instance.SonidoPlay(16);
             vidas -= 1;
             Debug.Log("Fallaste" + optionbutton.name);
+            //GameManager.Instance.SonidoPlay(16);
             if (vidas <= 0)
             {
                 canvasGameOver.SetActive(true);
@@ -86,10 +86,10 @@ public class QuizManager : MonoBehaviour
         }
         if (VolverAlPueblo == 7) 
         {
-            //GameManager.Instance.SonidoStop();
-            //GameManager.Instance.SonidoPlay(13);
             canvasWinGame.SetActive(true);
             Continuar.gameObject.SetActive(true);
+            //GameManager.Instance.SonidoStop();
+            //GameManager.Instance.SonidoPlay(13);
         }
 
         //public void CambiarEscena()
