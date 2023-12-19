@@ -18,7 +18,7 @@ public class PuebloManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-
+        GameManager.Instance.AmbientePlay(4);
     }
 
     void Update()
@@ -32,6 +32,7 @@ public class PuebloManager : MonoBehaviour
         if (PuebloManager.Instance.collidedObject == PuebloManager.Instance.cambioBuscaObjetos && Input.GetKey(KeyCode.Space))
         {
             GameManager.Instance.escena = "PulsarIngredientes";
+            GameManager.Instance.AmbienteStop();
             SceneManager.LoadScene("PantallaCarga");
         }
     }
@@ -43,6 +44,7 @@ public class PuebloManager : MonoBehaviour
             (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro")))
         {
             GameManager.Instance.escena = "Quiz";
+            GameManager.Instance.AmbienteStop();
             SceneManager.LoadScene("PantallaCarga");
         }
     }

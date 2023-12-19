@@ -30,7 +30,7 @@ public class UiDialogo : MonoBehaviour
     {
         for (int i = 0; i < interaccion.Length; i++)
         {
-            if (PuebloManager.Instance.collidedObject )
+            if (PuebloManager.Instance.collidedObject)
             {
 
 

@@ -13,9 +13,7 @@
 12 - Sonido Enrique
 13 - Ganar minijuego
 14 - Reiniciar minijuego
-15 - Acertar BO
-16 - Fallar BO
-17 - Acertar Quiz
-18 - Fallar Quiz
-19 - Sonido libro
-20 - Sonido onírico abrir libro
+15 - Acertar Minijuego
+16 - Fallar Minijuego
+17 - Sonido libro
+18 - Sonido onírico abrir libro

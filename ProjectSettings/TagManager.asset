@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - NPC
+  - Buscando
+  - No buscando
+  - Casa
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     public Toggle toggleZurdo, toggleDiestro;
 
-    public AudioSource audioSourceMusica, audioSourceSonidos;
+    public AudioSource audioSourceMusica, audioSourceSonidos, audioSourceAmbienteSonidos;
 
     private static GameManager instance;
     public static GameManager Instance
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        MenuDebug();
+        //MenuDebug();
     }
 
     //Debug
@@ -159,6 +159,18 @@ public class GameManager : MonoBehaviour
             audioSourceSonidos.Stop();
     }
 
+    public void AmbientePlay(int num)
+    {
+        if (!audioSourceAmbienteSonidos.isPlaying)
+            audioSourceAmbienteSonidos.PlayOneShot(Sonidos[num]);
+    }
+
+    public void AmbienteStop()
+    {
+        if (audioSourceAmbienteSonidos.isPlaying)
+            audioSourceAmbienteSonidos.Stop();
+    }
+
     public void SliderMusica(float valor)
     {
         audioSourceMusica.volume = valor;
@@ -167,6 +179,7 @@ public class GameManager : MonoBehaviour
     public void SliderSonidos(float valor)
     {
         audioSourceSonidos.volume = valor;
+        audioSourceAmbienteSonidos.volume = valor;
         SonidoPlay(0);
     }
 }

@@ -26,6 +26,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     public int Nivel { get { return nivel; } }
 
     float timerInicio, timerEsperaInicial;
+
+    bool tocado = false;
     
     int objeto;
 
@@ -166,6 +168,12 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     void Victoria()
     {
         jugar = false;
+        if(tocado == false)
+        {
+            GameManager.Instance.SonidoPlay(13);
+            tocado = true;
+        }
+
         canvasVictoria.SetActive(true);
     }
 

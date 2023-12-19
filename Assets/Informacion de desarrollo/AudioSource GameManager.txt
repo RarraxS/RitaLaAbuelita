@@ -1,3 +1,5 @@
 AudioSource Superior --> Música
 
-AudioSource Superior --> Sonidos
+AudioSource Intermedio --> Sonidos
+
+AudioSource Inferior --> Sonidos ambiente

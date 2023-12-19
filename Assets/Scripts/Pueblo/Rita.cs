@@ -9,9 +9,12 @@ using UnityEngine.SceneManagement;
 public class Rita : MonoBehaviour
 {
     [SerializeField] private float velocidad;
-    [SerializeField] GameObject canvasDialogo;
+    [SerializeField] GameObject canvasDialogo, canvasInteracciones;
+    [SerializeField] GameObject objetoNulo;
+    [SerializeField] TMP_Text textInteraccion;
 
     private Rigidbody2D rb;
+    string tecla;
     bool permitirMovimiento = true;
     Scene currentScene;
 
@@ -35,6 +38,7 @@ public class Rita : MonoBehaviour
         Movimiento();
         LanzarRaycast();
         Interactuar();
+        TextInteraccion();
     }
 
     void Movimiento()
@@ -43,10 +47,10 @@ public class Rita : MonoBehaviour
 
         if (permitirMovimiento == true)
         {
-            if (((Input.GetKey(KeyCode.I) || Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.L)
-                || Input.GetKey(KeyCode.J)) && GameManager.Instance.controles == "zurdo") ||
-                ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W)
-                || Input.GetKey(KeyCode.D)) && GameManager.Instance.controles == "diestro"))
+            if((((Input.GetKey(KeyCode.I) && !Input.GetKey(KeyCode.K)) || (Input.GetKey(KeyCode.K) && !Input.GetKey(KeyCode.I)) ||
+                (Input.GetKey(KeyCode.J) && !Input.GetKey(KeyCode.L)) || (Input.GetKey(KeyCode.L) && !Input.GetKey(KeyCode.J))) && GameManager.Instance.controles == "zurdo") ||
+                (((Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) ||
+                (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))) && GameManager.Instance.controles == "diestro"))
             {
                 GameManager.Instance.SonidoPlay(1);
             }
@@ -115,7 +119,7 @@ public class Rita : MonoBehaviour
         }
         else
         {
-            PuebloManager.Instance.collidedObject = null;
+            PuebloManager.Instance.collidedObject = objetoNulo ;
         }
 
         // Imprime el nombre del GameObject por consola
@@ -137,6 +141,38 @@ public class Rita : MonoBehaviour
         {
             canvasDialogo.SetActive(false);
             permitirMovimiento = true;
+        }
+    }
+
+    void TextInteraccion()
+    {
+        if (PuebloManager.Instance.collidedObject.tag == "NPC")
+        {
+            if (GameManager.Instance.controles == "zurdo")
+            {
+                tecla = "U";
+            }
+
+            else
+            {
+                tecla = "E";
+            }
+        }
+
+        if (PuebloManager.Instance.collidedObject.tag == "Casa")
+        {
+            tecla = "Espacio";
+        }
+
+        if (PuebloManager.Instance.collidedObject.tag == "NPC" || PuebloManager.Instance.collidedObject.tag == "Casa")
+        {
+            canvasInteracciones.SetActive(true);
+            textInteraccion.text = "Pulsa: " + tecla;
+        }
+        
+        else if (!(PuebloManager.Instance.collidedObject.tag == "NPC" || PuebloManager.Instance.collidedObject.tag == "Casa"))
+        {
+            canvasInteracciones.SetActive(false);
         }
     }
 }

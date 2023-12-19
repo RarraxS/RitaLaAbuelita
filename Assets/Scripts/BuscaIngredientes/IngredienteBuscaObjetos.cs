@@ -45,7 +45,6 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
         CorregirPosicion();
 
-        Fallar();
     }
     
 
@@ -56,12 +55,14 @@ public class IngredienteBuscaObjetos : MonoBehaviour
             MinijuegoManagerBuscaIngredientes.Instance.timer += MinijuegoManagerBuscaIngredientes.Instance.tiempoGanadoPorAcertar;
             MinijuegoManagerBuscaIngredientes.Instance.DestruirNivelEnabled = true;
             MinijuegoManagerBuscaIngredientes.Instance.timerEsperaEnabled = true;
+            GameManager.Instance.SonidoPlay(15);
             StartCoroutine(Acertar());
         }
 
         if (tag == "No buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
         {
             MinijuegoManagerBuscaIngredientes.Instance.timer -= MinijuegoManagerBuscaIngredientes.Instance.tiempoPerdidoPorFallar;
+            GameManager.Instance.SonidoPlay(16);
             StartCoroutine(Fallar());
         }
     }
@@ -103,7 +104,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
             _colorDeFallo = textTiempo.GetComponent<TextMeshProUGUI>().color;
             textTiempo.GetComponent<TextMeshProUGUI>().color = Color.red;
             Vector3 scaleOfText = textTiempo.GetComponent<RectTransform>().localScale;
-            textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1.5f, 1.5f, 1.5f);
+            textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1.25f, 1.25f, 1.25f);
             _numParpadeos = _parpadeos * 2;
 
             while (_numParpadeos > 0)
@@ -132,7 +133,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
             MinijuegoManagerBuscaIngredientes.Instance.jugar = true;
             timerPausa = _timerPausaInicial;
-            textTiempo.GetComponent<TextMeshProUGUI>().color = Color.white;
+            textTiempo.GetComponent<TextMeshProUGUI>().color = Color.black;
             textTiempo.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
             sr.color = new Color(255, 255, 255, 255);
         }
