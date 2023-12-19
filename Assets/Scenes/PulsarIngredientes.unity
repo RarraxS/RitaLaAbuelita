@@ -917,7 +917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 20
   tiempoPerdidoPorFallar: 3
-  tiempoGanadoPorAcertar: 5
+  tiempoGanadoPorAcertar: 4
   prefabIngrediente:
   - {fileID: 6392281883984217491, guid: 72ae11cc743b62041bad9a050bbefc2d, type: 3}
   - {fileID: 4341138109417016439, guid: b18c886e24b46cf4c855cf316780cd88, type: 3}
@@ -925,9 +925,9 @@ MonoBehaviour:
   - {fileID: 456199842935192642, guid: 29e88ffd606b1a34c82f647a8c74ca55, type: 3}
   canvasGameOver: {fileID: 758529815}
   canvasVictoria: {fileID: 52406416}
-  numeroDeNiveles: 6
-  nivelFinal: 6
-  numeroDeObjetosPorNivel: 080000000c00000010000000160000001c00000023000000
+  numeroDeNiveles: 5
+  nivelFinal: 5
+  numeroDeObjetosPorNivel: 080000000c00000010000000160000001c000000
   NumeroTotalDeIngredientes: 4
   timerEspera: 2
   textNivel: {fileID: 669647740}
