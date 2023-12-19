@@ -639,15 +639,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b98613bb3d30c4a4b8c4c752f1461b5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db4775d0ef2077a48bdea68d0f86818a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.79, y: 14.54}
+  m_Size: {x: 11.32, y: 18.88}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &187197871
@@ -682,8 +682,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.79, y: 14.54}
-    newSize: {x: 8.79, y: 14.54}
+    oldSize: {x: 11.32, y: 18.88}
+    newSize: {x: 11.32, y: 18.88}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4487,7 +4487,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -6, y: -6.5}
@@ -32984,7 +32984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_fontColor.b
@@ -33000,7 +33000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_fontSizeBase
-      value: 18
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_sharedMaterial
@@ -33028,7 +33028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchorMax.x
@@ -33048,11 +33048,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 175.9183
+      value: 233.2787
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 42.2552
+      value: 42.251
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33084,11 +33084,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 312.04
+      value: -283.3598
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 203.92
+      value: -203.76
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -33497,10 +33497,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06152451, y: -0.5353312}
+  m_Offset: {x: 0.06152451, y: -0.16432983}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.4632683, y: 0.25654122}
     oldSize: {x: 6.87, y: 12.29}
     newSize: {x: 6.87, y: 12.29}
     adaptiveTilingThreshold: 0.5
@@ -33508,7 +33508,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.9985545, y: 3.5393887}
+  m_Size: {x: 2.9985545, y: 3.8077774}
   m_EdgeRadius: 0
 --- !u!50 &2110292187
 Rigidbody2D:

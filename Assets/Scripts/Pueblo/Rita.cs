@@ -133,6 +133,7 @@ public class Rita : MonoBehaviour
             PuebloManager.Instance.collidedObject.tag == "NPC")
         {
             canvasDialogo.SetActive(true);
+            GameManager.Instance.SonidoStop();
             permitirMovimiento = false;
         }
 

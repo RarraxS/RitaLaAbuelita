@@ -32,6 +32,10 @@ public class QuizManager : MonoBehaviour
     private AudioSource quizAudioSource = null;
 
 
+    bool permitirTemp = false;
+    float temp = 1f;
+
+
     private void Start()
     {
         quizDB = GameObject.FindObjectOfType<Quiz>();
@@ -43,60 +47,118 @@ public class QuizManager : MonoBehaviour
         Continuar.gameObject.SetActive(false);
         NextQuestion();
     }
+
+    void Update()
+    {
+        if (permitirTemp == true)
+        {
+            temp -= Time.deltaTime;
+
+            if (temp <= 0)
+            {
+                permitirTemp = false;
+                temp = 1f;
+                NextQuestion();
+                VolverAlPueblo++;
+            }
+        }
+    }
+
+
     private void NextQuestion()
     {
         quizUI.Construct(quizDB.GetRandom(), GiveAnswer);
     }
     public void GiveAnswer(BotonOpcion optionbutton)
     {
-        StartCoroutine(GiveAnswerRoutine(optionbutton));
+        //StartCoroutine(GiveAnswerRoutine(optionbutton));
+
+        Comprobar(optionbutton);
     }
-    private IEnumerator GiveAnswerRoutine(BotonOpcion optionbutton)
+
+
+    void Comprobar(BotonOpcion optionbutton)
     {
-        if (quizAudioSource.isPlaying)
-        {
-            quizAudioSource.Stop();
-        }
-
-        quizAudioSource.clip = optionbutton.Opciones.correcta ? sonidocorrecto : sonidoincorrecto;
-
         optionbutton.SetColor(optionbutton.Opciones.correcta ? colorcorrecto : colorincorrecto);
-
-        yield return new WaitForSeconds(esperartiempo);
-        //NextQuestion();
 
         if (optionbutton.Opciones.correcta)
         {
             Debug.Log("Acertaste " + optionbutton.name);
-            NextQuestion();
-            //GameManager.Instance.SonidoPlay(15);
-            VolverAlPueblo++;
+            GameManager.Instance.SonidoPlay(15);
+            permitirTemp = true;
         }
+
         else
         {
             vidas -= 1;
             Debug.Log("Fallaste" + optionbutton.name);
-            //GameManager.Instance.SonidoPlay(16);
+            GameManager.Instance.SonidoPlay(16);
             if (vidas <= 0)
             {
                 canvasGameOver.SetActive(true);
                 Reiniciar.gameObject.SetActive(true);
             }
-
         }
-        if (VolverAlPueblo == 7) 
+
+        if (VolverAlPueblo >= 7)
         {
+            GameManager.Instance.SonidoStop();
+            GameManager.Instance.SonidoPlay(13);
             canvasWinGame.SetActive(true);
             Continuar.gameObject.SetActive(true);
-            //GameManager.Instance.SonidoStop();
-            //GameManager.Instance.SonidoPlay(13);
         }
-
-        //public void CambiarEscena()
-        //{
-        //    Debug.Log("Cambio de escena");
-        //    SceneManager.LoadScene("Pueblo");
-        //}
-
     }
+
+
+
+
+
+    //private IEnumerator GiveAnswerRoutine(BotonOpcion optionbutton)
+    //{
+    //    if (quizAudioSource.isPlaying)
+    //    {
+    //        quizAudioSource.Stop();
+    //    }
+
+    //    quizAudioSource.clip = optionbutton.Opciones.correcta ? sonidocorrecto : sonidoincorrecto;
+
+    //    optionbutton.SetColor(optionbutton.Opciones.correcta ? colorcorrecto : colorincorrecto);
+
+    //    yield return new WaitForSeconds(esperartiempo);
+    //    //NextQuestion();
+
+    //    if (optionbutton.Opciones.correcta)
+    //    {
+    //        Debug.Log("Acertaste " + optionbutton.name);
+    //        NextQuestion();
+    //        //GameManager.Instance.SonidoPlay(15);
+    //        VolverAlPueblo++;
+    //    }
+    //    else
+    //    {
+    //        vidas -= 1;
+    //        Debug.Log("Fallaste" + optionbutton.name);
+    //        //GameManager.Instance.SonidoPlay(16);
+    //        if (vidas <= 0)
+    //        {
+    //            canvasGameOver.SetActive(true);
+    //            Reiniciar.gameObject.SetActive(true);
+    //        }
+
+    //    }
+    //    if (VolverAlPueblo == 7) 
+    //    {
+    //        canvasWinGame.SetActive(true);
+    //        Continuar.gameObject.SetActive(true);
+    //        //GameManager.Instance.SonidoStop();
+    //        //GameManager.Instance.SonidoPlay(13);
+    //    }
+
+    //    //public void CambiarEscena()
+    //    //{
+    //    //    Debug.Log("Cambio de escena");
+    //    //    SceneManager.LoadScene("Pueblo");
+    //    //}
+
+    //}
 }
