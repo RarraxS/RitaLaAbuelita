@@ -21,16 +21,22 @@ public class QuizManager : MonoBehaviour
     [SerializeField] GameObject canvasWinGame;
     [SerializeField] GameObject Continuar;
 
+    [SerializeField] private AudioClip sonidocorrecto = null;
+    [SerializeField] private AudioClip sonidoincorrecto = null;
+
     public int VolverAlPueblo = 0;
     //[SerializeField] private List<Preguntas> preguntas = null;
 
     private Quiz quizDB = null;
     private QuizUI quizUI = null;
+    private AudioSource quizAudioSource = null;
+
 
     private void Start()
     {
         quizDB = GameObject.FindObjectOfType<Quiz>();
         quizUI = GameObject.FindObjectOfType<QuizUI>();
+        quizAudioSource = GetComponent<AudioSource>();
         canvasGameOver.SetActive(false);
         Reiniciar.gameObject.SetActive(false);
         canvasWinGame.SetActive(false);
@@ -47,11 +53,17 @@ public class QuizManager : MonoBehaviour
     }
     private IEnumerator GiveAnswerRoutine(BotonOpcion optionbutton)
     {
+        if (quizAudioSource.isPlaying)
+        {
+            quizAudioSource.Stop();
+        }
+
+        quizAudioSource.clip = optionbutton.Opciones.correcta ? sonidocorrecto : sonidoincorrecto;
 
         optionbutton.SetColor(optionbutton.Opciones.correcta ? colorcorrecto : colorincorrecto);
 
         yield return new WaitForSeconds(esperartiempo);
-        NextQuestion();
+        //NextQuestion();
 
         if (optionbutton.Opciones.correcta)
         {
@@ -72,7 +84,7 @@ public class QuizManager : MonoBehaviour
             }
 
         }
-        if (VolverAlPueblo >= 7) 
+        if (VolverAlPueblo == 7) 
         {
             //GameManager.Instance.SonidoStop();
             //GameManager.Instance.SonidoPlay(13);
@@ -80,6 +92,11 @@ public class QuizManager : MonoBehaviour
             Continuar.gameObject.SetActive(true);
         }
 
-       
+        //public void CambiarEscena()
+        //{
+        //    Debug.Log("Cambio de escena");
+        //    SceneManager.LoadScene("Pueblo");
+        //}
+
     }
 }
