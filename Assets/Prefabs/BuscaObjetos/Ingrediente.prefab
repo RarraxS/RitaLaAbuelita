@@ -124,12 +124,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb56d9d657260e4bb0b02e168069fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _velocidad: 010000000300000005000000070000000800000009000000
+  _velocidad: 0100000003000000050000000600000007000000
   timerPausa: 1
   _parpadeos: 2
   textTiempo: {fileID: 0}
+  ingrediente: {fileID: 0}
   distanciaRaycast: 3
   mascara:
     serializedVersion: 2
     m_Bits: 64
-  direccionRaycast: {x: 0, y: 0}
+  direccionRaycast: {x: 0, y: 0, z: 1}
