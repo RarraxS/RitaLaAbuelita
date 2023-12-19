@@ -22,8 +22,7 @@ public class QuizManager : MonoBehaviour
     [SerializeField] GameObject Continuar;
 
     public int VolverAlPueblo = 0;
-
-   // [SerializeField] private List<Preguntas> preguntas = null;
+    //[SerializeField] private List<Preguntas> preguntas = null;
 
     private Quiz quizDB = null;
     private QuizUI quizUI = null;
@@ -48,16 +47,22 @@ public class QuizManager : MonoBehaviour
     }
     private IEnumerator GiveAnswerRoutine(BotonOpcion optionbutton)
     {
+
+        optionbutton.SetColor(optionbutton.Opciones.correcta ? colorcorrecto : colorincorrecto);
+
+        yield return new WaitForSeconds(esperartiempo);
+        NextQuestion();
+
         if (optionbutton.Opciones.correcta)
         {
-            GameManager.Instance.SonidoPlay(15);
+            //GameManager.Instance.SonidoPlay(15);
             Debug.Log("Acertaste " + optionbutton.name);
             NextQuestion();
             VolverAlPueblo++;
         }
         else
         {
-            GameManager.Instance.SonidoPlay(16);
+            //GameManager.Instance.SonidoPlay(16);
             vidas -= 1;
             Debug.Log("Fallaste" + optionbutton.name);
             if (vidas <= 0)
@@ -69,12 +74,12 @@ public class QuizManager : MonoBehaviour
         }
         if (VolverAlPueblo >= 7) 
         {
-            GameManager.Instance.SonidoStop();
-            GameManager.Instance.SonidoPlay(13);
+            //GameManager.Instance.SonidoStop();
+            //GameManager.Instance.SonidoPlay(13);
             canvasWinGame.SetActive(true);
             Continuar.gameObject.SetActive(true);
         }
 
-        yield return new WaitForSeconds(esperartiempo);
+       
     }
 }
