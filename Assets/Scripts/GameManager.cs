@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public AudioSource audioSourceMusica, audioSourceSonidos, audioSourceAmbienteSonidos;
 
+    bool musica = true;
+
     private static GameManager instance;
     public static GameManager Instance
     {
@@ -178,8 +180,16 @@ public class GameManager : MonoBehaviour
 
     public void SliderSonidos(float valor)
     {
-        audioSourceSonidos.volume = valor;
-        audioSourceAmbienteSonidos.volume = valor;
+        if (audioSourceMusica == true)
+        {
+            audioSourceSonidos.volume = valor;
+            audioSourceAmbienteSonidos.volume = valor;
+        }
+        else
+        {
+            audioSourceSonidos.volume = 0;
+            audioSourceAmbienteSonidos.volume = 0;
+        }
         SonidoPlay(0);
     }
 }
