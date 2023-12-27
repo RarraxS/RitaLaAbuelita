@@ -55,7 +55,7 @@ public class Rita : MonoBehaviour
                 GameManager.Instance.SonidoPlay(1);
             }
 
-            else
+            else if(!GameManager.Instance.canvasControles.activeSelf)
             {
                 GameManager.Instance.SonidoStop();
             }

@@ -4,10 +4,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject canvasDebug, canvasInicio, canvasControles;
+    public GameObject canvasInicio, canvasControles, canvasQuiz;
 
     public string escena, controles;
     public bool permitirAbrirMenuControles = true;
+
+    string nombreEscenaActual;
+
+    //Audio----------------------------------------------------------------------------------------------
 
     [SerializeField] AudioClip[] Sonidos;
 
@@ -16,6 +20,8 @@ public class GameManager : MonoBehaviour
     public AudioSource audioSourceMusica, audioSourceSonidos, audioSourceAmbienteSonidos;
 
     bool musica = true;
+
+    //----------------------------------------------------------------------------------------------------
 
     private static GameManager instance;
     public static GameManager Instance
@@ -32,7 +38,6 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(this);
 
-        canvasDebug.SetActive(false);
         canvasInicio.SetActive(true);
         canvasControles.SetActive(false);
 
@@ -44,52 +49,21 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //MenuDebug();
+        nombreEscenaActual = SceneManager.GetActiveScene().name;
+
+        MenuControles();
     }
 
-    //Debug
-    void MenuDebug()
+    void MenuControles()
     {
-        if ((Input.GetKeyDown(KeyCode.Escape)) && !canvasDebug.activeSelf)
+        if (!(nombreEscenaActual == "Titulo" || nombreEscenaActual == "PantallaCarga"))
         {
-            canvasDebug.SetActive(true);
-        }
-
-        else if ((Input.GetKeyDown(KeyCode.Escape)) && canvasDebug.activeSelf)
-        {
-            canvasDebug.SetActive(false);
+            if ((Input.GetKeyDown(KeyCode.Escape)) && !canvasControles.activeSelf)
+            {
+                AbrirMenuControles();
+            }
         }
     }
-
-    public void TituloDebug()
-    {
-        canvasDebug.SetActive(false);
-        canvasInicio.SetActive(true);
-        SceneManager.LoadScene("Titulo");
-    }
-
-    public void PuebloDebug()
-    {
-        canvasDebug.SetActive(false);
-        canvasInicio.SetActive(false);
-        SceneManager.LoadScene("Pueblo");
-    }
-
-    public void MinijuegoPulsarIngredientesDebug()
-    {
-        canvasDebug.SetActive(false);
-        canvasInicio.SetActive(false);
-        SceneManager.LoadScene("PulsarIngredientes");
-    }
-
-    public void MinijuegoPulsarQuizDebug()
-    {
-        canvasDebug.SetActive(false);
-        canvasInicio.SetActive(false);
-        SceneManager.LoadScene("Quiz");
-    }
-
-    //Fin Debug
 
     public void Jugar()
     {
@@ -101,16 +75,46 @@ public class GameManager : MonoBehaviour
 
     public void AbrirMenuControles()
     {
-        canvasInicio.SetActive(false);
         SonidoPlay(0);
+        
+        if (nombreEscenaActual == "Titulo")
+        {
+            canvasInicio.SetActive(false);
+        }
+
+        if (nombreEscenaActual == "PulsarIngredientes")
+        {
+            MinijuegoManagerBuscaIngredientes.Instance.jugar = false;
+        }
+
+        if (nombreEscenaActual == "Quiz")
+        {
+            canvasQuiz.SetActive(false);
+        }
+
+
         canvasControles.SetActive(true);
     }
 
     public void CerrarMenuControles()
     {
         canvasControles.SetActive(false);
-        canvasInicio.SetActive(true);
         SonidoPlay(0);
+
+        if (nombreEscenaActual == "Titulo")
+        {
+            canvasInicio.SetActive(true);
+        }
+
+        if (nombreEscenaActual == "PulsarIngredientes")
+        {
+            MinijuegoManagerBuscaIngredientes.Instance.jugar = true;
+        }
+
+        if (nombreEscenaActual == "Quiz")
+        {
+            canvasQuiz.SetActive(true);
+        }
     }
 
     public void ToggleZurdo()

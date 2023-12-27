@@ -17,7 +17,10 @@ public class PuebloManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+    }
 
+    private void Start()
+    {
         GameManager.Instance.AmbientePlay(4);
     }
 

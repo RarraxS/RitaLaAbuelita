@@ -2997,9 +2997,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41f7cc934c4c6c44a1799ac45dbeb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasDebug: {fileID: 3616186611677058820}
   canvasInicio: {fileID: 0}
   canvasControles: {fileID: 0}
+  canvasQuiz: {fileID: 0}
   escena: 
   controles: diestro
   permitirAbrirMenuControles: 1
