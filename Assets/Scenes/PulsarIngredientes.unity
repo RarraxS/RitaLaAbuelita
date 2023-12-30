@@ -360,7 +360,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2e383a25e6e3f1e408222e469a5ef037, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad483ed89c8c2ca47ab9651b2fd5c390, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -860,7 +860,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2e383a25e6e3f1e408222e469a5ef037, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ad483ed89c8c2ca47ab9651b2fd5c390, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1036,8 +1036,8 @@ MonoBehaviour:
   textNivel: {fileID: 669647740}
   textTiempo: {fileID: 705591630563222188}
   objetoSuperpuesto: {fileID: 0}
-  minimoValorEjeX: -6.8
-  maximoValorEjeX: 6.8
+  minimoValorEjeX: -6.303
+  maximoValorEjeX: 6.303
   minimoValorEjeY: -3.92
   maximoValorEjeY: 1.14
   timerEsperaEnabled: 0
@@ -1870,7 +1870,7 @@ Transform:
   m_GameObject: {fileID: 1522723855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0069, y: -1.4021, z: 0.5}
-  m_LocalScale: {x: 14.4461, y: 6.1442, z: 1}
+  m_LocalScale: {x: 13.674679, y: 6.1442, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
