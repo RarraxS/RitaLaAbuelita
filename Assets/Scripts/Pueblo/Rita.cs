@@ -15,7 +15,7 @@ public class Rita : MonoBehaviour
 
     private Rigidbody2D rb;
     string tecla;
-    bool permitirMovimiento = true;
+    public bool permitirMovimiento = true;
     Scene currentScene;
 
     //Raycast
@@ -24,7 +24,22 @@ public class Rita : MonoBehaviour
     [SerializeField] LayerMask mascara;
     public Vector2 direccionRaycast = new Vector2(0, 1);
 
-    void Start()
+
+    private static Rita instance;
+    public static Rita Instance
+    {
+        get { return instance; }
+    }
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+        void Start()
     {
         canvasDialogo.SetActive(false);
 

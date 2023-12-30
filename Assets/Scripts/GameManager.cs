@@ -50,19 +50,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         nombreEscenaActual = SceneManager.GetActiveScene().name;
-
-        MenuControles();
-    }
-
-    void MenuControles()
-    {
-        if (!(nombreEscenaActual == "Titulo" || nombreEscenaActual == "PantallaCarga"))
-        {
-            if ((Input.GetKeyDown(KeyCode.Escape)) && !canvasControles.activeSelf)
-            {
-                AbrirMenuControles();
-            }
-        }
     }
 
     public void Jugar()
@@ -80,6 +67,11 @@ public class GameManager : MonoBehaviour
         if (nombreEscenaActual == "Titulo")
         {
             canvasInicio.SetActive(false);
+        }
+
+        if (nombreEscenaActual == "Pueblo")
+        {
+            Rita.Instance.permitirMovimiento = false;
         }
 
         if (nombreEscenaActual == "PulsarIngredientes")
@@ -104,6 +96,11 @@ public class GameManager : MonoBehaviour
         if (nombreEscenaActual == "Titulo")
         {
             canvasInicio.SetActive(true);
+        }
+
+        if (nombreEscenaActual == "Pueblo")
+        {
+            Rita.Instance.permitirMovimiento = true;
         }
 
         if (nombreEscenaActual == "PulsarIngredientes")
