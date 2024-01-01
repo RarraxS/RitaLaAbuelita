@@ -1,6 +1,7 @@
 using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class PuebloManager : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class PuebloManager : MonoBehaviour
     {
         if (PuebloManager.Instance.collidedObject == PuebloManager.Instance.cambioBuscaObjetos && Input.GetKey(KeyCode.Space))
         {
+            GameManager.Instance.position = Rita.Instance.rita.transform.position;
             GameManager.Instance.escena = "PulsarIngredientes";
             GameManager.Instance.AmbienteStop();
             SceneManager.LoadScene("PantallaCarga");
@@ -46,6 +48,7 @@ public class PuebloManager : MonoBehaviour
             ((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo") ||
             (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro")))
         {
+            GameManager.Instance.position = Rita.Instance.rita.transform.position;
             GameManager.Instance.escena = "Quiz";
             GameManager.Instance.AmbienteStop();
             SceneManager.LoadScene("PantallaCarga");

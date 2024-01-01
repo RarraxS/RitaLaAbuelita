@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
 
     string nombreEscenaActual;
 
+    public Vector3 position;
+
     //Audio----------------------------------------------------------------------------------------------
 
     [SerializeField] AudioClip[] Sonidos;

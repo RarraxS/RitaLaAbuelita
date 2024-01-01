@@ -9,14 +9,15 @@ using UnityEngine.SceneManagement;
 public class Rita : MonoBehaviour
 {
     [SerializeField] private float velocidad;
-    [SerializeField] GameObject canvasDialogo, canvasInteracciones;
-    [SerializeField] GameObject objetoNulo;
+    [SerializeField] GameObject canvasDialogo, canvasInteracciones, objetoNulo;
+    public GameObject rita;
     [SerializeField] TMP_Text textInteraccion;
 
     private Rigidbody2D rb;
     string tecla;
     public bool permitirMovimiento = true;
     Scene currentScene;
+
 
     //Raycast
     public RaycastHit2D informacionRaycast;
@@ -39,8 +40,10 @@ public class Rita : MonoBehaviour
             Destroy(gameObject);
     }
 
-        void Start()
+    void Start()
     {
+        ActualizarPosicion();
+
         canvasDialogo.SetActive(false);
 
         rb = GetComponent<Rigidbody2D>();
@@ -190,5 +193,10 @@ public class Rita : MonoBehaviour
         {
             canvasInteracciones.SetActive(false);
         }
+    }
+
+    void ActualizarPosicion()
+    {
+        rita.transform.position = GameManager.Instance.position;
     }
 }

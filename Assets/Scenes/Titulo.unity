@@ -805,6 +805,7 @@ MonoBehaviour:
   escena: 
   controles: diestro
   permitirAbrirMenuControles: 1
+  position: {x: 5.8, y: -5.2, z: -4}
   Sonidos:
   - {fileID: 8300000, guid: 13003e0732f21b241a079ecfaa8585b0, type: 3}
   - {fileID: 8300000, guid: dc2a837a8a5e27c42a64de58b349404c, type: 3}
