@@ -25,6 +25,10 @@ public class Rita : MonoBehaviour
     [SerializeField] LayerMask mascara;
     public Vector2 direccionRaycast = new Vector2(0, 1);
 
+    //Animator
+    [SerializeField] Animator animator;
+    //En el animator "Direccion" 1 es Alante, 2 es Derecha, 3 es Abajo, 4 es Izquierda
+
 
     private static Rita instance;
     public static Rita Instance
@@ -49,6 +53,8 @@ public class Rita : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         currentScene = GetComponent<Scene>();
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -71,11 +77,13 @@ public class Rita : MonoBehaviour
                 (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))) && GameManager.Instance.controles == "diestro"))
             {
                 GameManager.Instance.SonidoPlay(1);
+                animator.SetBool("Moviendose", true);
             }
 
             else if(!GameManager.Instance.canvasControles.activeSelf)
             {
                 GameManager.Instance.SonidoStop();
+                animator.SetBool("Moviendose", false);
             }
 
             if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
@@ -83,6 +91,7 @@ public class Rita : MonoBehaviour
             {
                 direccion += new Vector2(transform.up.x, transform.up.y); // Alante
                 direccionRaycast = new Vector2(0, 1);
+                animator.SetInteger("Direccion", 3);
             }
 
             if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
@@ -90,6 +99,7 @@ public class Rita : MonoBehaviour
             {
                 direccion += new Vector2(-transform.up.x, -transform.up.y); // Atrás
                 direccionRaycast = new Vector2(0, -1);
+                animator.SetInteger("Direccion", 1);
             }
 
             if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
@@ -97,6 +107,7 @@ public class Rita : MonoBehaviour
             {
                 direccion += new Vector2(-transform.right.x, -transform.right.y); // Izquierda
                 direccionRaycast = new Vector2(-1, 0);
+                animator.SetInteger("Direccion", 4);
             }
 
             if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
@@ -104,6 +115,7 @@ public class Rita : MonoBehaviour
             {
                 direccion += new Vector2(transform.right.x, transform.right.y); // Derecha
                 direccionRaycast = new Vector2(1, 0);
+                animator.SetInteger("Direccion", 2);
             }
         }
 
