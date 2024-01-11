@@ -10,18 +10,22 @@
 
 6. Llamar al nuevo objeto creado EXACTAMENTE IGUAL que al NPC al cual se le quiere adjuntar (respetar mayúsculas y espacios, MUY IMPORTANTE)
 
-7. Introducir tanto el diálogo de Rita como el del NPC en los campos correspondientes para ello
+7. En los campos de "Dialogos Rita" y "Dialogos NPC" cada vez que se le da al "+" es equivalente una nueva interacción de ese personaje. IMPORTANTE: el primer campo de todas las conversaciones debe permanecer en balnco siempre para que el dialogo no sed adelante (no contempla que el texto sea muy largo y se haya tenido que separar en varios slots)
 
-8. Introducir el número de NPC, teniendo en cuenta a los NPC anteriores, si es el primero, introducir "1" en este campo, si es el segundo "2", etc. <-- Muy importante que esta parte esté bien configurada
+8. Colocar en el campo de "Num Total Dialogos" el numero total de campos que tengan texto
 
-9. En el "Inspector" seguir la siguiente secuencia de pasos: Desplegar donde dice "PuebloManager" --> dentro de este, desplegar donde dice "Canvas Dialogo" --> dentro de este, pinchar en donde dice "NPC (Dialogo)"
+9. Marcar en la casilla "Rita Habla Primero" marcar con un tick si va ella primero o no marcarla si habla primero el npc
 
-10. Bajar hasta donde está adjuntado el llamado "Ui Dialogo"
+10. Introducir el número de NPC, teniendo en cuenta a los NPC anteriores, si es el primero, introducir "1" en este campo, si es el segundo "2", etc. <-- Muy importante que esta parte esté bien configurada
 
-11. En ese componente de Unity desplegar en donde pone "Interaccion"
+11. En el "Inspector" seguir la siguiente secuencia de pasos: Desplegar donde dice "PuebloManager" --> dentro de este, desplegar donde dice "Canvas Dialogo" --> dentro de este, pinchar en donde dice "NPC (Dialogo)"
 
-12. Ahí aparecerán varios elementos, dentro de este menú se le debe dar al "+", lo que creara un nuevo elemento
+12. Bajar hasta donde está adjuntado el llamado "Ui Dialogo"
 
-13. Arrastrar el diálogo creado anteriormente al nuevo elemento creado en la lista de "Interaccion"
+13. En ese componente de Unity desplegar en donde pone "Interaccion"
+
+14. Ahí aparecerán varios elementos, dentro de este menú se le debe dar al "+", lo que creara un nuevo elemento
+
+15. Arrastrar el diálogo creado anteriormente al nuevo elemento creado en la lista de "Interaccion"
 
 *Nota: para comprobar que todo el proceso se hizo bien, a la izquierda de donde se ha adjuntado el elemento aparecerá un "Elemento" seguido de un número, este número debe ser una unidad inferior al cual debe tener configurado en la variable "Num Npc" del diálogo creado*
