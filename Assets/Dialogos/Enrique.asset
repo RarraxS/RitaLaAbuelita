@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4965cbca72ee447ba7bb8ef1da247c, type: 3}
   m_Name: Enrique
   m_EditorClassIdentifier: 
-  dialogoNpc: "No soporto a los ni\xF1os peque\xF1os, son muy molestos"
-  dialogoRita: "Ya te acostumbrar\xE1s amigo m\xEDo"
+  dialogosRita:
+  - 
+  - La tienes en la cabeza
+  dialogosNpc:
+  - 
+  - "\xBFNo habr\xE1s visto mi gorra por ah\xED tirada, no?"
+  - Ah, es verdad jajaja
+  numTotalDialogos: 3
   numNpc: 4
+  ritaHablaPrimero: 0

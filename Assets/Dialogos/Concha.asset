@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4965cbca72ee447ba7bb8ef1da247c, type: 3}
   m_Name: Concha
   m_EditorClassIdentifier: 
-  dialogoNpc: Si, es un perrito muy bueno
-  dialogoRita: Ay, que mono es Firulais
+  dialogosRita:
+  - 
+  - "\xBFAy que mono, como se llama el perro?"
+  - Firulais, espero que cuides bien de Concha ehh
+  dialogosNpc:
+  - 
+  - Se llama Firulais
+  numTotalDialogos: 3
   numNpc: 3
+  ritaHablaPrimero: 1

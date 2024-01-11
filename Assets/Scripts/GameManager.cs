@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         toggleZurdo.isOn = false;
 
 
-        Debug.Log("Les dedico este juego a Carlitos Martín, Mauricio Gavidia, Guilermo Pérez y Lola Fernandez");
+        //Debug.Log("Les dedico este juego a Carlitos Martín, Mauricio Gavidia, Guilermo Pérez y Lola Fernandez");
     }
 
     void Update()

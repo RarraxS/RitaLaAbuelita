@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4965cbca72ee447ba7bb8ef1da247c, type: 3}
   m_Name: Rosa
   m_EditorClassIdentifier: 
-  dialogoNpc: Estoy muy cansada la verdad
-  dialogoRita: Adonde vas con esa cara, sonrie un poco, venga
+  dialogosRita:
+  - 
+  - "Anda Rosa, c\xF3mo est\xE1s "
+  - Ha pasado mucho tiempo
+  - Me alegro de verte
+  dialogosNpc:
+  - 
+  - Bien Rita
+  - "La verdad es que s\xED"
+  numTotalDialogos: 5
   numNpc: 5
+  ritaHablaPrimero: 1

@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class Rita : MonoBehaviour
 {
     [SerializeField] private float velocidad;
-    [SerializeField] GameObject canvasDialogo, canvasInteracciones, objetoNulo;
+    [SerializeField] GameObject canvasInteracciones, objetoNulo;
+    public GameObject canvasDialogo;
     public GameObject rita;
     [SerializeField] TMP_Text textInteraccion;
 
@@ -153,7 +154,7 @@ public class Rita : MonoBehaviour
         }
 
         // Imprime el nombre del GameObject por consola
-        Debug.Log(PuebloManager.Instance.collidedObject);
+        //Debug.Log(PuebloManager.Instance.collidedObject);
     }
 
     void Interactuar()
@@ -162,16 +163,12 @@ public class Rita : MonoBehaviour
             (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro" && !canvasDialogo.activeInHierarchy)) && 
             PuebloManager.Instance.collidedObject.tag == "NPC")
         {
+            
             canvasDialogo.SetActive(true);
             GameManager.Instance.SonidoStop();
             permitirMovimiento = false;
-        }
-
-        else if((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo" && canvasDialogo.activeInHierarchy) || 
-            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro" && canvasDialogo.activeInHierarchy))
-        {
-            canvasDialogo.SetActive(false);
-            permitirMovimiento = true;
+            UiDialogo.Instance.accesoInicial = false;
+            UiDialogo.Instance.InicializarDialogos();
         }
     }
 

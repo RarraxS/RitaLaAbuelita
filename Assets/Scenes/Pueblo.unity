@@ -1483,6 +1483,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a9615921a597efa4daddeb9639035a31, type: 2}
   textRita: {fileID: 1377808502}
   textNpc: {fileID: 2096488725}
+  textsRita:
+  - {fileID: 1377808502}
+  - {fileID: 1377808502}
+  textsNpc:
+  - {fileID: 2096488725}
+  - {fileID: 2096488725}
+  descansoEntreLetras: 0.1
   animator: {fileID: 392473815}
 --- !u!1 &408486064
 GameObject:
@@ -33864,11 +33871,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 2
-  canvasDialogo: {fileID: 217599278}
   canvasInteracciones: {fileID: 1379460688}
   objetoNulo: {fileID: 3076986760968401864}
+  canvasDialogo: {fileID: 217599278}
   rita: {fileID: 2110292184}
   textInteraccion: {fileID: 705591632266104524}
+  interaccionesTerminadas: 0
   permitirMovimiento: 1
   distanciaRaycast: 1.5
   mascara:
