@@ -44,10 +44,19 @@ public class UiDialogo : MonoBehaviour
         get { return instance; }
     }
 
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();
     }
+
 
     void Update()
     {
@@ -126,7 +135,7 @@ public class UiDialogo : MonoBehaviour
             turnoRita = !turnoRita;
 
             Debug.Log("InterAct " + interaccionActual);
-            if (interaccionActual > numInteraccionesTotales)
+            if (interaccionActual >= numInteraccionesTotales)
             {
                 Rita.Instance.canvasDialogo.SetActive(false);
                 interaccionActual = 0;
