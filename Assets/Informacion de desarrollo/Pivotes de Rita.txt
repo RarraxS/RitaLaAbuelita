@@ -5,3 +5,11 @@ Frente andar:
 Atras andar:
 	X -> 0.6
 	Y -> 0.25
+
+Izquierda andar:
+	X -> 0.5
+	Y -> 0.25
+
+Derecha andar:
+	X -> 0.55
+	Y -> 0.25

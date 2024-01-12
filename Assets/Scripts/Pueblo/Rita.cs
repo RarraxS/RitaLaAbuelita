@@ -78,6 +78,7 @@ public class Rita : MonoBehaviour
                 (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))) && GameManager.Instance.controles == "diestro"))
             {
                 GameManager.Instance.SonidoPlay(1);
+                animator.StopPlayback();
                 animator.SetBool("Moviendose", true);
             }
 
