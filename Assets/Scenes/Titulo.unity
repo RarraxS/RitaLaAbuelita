@@ -1744,7 +1744,6 @@ GameObject:
   - component: {fileID: 2270141908263040888}
   - component: {fileID: 2270141908263040889}
   - component: {fileID: 2270141908263040894}
-  - component: {fileID: 2270141908263040896}
   m_Layer: 5
   m_Name: Boton Jugar
   m_TagString: Untagged
@@ -1828,18 +1827,6 @@ RectTransform:
   m_AnchoredPosition: {x: -47.9, y: -185}
   m_SizeDelta: {x: 63.8355, y: 63.8355}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2270141908263040896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2270141908263040892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 518d6678b84b5c24c9221dc0d29f66ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &2270141909189161614 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
@@ -2185,7 +2172,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boton Controles
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8408553627430043719, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
 --- !u!114 &8879722445465012506
 MonoBehaviour:

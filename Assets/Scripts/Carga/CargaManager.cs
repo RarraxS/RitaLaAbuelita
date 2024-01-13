@@ -1,11 +1,9 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class CargaManager : MonoBehaviour
 {
-    float timerEspera = 2.1f;
+    private float timerEspera = 2.1f;
 
     private static CargaManager instance;
     public static CargaManager Instance
@@ -13,18 +11,23 @@ public class CargaManager : MonoBehaviour
         get { return instance; }
     }
 
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
             instance = this;
         else
             Destroy(gameObject);
 
+        //Si está sonando algún sonido, que no música a la hora de que empiece a
+        //la pantalla de carga este sonido se para
         GameManager.Instance.SonidoStop();
     }
 
-    void Update()
+    private void Update()
     {
+        //Hay un timer para cambiar de escena, ya que la barra es una animación,
+        //lo que se hace es que este timer cuando llega a 0 la barra ya ha llegado
+        //al máximo, asique cambiamos ya a la nueva escena
         timerEspera -= Time.deltaTime;
 
         if (timerEspera <= 0)

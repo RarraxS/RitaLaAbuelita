@@ -12,7 +12,7 @@ public class PuebloManager : MonoBehaviour
     {
         get { return instance; }
     }
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
             instance = this;

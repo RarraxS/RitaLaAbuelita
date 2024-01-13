@@ -169,7 +169,6 @@ public class Rita : MonoBehaviour
             GameManager.Instance.SonidoStop();
             permitirMovimiento = false;
             UiDialogo.Instance.accesoInicial = false;
-            UiDialogo.Instance.InicializarDialogos();
         }
     }
 

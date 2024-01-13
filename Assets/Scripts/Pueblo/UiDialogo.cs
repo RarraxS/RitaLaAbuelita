@@ -1,15 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class UiDialogo : MonoBehaviour
 {
     [SerializeField] private ScriptableObject[] interaccion;
-
 
     //-------------------------------------------------------------------------------
     //Sistema de diálogos
@@ -23,17 +17,6 @@ public class UiDialogo : MonoBehaviour
     private bool ritaPrimero;
     private int numNpc;
     private string DialogoNpc, DialogoRita;
-
-
-
-
-
-    [SerializeField] private float descansoEntreLetras = 0.1f;
-    private float temporizador = 0f;
-    private string textoImprimir;
-    private string textoActualRita, textoActualNPC;
-    private int letraActual;
-
     //-------------------------------------------------------------------------------
 
     [SerializeField] private Animator animator;
@@ -44,7 +27,7 @@ public class UiDialogo : MonoBehaviour
         get { return instance; }
     }
 
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
             instance = this;
@@ -52,13 +35,13 @@ public class UiDialogo : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void Start()
+    private void Start()
     {
         animator = GetComponent<Animator>();
     }
 
 
-    void Update()
+    private void Update()
     {
         DialogoMultiple();
     }
@@ -69,54 +52,57 @@ public class UiDialogo : MonoBehaviour
         Continuar();
     }
 
-
-    public void InicializarDialogos()
-    {
-        if (ritaPrimero == true && accesoInicial == false)
-        {
-            interaccionActualRita = 1;
-            interaccionActualNPC = 0;
-            turnoRita = false;
-        }
-
-        else if (ritaPrimero == false && accesoInicial == false)
-        {
-            interaccionActualRita = 0;
-            interaccionActualNPC = 1;
-            turnoRita = true;
-        }
-    }
-
     private void AccederNPC()
     {
+        //Comprobamos si el objeto colisionado coincide con alguno de los Dialogos que hay creados y
+        //almecenamos sus datos en variables para usarlas más tarde
         for (int i = 0; i < interaccion.Length; i++)
         {
             if (PuebloManager.Instance.collidedObject.name == interaccion[i].name)
             {
-                //Aquí sacamos estas variables antes para tenerlas listas antes del bucle for
                 int numNpc = ((DialogoNpc)interaccion[i]).numNpc;
 
 
                 ritaPrimero = ((DialogoNpc)interaccion[i]).ritaHablaPrimero;
                 numInteraccionesTotales = ((DialogoNpc)interaccion[i]).numTotalDialogos;
+
+                //Se comprueba el valor de "ritaPrimero" y dependiendo de su valor ajustamos parametros,
+                //le metemos una variable de ocntención llamada "accesoInicial" que después setearemos a
+                //"true" para que no vuelva a setear los valores hasta la proxima vez que iniciemos un
+                //diálogo con un NPC la cual es seteada a "false" otra vez desde el spript de Rita
+                if (ritaPrimero == true && accesoInicial == false)
+                {
+                    interaccionActualRita = 1;
+                    interaccionActualNPC = 0;
+                    turnoRita = false;
+                }
+
+                else if (ritaPrimero == false && accesoInicial == false)
+                {
+                    interaccionActualRita = 0;
+                    interaccionActualNPC = 1;
+                    turnoRita = true;
+                }
+
                 accesoInicial = true;
 
-                //Seteamos el animator antes de entrar al bucle for para que no consuma recursos cada frame
                 animator.SetInteger("numNpc", numNpc);
-                //Debug.Log(numNpc);
 
-
-                string DialogoNpc = ((DialogoNpc)interaccion[i]).dialogosNpc[interaccionActualRita];
-                string DialogoRita = ((DialogoNpc)interaccion[i]).dialogosRita[interaccionActualNPC];
+                //Esta variable es la que va a controlar a que diálogos accedemos de cada personaje y como tiene que acceder
+                //a las siguientes posiciones del array hacemos que se actualice cada frame y lo mostramos por pantalla
+                string DialogoNpc = ((DialogoNpc)interaccion[i]).dialogosNpc[interaccionActualNPC];
+                string DialogoRita = ((DialogoNpc)interaccion[i]).dialogosRita[interaccionActualRita];
 
                 textRita.text = DialogoRita;
                 textNpc.text = DialogoNpc;
             }
         }
     }
-    
+
     private void Continuar()
     {
+        //Hacemos que al pulsar la tecla de interacción contador de diálogos aumenta y la conversación avanza,
+        //tocandole ahora hablar al otro personaje.
         if ((Rita.Instance.canvasDialogo.activeSelf && (Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo")) ||
             (Rita.Instance.canvasDialogo.activeSelf && (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro")))
         {
@@ -134,7 +120,8 @@ public class UiDialogo : MonoBehaviour
 
             turnoRita = !turnoRita;
 
-            Debug.Log("InterAct " + interaccionActual);
+            //Si el contador ya ha llegado al número máximoo en esa conversación setea todo
+            //a 0, se cierra el menúu de conversación y le permite al jugador volver a moverse 
             if (interaccionActual >= numInteraccionesTotales)
             {
                 Rita.Instance.canvasDialogo.SetActive(false);
