@@ -9,25 +9,25 @@ using UnityEngine.SceneManagement;
 public class Rita : MonoBehaviour
 {
     [SerializeField] private float velocidad;
-    [SerializeField] GameObject canvasInteracciones, objetoNulo;
+    [SerializeField] private GameObject canvasInteracciones, objetoNulo;
     public GameObject canvasDialogo;
     public GameObject rita;
-    [SerializeField] TMP_Text textInteraccion;
+    [SerializeField] private TMP_Text textInteraccion;
 
     private Rigidbody2D rb;
-    string tecla;
+    private string tecla;
     public bool permitirMovimiento = true;
-    Scene currentScene;
+    private Scene currentScene;
 
 
     //Raycast
     public RaycastHit2D informacionRaycast;
     public float distanciaRaycast;
-    [SerializeField] LayerMask mascara;
+    [SerializeField] private LayerMask mascara;
     public Vector2 direccionRaycast = new Vector2(0, 1);
 
     //Animator
-    [SerializeField] Animator animator;
+    [SerializeField] private Animator animator;
     //En el animator "Direccion" 1 es Alante, 2 es Derecha, 3 es Abajo, 4 es Izquierda
 
 
@@ -47,6 +47,8 @@ public class Rita : MonoBehaviour
 
     void Start()
     {
+        //Inicializamos todo lo que vamos a necesitar
+
         ActualizarPosicion();
 
         canvasDialogo.SetActive(false);
@@ -68,6 +70,8 @@ public class Rita : MonoBehaviour
 
     void Movimiento()
     {
+        //Dependiendo de que tecla pulse se moverá en una dirección u otra, y esto tiene sus propias animaciones
+
         Vector2 direccion = Vector2.zero;
 
         if (permitirMovimiento == true)
@@ -137,6 +141,8 @@ public class Rita : MonoBehaviour
 
     void LanzarRaycast()
     {
+        //Se usa un raycast para poder interactuar con los distintos objetos y NPC del juego
+
         // Realiza el raycast
         informacionRaycast = Physics2D.Raycast(transform.position, direccionRaycast, distanciaRaycast, mascara);
 
@@ -160,6 +166,9 @@ public class Rita : MonoBehaviour
 
     void Interactuar()
     {
+        //Si se pulsa la tecla interacción y el raycast está enfocando a un NPC
+        //llama al "UiDialogo" que se encarga degestionar los diálogos
+
         if (((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo" && !canvasDialogo.activeInHierarchy) ||
             (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro" && !canvasDialogo.activeInHierarchy)) && 
             PuebloManager.Instance.collidedObject.tag == "NPC")
@@ -174,6 +183,7 @@ public class Rita : MonoBehaviour
 
     void TextInteraccion()
     {
+        //Si el raycast se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
         if (PuebloManager.Instance.collidedObject.tag == "NPC")
         {
             if (GameManager.Instance.controles == "zurdo")
@@ -206,6 +216,7 @@ public class Rita : MonoBehaviour
 
     void ActualizarPosicion()
     {
+        //Guarda la posición de Rita antes de cambiar de escena para que aparezca ahí cuando vuelva
         rita.transform.position = GameManager.Instance.position;
     }
 }

@@ -838,6 +838,7 @@ RectTransform:
   - {fileID: 392473812}
   - {fileID: 1708637621}
   - {fileID: 444704120}
+  - {fileID: 2036003612}
   m_Father: {fileID: 1519641770}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1483,13 +1484,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a9615921a597efa4daddeb9639035a31, type: 2}
   textRita: {fileID: 1377808502}
   textNpc: {fileID: 2096488725}
-  textsRita:
-  - {fileID: 1377808502}
-  - {fileID: 1377808502}
-  textsNpc:
-  - {fileID: 2096488725}
-  - {fileID: 2096488725}
-  descansoEntreLetras: 0.1
+  textContinuar: {fileID: 2036003613}
+  accesoInicial: 0
   animator: {fileID: 392473815}
 --- !u!1 &408486064
 GameObject:
@@ -32689,7 +32685,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2036003612}
   - {fileID: 840352418}
   m_Father: {fileID: 1519641770}
   m_RootOrder: 0
@@ -33369,13 +33364,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1832211138}
+    m_TransformParent: {fileID: 217599279}
     m_Modifications:
     - target: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_text
-      value: 'Rita la abuelita
-
-        Devemopment Build 33'
+      value: Pulsa U para continuar
       objectReference: {fileID: 0}
     - target: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_fontSize
@@ -33407,7 +33400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_VerticalAlignment
-      value: 512
+      value: 1024
       objectReference: {fileID: 0}
     - target: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_hasFontAssetChanged
@@ -33423,7 +33416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchorMax.x
@@ -33443,11 +33436,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 180.9142
+      value: 140.6319
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 87.9778
+      value: 63.5046
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33479,11 +33472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -309.54205
+      value: -315.76028
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -180.8966
+      value: -185.59811
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -33499,7 +33492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8590595875148427396, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_Name
-      value: Build
+      value: Text Continuar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ade7e912aaf718e44867e82712316257, type: 3}
@@ -33508,6 +33501,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
   m_PrefabInstance: {fileID: 2036003611}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2036003613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
+  m_PrefabInstance: {fileID: 2036003611}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2040225476
 GameObject:
   m_ObjectHideFlags: 0
@@ -33876,7 +33880,6 @@ MonoBehaviour:
   canvasDialogo: {fileID: 217599278}
   rita: {fileID: 2110292184}
   textInteraccion: {fileID: 705591632266104524}
-  interaccionesTerminadas: 0
   permitirMovimiento: 1
   distanciaRaycast: 1.5
   mascara:

@@ -1,35 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 {
     public float timer, tiempoPerdidoPorFallar, tiempoGanadoPorAcertar;
-    [SerializeField] GameObject[] prefabIngrediente;
-    [SerializeField] GameObject canvasGameOver, canvasVictoria;
-    [SerializeField] int numeroDeNiveles, nivelFinal;
-    [SerializeField] int[] numeroDeObjetosPorNivel;
-    [SerializeField] int NumeroTotalDeIngredientes;
-    [SerializeField] float timerEspera;
-    [SerializeField] TMP_Text textNivel;
+    [SerializeField] private GameObject[] prefabIngrediente;
+    [SerializeField] private GameObject canvasGameOver, canvasVictoria;
+    [SerializeField] private int numeroDeNiveles, nivelFinal;
+    [SerializeField] private int[] numeroDeObjetosPorNivel;
+    [SerializeField] private int NumeroTotalDeIngredientes;
+    [SerializeField] private float timerEspera;
+    [SerializeField] private TMP_Text textNivel;
     public TMP_Text textTiempo;
     public GameObject objetoSuperpuesto;
     public float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
     public bool timerEsperaEnabled = false, jugar = true, DestruirNivelEnabled = false;
-    float valorEjeX, valorEjeY;
+    private float valorEjeX, valorEjeY;
 
     private int nivel = 0;
     public int Nivel { get { return nivel; } }
 
-    float timerInicio, timerEsperaInicial;
+    private float timerInicio, timerEsperaInicial;
 
-    bool tocado = false;
-    
-    int objeto;
+    private bool sonarVictoria = false;
+
+    private int objeto;
 
     private static MinijuegoManagerBuscaIngredientes instance;
     public static MinijuegoManagerBuscaIngredientes Instance
@@ -43,11 +39,12 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
             instance = this;
         else
             Destroy(this);
-
     }
 
     void Start()
     {
+        //Seteamos todo para que esté listo para empezar y creamos el primer nivel
+
         timerInicio = timer;
         timerEsperaInicial = timerEspera;
 
@@ -62,6 +59,10 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 
     void Update()
     {
+        //Actualiza el HHUD en todo momento, además comprueba si hay que destruir el nivel o no.
+        //También mira el temporizador y se comprueba si se ha ganado, perdido, o aún no había
+        //pasado ninguna de las anteriores
+
         ActualizarHUD();
         DestructorNiveles();
 
@@ -82,8 +83,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
             Victoria();
         }
     }
-
-    //Esta función es la encargada de crear niveles
+    
+    //Esta función es la encargada de crear niveles mediante los datos que se le pasan desde el inspector de Unity
     void CreadorNiveles()
     {
         objeto = 0;
@@ -105,7 +106,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         }
     }
 
-    // Esta función destruirá los objetos con los tags "Buscando" y "No buscando"
+    // Esta función destruirá los objetos con los tags "Buscando" y "No buscando", y después llama a "CreadorNiveles"
     public void DestructorNiveles()
     {
         if (DestruirNivelEnabled == true)
@@ -157,21 +158,24 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 
     void GamerOver()
     {
+        //Activa el canvas de Game Over
         canvasGameOver.SetActive(true);
     }
 
     public void Reintentar()
     {
+        //Recarga la escena desde cero
         SceneManager.LoadScene("PulsarIngredientes");
     }
 
     void Victoria()
     {
+        //Si se gana suena la música de victoria en el minijuego y se activa el canvas de victoria
         jugar = false;
-        if(tocado == false)
+        if(sonarVictoria == false)
         {
             GameManager.Instance.SonidoPlay(13);
-            tocado = true;
+            sonarVictoria = true;
         }
 
         canvasVictoria.SetActive(true);
@@ -179,7 +183,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
 
     public void CambiarEscena()
     {
-        Debug.Log("Cambio de escena");
+        //Vuelve a la escena de pueblo
         SceneManager.LoadScene("Pueblo");
     }
 }

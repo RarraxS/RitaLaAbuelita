@@ -1,33 +1,30 @@
 using System.Collections;
 using TMPro;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class IngredienteBuscaObjetos : MonoBehaviour
 {
     [SerializeField] private int[] _velocidad;
-    [SerializeField] float timerPausa;
+    [SerializeField] private float timerPausa;
     [SerializeField] private int _parpadeos;
     public TMP_Text textTiempo;
     private Color _colorDeFallo;
-    SpriteRenderer sr;
+    private SpriteRenderer sr;
 
     public IngredienteBuscaObjetos ingrediente;
 
     private Vector2 _direction;
 
-    float _timerPausaInicial, _timepoPorParpadeo, _tiempoParpadeo;
-    int _numParpadeos;
-    bool _spriteOn = true, pulsable = true;
-
-    //Raycast
-    RaycastHit2D informacionRaycast;
-    public float distanciaRaycast;
-    [SerializeField] LayerMask mascara;
-    public Vector3 direccionRaycast = new Vector3(0, 0, 1);
+    private float _timerPausaInicial, _timepoPorParpadeo, _tiempoParpadeo;
+    private int _numParpadeos;
+    private bool _spriteOn = true, pulsable = true;
 
     void Start()
     {
+        //Se setean las variables que se van a usar, se establece que el número de parpadeos
+        //es del doble de los estipulado, dado que se cuenta aparición y desaparición, y se 
+        //randomiza la posición del objeto
+
         sr = GetComponent<SpriteRenderer>();
 
         _timerPausaInicial = timerPausa;
@@ -41,15 +38,18 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     void Update()
     {
+        //Se mueve el objeto en una dirección random, y se comprueba si se ha chocado con alguno de los bordes,
+        //si ha sido así, se cambia la dirección a la que se está moviendo la pieza
+
         transform.Translate(Time.deltaTime * _velocidad[MinijuegoManagerBuscaIngredientes.Instance.Nivel] * _direction);
 
         CorregirPosicion();
-
     }
     
 
     void OnMouseDown()
     {
+        //Si se acierta se le suma al temporizador más tiempo, se destruye el nivel y suena el sonido de acertar
         if (tag == "Buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
         {
             MinijuegoManagerBuscaIngredientes.Instance.timer += MinijuegoManagerBuscaIngredientes.Instance.tiempoGanadoPorAcertar;
@@ -59,6 +59,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
             StartCoroutine(Acertar());
         }
 
+        //Si se falla se le resta al temporizador una cantidad de tiempo, y suena el sonido de fallar
         if (tag == "No buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
         {
             MinijuegoManagerBuscaIngredientes.Instance.timer -= MinijuegoManagerBuscaIngredientes.Instance.tiempoPerdidoPorFallar;
@@ -69,6 +70,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     void RandomizarPosicion()
     {
+        //Randomiza la posición
         Vector2 randomCircle = Random.insideUnitCircle;
         Vector3 randomPosition = new(randomCircle.x, randomCircle.y, 0);
         _direction = (randomPosition - transform.position).normalized;
@@ -76,6 +78,8 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     void CorregirPosicion()
     {
+        //Comprueba si se han sobrepasado los bordes establecidos y si así ha
+        //sido, se vuelve a randomizar la posición hacia la que se va a mover
         if (transform.position.x <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeX ||
             transform.position.x >= MinijuegoManagerBuscaIngredientes.Instance.maximoValorEjeX ||
             transform.position.y <= MinijuegoManagerBuscaIngredientes.Instance.minimoValorEjeY ||
@@ -87,6 +91,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     IEnumerator Acertar()
     {
+        //Si se acierta el objeto acierto se hace más grande frame a frame
         _direction *= 0;
         while (transform.localScale.x < 0.1f)
         {
@@ -97,6 +102,8 @@ public class IngredienteBuscaObjetos : MonoBehaviour
 
     IEnumerator Fallar()
     {
+        //Si se falla  el objeto pulsado se pone a parpadear y el texto de
+        //tiempo se hace más grande y se pone rojo por un tiempo establecido
         if (pulsable == true)
         {
             MinijuegoManagerBuscaIngredientes.Instance.jugar = false;

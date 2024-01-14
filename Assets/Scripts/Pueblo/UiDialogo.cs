@@ -7,7 +7,7 @@ public class UiDialogo : MonoBehaviour
 
     //-------------------------------------------------------------------------------
     //Sistema de diálogos
-    [SerializeField] private TMP_Text textRita, textNpc;
+    [SerializeField] private TMP_Text textRita, textNpc, textContinuar;
     private int interaccionActual, interaccionActualRita, interaccionActualNPC;
     private bool turnoRita;
 
@@ -16,7 +16,7 @@ public class UiDialogo : MonoBehaviour
     public bool accesoInicial = false;
     private bool ritaPrimero;
     private int numNpc;
-    private string DialogoNpc, DialogoRita;
+    private string DialogoNpc, DialogoRita, _tecla;
     //-------------------------------------------------------------------------------
 
     [SerializeField] private Animator animator;
@@ -43,6 +43,7 @@ public class UiDialogo : MonoBehaviour
 
     private void Update()
     {
+        InteractuarText();
         DialogoMultiple();
     }
 
@@ -131,5 +132,20 @@ public class UiDialogo : MonoBehaviour
                 Rita.Instance.permitirMovimiento = true;
             }
         }
+    }
+
+    private void InteractuarText()
+    {
+        if (GameManager.Instance.controles == "zurdo")
+        {
+            _tecla = "U";
+        }
+
+        else
+        {
+            _tecla = "E";
+        }
+
+        textContinuar.text = "Pulsa " + _tecla + " para continuar";
     }
 }

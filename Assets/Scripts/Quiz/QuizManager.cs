@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.Video;
 
 [RequireComponent(typeof(AudioSource))]
 public class QuizManager : MonoBehaviour

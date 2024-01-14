@@ -7,7 +7,7 @@ public class FondoInicio : MonoBehaviour
     private float timer = 1.75f;
     public bool timerActivado = false;
 
-    [SerializeField] private Animator animator;
+    public Animator animator;
 
     private static FondoInicio instance;
     public static FondoInicio Instance

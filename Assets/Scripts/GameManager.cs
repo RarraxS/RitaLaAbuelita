@@ -9,19 +9,18 @@ public class GameManager : MonoBehaviour
     public string escena, controles;
     public bool permitirAbrirMenuControles = true;
 
-    string nombreEscenaActual;
+    private string nombreEscenaActual;
 
     public Vector3 position;
 
     //Audio----------------------------------------------------------------------------------------------
 
-    [SerializeField] AudioClip[] Sonidos;
+    [SerializeField] private AudioClip[] Sonidos;
 
     public Toggle toggleZurdo, toggleDiestro;
 
     public AudioSource audioSourceMusica, audioSourceSonidos, audioSourceAmbienteSonidos;
 
-    bool musica = true;
 
     //----------------------------------------------------------------------------------------------------
 
@@ -43,19 +42,19 @@ public class GameManager : MonoBehaviour
         canvasInicio.SetActive(true);
         canvasControles.SetActive(false);
 
+        //Lo inicializamos con controles de diestro
         toggleZurdo.isOn = false;
-
-
-        //Debug.Log("Les dedico este juego a Carlitos Martín, Mauricio Gavidia, Guilermo Pérez y Lola Fernandez");
     }
 
     void Update()
     {
+        //Guardamos en todo momento el nombre de la escena en la que nos encontramos
         nombreEscenaActual = SceneManager.GetActiveScene().name;
     }
 
     public void Jugar()
     {
+        //Cuando pulsas el botón en la pantalla de inicio suena el sonido y se reproduce la animación de la pantalla
         canvasInicio.SetActive(false);
         SonidoPlay(0);
         FondoInicio.Instance.animator.SetBool("Jugar", true);
@@ -64,6 +63,9 @@ public class GameManager : MonoBehaviour
 
     public void AbrirMenuControles()
     {
+        //Cuando pulsas el botón controles suena un sonido y se pausan las distintas pruebas
+        //de los minijuegos o el poder andar por el pueblo mientras el menú está activo
+        
         SonidoPlay(0);
         
         if (nombreEscenaActual == "Titulo")
@@ -92,6 +94,8 @@ public class GameManager : MonoBehaviour
 
     public void CerrarMenuControles()
     {
+        //Este botón cierra el menú controles y lo devuelve todo a la normalidad 
+
         canvasControles.SetActive(false);
         SonidoPlay(0);
 
@@ -118,6 +122,8 @@ public class GameManager : MonoBehaviour
 
     public void ToggleZurdo()
     {
+        //Cambia los controles a zurdo y desactiva los de diestro cuando
+        //esta activado y hace lo contrario cuando esta desactivado
         if (toggleZurdo.isOn)
         {
             //El toggle está activado
@@ -136,6 +142,8 @@ public class GameManager : MonoBehaviour
 
     public void ToggleDiestro()
     {
+        //Cambia los controles a diestro y desactiva los de zurdo cuando
+        //esta activado y hace lo contrario cuando esta desactivado
         if (toggleDiestro.isOn)
         {
             //El toggle está activado
@@ -154,35 +162,41 @@ public class GameManager : MonoBehaviour
 
    public void SonidoPlay(int num)
     {
+        //Suena el sonido que se le pase por parámetro
         if(!audioSourceSonidos.isPlaying)
             audioSourceSonidos.PlayOneShot(Sonidos[num]);
     }
 
     public void SonidoStop()
     {
+        //Se paran los sonidos
         if (audioSourceSonidos.isPlaying)
             audioSourceSonidos.Stop();
     }
 
     public void AmbientePlay(int num)
     {
+        //Suenan los sonidos de ambiente
         if (!audioSourceAmbienteSonidos.isPlaying)
             audioSourceAmbienteSonidos.PlayOneShot(Sonidos[num]);
     }
 
     public void AmbienteStop()
     {
+        //Se paran los sonidos de ambiente 
         if (audioSourceAmbienteSonidos.isPlaying)
             audioSourceAmbienteSonidos.Stop();
     }
 
     public void SliderMusica(float valor)
     {
+        //Ajusta el volumen de la música mediante un slider que controla el jugador
         audioSourceMusica.volume = valor;
     }
 
     public void SliderSonidos(float valor)
     {
+        //Ajusta el volumen de todos los sonidos mediante un slider que controla el jugador
         if (audioSourceMusica == true)
         {
             audioSourceSonidos.volume = valor;
