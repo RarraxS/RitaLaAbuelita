@@ -146,6 +146,6 @@ public class UiDialogo : MonoBehaviour
             _tecla = "E";
         }
 
-        textContinuar.text = "Pulsa " + _tecla + " para continuar";
+        textContinuar.text = _tecla + " para continuar";
     }
 }
