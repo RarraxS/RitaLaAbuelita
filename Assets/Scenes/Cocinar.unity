@@ -216,7 +216,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158858710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.07349591}
+  m_LocalPosition: {x: 0, y: 0, z: -1.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -253,7 +253,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &211144826
 Transform:
   m_ObjectHideFlags: 0
@@ -319,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242338864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.52, y: 0.3981375, z: -9.177078}
+  m_LocalPosition: {x: 8.52, y: 0.3981375, z: -1.57}
   m_LocalScale: {x: 0.17524387, y: 0.17524387, z: 0.17524387}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -437,7 +437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252970759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8711, z: 2.28}
+  m_LocalPosition: {x: 0, y: 0.8711, z: 2.6365042}
   m_LocalScale: {x: 2.6799998, y: 0.15519017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -651,7 +651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285830905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.006111239, y: 0.8711, z: 2.28}
+  m_LocalPosition: {x: -0.006111239, y: 0.8711, z: 2.6365042}
   m_LocalScale: {x: 2.6799998, y: 0.15519017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -762,7 +762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292011501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.097502, y: 0.8711, z: 2.28}
+  m_LocalPosition: {x: 6.097502, y: 0.8711, z: 2.6365042}
   m_LocalScale: {x: 2.6799998, y: 0.15519017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -873,7 +873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347379229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.094549, y: 0.8711, z: 2.28}
+  m_LocalPosition: {x: -6.094549, y: 0.8711, z: 2.6365042}
   m_LocalScale: {x: 2.6799998, y: 0.15519017, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1607,6 +1607,8 @@ GameObject:
   - component: {fileID: 802348037}
   - component: {fileID: 802348038}
   - component: {fileID: 802348039}
+  - component: {fileID: 802348040}
+  - component: {fileID: 802348041}
   m_Layer: 0
   m_Name: Cuchillo
   m_TagString: Untagged
@@ -1622,7 +1624,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802348036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.540074, y: 0.3981375, z: -9.177078}
+  m_LocalPosition: {x: 0.540074, y: 0.3981375, z: -1.57}
   m_LocalScale: {x: 0.17524387, y: 0.17524387, z: 0.17524387}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1706,7 +1708,45 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 20, y: 20}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.05
+--- !u!114 &802348040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802348036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a082fa50a04ceb1468ac4a43f5a37cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  managerCocina: {fileID: 1790346822}
+  ganar: 0
+  canvasGameOver: {fileID: 856378151}
+  canvasWinGame: {fileID: 283244969}
+  Boton: {fileID: 988770678}
+--- !u!50 &802348041
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802348036}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &809719109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,7 +2090,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &881005605
 Transform:
   m_ObjectHideFlags: 0
@@ -2311,109 +2351,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1790346822}
-        m_TargetAssemblyTypeName: CocinaManager, Assembly-CSharp
-        m_MethodName: OnTriggerStay2D
-        m_Mode: 2
+      - m_Target: {fileID: 802348040}
+        m_TargetAssemblyTypeName: Cuchillo, Assembly-CSharp
+        m_MethodName: Corte
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 252970761}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1790346822}
-        m_TargetAssemblyTypeName: CocinaManager, Assembly-CSharp
-        m_MethodName: OnTriggerStay2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 285830907}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1790346822}
-        m_TargetAssemblyTypeName: CocinaManager, Assembly-CSharp
-        m_MethodName: OnTriggerStay2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 347379231}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1790346822}
-        m_TargetAssemblyTypeName: CocinaManager, Assembly-CSharp
-        m_MethodName: OnTriggerStay2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 292011503}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1790346822}
-        m_TargetAssemblyTypeName: CocinaManager, Assembly-CSharp
-        m_MethodName: OnTriggerStay2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 211144827}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1790346822}
-        m_TargetAssemblyTypeName: CocinaManager, Assembly-CSharp
-        m_MethodName: OnTriggerStay2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 881005606}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1790346822}
-        m_TargetAssemblyTypeName: CocinaManager, Assembly-CSharp
-        m_MethodName: OnTriggerStay2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1987557274}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1790346822}
-        m_TargetAssemblyTypeName: CocinaManager, Assembly-CSharp
-        m_MethodName: OnTriggerStay2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1352188965}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1790346822}
-        m_TargetAssemblyTypeName: CocinaManager, Assembly-CSharp
-        m_MethodName: OnTriggerStay2D
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1192223779}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Collider2D, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2610,7 +2554,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1192223778
 Transform:
   m_ObjectHideFlags: 0
@@ -2843,6 +2787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2896,7 +2841,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1352188964
 Transform:
   m_ObjectHideFlags: 0
@@ -3528,9 +3473,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidas: 3
-  canvasGameOver: {fileID: 856378151}
-  canvasWinGame: {fileID: 283244969}
-  Boton: {fileID: 988770678}
 --- !u!1 &1852811698
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,7 +3497,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852811698}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.46, y: 0.3981375, z: -9.177078}
+  m_LocalPosition: {x: -8.46, y: 0.3981375, z: -1.57}
   m_LocalScale: {x: 0.17524387, y: 0.17524387, z: 0.17524387}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3715,7 +3657,7 @@ GameObject:
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1987557273
 Transform:
   m_ObjectHideFlags: 0
@@ -3988,7 +3930,7 @@ MonoBehaviour:
   Cuchillo: {fileID: 802348036}
   startPoint: {fileID: 1852811699}
   endPoint: {fileID: 242338865}
-  velocidad: 2
+  velocidad: 2.5
   moverHacia: {x: 0, y: 0, z: 0}
 --- !u!212 &2113641996
 SpriteRenderer:
@@ -4050,7 +3992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113641994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2113, y: 3.64, z: 0}
+  m_LocalPosition: {x: -0.2113, y: 3.64, z: -1.21}
   m_LocalScale: {x: 0.5023385, y: 0.5023385, z: 0.5023385}
   m_ConstrainProportionsScale: 0
   m_Children:
