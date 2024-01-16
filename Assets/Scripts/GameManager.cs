@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(this);
 
+        position.z = position.y;
+
         canvasInicio.SetActive(true);
         canvasControles.SetActive(false);
 

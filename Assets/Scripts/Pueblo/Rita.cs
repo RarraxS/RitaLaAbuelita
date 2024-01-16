@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics.Tracing;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -72,7 +68,7 @@ public class Rita : MonoBehaviour
     {
         //Dependiendo de que tecla pulse se moverá en una dirección u otra, y esto tiene sus propias animaciones
 
-        Vector2 direccion = Vector2.zero;
+        Vector3 direccion = Vector3.zero;
 
         if (permitirMovimiento == true)
         {
@@ -95,7 +91,7 @@ public class Rita : MonoBehaviour
             if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector2(transform.up.x, transform.up.y); // Alante
+                direccion += new Vector3(transform.up.x, transform.up.y, transform.up.y); // Alante
                 direccionRaycast = new Vector2(0, 1);
                 animator.SetInteger("Direccion", 3);
             }
@@ -103,7 +99,7 @@ public class Rita : MonoBehaviour
             if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.S) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector2(-transform.up.x, -transform.up.y); // Atrás
+                direccion += new Vector3(-transform.up.x, -transform.up.y, -transform.up.y); // Atrás
                 direccionRaycast = new Vector2(0, -1);
                 animator.SetInteger("Direccion", 1);
             }
@@ -111,7 +107,7 @@ public class Rita : MonoBehaviour
             if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.A) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector2(-transform.right.x, -transform.right.y); // Izquierda
+                direccion += new Vector3(-transform.right.x, -transform.right.y); // Izquierda
                 direccionRaycast = new Vector2(-1, 0);
                 animator.SetInteger("Direccion", 4);
             }
@@ -119,24 +115,19 @@ public class Rita : MonoBehaviour
             if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.D) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector2(transform.right.x, transform.right.y); // Derecha
+                direccion += new Vector3(transform.right.x, transform.right.y); // Derecha
                 direccionRaycast = new Vector2(1, 0);
                 animator.SetInteger("Direccion", 2);
             }
         }
 
         // Normalizar el vector de dirección si es diferente de cero
-        if (direccion != Vector2.zero)
+        if (direccion != Vector3.zero)
         {
             direccion.Normalize();
         }
 
-        // Convertir la posición actual a Vector2 y aplicar la velocidad
-        Vector2 nuevaPosicion = rb.position;
-        nuevaPosicion += direccion * velocidad * Time.deltaTime;
-
-        // Asignar la nueva posición al Rigidbody
-        rb.position = nuevaPosicion;
+        transform.position += (direccion * velocidad* Time.deltaTime);
     }
 
     void LanzarRaycast()
@@ -157,7 +148,7 @@ public class Rita : MonoBehaviour
         }
         else
         {
-            PuebloManager.Instance.collidedObject = objetoNulo ;
+            PuebloManager.Instance.collidedObject = objetoNulo;
         }
 
         // Imprime el nombre del GameObject por consola
