@@ -214,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581943253766511818, guid: 58dfe9d147bb8e343bc26f44750d4fbf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 74.1
+      value: 60.8
       objectReference: {fileID: 0}
     - target: {fileID: 4581943253766511818, guid: 58dfe9d147bb8e343bc26f44750d4fbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -339,7 +339,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &484602706
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -356,7 +356,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &484602707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1981,7 +1983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581943253766511818, guid: 58dfe9d147bb8e343bc26f44750d4fbf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 74.1
+      value: 60.799988
       objectReference: {fileID: 0}
     - target: {fileID: 4581943253766511818, guid: 58dfe9d147bb8e343bc26f44750d4fbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
