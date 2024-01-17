@@ -1,11 +1,9 @@
-using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 public class PuebloManager : MonoBehaviour
 {
-    public GameObject collidedObject, cambioBuscaObjetos, cambioQuiz;
+    public GameObject collidedObject, cambioBuscaObjetos, cambioQuiz, cambioCasaRita;
 
     private static PuebloManager instance;
     public static PuebloManager Instance
@@ -28,8 +26,25 @@ public class PuebloManager : MonoBehaviour
 
     void Update()
     {
+        CambioCasaRita();
         CambioBuscaObjetos();
         CambioQuiz();
+    }
+
+
+    void CambioCasaRita()
+    {
+        //Si se pulsa la tecla de interacción cuando se está frente a la casa de Rita,
+        //se guarda la posición de Rita para cuando se vuelva a la escena y se le dice
+        //a que escena debe ir tras acabar la pantalla de carga
+        if (PuebloManager.Instance.collidedObject == PuebloManager.Instance.cambioCasaRita &&
+            Input.GetKeyDown(KeyCode.Space))
+        {
+            GameManager.Instance.position = Rita.Instance.rita.transform.position;
+            GameManager.Instance.escena = "CasaRita";
+            GameManager.Instance.AmbienteStop();
+            SceneManager.LoadScene("PantallaCarga");
+        }
     }
 
     void CambioBuscaObjetos()

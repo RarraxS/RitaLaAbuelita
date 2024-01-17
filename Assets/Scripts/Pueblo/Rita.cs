@@ -10,7 +10,7 @@ public class Rita : MonoBehaviour
     public GameObject rita;
     [SerializeField] private TMP_Text textInteraccion;
 
-    private Rigidbody2D rb;
+    private Vector3 direccion;
     private string tecla;
     public bool permitirMovimiento = true;
     private Scene currentScene;
@@ -44,12 +44,12 @@ public class Rita : MonoBehaviour
     void Start()
     {
         //Inicializamos todo lo que vamos a necesitar
-
-        ActualizarPosicion();
+        if (GameManager.Instance.escena == "Pueblo")
+        {
+            ActualizarPosicion();
+        }
 
         canvasDialogo.SetActive(false);
-
-        rb = GetComponent<Rigidbody2D>();
 
         currentScene = GetComponent<Scene>();
 
@@ -58,6 +58,11 @@ public class Rita : MonoBehaviour
 
     void Update()
     {
+        //Actualiza el Z Depth
+        Vector3 newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+        transform.position = newPosition;
+
+
         Movimiento();
         LanzarRaycast();
         Interactuar();
@@ -68,7 +73,7 @@ public class Rita : MonoBehaviour
     {
         //Dependiendo de que tecla pulse se moverá en una dirección u otra, y esto tiene sus propias animaciones
 
-        Vector3 direccion = Vector3.zero;
+        direccion = Vector3.zero;
 
         if (permitirMovimiento == true)
         {
@@ -91,7 +96,7 @@ public class Rita : MonoBehaviour
             if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector3(transform.up.x, transform.up.y, transform.up.y); // Alante
+                direccion += new Vector3(transform.up.x, transform.up.y); // Alante
                 direccionRaycast = new Vector2(0, 1);
                 animator.SetInteger("Direccion", 3);
             }
@@ -99,7 +104,7 @@ public class Rita : MonoBehaviour
             if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.S) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector3(-transform.up.x, -transform.up.y, -transform.up.y); // Atrás
+                direccion += new Vector3(-transform.up.x, -transform.up.y); // Atrás
                 direccionRaycast = new Vector2(0, -1);
                 animator.SetInteger("Direccion", 1);
             }
