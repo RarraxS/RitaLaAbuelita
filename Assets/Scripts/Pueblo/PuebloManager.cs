@@ -24,7 +24,7 @@ public class PuebloManager : MonoBehaviour
         GameManager.Instance.AmbientePlay(4);
     }
 
-    void Update()
+    private void Update()
     {
         CambioCasaRita();
         CambioBuscaObjetos();
@@ -32,7 +32,7 @@ public class PuebloManager : MonoBehaviour
     }
 
 
-    void CambioCasaRita()
+    private void CambioCasaRita()
     {
         //Si se pulsa la tecla de interacción cuando se está frente a la casa de Rita,
         //se guarda la posición de Rita para cuando se vuelva a la escena y se le dice
@@ -47,7 +47,7 @@ public class PuebloManager : MonoBehaviour
         }
     }
 
-    void CambioBuscaObjetos()
+    private void CambioBuscaObjetos()
     {
         //Si se pulsa la tecla espacio cuando se está frente a la tienda, se guarda la 
         //posición de Rita para cuando se vuelva a la escena y se le dice a que escena
