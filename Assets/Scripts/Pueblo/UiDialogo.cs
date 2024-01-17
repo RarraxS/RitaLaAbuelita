@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UiDialogo : MonoBehaviour
@@ -7,7 +8,7 @@ public class UiDialogo : MonoBehaviour
 
     //-------------------------------------------------------------------------------
     //Sistema de diálogos
-    [SerializeField] private TMP_Text textRita, textNpc, textContinuar;
+    [SerializeField] private TMP_Text textRita, textNpc;
     private int interaccionActual, interaccionActualRita, interaccionActualNPC;
     private bool turnoRita;
 
@@ -16,7 +17,7 @@ public class UiDialogo : MonoBehaviour
     public bool accesoInicial = false;
     private bool ritaPrimero;
     private int numNpc;
-    private string DialogoNpc, DialogoRita, _tecla;
+    private string DialogoNpc, DialogoRita;
     //-------------------------------------------------------------------------------
 
     [SerializeField] private Animator animator;
@@ -43,7 +44,6 @@ public class UiDialogo : MonoBehaviour
 
     private void Update()
     {
-        InteractuarText();
         DialogoMultiple();
     }
 
@@ -104,8 +104,7 @@ public class UiDialogo : MonoBehaviour
     {
         //Hacemos que al pulsar la tecla de interacción contador de diálogos aumenta y la conversación avanza,
         //tocandole ahora hablar al otro personaje.
-        if ((Rita.Instance.canvasDialogo.activeSelf && (Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo")) ||
-            (Rita.Instance.canvasDialogo.activeSelf && (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro")))
+        if (Rita.Instance.canvasDialogo.activeSelf && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
             if (turnoRita == true)
             {
@@ -132,20 +131,5 @@ public class UiDialogo : MonoBehaviour
                 Rita.Instance.permitirMovimiento = true;
             }
         }
-    }
-
-    private void InteractuarText()
-    {
-        if (GameManager.Instance.controles == "zurdo")
-        {
-            _tecla = "U";
-        }
-
-        else
-        {
-            _tecla = "E";
-        }
-
-        textContinuar.text = _tecla + " para continuar";
     }
 }
