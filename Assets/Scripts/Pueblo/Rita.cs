@@ -49,6 +49,11 @@ public class Rita : MonoBehaviour
             ActualizarPosicion();
         }
 
+        if (GameManager.Instance.escena == "CasaRita")
+        {
+            canvasInteracciones.SetActive(false);
+        }
+
         canvasDialogo.SetActive(false);
 
         currentScene = GetComponent<Scene>();
@@ -163,13 +168,10 @@ public class Rita : MonoBehaviour
     void Interactuar()
     {
         //Si se pulsa la tecla interacción y el raycast está enfocando a un NPC
-        //llama al "UiDialogo" que se encarga degestionar los diálogos
+        //llama al "UiDialogo" que se encarga de gestionar los diálogos
 
-        if (((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo" && !canvasDialogo.activeInHierarchy) ||
-            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro" && !canvasDialogo.activeInHierarchy)) && 
-            PuebloManager.Instance.collidedObject.tag == "NPC")
+        if (Input.GetKeyDown(KeyCode.Space) && PuebloManager.Instance.collidedObject.tag == "NPC")
         {
-            
             canvasDialogo.SetActive(true);
             GameManager.Instance.SonidoStop();
             permitirMovimiento = false;
@@ -180,33 +182,19 @@ public class Rita : MonoBehaviour
     void TextInteraccion()
     {
         //Si el raycast se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
-        if (PuebloManager.Instance.collidedObject.tag == "NPC")
-        {
-            if (GameManager.Instance.controles == "zurdo")
-            {
-                tecla = "U";
-            }
-
-            else
-            {
-                tecla = "E";
-            }
-        }
-
-        if (PuebloManager.Instance.collidedObject.tag == "Casa")
-        {
-            tecla = "Espacio";
-        }
-
         if (PuebloManager.Instance.collidedObject.tag == "NPC" || PuebloManager.Instance.collidedObject.tag == "Casa")
         {
             canvasInteracciones.SetActive(true);
-            textInteraccion.text = "Pulsa: " + tecla;
         }
         
         else if (!(PuebloManager.Instance.collidedObject.tag == "NPC" || PuebloManager.Instance.collidedObject.tag == "Casa"))
         {
             canvasInteracciones.SetActive(false);
+        }
+
+        if (GameManager.Instance.escena == "CasaRita")
+        {
+            canvasInteracciones.transform.SetParent(rita.transform);
         }
     }
 
