@@ -1359,7 +1359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1379,11 +1379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 63.835
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 63.833
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1415,11 +1415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 362
+      value: -364.5
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -188
+      value: 189.6
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -29847,7 +29847,7 @@ MonoBehaviour:
   mascara:
     serializedVersion: 2
     m_Bits: 64
-  direccionRaycast: {x: 0, y: 1}
+  direccionRaycast: {x: 0, y: -1}
   animator: {fileID: 2110292190}
 --- !u!61 &2110292186
 BoxCollider2D:
@@ -30006,7 +30006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pulsa: Espacio'
+  m_text: Pulsa espacio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}

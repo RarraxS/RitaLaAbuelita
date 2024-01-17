@@ -177,7 +177,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &114524404
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -194,7 +194,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &114524405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,17 +606,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
   m_PrefabInstance: {fileID: 555566919}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &555566921 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
-  m_PrefabInstance: {fileID: 555566919}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &565186457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -665,11 +655,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 63.835
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 63.833
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -701,11 +691,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 362
+      value: -364.5
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -188
+      value: 189.6
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1910,7 +1900,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pulsa: Espacio'
+  m_text: Pulsa espacio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -2124,12 +2114,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a9615921a597efa4daddeb9639035a31, type: 2}
   textRita: {fileID: 1196963232}
   textNpc: {fileID: 1547237193}
-  textContinuar: {fileID: 555566921}
   accesoInicial: 0
   animator: {fileID: 1911761127}
 --- !u!95 &1911761127
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2146,7 +2135,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1911761128
 MonoBehaviour:
   m_ObjectHideFlags: 0
