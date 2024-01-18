@@ -104,7 +104,8 @@ public class UiDialogo : MonoBehaviour
     {
         //Hacemos que al pulsar la tecla de interacción contador de diálogos aumenta y la conversación avanza,
         //tocandole ahora hablar al otro personaje.
-        if (Rita.Instance.canvasDialogo.activeSelf && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+        if (Rita.Instance.canvasDialogo.activeSelf && GameManager.Instance.escena == "Pueblo" && 
+            (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
             if (turnoRita == true)
             {

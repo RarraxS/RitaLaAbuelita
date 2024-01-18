@@ -52,7 +52,10 @@ public class Rita : MonoBehaviour
             canvasInteracciones.SetActive(false);
         }
 
-        canvasDialogo.SetActive(false);
+        if (GameManager.Instance.escena == "Pueblo")
+        {
+            canvasDialogo.SetActive(false);
+        }
 
         currentScene = GetComponent<Scene>();
 
@@ -163,21 +166,6 @@ public class Rita : MonoBehaviour
         //Debug.Log(PuebloManager.Instance.collidedObject);
     }
 
-    void Interactuar()
-    {
-        //Si se pulsa la tecla interacción y el raycast está enfocando a un NPC
-        //llama al "UiDialogo" que se encarga de gestionar los diálogos
-
-        if (!Rita.Instance.canvasDialogo.activeSelf && Input.GetKeyDown(KeyCode.Space) && 
-            collidedObject.tag == "NPC")
-        {
-            canvasDialogo.SetActive(true);
-            GameManager.Instance.SonidoStop();
-            permitirMovimiento = false;
-            UiDialogo.Instance.accesoInicial = false;
-        }
-    }
-
     void TextInteraccion()
     {
         //Si el raycast se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
@@ -185,7 +173,7 @@ public class Rita : MonoBehaviour
         {
             canvasInteracciones.SetActive(true);
         }
-        
+
         else if (!(collidedObject.tag == "NPC" || collidedObject.tag == "Casa"))
         {
             canvasInteracciones.SetActive(false);
@@ -194,6 +182,24 @@ public class Rita : MonoBehaviour
         if (GameManager.Instance.escena == "CasaRita")
         {
             canvasInteracciones.transform.SetParent(rita.transform);
+        }
+    }
+
+    void Interactuar()
+    {
+        //Si se pulsa la tecla interacción y el raycast está enfocando a un NPC
+        //llama al "UiDialogo" que se encarga de gestionar los diálogos
+
+        if (GameManager.Instance.escena == "Pueblo")
+        {
+            if (!Rita.Instance.canvasDialogo.activeSelf && Input.GetKeyDown(KeyCode.Space) &&
+                collidedObject.tag == "NPC")
+            {
+                canvasDialogo.SetActive(true);
+                GameManager.Instance.SonidoStop();
+                permitirMovimiento = false;
+                UiDialogo.Instance.accesoInicial = false;
+            }
         }
     }
 
