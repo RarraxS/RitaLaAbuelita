@@ -717,7 +717,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &392473815
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -734,8 +734,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &392473816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,7 +754,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e9ee752b01a0baf428766fa5de278781, type: 2}
   - {fileID: 11400000, guid: a9615921a597efa4daddeb9639035a31, type: 2}
   textRita: {fileID: 622945254}
-  textNpc: {fileID: 0}
+  textNpc: {fileID: 1397732975}
   accesoInicial: 0
   animator: {fileID: 392473815}
 --- !u!1 &467386535
@@ -1913,7 +1912,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -2545,7 +2543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8590595875148427396, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_Name
-      value: Text Rita
+      value: Text NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ade7e912aaf718e44867e82712316257, type: 3}
@@ -2554,6 +2552,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
   m_PrefabInstance: {fileID: 1397732973}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1397732975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 705591631461281620, guid: ade7e912aaf718e44867e82712316257, type: 3}
+  m_PrefabInstance: {fileID: 1397732973}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1400826431
 GameObject:
   m_ObjectHideFlags: 0
@@ -29967,7 +29976,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2110292190
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -29984,8 +29993,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &705591632266104524
 MonoBehaviour:
   m_ObjectHideFlags: 0

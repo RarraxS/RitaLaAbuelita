@@ -170,7 +170,8 @@ public class Rita : MonoBehaviour
         //Si se pulsa la tecla interacción y el raycast está enfocando a un NPC
         //llama al "UiDialogo" que se encarga de gestionar los diálogos
 
-        if (Input.GetKeyDown(KeyCode.Space) && PuebloManager.Instance.collidedObject.tag == "NPC")
+        if (!Rita.Instance.canvasDialogo.activeSelf && Input.GetKeyDown(KeyCode.Space) && 
+            PuebloManager.Instance.collidedObject.tag == "NPC")
         {
             canvasDialogo.SetActive(true);
             GameManager.Instance.SonidoStop();
