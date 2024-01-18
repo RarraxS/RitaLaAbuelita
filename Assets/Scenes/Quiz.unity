@@ -1096,23 +1096,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: Rio que pasa por Galicia
+      value: 'Continua: Sevilla tiene ....'
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: Ebro
+      value: Un olor especial
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: Guadiana
+      value: Una atmosfera especial
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: Jucar
+      value: Una vibra especial
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: "Mi\xF1o"
+      value: Un color especial
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].correcta
@@ -1333,7 +1333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "Libro espa\xF1ol mas conocido del mundo"
+      value: "Libro espa\xF1ol m\xE1s conocido del mundo"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -1341,15 +1341,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: "El guardi\xE1n entre el centeno"
+      value: Luces de bohemia
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: 
+      value: Lazarillo De Tormes
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: "Eres t\xFA"
+      value: La casa de Bernarda Alba
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].correcta
@@ -1533,7 +1533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: Cual era la moneda que se usaba antes del euro
+      value: "Cual era la moneda que se usaba antes del euro en Espa\xF1a"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -1710,24 +1710,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "Libro que cuenta la historia de la perspectiva de un adolescente en
-        la Guerra Civil espa\xF1ola"
+      value: "Capital de Espa\xF1a"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: Los girasoles ciegos
+      value: "C\xE1ceres"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: Tierra  y libertad
+      value: Barcelona
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: Las bicicletas son para el verano
+      value: Madrid
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: Las 13 rosas
+      value: La Rioja
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].correcta
@@ -2505,23 +2504,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: Ganador del Premio Nobel de Medicina
+      value: 'Continua: A palabras necias, ...'
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: 'Jacinto Benavente '
+      value: Boca cerrada
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: "Santiago Ram\xF3n y Cajal "
+      value: Oidos sordos
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: "Juan Ram\xF3n Jim\xE9nez"
+      value: Boca abierta
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: "Camilo Jos\xE9 Cela"
+      value: Oidos abiertos
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].correcta
@@ -2789,23 +2788,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "Primer rey Borb\xF3n en Espa\xF1a"
+      value: 'Continua: De tal palo, ...'
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
-      value: Felipe V
+      value: Tal astilla
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: Fernando VI
+      value: Tal madera
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: Luis I
+      value: Tal rama
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: Carlos III
+      value: Tal tallado
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].correcta
