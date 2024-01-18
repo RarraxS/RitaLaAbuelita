@@ -7,7 +7,6 @@ public class Rita : MonoBehaviour
     [SerializeField] private float velocidad;
     [SerializeField] private GameObject canvasInteracciones, objetoNulo;
     public GameObject canvasDialogo, rita, collidedObject;
-    [SerializeField] private TMP_Text textInteraccion;
 
     private Vector3 direccion;
     private string tecla;
