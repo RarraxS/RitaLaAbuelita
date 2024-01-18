@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PuebloManager : MonoBehaviour
 {
-    public GameObject collidedObject, cambioBuscaObjetos, cambioQuiz, cambioCasaRita;
+    public GameObject cambioBuscaObjetos, cambioQuiz, cambioCasaRita;
 
     private static PuebloManager instance;
     public static PuebloManager Instance
@@ -37,7 +37,7 @@ public class PuebloManager : MonoBehaviour
         //Si se pulsa la tecla de interacción cuando se está frente a la casa de Rita,
         //se guarda la posición de Rita para cuando se vuelva a la escena y se le dice
         //a que escena debe ir tras acabar la pantalla de carga
-        if (PuebloManager.Instance.collidedObject == PuebloManager.Instance.cambioCasaRita &&
+        if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioCasaRita &&
             Input.GetKeyDown(KeyCode.Space))
         {
             GameManager.Instance.position = Rita.Instance.rita.transform.position;
@@ -52,7 +52,7 @@ public class PuebloManager : MonoBehaviour
         //Si se pulsa la tecla espacio cuando se está frente a la tienda, se guarda la 
         //posición de Rita para cuando se vuelva a la escena y se le dice a que escena
         //debe ir tras acabar la pantalla de carga
-        if (PuebloManager.Instance.collidedObject == PuebloManager.Instance.cambioBuscaObjetos && Input.GetKey(KeyCode.Space))
+        if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioBuscaObjetos && Input.GetKey(KeyCode.Space))
         {
             GameManager.Instance.position = Rita.Instance.rita.transform.position;
             GameManager.Instance.escena = "PulsarIngredientes";
@@ -66,7 +66,7 @@ public class PuebloManager : MonoBehaviour
         //Si se pulsa la tecla de interacción cuando se está frente al NPC, se guarda la 
         //posición de Rita para cuando se vuelva a la escena y se le dice a que escena
         //debe ir tras acabar la pantalla de carga
-        if (PuebloManager.Instance.collidedObject == PuebloManager.Instance.cambioQuiz && 
+        if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioQuiz && 
             ((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo") ||
             (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro")))
         {

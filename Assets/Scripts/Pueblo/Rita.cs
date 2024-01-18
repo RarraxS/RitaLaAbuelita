@@ -6,8 +6,7 @@ public class Rita : MonoBehaviour
 {
     [SerializeField] private float velocidad;
     [SerializeField] private GameObject canvasInteracciones, objetoNulo;
-    public GameObject canvasDialogo;
-    public GameObject rita;
+    public GameObject canvasDialogo, rita, collidedObject;
     [SerializeField] private TMP_Text textInteraccion;
 
     private Vector3 direccion;
@@ -154,11 +153,11 @@ public class Rita : MonoBehaviour
         if (informacionRaycast.collider != null)
         {
             // Accede al GameObject con el que ha colisionado
-            PuebloManager.Instance.collidedObject = informacionRaycast.collider.gameObject;
+            collidedObject = informacionRaycast.collider.gameObject;
         }
         else
         {
-            PuebloManager.Instance.collidedObject = objetoNulo;
+            collidedObject = objetoNulo;
         }
 
         // Imprime el nombre del GameObject por consola
@@ -171,7 +170,7 @@ public class Rita : MonoBehaviour
         //llama al "UiDialogo" que se encarga de gestionar los diálogos
 
         if (!Rita.Instance.canvasDialogo.activeSelf && Input.GetKeyDown(KeyCode.Space) && 
-            PuebloManager.Instance.collidedObject.tag == "NPC")
+            collidedObject.tag == "NPC")
         {
             canvasDialogo.SetActive(true);
             GameManager.Instance.SonidoStop();
@@ -183,12 +182,12 @@ public class Rita : MonoBehaviour
     void TextInteraccion()
     {
         //Si el raycast se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
-        if (PuebloManager.Instance.collidedObject.tag == "NPC" || PuebloManager.Instance.collidedObject.tag == "Casa")
+        if (collidedObject.tag == "NPC" || collidedObject.tag == "Casa")
         {
             canvasInteracciones.SetActive(true);
         }
         
-        else if (!(PuebloManager.Instance.collidedObject.tag == "NPC" || PuebloManager.Instance.collidedObject.tag == "Casa"))
+        else if (!(collidedObject.tag == "NPC" || collidedObject.tag == "Casa"))
         {
             canvasInteracciones.SetActive(false);
         }

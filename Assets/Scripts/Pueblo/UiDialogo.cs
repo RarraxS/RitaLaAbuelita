@@ -59,7 +59,7 @@ public class UiDialogo : MonoBehaviour
         //almecenamos sus datos en variables para usarlas más tarde
         for (int i = 0; i < interaccion.Length; i++)
         {
-            if (PuebloManager.Instance.collidedObject.name == interaccion[i].name)
+            if (Rita.Instance.collidedObject.name == interaccion[i].name)
             {
                 int numNpc = ((DialogoNpc)interaccion[i]).numNpc;
 

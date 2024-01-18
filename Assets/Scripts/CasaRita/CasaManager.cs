@@ -14,7 +14,7 @@ public class CasaManager : MonoBehaviour
     {
         //Si se pulsa la tecla de interacción cuando se está frente a la alfombra de la casa de Rita
         //se va a la escena "Pueblo"
-        if (PuebloManager.Instance.collidedObject == cambioPueblo &&
+        if (Rita.Instance.collidedObject == cambioPueblo &&
             Input.GetKeyDown(KeyCode.Space))
         {
             GameManager.Instance.escena = "Pueblo";
