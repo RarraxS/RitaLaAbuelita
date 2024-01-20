@@ -1120,7 +1120,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 142786600}
         m_TargetAssemblyTypeName: GamOver_cocina, Assembly-CSharp
-        m_MethodName: Ganar
+        m_MethodName: Nivel2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2430,7 +2430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -3351,7 +3350,7 @@ GameObject:
   - component: {fileID: 2017925078}
   - component: {fileID: 2017925077}
   m_Layer: 0
-  m_Name: Tomate
+  m_Name: Patata
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

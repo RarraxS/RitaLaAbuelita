@@ -9,16 +9,13 @@ TagManager:
   - No buscando
   - Casa
   - Cuchillo
-  - Incorrrecto1
-  - Incorrecto2
-  - Incorrecto3
-  - Incorrecto4
-  - Incorrecto5
   - Correcto1
   - Correcto2
   - Correcto3
   - Correcto4
   - Rita
+  - Correcto5
+  - Correcto6
   layers:
   - Default
   - TransparentFX
