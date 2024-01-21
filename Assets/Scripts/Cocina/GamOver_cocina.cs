@@ -13,7 +13,8 @@ public class GamOver_cocina : MonoBehaviour
     public void Ganar()
     {
         Debug.Log("Cambio de escena");
-        SceneManager.LoadScene("Pueblo");
+        GameManager.Instance.escena = "CasaRita";
+        SceneManager.LoadScene("CasaRita");
     }
     public void Nivel2()
     {
@@ -28,7 +29,8 @@ public class GamOver_cocina : MonoBehaviour
     public void Pueblo()
     {
         Debug.Log("Cambio de escena");
-        SceneManager.LoadScene("Pueblo");
+        GameManager.Instance.escena = "CasaRita";
+        SceneManager.LoadScene("CasaRita");
     }
 
     // Update is called once per frame

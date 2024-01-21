@@ -31,7 +31,7 @@ public class CasaManager : MonoBehaviour
         if (Rita.Instance.collidedObject == cambioCocinar &&
             Input.GetKeyDown(KeyCode.Space))
         {
-            GameManager.Instance.escena = "Cocinar";
+            GameManager.Instance.escena = "Cocinar 1";
             GameManager.Instance.AmbienteStop();
             SceneManager.LoadScene("PantallaCarga");
         }

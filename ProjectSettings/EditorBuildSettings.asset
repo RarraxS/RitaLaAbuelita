@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PantallaCarga.unity
     guid: 70d5ebacdaa3e43498dbb26470eee012
   - enabled: 1
+    path: Assets/Scenes/CasaRita.unity
+    guid: 23fb34c3c11d60a4da6d96bc8e86f297
+  - enabled: 1
     path: Assets/Scenes/Pueblo.unity
     guid: 8b3224de64343db43b6bc8a1f10d3ea5
   - enabled: 1
@@ -21,9 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Quiz.unity
     guid: f3b5d5f8c55c0e046b196de86b013463
   - enabled: 1
+    path: Assets/Scenes/Cocinar/Cocinar 1.unity
+    guid: 41dda1831dea3174a956998c14be5026
+  - enabled: 1
     path: Assets/Scenes/Cocinar/Cocinar 2.unity
     guid: 57fc5479458bcdb498aa7738b2728ee9
   - enabled: 1
-    path: Assets/Scenes/CasaRita.unity
-    guid: 23fb34c3c11d60a4da6d96bc8e86f297
+    path: Assets/Scenes/Cocinar/Cocinar 3.unity
+    guid: 6eade1ec8333f91428808030c9560d9e
   m_configObjects: {}
