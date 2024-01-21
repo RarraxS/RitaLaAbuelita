@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,12 +17,12 @@ public class GamOver_cocina : MonoBehaviour
     public void Nivel2()
     {
         Debug.Log("Cambio de escena");
-        SceneManager.LoadScene("Cocinar 2");
+        SceneManager.LoadScene("Cocinar2");
     }
     public void Nivel3()
     {
         Debug.Log("Cambio de escena");
-        SceneManager.LoadScene("Cocinar 3");
+        SceneManager.LoadScene("Cocinar3");
     }
     public void Pueblo()
     {

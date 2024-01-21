@@ -24,12 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Quiz.unity
     guid: f3b5d5f8c55c0e046b196de86b013463
   - enabled: 1
-    path: Assets/Scenes/Cocinar/Cocinar 1.unity
+    path: Assets/Scenes/Cocinar/Cocinar1.unity
     guid: 41dda1831dea3174a956998c14be5026
   - enabled: 1
-    path: Assets/Scenes/Cocinar/Cocinar 2.unity
+    path: Assets/Scenes/Cocinar/Cocinar2.unity
     guid: 57fc5479458bcdb498aa7738b2728ee9
   - enabled: 1
-    path: Assets/Scenes/Cocinar/Cocinar 3.unity
+    path: Assets/Scenes/Cocinar/Cocinar3.unity
     guid: 6eade1ec8333f91428808030c9560d9e
   m_configObjects: {}

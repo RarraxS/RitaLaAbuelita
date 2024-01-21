@@ -19,7 +19,7 @@ MonoBehaviour:
   - Me alegro de verte
   dialogosNpc:
   - 
-  - Bien Rita
+  - Bien, Rita
   - "La verdad es que s\xED"
   numTotalDialogos: 5
   numNpc: 5

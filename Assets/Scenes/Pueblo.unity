@@ -2576,7 +2576,7 @@ GameObject:
   - component: {fileID: 1400826432}
   m_Layer: 6
   m_Name: NPC Quiz
-  m_TagString: NPC
+  m_TagString: Casa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2833,7 +2833,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1183969cd2e1ed24c905de83bdb6b52a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collidedObject: {fileID: 0}
   cambioBuscaObjetos: {fileID: 959515235}
   cambioQuiz: {fileID: 1400826431}
   cambioCasaRita: {fileID: 1912612237}
@@ -29850,7 +29849,7 @@ MonoBehaviour:
   objetoNulo: {fileID: 3076986760968401864}
   canvasDialogo: {fileID: 217599278}
   rita: {fileID: 2110292184}
-  textInteraccion: {fileID: 705591632266104524}
+  collidedObject: {fileID: 0}
   permitirMovimiento: 1
   distanciaRaycast: 1.5
   mascara:
