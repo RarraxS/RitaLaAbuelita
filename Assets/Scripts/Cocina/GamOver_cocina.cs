@@ -15,6 +15,16 @@ public class GamOver_cocina : MonoBehaviour
         Debug.Log("Cambio de escena");
         SceneManager.LoadScene("Pueblo");
     }
+    public void Nivel2()
+    {
+        Debug.Log("Cambio de escena");
+        SceneManager.LoadScene("Cocinar 2");
+    }
+    public void Nivel3()
+    {
+        Debug.Log("Cambio de escena");
+        SceneManager.LoadScene("Cocinar 3");
+    }
     public void Pueblo()
     {
         Debug.Log("Cambio de escena");
