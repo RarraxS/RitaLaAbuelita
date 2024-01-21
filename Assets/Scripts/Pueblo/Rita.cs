@@ -11,7 +11,6 @@ public class Rita : MonoBehaviour
     private Vector3 direccion;
     private string tecla;
     public bool permitirMovimiento = true;
-    private Scene currentScene;
 
 
     //Raycast
@@ -56,8 +55,6 @@ public class Rita : MonoBehaviour
         {
             canvasDialogo.SetActive(false);
         }
-
-        currentScene = GetComponent<Scene>();
 
         animator = GetComponent<Animator>();
     }

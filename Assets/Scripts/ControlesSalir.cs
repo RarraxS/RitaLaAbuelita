@@ -12,6 +12,7 @@ public class ControlesSalir : MonoBehaviour
     public void VolverPueblo()
     {
         //Permite salir del minijuego y volver al pueblo mediante un botón
+        GameManager.Instance.escena = "Pueblo";
         SceneManager.LoadScene("Pueblo");
     }
 }
