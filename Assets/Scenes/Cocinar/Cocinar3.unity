@@ -209,6 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 142786601}
   - component: {fileID: 142786600}
+  - component: {fileID: 142786602}
   m_Layer: 0
   m_Name: GameOver
   m_TagString: Untagged
@@ -243,6 +244,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &142786602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142786599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc259bde0c9d92d458e6e75505768522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &158858710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,9 +1131,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 142786600}
-        m_TargetAssemblyTypeName: GamOver_cocina, Assembly-CSharp
-        m_MethodName: Ganar
+      - m_Target: {fileID: 142786602}
+        m_TargetAssemblyTypeName: Ganar, Assembly-CSharp
+        m_MethodName: GanarCocina
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2688,7 +2701,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 142786600}
         m_TargetAssemblyTypeName: GamOver_cocina, Assembly-CSharp
-        m_MethodName: Perder
+        m_MethodName: PerderNivel3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

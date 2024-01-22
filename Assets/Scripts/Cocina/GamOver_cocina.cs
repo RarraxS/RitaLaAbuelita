@@ -4,24 +4,16 @@ using UnityEngine.SceneManagement;
 public class GamOver_cocina : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Perder()
+    public void PerderNivel1()
     {
-        SceneManager.LoadScene("Cocinar");
+        SceneManager.LoadScene("Cocinar1");
     }
-    public void Ganar()
+    public void PerderNivel2()
     {
-        Debug.Log("Cambio de escena");
-        GameManager.Instance.escena = "CasaRita";
-        SceneManager.LoadScene("CasaRita");
-    }
-    public void Nivel2()
-    {
-        Debug.Log("Cambio de escena");
         SceneManager.LoadScene("Cocinar2");
     }
-    public void Nivel3()
+    public void PerderNivel3()
     {
-        Debug.Log("Cambio de escena");
         SceneManager.LoadScene("Cocinar3");
     }
     public void Pueblo()
@@ -29,11 +21,5 @@ public class GamOver_cocina : MonoBehaviour
         Debug.Log("Cambio de escena");
         GameManager.Instance.escena = "CasaRita";
         SceneManager.LoadScene("CasaRita");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
