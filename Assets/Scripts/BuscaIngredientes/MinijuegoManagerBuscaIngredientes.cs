@@ -184,6 +184,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     public void CambiarEscena()
     {
         //Vuelve a la escena de pueblo
+        GameManager.Instance.escena = "Pueblo";
         SceneManager.LoadScene("Pueblo");
     }
 }

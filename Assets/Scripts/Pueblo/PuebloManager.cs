@@ -67,8 +67,7 @@ public class PuebloManager : MonoBehaviour
         //posición de Rita para cuando se vuelva a la escena y se le dice a que escena
         //debe ir tras acabar la pantalla de carga
         if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioQuiz && 
-            ((Input.GetKeyDown(KeyCode.U) && GameManager.Instance.controles == "zurdo") ||
-            (Input.GetKeyDown(KeyCode.E) && GameManager.Instance.controles == "diestro")))
+            Input.GetKeyDown(KeyCode.Space))
         {
             GameManager.Instance.position = Rita.Instance.rita.transform.position;
             GameManager.Instance.escena = "Quiz";

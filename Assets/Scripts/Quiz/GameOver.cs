@@ -13,11 +13,13 @@ public class GameOver : MonoBehaviour
     public void Ganar()
     {
         Debug.Log("Cambio de escena");
+        GameManager.Instance.escena = "Pueblo";
         SceneManager.LoadScene("Pueblo");
     }
     public void Pueblo()
     {
         Debug.Log("Cambio de escena");
+        GameManager.Instance.escena = "Pueblo";
         SceneManager.LoadScene("Pueblo");
     }
     // Update is called once per frame
