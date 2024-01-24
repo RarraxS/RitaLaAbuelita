@@ -602,7 +602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252970759}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.44, y: 3.4844787, z: 0}
+  m_LocalPosition: {x: -2.19, y: 3.4844787, z: 0}
   m_LocalScale: {x: 0.83803594, y: 0.84039813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -817,7 +817,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285830905}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.541911, y: 3.4844787, z: 0}
+  m_LocalPosition: {x: -0.17, y: 3.4844787, z: 0}
   m_LocalScale: {x: 0.83803594, y: 0.84039813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -928,7 +928,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292011501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.086689, y: 3.4844787, z: 0}
+  m_LocalPosition: {x: 4.89, y: 3.4844787, z: 0}
   m_LocalScale: {x: 0.83803594, y: 0.84039813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1039,7 +1039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347379229}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2042346, y: 3.4844787, z: 0}
+  m_LocalPosition: {x: 2.98, y: 3.4844787, z: 0}
   m_LocalScale: {x: 0.83803594, y: 0.84039813, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1688,7 +1688,6 @@ GameObject:
   - component: {fileID: 802348037}
   - component: {fileID: 802348038}
   - component: {fileID: 802348039}
-  - component: {fileID: 802348040}
   - component: {fileID: 802348042}
   - component: {fileID: 802348041}
   m_Layer: 0
@@ -1706,8 +1705,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 802348036}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 0.3981375, z: -1.5699999}
-  m_LocalScale: {x: 0.11797418, y: 0.17524387, z: 0.17524387}
+  m_LocalPosition: {x: 0.3785, y: 0.3981375, z: -1.5699999}
+  m_LocalScale: {x: 0.060131438, y: 0.17524387, z: 0.17524387}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2113641997}
@@ -1791,23 +1790,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 20}
   m_EdgeRadius: 0.05
---- !u!114 &802348040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802348036}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a082fa50a04ceb1468ac4a43f5a37cef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  managerCocina: {fileID: 1790346822}
-  ganar: 0
-  canvasGameOver: {fileID: 856378151}
-  canvasWinGame: {fileID: 283244969}
-  Boton: {fileID: 988770678}
 --- !u!50 &802348041
 Rigidbody2D:
   serializedVersion: 4
@@ -2392,8 +2374,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 802348040}
-        m_TargetAssemblyTypeName: Cuchillo, Assembly-CSharp
+      - m_Target: {fileID: 802348042}
+        m_TargetAssemblyTypeName: Cuchillo_2, Assembly-CSharp
         m_MethodName: Corte
         m_Mode: 1
         m_Arguments:
@@ -3710,7 +3692,7 @@ MonoBehaviour:
   Cuchillo: {fileID: 802348036}
   startPoint: {fileID: 1852811699}
   endPoint: {fileID: 242338865}
-  velocidad: 3
+  velocidad: 6
   moverHacia: {x: 0, y: 0, z: 0}
 --- !u!212 &2113641996
 SpriteRenderer:
