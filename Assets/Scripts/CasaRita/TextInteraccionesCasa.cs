@@ -5,8 +5,7 @@ using System.Drawing;
 public class TextInteraccionesCasa : MonoBehaviour
 {
     public Transform targetObject;  // Referencia al GameObject que seguirá el objeto de texto.
-    public Transform textTransform;
-    private Vector3 distancia = new Vector3(525, 300, 0);
+    public RectTransform textTransform;
     private int velocidad = 2;
     public Vector3 VerticalOffset;
 
