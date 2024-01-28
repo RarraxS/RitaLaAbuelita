@@ -1,10 +1,9 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class UiDialogo : MonoBehaviour
 {
-    [SerializeField] private ScriptableObject[] interaccion;
+    [SerializeField] private ScriptableObject[] interaccionAntesQuiz, interaccionAntesBuscaObjetos, interaccionAntesCocina;
 
     //-------------------------------------------------------------------------------
     //Sistema de diálogos
@@ -53,8 +52,11 @@ public class UiDialogo : MonoBehaviour
         Continuar();
     }
 
+
     private void AccederNPC()
     {
+        /*
+
         //Comprobamos si el objeto colisionado coincide con alguno de los Dialogos que hay creados y
         //almecenamos sus datos en variables para usarlas más tarde
         for (int i = 0; i < interaccion.Length; i++)
@@ -98,6 +100,8 @@ public class UiDialogo : MonoBehaviour
                 textNpc.text = DialogoNpc;
             }
         }
+
+        */
     }
 
     private void Continuar()

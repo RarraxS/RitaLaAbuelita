@@ -672,7 +672,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 5, y: 99, z: 0}
+  - first: {x: 2, y: 99, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 3
@@ -1113,7 +1113,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
---- !u!114 &3859574382706413205
+--- !u!114 &261152741470891321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
