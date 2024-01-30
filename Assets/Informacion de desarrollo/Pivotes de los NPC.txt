@@ -1,0 +1,19 @@
+Paca
+	X = 0.5 
+	Y = 0.3
+
+Toño
+	X = 
+	Y = 
+
+Concha 
+	X = 
+	Y = 
+
+Enrique
+	X = 
+	Y = 
+
+Rosa
+	X = 
+	Y = 
