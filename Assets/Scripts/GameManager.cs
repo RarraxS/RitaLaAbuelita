@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public Vector3 position;
 
+    public bool buscaObjetosCompletado = false, quizCompletado = false;
+
     //Audio----------------------------------------------------------------------------------------------
 
     [SerializeField] private AudioClip[] Sonidos;

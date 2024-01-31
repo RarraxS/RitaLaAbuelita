@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class UiDialogo : MonoBehaviour
 {
-    [SerializeField] private ScriptableObject[] interaccionAntesQuiz, interaccionAntesBuscaObjetos, interaccionAntesCocina;
+    [SerializeField] private ScriptableObject[] interaccionAntesQuizBuscaObjetos, interaccionDespuesQuizAntesBuscaObjetos, 
+        interaccionDespuesBuscaObjetosAntesQuiz, interaccionAntesCocina;
 
     //-------------------------------------------------------------------------------
     //Sistema de diálogos
@@ -48,15 +49,18 @@ public class UiDialogo : MonoBehaviour
 
     private void DialogoMultiple()
     {
-        AccederNPC();
+        if (GameManager.Instance.quizCompletado == false && GameManager.Instance.buscaObjetosCompletado == false)
+        {
+            //AccederNPC();
+        }
+
+        //AccederNPC();
         Continuar();
     }
 
 
-    private void AccederNPC()
+    private void AccederNPC(ScriptableObject[] interaccion)
     {
-        /*
-
         //Comprobamos si el objeto colisionado coincide con alguno de los Dialogos que hay creados y
         //almecenamos sus datos en variables para usarlas más tarde
         for (int i = 0; i < interaccion.Length; i++)
@@ -100,8 +104,6 @@ public class UiDialogo : MonoBehaviour
                 textNpc.text = DialogoNpc;
             }
         }
-
-        */
     }
 
     private void Continuar()
