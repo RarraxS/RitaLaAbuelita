@@ -14,13 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - "Anda Rosa, c\xF3mo est\xE1s "
-  - Ha pasado mucho tiempo
-  - Me alegro de verte
+  - Rosa lista
   dialogosNpc:
   - 
-  - Bien, Rita
-  - "La verdad es que s\xED"
-  numTotalDialogos: 5
+  - BuscaObjetos Rosa completado
+  numTotalDialogos: 2
   numNpc: 5
-  ritaHablaPrimero: 1
+  ritaHablaPrimero: 0

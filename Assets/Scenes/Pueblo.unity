@@ -2125,10 +2125,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d82664c9153af7141843e24793ef4f7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interaccionAntesQuizBuscaObjetos: []
-  interaccionDespuesQuizAntesBuscaObjetos: []
-  interaccionDespuesBuscaObjetosAntesQuiz: []
-  interaccionAntesCocina: []
+  interaccionAntesQuiz:
+  - {fileID: 11400000, guid: cf3b1427a21bda04ebceffd1734e315a, type: 2}
+  - {fileID: 11400000, guid: 50a221f21359c654d9754ff973828622, type: 2}
+  - {fileID: 11400000, guid: 6a57331d6ca3b9c4891493c0dfad16bc, type: 2}
+  - {fileID: 11400000, guid: e9ee752b01a0baf428766fa5de278781, type: 2}
+  - {fileID: 11400000, guid: a9615921a597efa4daddeb9639035a31, type: 2}
+  interaccionAntesBuscaObjetos:
+  - {fileID: 11400000, guid: 57262fa695ad9834aaca9e06de8398c0, type: 2}
+  - {fileID: 11400000, guid: fcd07707fa43be04f8b8b05db3908063, type: 2}
+  - {fileID: 11400000, guid: 7820229d99bce034793c698afe028818, type: 2}
+  - {fileID: 11400000, guid: d8aa0cdfa4db94d49bd6cb0450306843, type: 2}
+  - {fileID: 11400000, guid: ce67a1ffff03d1a43bc09ead3f95e823, type: 2}
+  interaccionesAntesCocina:
+  - {fileID: 11400000, guid: 038dde04013200d4584192a8abd5a1b2, type: 2}
+  - {fileID: 11400000, guid: a1d010ac63706ab4bb2d8333609dc620, type: 2}
+  - {fileID: 11400000, guid: a15bce0ebbc35534baffad8615c3d529, type: 2}
+  - {fileID: 11400000, guid: 7e578b3a1b0a2ae458f954a4c7d0776e, type: 2}
+  - {fileID: 11400000, guid: de16cec915a53c94c8c002f51318d2a7, type: 2}
   textRita: {fileID: 622945254}
   textNpc: {fileID: 1397732975}
   accesoInicial: 0

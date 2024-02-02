@@ -50,10 +50,19 @@ public class UiDialogo : MonoBehaviour
     {
         if (GameManager.Instance.quizCompletado == false && GameManager.Instance.buscaObjetosCompletado == false)
         {
-            //AccederNPC();
+            AccederNPC(interaccionAntesQuiz);
         }
 
-        //AccederNPC();
+        if (GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == false)
+        {
+            AccederNPC(interaccionAntesBuscaObjetos);
+        }
+
+        if (GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == true)
+        {
+            AccederNPC(interaccionesAntesCocina);
+        }
+        
         Continuar();
     }
 
