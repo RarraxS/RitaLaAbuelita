@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(AudioSource))]
 public class QuizManager : MonoBehaviour
@@ -21,6 +23,7 @@ public class QuizManager : MonoBehaviour
     [SerializeField] private AudioClip sonidoincorrecto = null;
 
     public int VolverAlPueblo = 0;
+    public TMP_Text textoContador;
     //[SerializeField] private List<Preguntas> preguntas = null;
 
     private Quiz quizDB = null;
@@ -56,14 +59,25 @@ public class QuizManager : MonoBehaviour
                 temp = 1f;
                 NextQuestion();
                 VolverAlPueblo++;
+                textoContador.text = VolverAlPueblo.ToString();
             }
+        }
+        if (VolverAlPueblo >= 7)
+        {
+            GameManager.Instance.SonidoStop();
+            GameManager.Instance.SonidoPlay(13);
+            canvasWinGame.SetActive(true);
+            Continuar.gameObject.SetActive(true);
         }
     }
 
 
     private void NextQuestion()
     {
-        quizUI.Construct(quizDB.GetRandom(), GiveAnswer);
+        if (VolverAlPueblo < 7)
+        {
+            quizUI.Construct(quizDB.GetRandom(), GiveAnswer);
+        }
     }
     public void GiveAnswer(BotonOpcion optionbutton)
     {
@@ -94,14 +108,6 @@ public class QuizManager : MonoBehaviour
                 canvasGameOver.SetActive(true);
                 Reiniciar.gameObject.SetActive(true);
             }
-        }
-
-        if (VolverAlPueblo >= 7)
-        {
-            GameManager.Instance.SonidoStop();
-            GameManager.Instance.SonidoPlay(13);
-            canvasWinGame.SetActive(true);
-            Continuar.gameObject.SetActive(true);
         }
     }
 
