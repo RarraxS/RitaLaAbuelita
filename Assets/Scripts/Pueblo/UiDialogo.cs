@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class UiDialogo : MonoBehaviour
 {
-    [SerializeField] private ScriptableObject[] interaccionAntesQuizBuscaObjetos, interaccionDespuesQuizAntesBuscaObjetos, 
-        interaccionDespuesBuscaObjetosAntesQuiz, interaccionAntesCocina;
+    [SerializeField] private ScriptableObject[] interaccionAntesQuiz, interaccionAntesBuscaObjetos, interaccionesAntesCocina;
 
     //-------------------------------------------------------------------------------
     //Sistema de diálogos
