@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class CargaManager : MonoBehaviour
 {
-    private float timerEspera = 2.1f;
+    private float timerEspera = 1.31f;
 
     private static CargaManager instance;
     public static CargaManager Instance
@@ -25,14 +25,13 @@ public class CargaManager : MonoBehaviour
 
     private void Update()
     {
-        //Hay un timer para cambiar de escena, ya que la barra es una animación,
-        //lo que se hace es que este timer cuando llega a 0 la barra ya ha llegado
-        //al máximo, asique cambiamos ya a la nueva escena
+        //Cuando acaba el timer carga la escena y cuando esta ha
+        //acabado de cargar te llave a la escena correspondiente
         timerEspera -= Time.deltaTime;
 
         if (timerEspera <= 0)
         {
-            SceneManager.LoadScene(GameManager.Instance.escena);
+            AsyncOperation carga = SceneManager.LoadSceneAsync(GameManager.Instance.escena);//Esta es la función que se encarga de cargar la escena de fondo
         }
     }
 
