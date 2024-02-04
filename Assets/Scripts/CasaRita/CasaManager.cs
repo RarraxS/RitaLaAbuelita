@@ -28,8 +28,8 @@ public class CasaManager : MonoBehaviour
     {
         //Si se pulsa la tecla de interacción cuando se está frente a la encimera de la casa de Rita
         //se va a la escena "Cocinar"
-        if (Rita.Instance.collidedObject == cambioCocinar &&
-            Input.GetKeyDown(KeyCode.Space))
+        if (Rita.Instance.collidedObject == cambioCocinar && Input.GetKeyDown(KeyCode.Space) &&
+            GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == true)
         {
             GameManager.Instance.escena = "Cocinar1";
             GameManager.Instance.AmbienteStop();

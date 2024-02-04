@@ -1,13 +1,10 @@
 using UnityEngine;
-using System;
-using System.Drawing;
 
 public class TextInteraccionesCasa : MonoBehaviour
 {
-    public Transform targetObject;  // Referencia al GameObject que seguirá el objeto de texto.
-    public RectTransform textTransform;
-    private int velocidad = 2;
-    public Vector3 VerticalOffset;
+    [SerializeField] private Transform targetObject;  // Referencia al GameObject que seguirá el objeto de texto.
+    [SerializeField] private RectTransform textTransform;
+    [SerializeField] private Vector3 VerticalOffset;
 
     void Update()
     {

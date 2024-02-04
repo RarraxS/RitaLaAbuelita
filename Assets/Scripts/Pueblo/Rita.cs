@@ -164,7 +164,10 @@ public class Rita : MonoBehaviour
     void TextInteraccion()
     {
         //Si el raycast se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
-        if (collidedObject.tag == "NPC" || collidedObject.tag == "Casa")
+        if ((collidedObject.tag == "NPC" || collidedObject.tag == "Casa") ||
+            (collidedObject.tag == "Busca objetos" && GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == false) ||
+            (collidedObject.tag == "Quiz" && GameManager.Instance.quizCompletado == false) ||
+            (collidedObject.tag == "Cocinar" && GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == true))
         {
             canvasInteracciones.SetActive(true);
         }

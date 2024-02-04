@@ -366,7 +366,7 @@ BoxCollider2D:
   m_Offset: {x: -0.105418086, y: -2.705726}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.49, y: 0.26}
     oldSize: {x: 10, y: 10}
     newSize: {x: 10, y: 10}
     adaptiveTilingThreshold: 0.5
@@ -1546,10 +1546,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17773688, y: -4.665603}
+  m_Offset: {x: -0.042846203, y: -1.1086566}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.51, y: 0.3}
     oldSize: {x: 11.32, y: 18.88}
     newSize: {x: 11.32, y: 18.88}
     adaptiveTilingThreshold: 0.5
@@ -1557,7 +1557,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.057519, y: 5.2087927}
+  m_Size: {x: 7.5942593, y: 6.6977477}
   m_EdgeRadius: 0
 --- !u!114 &187197873
 MonoBehaviour:
@@ -19148,7 +19148,7 @@ GameObject:
   - component: {fileID: 959515239}
   m_Layer: 6
   m_Name: Tienda
-  m_TagString: Casa
+  m_TagString: Busca objetos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20148,10 +20148,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 2.5191023, y: -5.571176}
+  m_Offset: {x: -0.3046875, y: -0.9190074}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.67, y: 0.28}
     oldSize: {x: 19.15, y: 20.674328}
     newSize: {x: 19.15, y: 20.674328}
     adaptiveTilingThreshold: 0.5
@@ -20159,7 +20159,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.0376086, y: 7.454318}
+  m_Size: {x: 9.014263, y: 8.56968}
   m_EdgeRadius: 0
 --- !u!212 &1388783141
 SpriteRenderer:
@@ -20241,10 +20241,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -6, y: -6.5}
+  m_Offset: {x: -9.60034, y: -3.1114705}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.67, y: 0.28}
     oldSize: {x: 19.15, y: 20.674328}
     newSize: {x: 19.15, y: 20.674328}
     adaptiveTilingThreshold: 0.5
@@ -20252,7 +20252,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.7, y: 5.5}
+  m_Size: {x: 5.8412113, y: 3.8057408}
   m_EdgeRadius: 0
 --- !u!114 &1388783144
 MonoBehaviour:
@@ -20433,7 +20433,7 @@ GameObject:
   - component: {fileID: 1400826435}
   m_Layer: 6
   m_Name: NPC Quiz
-  m_TagString: Casa
+  m_TagString: Quiz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21258,7 +21258,7 @@ BoxCollider2D:
   m_Offset: {x: -0.09681237, y: -3.2141628}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.25}
     oldSize: {x: 10, y: 12.03}
     newSize: {x: 10, y: 12.03}
     adaptiveTilingThreshold: 0.5

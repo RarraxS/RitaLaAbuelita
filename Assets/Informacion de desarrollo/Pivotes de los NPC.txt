@@ -3,17 +3,17 @@ Paca
 	Y = 0.3
 
 Toño
-	X = 
-	Y = 
+	X = 0.51
+	Y = 0.3
 
 Concha 
-	X = 
-	Y = 
+	X = 0.67
+	Y = 0.28
 
 Enrique
-	X = 
-	Y = 
+	X = 0.49
+	Y = 0.26
 
 Rosa
-	X = 
-	Y = 
+	X = 0.5
+	Y = 0.25
