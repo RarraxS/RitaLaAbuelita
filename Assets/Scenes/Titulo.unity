@@ -140,10 +140,9 @@ GameObject:
   - component: {fileID: 35916880}
   - component: {fileID: 35916879}
   - component: {fileID: 35916878}
-  - component: {fileID: 35916881}
   m_Layer: 5
   m_Name: Boton Salir
-  m_TagString: Untagged
+  m_TagString: toolTip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +160,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2058617353}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -262,25 +261,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35916876}
   m_CullTransparentMesh: 1
---- !u!114 &35916881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35916876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ddc61b46d4155645b2d748c9387a0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indicador: {fileID: 2058617354}
-  toolTip: Salir del juego
---- !u!1 &38064734 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8408553627430043738, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
-  m_PrefabInstance: {fileID: 7723678792517432023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &144484578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2432,7 +2412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2444,19 +2424,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 530.6852
+      value: 450.68518
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 53.792404
+      value: 75.792404
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_LocalScale.x
@@ -2500,11 +2480,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.43338013
+      value: 79.56558
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.4333496
+      value: -22.43338
       objectReference: {fileID: 0}
     - target: {fileID: 6508701897932701523, guid: ade7e912aaf718e44867e82712316257, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2752,10 +2732,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 983890880}
   - {fileID: 2270141908263040895}
   - {fileID: 2270141909189161614}
   - {fileID: 35916877}
+  - {fileID: 983890880}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2962,10 +2942,9 @@ GameObject:
   - component: {fileID: 2270141908263040888}
   - component: {fileID: 2270141908263040889}
   - component: {fileID: 2270141908263040894}
-  - component: {fileID: 2270141908263040896}
   m_Layer: 5
   m_Name: Boton Jugar
-  m_TagString: Untagged
+  m_TagString: toolTip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3039,46 +3018,18 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2058617353}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 6.5, y: -180.2}
   m_SizeDelta: {x: 77.8939, y: 77.3674}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2270141908263040896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2270141908263040892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ddc61b46d4155645b2d748c9387a0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indicador: {fileID: 2058617354}
-  toolTip: Jugar
 --- !u!224 &2270141909189161614 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
   m_PrefabInstance: {fileID: 7723678792517432023}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2270141909189161615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38064734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ddc61b46d4155645b2d748c9387a0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  indicador: {fileID: 2058617354}
-  toolTip: "Configuraci\xF3n"
 --- !u!1001 &2474564088094101239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3341,7 +3292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3418,6 +3369,10 @@ PrefabInstance:
     - target: {fileID: 8408553627430043738, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_Name
       value: Boton Controles
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408553627430043738, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
+      propertyPath: m_TagString
+      value: toolTip
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8408553627430043719, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
