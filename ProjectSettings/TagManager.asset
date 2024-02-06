@@ -19,6 +19,7 @@ TagManager:
   - Busca objetos
   - Quiz
   - Cocinar
+  - toolTip
   layers:
   - Default
   - TransparentFX
