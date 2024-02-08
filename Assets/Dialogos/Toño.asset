@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a4965cbca72ee447ba7bb8ef1da247c, type: 3}
-  m_Name: Rosa
+  m_Name: "To\xF1o"
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Rosa in
+  - "\xBFQu\xE9 tal To\xF1o?"
+  - Ya, que se le va a hacer
   dialogosNpc:
   - 
-  - Inicio Rosa
-  numTotalDialogos: 2
-  numNpc: 5
+  - "Pero hombre, mira quien est\xE1 aqu\xED"
+  - Muy bien, pero hace calor
+  numTotalDialogos: 4
+  numNpc: 2
   ritaHablaPrimero: 0

@@ -11,7 +11,6 @@ public class GameOver : MonoBehaviour
     public void Ganar()
     {
         Debug.Log("Cambio de escena");
-        GameManager.Instance.quizCompletado = true;
         GameManager.Instance.escena = "Pueblo";
         SceneManager.LoadScene("Pueblo");
     }

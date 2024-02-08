@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Enrique ok
+  - La tienes en la cabeza
   dialogosNpc:
   - 
-  - Quiz Enrique completado
-  numTotalDialogos: 2
+  - "\xBFNo habr\xE1s visto mi gorra por ah\xED tirada, no?"
+  - Ah, es verdad jajaja
+  numTotalDialogos: 3
   numNpc: 4
   ritaHablaPrimero: 0

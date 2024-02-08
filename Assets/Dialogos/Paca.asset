@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Paca lista
+  - Hola Paca
+  - 'Que tal estas '
+  - Bien, voy para la tienda
   dialogosNpc:
   - 
-  - BuscaObjetos Paca completado
-  numTotalDialogos: 2
+  - Hola Rita
+  - Bien y tu
+  - Buena compra
+  numTotalDialogos: 6
   numNpc: 1
-  ritaHablaPrimero: 0
+  ritaHablaPrimero: 1

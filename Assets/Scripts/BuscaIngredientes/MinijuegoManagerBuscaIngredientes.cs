@@ -179,8 +179,6 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         }
 
         canvasVictoria.SetActive(true);
-
-        GameManager.Instance.buscaObjetosCompletado = true;
     }
 
     public void CambiarEscena()
