@@ -14,14 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Hola Paca
-  - 'Que tal estas '
-  - Bien, voy para la tienda
+  - Paca in
   dialogosNpc:
   - 
-  - Hola Rita
-  - Bien y tu
-  - Buena compra
-  numTotalDialogos: 6
+  - Inicio Paca
+  numTotalDialogos: 2
   numNpc: 1
-  ritaHablaPrimero: 1
+  ritaHablaPrimero: 0

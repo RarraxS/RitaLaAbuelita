@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a4965cbca72ee447ba7bb8ef1da247c, type: 3}
-  m_Name: Rosa
+  m_Name: "To\xF1o"
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Rosa in
+  - "To\xF1o ok"
   dialogosNpc:
   - 
-  - Inicio Rosa
+  - "Quiz To\xF1o completado"
   numTotalDialogos: 2
-  numNpc: 5
+  numNpc: 2
   ritaHablaPrimero: 0

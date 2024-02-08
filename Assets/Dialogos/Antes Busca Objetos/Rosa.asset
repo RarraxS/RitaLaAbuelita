@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Rosa in
+  - Rosa ok
   dialogosNpc:
   - 
-  - Inicio Rosa
+  - Quiz Rosa completado
   numTotalDialogos: 2
   numNpc: 5
   ritaHablaPrimero: 0

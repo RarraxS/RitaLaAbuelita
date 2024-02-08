@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - "\xBFAy que mono, como se llama el perro?"
-  - Firulais, espero que cuides bien de Concha ehh
+  - Concha In
   dialogosNpc:
   - 
-  - Se llama Firulais
-  numTotalDialogos: 3
+  - Inicio Concha
+  numTotalDialogos: 2
   numNpc: 3
-  ritaHablaPrimero: 1
+  ritaHablaPrimero: 0

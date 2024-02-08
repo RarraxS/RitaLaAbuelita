@@ -14,12 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - "\xBFQu\xE9 tal To\xF1o?"
-  - Ya, que se le va a hacer
+  - "To\xF1o in"
   dialogosNpc:
   - 
-  - "Pero hombre, mira quien est\xE1 aqu\xED"
-  - Muy bien, pero hace calor
-  numTotalDialogos: 4
+  - "Inicio To\xF1o"
+  numTotalDialogos: 2
   numNpc: 2
   ritaHablaPrimero: 0
