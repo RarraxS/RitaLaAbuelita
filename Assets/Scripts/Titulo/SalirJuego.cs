@@ -1,19 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SalirJuego : MonoBehaviour
 {
-    [SerializeField] GameObject canvasSalir;
-
     private void Start()
     {
-        canvasSalir.SetActive(false);
+        GameManager.Instance.canvasSalir.SetActive(false);
     }
     public void PulsarSalir()
     {
-        canvasSalir.SetActive(true);
+        GameManager.Instance.canvasSalir.SetActive(true);
     }
     public void Salir()
     {
@@ -21,6 +16,6 @@ public class SalirJuego : MonoBehaviour
     }
     public void Quedarse()
     {
-        canvasSalir.SetActive(false);
+        GameManager.Instance.canvasSalir.SetActive(false);
     }
 }

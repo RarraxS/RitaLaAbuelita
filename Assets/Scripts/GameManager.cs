@@ -4,10 +4,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject canvasInicio, canvasControles, canvasQuiz;
+    public GameObject canvasInicio, canvasControles, canvasSalir, canvasQuiz;
 
-    public string escena, controles;
-    public bool permitirAbrirMenuControles = true;
+    public string escena = "Titulo", controles;
+    public bool permitirAbrirMenuControles = true, permitirTextIndicador = true;
 
     private string nombreEscenaActual;
 
@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour
     {
         //Guardamos en todo momento el nombre de la escena en la que nos encontramos
         nombreEscenaActual = SceneManager.GetActiveScene().name;
+
+        PermitirmostrarIndicador();
     }
 
     public void Jugar()
@@ -161,6 +163,19 @@ public class GameManager : MonoBehaviour
             controles = "zurdo";
             toggleZurdo.isOn = true;
             SonidoPlay(0);
+        }
+    }
+
+    private void PermitirmostrarIndicador()
+    {
+        if (escena == "Titulo" && canvasSalir.activeSelf)
+        {
+            permitirTextIndicador = false;
+        }
+
+        else
+        {
+            permitirTextIndicador = true;
         }
     }
 
