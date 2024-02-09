@@ -13,7 +13,7 @@ public class GameOver : MonoBehaviour
         Debug.Log("Cambio de escena");
         GameManager.Instance.quizCompletado = true;
         GameManager.Instance.escena = "Pueblo";
-        SceneManager.LoadScene("Pueblo");
+        SceneManager.LoadScene("PantallaCarga");
     }
     public void Pueblo()
     {
