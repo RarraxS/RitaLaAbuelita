@@ -13,7 +13,6 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     [SerializeField] private float timerEspera;
     [SerializeField] private TMP_Text textNivel;
     public TMP_Text textTiempo;
-    public GameObject objetoSuperpuesto;
     public float minimoValorEjeX, maximoValorEjeX, minimoValorEjeY, maximoValorEjeY;
     public bool timerEsperaEnabled = false, jugar = true, DestruirNivelEnabled = false;
     private float valorEjeX, valorEjeY;
@@ -150,7 +149,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     void ActualizarHUD()
     {
         //Actualiza en el HUD el nivel en el que te encuentras
-        textNivel.text = "Nivel: " + (nivel + 1).ToString("0");
+        textNivel.text = "Nivel: " + (nivel + 1).ToString("0") + "/" + nivelFinal.ToString("0");
 
         //Actualiza en el HUD el tiempo que te queda en cada momento
         textTiempo.text = "Tiempo: " + timer.ToString("0");
