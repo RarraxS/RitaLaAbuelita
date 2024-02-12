@@ -19395,11 +19395,11 @@ PrefabInstance:
       objectReference: {fileID: 1519641772}
     - target: {fileID: 8408553627430043736, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: MenuControles
+      value: MenuPausa
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043736, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ControlesSalir, Assembly-CSharp
+      value: PausaSalir, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8408553627430043737, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
       propertyPath: m_Pivot.x

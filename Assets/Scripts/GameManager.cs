@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject canvasInicio, canvasControles, canvasSalir, canvasQuiz;
+    public GameObject canvasInicio, canvasPausa, canvasControles, canvasSalir, canvasQuiz;
 
     public string escena = "Titulo", controles;
     public bool permitirAbrirMenuControles = true, permitirTextIndicador = true;
@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
 
         canvasInicio.SetActive(true);
         canvasControles.SetActive(false);
+        canvasPausa.SetActive(false);
 
         //Lo inicializamos con controles de diestro
         toggleZurdo.isOn = false;

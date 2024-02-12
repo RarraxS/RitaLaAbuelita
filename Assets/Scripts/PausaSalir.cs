@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ControlesSalir : MonoBehaviour
+public class PausaSalir : MonoBehaviour
 {
-    public void MenuControles()
+    public void MenuPausa()
     {
-        //Permite abrir el menú de controles mediante un botón
-        GameManager.Instance.AbrirMenuControles();
+        //Permite abrir el menú de pausa
+        GameManager.Instance.canvasPausa.SetActive(true);
     }
 
     public void VolverPueblo()
