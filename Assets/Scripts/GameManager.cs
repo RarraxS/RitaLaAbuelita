@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     private string nombreEscenaActual;
 
-    public Vector3 position;
+    public Vector3 posicionPueblo, posicionCasa;
 
     public bool buscaObjetosCompletado = false, quizCompletado = false;
 
@@ -41,7 +41,15 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(this);
 
-        position.z = position.y;
+        if (escena == "Pueblo")
+        {
+            posicionPueblo.z = posicionPueblo.y;
+        }
+
+        if (escena == "CasaRita")
+        {
+            posicionCasa.z = posicionCasa.y;
+        }
 
         canvasInicio.SetActive(true);
         canvasControles.SetActive(false);

@@ -40,7 +40,7 @@ public class PuebloManager : MonoBehaviour
         if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioCasaRita &&
             Input.GetKeyDown(KeyCode.Space))
         {
-            GameManager.Instance.position = Rita.Instance.rita.transform.position;
+            GameManager.Instance.posicionPueblo = Rita.Instance.rita.transform.position;
             GameManager.Instance.escena = "CasaRita";
             GameManager.Instance.AmbienteStop();
             SceneManager.LoadScene("PantallaCarga");
@@ -55,7 +55,7 @@ public class PuebloManager : MonoBehaviour
         if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioQuiz &&
             Input.GetKeyDown(KeyCode.Space) && GameManager.Instance.quizCompletado == false)
         {
-            GameManager.Instance.position = Rita.Instance.rita.transform.position;
+            GameManager.Instance.posicionPueblo = Rita.Instance.rita.transform.position;
             GameManager.Instance.escena = "Quiz";
             GameManager.Instance.AmbienteStop();
             SceneManager.LoadScene("PantallaCarga");
@@ -71,7 +71,7 @@ public class PuebloManager : MonoBehaviour
             Input.GetKey(KeyCode.Space) && GameManager.Instance.quizCompletado == true && 
             GameManager.Instance.buscaObjetosCompletado == false)
         {
-            GameManager.Instance.position = Rita.Instance.rita.transform.position;
+            GameManager.Instance.posicionPueblo = Rita.Instance.rita.transform.position;
             GameManager.Instance.escena = "PulsarIngredientes";
             GameManager.Instance.AmbienteStop();
             SceneManager.LoadScene("PantallaCarga");

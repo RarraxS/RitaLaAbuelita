@@ -34,6 +34,8 @@ public class QuizManager : MonoBehaviour
     bool permitirTemp = false;
     float temp = 1f;
 
+    private bool sonarVictoria = false;
+
 
     private void Start()
     {
@@ -64,8 +66,11 @@ public class QuizManager : MonoBehaviour
         }
         if (VolverAlPueblo >= 7)
         {
-            GameManager.Instance.SonidoStop();
-            GameManager.Instance.SonidoPlay(13);
+            if (sonarVictoria == false)
+            {
+                GameManager.Instance.SonidoPlay(13);
+                sonarVictoria = true;
+            }
             canvasWinGame.SetActive(true);
             Continuar.gameObject.SetActive(true);
         }

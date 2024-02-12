@@ -39,7 +39,7 @@ public class Rita : MonoBehaviour
     void Start()
     {
         //Inicializamos todo lo que vamos a necesitar
-        if (GameManager.Instance.escena == "Pueblo")
+        if (GameManager.Instance.escena == "Pueblo" || GameManager.Instance.escena == "CasaRita")
         {
             ActualizarPosicion();
         }
@@ -211,6 +211,14 @@ public class Rita : MonoBehaviour
     void ActualizarPosicion()
     {
         //Guarda la posición de Rita antes de cambiar de escena para que aparezca ahí cuando vuelva
-        rita.transform.position = GameManager.Instance.position;
+        if (GameManager.Instance.escena == "Pueblo")
+        {
+            rita.transform.position = GameManager.Instance.posicionPueblo;
+        }
+
+        if (GameManager.Instance.escena == "CasaRita")
+        {
+            rita.transform.position = GameManager.Instance.posicionCasa;
+        }
     }
 }
