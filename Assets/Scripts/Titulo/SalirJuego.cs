@@ -2,20 +2,36 @@ using UnityEngine;
 
 public class SalirJuego : MonoBehaviour
 {
-    private void Start()
+    private static SalirJuego instance;
+    public static SalirJuego Instance
     {
+        get { return instance; }
+    }
+
+    void Awake()
+    {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+
         GameManager.Instance.canvasSalir.SetActive(false);
     }
+
     public void PulsarSalir()
     {
         GameManager.Instance.canvasSalir.SetActive(true);
     }
+
     public void Salir()
     {
         Application.Quit();
     }
+
     public void Quedarse()
     {
         GameManager.Instance.canvasSalir.SetActive(false);
+
+
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject canvasInicio, canvasPausa, canvasControles, canvasSalir, canvasQuiz;
+    public GameObject canvasPausa, canvasControles, canvasSalir, canvasQuiz;
 
     public string escena = "Titulo", controles;
     public bool permitirAbrirMenuControles = true, permitirTextIndicador = true;
 
-    private string nombreEscenaActual;
 
     public Vector3 posicionPueblo, posicionCasa;
+    private Vector3 posicionPuebloBase, posicionCasaBase;
 
     public bool buscaObjetosCompletado = false, quizCompletado = false;
 
@@ -50,30 +50,21 @@ public class GameManager : MonoBehaviour
         {
             posicionCasa.z = posicionCasa.y;
         }
-
-        canvasInicio.SetActive(true);
         canvasControles.SetActive(false);
         canvasPausa.SetActive(false);
 
         //Lo inicializamos con controles de diestro
         toggleZurdo.isOn = false;
+
+        posicionPuebloBase = posicionPueblo;
+        posicionCasaBase = posicionCasa;
     }
 
     void Update()
     {
         //Guardamos en todo momento el nombre de la escena en la que nos encontramos
-        nombreEscenaActual = SceneManager.GetActiveScene().name;
-
+        
         PermitirmostrarIndicador();
-    }
-
-    public void Jugar()
-    {
-        //Cuando pulsas el botón en la pantalla de inicio suena el sonido y se reproduce la animación de la pantalla
-        canvasInicio.SetActive(false);
-        SonidoPlay(0);
-        FondoInicio.Instance.animator.SetBool("Jugar", true);
-        FondoInicio.Instance.timerActivado = true;
     }
 
     public void AbrirMenuControles()
@@ -82,27 +73,6 @@ public class GameManager : MonoBehaviour
         //de los minijuegos o el poder andar por el pueblo mientras el menú está activo
         
         SonidoPlay(0);
-        
-        if (nombreEscenaActual == "Titulo")
-        {
-            canvasInicio.SetActive(false);
-        }
-
-        if (nombreEscenaActual == "Pueblo")
-        {
-            Rita.Instance.permitirMovimiento = false;
-        }
-
-        if (nombreEscenaActual == "PulsarIngredientes")
-        {
-            MinijuegoManagerBuscaIngredientes.Instance.jugar = false;
-        }
-
-        if (nombreEscenaActual == "Quiz")
-        {
-            canvasQuiz.SetActive(false);
-        }
-
 
         canvasControles.SetActive(true);
     }
@@ -111,27 +81,12 @@ public class GameManager : MonoBehaviour
     {
         //Este botón cierra el menú controles y lo devuelve todo a la normalidad 
 
-        canvasControles.SetActive(false);
+        MenuControles.Instance.salida = true;
         SonidoPlay(0);
 
-        if (nombreEscenaActual == "Titulo")
+        if (escena == "Titulo")
         {
-            canvasInicio.SetActive(true);
-        }
-
-        if (nombreEscenaActual == "Pueblo")
-        {
-            Rita.Instance.permitirMovimiento = true;
-        }
-
-        if (nombreEscenaActual == "PulsarIngredientes")
-        {
-            MinijuegoManagerBuscaIngredientes.Instance.jugar = true;
-        }
-
-        if (nombreEscenaActual == "Quiz")
-        {
-            canvasQuiz.SetActive(true);
+            BotonesIntro.Instance.canvasInicio.SetActive(true);
         }
     }
 

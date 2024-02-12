@@ -90,7 +90,7 @@ public class Rita : MonoBehaviour
                 animator.SetBool("Moviendose", true);
             }
 
-            else if(!GameManager.Instance.canvasControles.activeSelf)
+            else if(!GameManager.Instance.canvasPausa.activeSelf)
             {
                 GameManager.Instance.SonidoStop();
                 animator.SetBool("Moviendose", false);

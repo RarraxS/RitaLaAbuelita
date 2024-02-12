@@ -1,12 +1,34 @@
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PausaSalir : MonoBehaviour
 {
-    public void MenuPausa()
+    public void AbrirMenuPausa()
     {
         //Permite abrir el menú de pausa
         GameManager.Instance.canvasPausa.SetActive(true);
+        MenuPausa.Instance.salida = false;
+
+        if (GameManager.Instance.escena == "Titulo")
+        {
+            BotonesIntro.Instance.canvasInicio.SetActive(false);
+        }
+
+        if (GameManager.Instance.escena == "Pueblo")
+        {
+            Rita.Instance.permitirMovimiento = false;
+        }
+
+        if (GameManager.Instance.escena == "PulsarIngredientes")
+        {
+            MinijuegoManagerBuscaIngredientes.Instance.jugar = false;
+        }
+
+        if (GameManager.Instance.escena == "Quiz")
+        {
+            GameManager.Instance.canvasQuiz.SetActive(false);
+        }
     }
 
     public void VolverPueblo()
