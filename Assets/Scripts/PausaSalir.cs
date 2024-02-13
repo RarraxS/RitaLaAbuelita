@@ -15,7 +15,7 @@ public class PausaSalir : MonoBehaviour
             BotonesIntro.Instance.canvasInicio.SetActive(false);
         }
 
-        if (GameManager.Instance.escena == "Pueblo")
+        if (GameManager.Instance.escena == "Pueblo" || GameManager.Instance.escena == "CasaRita")
         {
             Rita.Instance.permitirMovimiento = false;
         }

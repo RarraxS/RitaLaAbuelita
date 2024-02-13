@@ -54,7 +54,7 @@ public class MenuPausa : MonoBehaviour
 
                 GameManager.Instance.canvasControles.SetActive(true);
 
-                if (GameManager.Instance.escena == "Pueblo")
+                if (GameManager.Instance.escena == "Pueblo" || GameManager.Instance.escena == "CasaRita")
                 {
                     Rita.Instance.permitirMovimiento = true;
                 }
