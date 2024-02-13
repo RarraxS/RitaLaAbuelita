@@ -8,7 +8,7 @@ public class PausaSalir : MonoBehaviour
     {
         //Permite abrir el menú de pausa
         GameManager.Instance.canvasPausa.SetActive(true);
-        MenuPausa.Instance.salida = false;
+        MenuPausa.Instance.salidaPausa = false;
 
         if (GameManager.Instance.escena == "Titulo")
         {

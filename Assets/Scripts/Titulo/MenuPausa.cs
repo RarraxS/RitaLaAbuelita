@@ -5,9 +5,9 @@ public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    private float timer = 0.55f;
-    public bool salida = false;
-    private bool entrado = false;
+    private float timerPausa = 0.55f;
+    public bool salidaPausa = false;
+    private bool entradoPausa = false;
 
     private static MenuPausa instance;
     public static MenuPausa Instance
@@ -27,32 +27,30 @@ public class MenuPausa : MonoBehaviour
     {
         if (GameManager.Instance.canvasPausa.activeSelf && animator.GetInteger("menuPausa") == 0)
         {
-            timer -= Time.deltaTime;
+            timerPausa -= Time.deltaTime;
 
-            if (timer <= 0)
+            if (timerPausa <= 0)
             {
                 animator.SetInteger("menuPausa", 1);
-                timer = 0.55f;
+                timerPausa = 0.55f;
             }
         }
 
-        if (GameManager.Instance.canvasPausa.activeSelf && salida == true)
+        if (GameManager.Instance.canvasPausa.activeSelf && salidaPausa == true)
         {
-            if (entrado == false)
+            if (entradoPausa == false)
             {
                 animator.SetInteger("menuPausa", 2);
-                entrado = true;
+                entradoPausa = true;
             }
 
-            timer -= Time.deltaTime;
+            timerPausa -= Time.deltaTime;
 
-            if (timer <= 0)
+            if (timerPausa <= 0)
             {
-                timer = 0.55f;
+                timerPausa = 0.55f;
                 GameManager.Instance.canvasPausa.SetActive(false);
-                entrado = false;
-
-                GameManager.Instance.canvasControles.SetActive(true);
+                entradoPausa = false;
 
                 if (GameManager.Instance.escena == "Pueblo" || GameManager.Instance.escena == "CasaRita")
                 {
@@ -74,7 +72,7 @@ public class MenuPausa : MonoBehaviour
 
     public void Reanudar()
     {
-        salida = true;
+        salidaPausa = true;
     }
 
     public void Reiniciar()

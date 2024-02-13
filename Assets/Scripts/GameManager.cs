@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
     {
         //Este botón cierra el menú controles y lo devuelve todo a la normalidad 
 
-        MenuControles.Instance.salida = true;
+        MenuControles.Instance.salidaControles = true;
         SonidoPlay(0);
 
         if (escena == "Titulo")

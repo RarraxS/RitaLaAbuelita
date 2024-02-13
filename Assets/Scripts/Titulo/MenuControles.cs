@@ -4,9 +4,9 @@ public class MenuControles : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    private float timer = 0.55f;
-    public bool salida = false;
-    private bool entrado = false;
+    private float timerControles = 0.55f;
+    public bool salidaControles = false;
+    private bool entradoControles = false;
 
     private static MenuControles instance;
     public static MenuControles Instance
@@ -26,32 +26,32 @@ public class MenuControles : MonoBehaviour
     {
         if (GameManager.Instance.canvasControles.activeSelf && animator.GetInteger("menuControles") == 0)
         {
-            timer -= Time.deltaTime;
+            timerControles -= Time.deltaTime;
 
-            if (timer <= 0)
+            if (timerControles <= 0)
             {
                 animator.SetInteger("menuControles", 1);
-                timer = 0.55f;
+                timerControles = 0.55f;
             }
         }
 
-        if (GameManager.Instance.canvasControles.activeSelf && salida == true)
+        if (GameManager.Instance.canvasControles.activeSelf && salidaControles == true)
         {
-            if (entrado == false)
+            if (entradoControles == false)
             {
                 animator.SetInteger("menuControles", 2);
-                entrado = true;
+                entradoControles = true;
             }
 
-            timer -= Time.deltaTime;
-            Debug.Log(timer);
+            timerControles -= Time.deltaTime;
+            Debug.Log(timerControles);
 
-            if (timer <= 0)
+            if (timerControles <= 0)
             {
-                timer = 0.55f;
+                timerControles = 0.55f;
                 GameManager.Instance.canvasControles.SetActive(false);
-                entrado = false;
-                salida = false;
+                entradoControles = false;
+                salidaControles = false;
             }
         }
     }
