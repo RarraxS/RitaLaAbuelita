@@ -83,6 +83,8 @@ public class MenuPausa : MonoBehaviour
         GameManager.Instance.audioSourceMusica.volume = 0.5f;
         GameManager.Instance.audioSourceSonidos.volume = 0.5f;
         GameManager.Instance.audioSourceAmbienteSonidos.volume = 0.5f;
+        GameManager.Instance.toggleZurdo.isOn = false;
+        GameManager.Instance.toggleDiestro.isOn = true;
 
         GameManager.Instance.escena = "Titulo";
         SceneManager.LoadScene("PantallaCarga");

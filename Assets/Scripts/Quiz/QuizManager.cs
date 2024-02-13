@@ -8,7 +8,7 @@ public class QuizManager : MonoBehaviour
     [SerializeField] private Color colorcorrecto = Color.black;
     [SerializeField] private Color colorincorrecto = Color.black;
 
-    [SerializeField] private float esperartiempo = 0.0f;
+    //[SerializeField] private float esperartiempo = 0.0f;
     [SerializeField] public int vidas = 1;
 
     public bool preguntacorrecta = true;
@@ -19,8 +19,8 @@ public class QuizManager : MonoBehaviour
     [SerializeField] GameObject canvasWinGame;
     [SerializeField] GameObject Continuar;
 
-    [SerializeField] private AudioClip sonidocorrecto = null;
-    [SerializeField] private AudioClip sonidoincorrecto = null;
+    //[SerializeField] private AudioClip sonidocorrecto = null;
+    //[SerializeField] private AudioClip sonidoincorrecto = null;
 
     public int VolverAlPueblo = 0;
     public TMP_Text textoContador;

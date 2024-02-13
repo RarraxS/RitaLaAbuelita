@@ -44,7 +44,6 @@ public class MenuControles : MonoBehaviour
             }
 
             timerControles -= Time.deltaTime;
-            Debug.Log(timerControles);
 
             if (timerControles <= 0)
             {
