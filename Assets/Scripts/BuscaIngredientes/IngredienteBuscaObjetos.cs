@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class IngredienteBuscaObjetos : MonoBehaviour
     [SerializeField] private int[] _velocidad;
     [SerializeField] private float timerPausa;
     [SerializeField] private int _parpadeos;
+    [SerializeField] private int numeroImagen;
+    [SerializeField] private ScriptableObject[] distribucion;
     public TMP_Text textTiempo;
     private Color _colorDeFallo;
     private SpriteRenderer sr;
@@ -66,6 +69,11 @@ public class IngredienteBuscaObjetos : MonoBehaviour
             GameManager.Instance.SonidoPlay(16);
             StartCoroutine(Fallar());
         }
+    }
+
+    void RandomizarObjetoBuscar(ScriptableObject distribucion)
+    {
+        //sr.sprite = distribucion[numeroImagen];
     }
 
     void RandomizarPosicion()

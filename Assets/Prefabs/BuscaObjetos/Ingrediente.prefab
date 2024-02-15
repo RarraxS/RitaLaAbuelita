@@ -127,10 +127,11 @@ MonoBehaviour:
   _velocidad: 0100000003000000050000000600000007000000
   timerPausa: 1
   _parpadeos: 2
+  numeroImagen: 0
+  distribucion:
+  - {fileID: 11400000, guid: ccfb211ce762e44419b4e31c8dd2d82c, type: 2}
+  - {fileID: 11400000, guid: eae0c69f85ace704481952263f2dfbd7, type: 2}
+  - {fileID: 11400000, guid: 2453cc64ae35dc54eaab7b3de746f502, type: 2}
+  - {fileID: 11400000, guid: 4fbb2d24d8249d445803ed85dbd96a90, type: 2}
   textTiempo: {fileID: 0}
   ingrediente: {fileID: 0}
-  distanciaRaycast: 3
-  mascara:
-    serializedVersion: 2
-    m_Bits: 64
-  direccionRaycast: {x: 0, y: 0, z: 1}
