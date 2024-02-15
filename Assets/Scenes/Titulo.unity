@@ -441,7 +441,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &198248470
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -458,8 +458,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &290695896 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4581943253766511818, guid: 58dfe9d147bb8e343bc26f44750d4fbf, type: 3}
@@ -727,7 +726,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &451192961
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -744,8 +743,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &452543456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8792484482690703909, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
@@ -989,7 +987,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &484602706
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1006,8 +1004,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &484602707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,7 +1049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1642,6 +1638,7 @@ GameObject:
   - component: {fileID: 1144826823}
   - component: {fileID: 1144826824}
   - component: {fileID: 1144826825}
+  - component: {fileID: 1144826826}
   - component: {fileID: 1144826820}
   - component: {fileID: 1144826821}
   - component: {fileID: 1144826822}
@@ -2050,6 +2047,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1540973487}
   salidaControles: 0
+--- !u!114 &1144826826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144826817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 269a6db9957ee94489235ceb2d870298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1202512241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,7 +2532,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &1540973487
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2540,8 +2549,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1611806722
 GameObject:
   m_ObjectHideFlags: 0

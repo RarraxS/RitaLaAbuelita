@@ -24,14 +24,22 @@ public class MenuControles : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.canvasControles.activeSelf && animator.GetInteger("menuControles") == 0)
+        if (GameManager.Instance.canvasControles.activeSelf && !(animator.GetInteger("menuControles") == 1))
         {
             timerControles -= Time.deltaTime;
 
-            if (timerControles <= 0)
+            if (timerControles <= 0 && animator.GetInteger("menuControles") == 0)
             {
                 animator.SetInteger("menuControles", 1);
                 timerControles = 0.55f;
+            }
+
+            if (timerControles <= 0 && animator.GetInteger("menuControles") == 2)
+            {
+                timerControles = 0.55f;
+                GameManager.Instance.canvasControles.SetActive(false);
+                entradoControles = false;
+                salidaControles = false;
             }
         }
 
@@ -41,16 +49,6 @@ public class MenuControles : MonoBehaviour
             {
                 animator.SetInteger("menuControles", 2);
                 entradoControles = true;
-            }
-
-            timerControles -= Time.deltaTime;
-
-            if (timerControles <= 0)
-            {
-                timerControles = 0.55f;
-                GameManager.Instance.canvasControles.SetActive(false);
-                entradoControles = false;
-                salidaControles = false;
             }
         }
     }
