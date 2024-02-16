@@ -1669,8 +1669,8 @@ MonoBehaviour:
   controles: diestro
   permitirAbrirMenuControles: 1
   permitirTextIndicador: 0
-  posicionPueblo: {x: 0, y: 0, z: 0}
-  posicionCasa: {x: 0, y: 0, z: 0}
+  posicionPueblo: {x: 3.98, y: -1.98, z: -1.98}
+  posicionCasa: {x: 0.046, y: -0.522, z: -5.14}
   buscaObjetosCompletado: 0
   quizCompletado: 0
   Sonidos:
