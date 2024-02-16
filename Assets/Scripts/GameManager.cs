@@ -64,7 +64,12 @@ public class GameManager : MonoBehaviour
     {
         //Guardamos en todo momento el nombre de la escena en la que nos encontramos
         
-        PermitirmostrarIndicador();
+        PermitirMostrarIndicador();
+
+        //-------------------------------------------------------------------------------------
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene("PulsarIngredientes");
+        //-------------------------------------------------------------------------------------
     }
 
     public void AbrirMenuControles()
@@ -130,7 +135,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void PermitirmostrarIndicador()
+    private void PermitirMostrarIndicador()
     {
         if (escena == "Titulo" && canvasSalir.activeSelf)
         {
