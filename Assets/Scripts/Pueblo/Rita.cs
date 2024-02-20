@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Rita : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Rita : MonoBehaviour
     private Vector3 direccion;
     public bool permitirMovimiento = true;
     private Rigidbody2D rb;
-
+    private Transform tr;
 
     //Raycast
     public RaycastHit2D informacionRaycast;
@@ -17,8 +18,8 @@ public class Rita : MonoBehaviour
     [SerializeField] private LayerMask mascara;
     public Vector2 direccionRaycast = new Vector2(0, 1);
 
-    //Animator
-    [SerializeField] private Animator animator;
+   //Animator
+   [SerializeField] private Animator animator;
     //En el animator "Direccion" 1 es Alante, 2 es Derecha, 3 es Abajo, 4 es Izquierda
 
 
@@ -38,6 +39,8 @@ public class Rita : MonoBehaviour
 
     void Start()
     {
+        tr = transform;
+
         //Inicializamos todo lo que vamos a necesitar
         if (GameManager.Instance.escena == "Pueblo" || GameManager.Instance.escena == "CasaRita")
         {
@@ -62,8 +65,7 @@ public class Rita : MonoBehaviour
     void Update()
     {
         //Actualiza el Z Depth
-        Vector3 newPosition = new Vector3(transform.position.x, transform.position.y, transform.position.y);
-        transform.position = newPosition;
+        tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.y); 
 
 
         Movimiento();
@@ -72,11 +74,22 @@ public class Rita : MonoBehaviour
         TextInteraccion();
     }
 
+    //Es el update especializado para físicas
+    private void FixedUpdate()
+    {
+        // Convertir la posición actual a Vector2 y aplicar la velocidad
+        Vector2 nuevaPosicion = rb.position;
+        nuevaPosicion += (Vector2)direccion * velocidad * Time.deltaTime;
+        // Asignar la nueva posición al Rigidbody
+        rb.position = (Vector2)nuevaPosicion;
+    }
+
     void Movimiento()
     {
         //Dependiendo de que tecla pulse se moverá en una dirección u otra, y esto tiene sus propias animaciones
 
-        Vector2 direccion = Vector2.zero;
+        float verticalMultiplier = 1.2f;
+        direccion = Vector2.zero;
 
         if (permitirMovimiento == true)
         {
@@ -99,48 +112,43 @@ public class Rita : MonoBehaviour
             if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector2(transform.up.x, transform.up.y); // Alante
+                direccion += new Vector3(tr.up.x, tr.up.y * verticalMultiplier, 0); // Adelante
                 direccionRaycast = new Vector2(0, 1);
                 animator.SetInteger("Direccion", 3);
             }
 
-            if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
+            else if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.S) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector2(-transform.up.x, -transform.up.y); // Atrás
+                direccion += new Vector3(-tr.up.x, -tr.up.y * verticalMultiplier, 0); // Atrás
                 direccionRaycast = new Vector2(0, -1);
                 animator.SetInteger("Direccion", 1);
             }
 
-            if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
+            else if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.A) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector2(-transform.right.x, -transform.right.y); // Izquierda
+                direccion += new Vector3(-tr.right.x, -tr.right.y, 0); // Izquierda
                 direccionRaycast = new Vector2(-1, 0);
                 animator.SetInteger("Direccion", 4);
             }
 
-            if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
+            else if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.D) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector2(transform.right.x, transform.right.y); // Derecha
+                direccion += new Vector3(tr.right.x, tr.right.y, 0); // Derecha
                 direccionRaycast = new Vector2(1, 0);
                 animator.SetInteger("Direccion", 2);
             }
         }
 
         // Normalizar el vector de dirección si es diferente de cero
-        if (direccion != Vector2.zero)
-        {
-            direccion.Normalize();
-        }
+        //if (direccion != Vector3.zero)
+        //{
+        //    direccion.Normalize();
+        //}
 
-        // Convertir la posición actual a Vector2 y aplicar la velocidad
-        Vector2 nuevaPosicion = rb.position;
-        nuevaPosicion += direccion * velocidad * Time.deltaTime;
 
-        // Asignar la nueva posición al Rigidbody
-        rb.position = nuevaPosicion;
     }
 
     void LanzarRaycast()
@@ -151,7 +159,7 @@ public class Rita : MonoBehaviour
         informacionRaycast = Physics2D.Raycast(transform.position, direccionRaycast, distanciaRaycast, mascara);
 
         // Dibuja el rayo en la escena para propósitos de depuración
-        Debug.DrawRay(transform.position, direccionRaycast * distanciaRaycast, Color.red);
+        //Debug.DrawRay(transform.position, direccionRaycast * distanciaRaycast, Color.red);
 
         // Verifica si el raycast colisionó con algo
         if (informacionRaycast.collider != null)
