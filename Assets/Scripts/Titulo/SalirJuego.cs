@@ -31,7 +31,5 @@ public class SalirJuego : MonoBehaviour
     public void Quedarse()
     {
         GameManager.Instance.canvasSalir.SetActive(false);
-
-
     }
 }

@@ -20,6 +20,8 @@ public class Rita : MonoBehaviour
 
    //Animator
    [SerializeField] private Animator animator;
+    private bool parar, moviendose;
+    private int direccionAnimator;
     //En el animator "Direccion" 1 es Alante, 2 es Derecha, 3 es Abajo, 4 es Izquierda
 
 
@@ -84,7 +86,20 @@ public class Rita : MonoBehaviour
         rb.position = (Vector2)nuevaPosicion;
     }
 
-    void Movimiento()
+    private void OnAnimatorMove()
+    {
+        if (parar == true)
+        {
+            animator.StopPlayback();
+            parar = false;
+        }
+
+        animator.SetBool("Moviendose", moviendose);
+        
+        animator.SetInteger("Direccion", direccionAnimator);
+    }
+
+    private void Movimiento()
     {
         //Dependiendo de que tecla pulse se moverá en una dirección u otra, y esto tiene sus propias animaciones
 
@@ -99,14 +114,14 @@ public class Rita : MonoBehaviour
                 (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))) && GameManager.Instance.controles == "diestro"))
             {
                 GameManager.Instance.SonidoPlay(1);
-                animator.StopPlayback();
-                animator.SetBool("Moviendose", true);
+                parar = true;
+                moviendose = true;
             }
 
             else if(!GameManager.Instance.canvasPausa.activeSelf)
             {
                 GameManager.Instance.SonidoStop();
-                animator.SetBool("Moviendose", false);
+                moviendose = false;
             }
 
             if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
@@ -114,7 +129,7 @@ public class Rita : MonoBehaviour
             {
                 direccion += new Vector3(tr.up.x, tr.up.y * verticalMultiplier, 0); // Adelante
                 direccionRaycast = new Vector2(0, 1);
-                animator.SetInteger("Direccion", 3);
+                direccionAnimator = 3;
             }
 
             else if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
@@ -122,7 +137,7 @@ public class Rita : MonoBehaviour
             {
                 direccion += new Vector3(-tr.up.x, -tr.up.y * verticalMultiplier, 0); // Atrás
                 direccionRaycast = new Vector2(0, -1);
-                animator.SetInteger("Direccion", 1);
+                direccionAnimator = 1;
             }
 
             else if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
@@ -130,7 +145,7 @@ public class Rita : MonoBehaviour
             {
                 direccion += new Vector3(-tr.right.x, -tr.right.y, 0); // Izquierda
                 direccionRaycast = new Vector2(-1, 0);
-                animator.SetInteger("Direccion", 4);
+                direccionAnimator = 4;
             }
 
             else if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
@@ -138,7 +153,7 @@ public class Rita : MonoBehaviour
             {
                 direccion += new Vector3(tr.right.x, tr.right.y, 0); // Derecha
                 direccionRaycast = new Vector2(1, 0);
-                animator.SetInteger("Direccion", 2);
+                direccionAnimator = 2;
             }
         }
 
@@ -151,7 +166,7 @@ public class Rita : MonoBehaviour
 
     }
 
-    void LanzarRaycast()
+    private void LanzarRaycast()
     {
         //Se usa un raycast para poder interactuar con los distintos objetos y NPC del juego
 
@@ -176,7 +191,7 @@ public class Rita : MonoBehaviour
         //Debug.Log(PuebloManager.Instance.collidedObject);
     }
 
-    void TextInteraccion()
+    private void TextInteraccion()
     {
         //Si el raycast se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
         if ((collidedObject.tag == "NPC" || collidedObject.tag == "Casa") ||
@@ -198,7 +213,7 @@ public class Rita : MonoBehaviour
         }
     }
 
-    void Interactuar()
+    private void Interactuar()
     {
         //Si se pulsa la tecla interacción y el raycast está enfocando a un NPC
         //llama al "UiDialogo" que se encarga de gestionar los diálogos
@@ -216,7 +231,7 @@ public class Rita : MonoBehaviour
         }
     }
 
-    void ActualizarPosicion()
+    private void ActualizarPosicion()
     {
         //Guarda la posición de Rita antes de cambiar de escena para que aparezca ahí cuando vuelva
         if (GameManager.Instance.escena == "Pueblo")
