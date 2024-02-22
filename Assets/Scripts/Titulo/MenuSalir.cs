@@ -4,9 +4,9 @@ public class MenuSalir : MonoBehaviour
 {
     [SerializeField] private Animator animator;
 
-    private float timerControles = 0.45f;
-    public bool salidaControles = false;
-    private bool entradoControles = false;
+    private float timerSalir = 0.45f;
+    public bool salidaSalir = false;
+    private bool entradoSalir = false;
 
     private static MenuSalir instance;
     public static MenuSalir Instance
@@ -24,31 +24,31 @@ public class MenuSalir : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.canvasControles.activeSelf && !(animator.GetInteger("menuControles") == 1))
+        if (GameManager.Instance.canvasSalir.activeSelf && !(animator.GetInteger("menuSalir") == 1))
         {
-            timerControles -= Time.deltaTime;
+            timerSalir -= Time.deltaTime;
 
-            if (timerControles <= 0 && animator.GetInteger("menuSalir") == 0)
+            if (timerSalir <= 0 && animator.GetInteger("menuSalir") == 0)
             {
                 animator.SetInteger("menuSalir", 1);
-                timerControles = 0.55f;
+                timerSalir = 0.45f;
             }
 
-            if (timerControles <= 0 && animator.GetInteger("menuSalir") == 2)
+            if (timerSalir <= 0 && animator.GetInteger("menuSalir") == 2)
             {
-                timerControles = 0.55f;
-                GameManager.Instance.canvasControles.SetActive(false);
-                entradoControles = false;
-                salidaControles = false;
+                timerSalir = 0.45f;
+                GameManager.Instance.canvasSalir.SetActive(false);
+                entradoSalir = false;
+                salidaSalir = false;
             }
         }
 
-        if (GameManager.Instance.canvasControles.activeSelf && salidaControles == true)
+        if (GameManager.Instance.canvasSalir.activeSelf && salidaSalir == true)
         {
-            if (entradoControles == false)
+            if (entradoSalir == false)
             {
                 animator.SetInteger("menuSalir", 2);
-                entradoControles = true;
+                entradoSalir = true;
             }
         }
     }
