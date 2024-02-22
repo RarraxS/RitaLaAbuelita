@@ -363,7 +363,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.105418086, y: -2.705726}
+  m_Offset: {x: 0.07866049, y: -0.42317408}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.49, y: 0.26}
@@ -374,7 +374,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.869664, y: 4.588548}
+  m_Size: {x: 4.501507, y: 3.8522382}
   m_EdgeRadius: 0
 --- !u!212 &4677239
 SpriteRenderer:
@@ -1460,7 +1460,7 @@ GameObject:
   - component: {fileID: 187197872}
   - component: {fileID: 187197873}
   m_Layer: 6
-  m_Name: "To\xF1o"
+  m_Name: Tono
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2763,7 +2763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631665572}
   m_Layer: 0
-  m_Name: Demo items
+  m_Name: Placeholders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2863,7 +2863,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1bf89974034ffa0458d83bc3809a11c6, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20461,7 +20461,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.17694366, y: -0.7303563}
+  m_Offset: {x: -0.17693698, y: -0.7303562}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.3}
@@ -20472,7 +20472,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.5666282, y: 4.3342285}
+  m_Size: {x: 5.2586775, y: 4.3342285}
   m_EdgeRadius: 0
 --- !u!212 &1400826433
 SpriteRenderer:
@@ -21265,7 +21265,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09681237, y: -3.2141628}
+  m_Offset: {x: -0.09681225, y: -0.5747769}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.25}
@@ -21276,7 +21276,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.7015476, y: 4.672283}
+  m_Size: {x: 5.7015476, y: 4.4652796}
   m_EdgeRadius: 0
 --- !u!212 &1636332334
 SpriteRenderer:
@@ -22004,7 +22004,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5bc250e8cba16f24f9a0092e913b904e, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33570,7 +33570,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.42040813, y: -1.1681602}
+  m_Offset: {x: -0.42040825, y: -0.93966365}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.25}
@@ -33581,7 +33581,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.055232, y: 4.02364}
+  m_Size: {x: 6.055232, y: 4.4806333}
   m_EdgeRadius: 0
 --- !u!50 &2110292187
 Rigidbody2D:
