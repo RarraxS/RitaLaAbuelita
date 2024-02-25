@@ -21,9 +21,4 @@ public class GameOver : MonoBehaviour
         GameManager.Instance.escena = "Pueblo";
         SceneManager.LoadScene("Pueblo");
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

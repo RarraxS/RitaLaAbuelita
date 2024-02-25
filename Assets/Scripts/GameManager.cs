@@ -66,9 +66,11 @@ public class GameManager : MonoBehaviour
         
         PermitirMostrarIndicador();
 
+
+        //Probador de escenas
         //-------------------------------------------------------------------------------------
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("PulsarIngredientes");
+            SceneManager.LoadScene("Quiz");
         //-------------------------------------------------------------------------------------
     }
 

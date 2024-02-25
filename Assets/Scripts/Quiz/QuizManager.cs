@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 [RequireComponent(typeof(AudioSource))]
 public class QuizManager : MonoBehaviour
@@ -68,6 +69,7 @@ public class QuizManager : MonoBehaviour
         {
             if (sonarVictoria == false)
             {
+                GameManager.Instance.SonidoStop();
                 GameManager.Instance.SonidoPlay(13);
                 sonarVictoria = true;
             }
