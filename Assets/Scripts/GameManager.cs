@@ -1,6 +1,8 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Drawing;
 
 public class GameManager : MonoBehaviour
 {
@@ -70,7 +72,7 @@ public class GameManager : MonoBehaviour
         //Probador de escenas
         //-------------------------------------------------------------------------------------
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("Quiz");
+            SceneManager.LoadScene("Cocinar1");
         //-------------------------------------------------------------------------------------
     }
 
@@ -176,6 +178,19 @@ public class GameManager : MonoBehaviour
         //Se paran los sonidos de ambiente 
         if (audioSourceAmbienteSonidos.isPlaying)
             audioSourceAmbienteSonidos.Stop();
+    }
+
+    public IEnumerator MusicaStopTimer(float timerVolumen)
+    {
+        //El volumen se baja a 0 hasta que el temporizador haya terminado
+        float volumenNormal = audioSourceMusica.volume;
+        audioSourceMusica.volume = 0;
+        while (timerVolumen >= 0)
+        {
+            timerVolumen -= Time.deltaTime;
+            yield return null;
+        }
+        audioSourceMusica.volume = volumenNormal;
     }
 
     public void SliderMusica(float valor)

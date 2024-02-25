@@ -19,7 +19,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
     private int _numParpadeos;
     private bool _spriteOn = true, pulsable = true;
 
-    void Start()
+    private void Start()
     {
         //Se setean las variables que se van a usar, se establece que el número de parpadeos
         //es del doble de los estipulado, dado que se cuenta aparición y desaparición, y se 
@@ -36,7 +36,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         RandomizarPosicion();
     }
 
-    void Update()
+    private void Update()
     {
         //Se mueve el objeto en una dirección random, y se comprueba si se ha chocado con alguno de los bordes,
         //si ha sido así, se cambia la dirección a la que se está moviendo la pieza
@@ -47,7 +47,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
     }
     
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         //Si se acierta se le suma al temporizador más tiempo, se destruye el nivel y suena el sonido de acertar
         if (tag == "Buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
@@ -68,7 +68,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         }
     }
 
-    void RandomizarPosicion()
+    private void RandomizarPosicion()
     {
         //Randomiza la posición
         Vector2 randomCircle = Random.insideUnitCircle;
@@ -76,7 +76,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         _direction = (randomPosition - transform.position).normalized;
     }
 
-    void CorregirPosicion()
+    private void CorregirPosicion()
     {
         //Comprueba si se han sobrepasado los bordes establecidos y si así ha
         //sido, se vuelve a randomizar la posición hacia la que se va a mover
@@ -89,7 +89,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         }
     }
 
-    IEnumerator Acertar()
+    private IEnumerator Acertar()
     {
         //Si se acierta el objeto acierto se hace más grande frame a frame
         _direction *= 0;
@@ -100,7 +100,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         }
     }
 
-    IEnumerator Fallar()
+    private IEnumerator Fallar()
     {
         //Si se falla  el objeto pulsado se pone a parpadear y el texto de
         //tiempo se hace más grande y se pone rojo por un tiempo establecido

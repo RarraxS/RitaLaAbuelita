@@ -68,6 +68,11 @@ public class Cuchillo_3 : MonoBehaviour
     {
         if (ganar >= 2)
         {
+            //Los sonidos de victoria
+            StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
+            GameManager.Instance.SonidoStop();
+            GameManager.Instance.SonidoPlay(13);
+
             canvasWinGame.SetActive(true);
             Boton.gameObject.SetActive(false);
         }

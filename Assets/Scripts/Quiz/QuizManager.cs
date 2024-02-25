@@ -69,6 +69,7 @@ public class QuizManager : MonoBehaviour
         {
             if (sonarVictoria == false)
             {
+                StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
                 GameManager.Instance.SonidoStop();
                 GameManager.Instance.SonidoPlay(13);
                 sonarVictoria = true;

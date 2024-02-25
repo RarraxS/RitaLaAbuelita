@@ -177,6 +177,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         jugar = false;
         if(sonarVictoria == false)
         {
+            StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
             GameManager.Instance.SonidoPlay(13);
             sonarVictoria = true;
         }
