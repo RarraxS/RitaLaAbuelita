@@ -9,7 +9,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     [SerializeField] private GameObject canvasGameOver, canvasVictoria;
     [SerializeField] private int numeroDeNiveles, nivelFinal;
     [SerializeField] private int[] numeroDeObjetosPorNivel;
-    [SerializeField] private int NumeroTotalDeIngredientes;
+    [SerializeField] private int numeroTotalDeIngredientes, numeroTotalDeDistribuciones;
     [SerializeField] private float timerEspera;
     [SerializeField] private TMP_Text textNivel;
     public TMP_Text textTiempo;
@@ -25,6 +25,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     private bool sonarVictoria = false;
 
     private int objeto;
+
+    public int distribucion;
 
     private static MinijuegoManagerBuscaIngredientes instance;
     public static MinijuegoManagerBuscaIngredientes Instance
@@ -47,7 +49,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         timerInicio = timer;
         timerEsperaInicial = timerEspera;
 
-        NumeroTotalDeIngredientes = NumeroTotalDeIngredientes - 1;
+        numeroTotalDeIngredientes = numeroTotalDeIngredientes - 1;
 
         CreadorNiveles();
 
@@ -101,8 +103,10 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
                 clon.transform.position = new Vector3(valorEjeX, valorEjeY, 0);
             }
             clon.GetComponent<IngredienteBuscaObjetos>().textTiempo = textTiempo;
-            objeto = Random.Range(1, (NumeroTotalDeIngredientes + 1));
+            objeto = Random.Range(1, (numeroTotalDeIngredientes + 1));
         }
+        distribucion = Random.Range(1, (numeroTotalDeDistribuciones + 1));
+        Debug.Log(distribucion);
     }
 
     // Esta función destruirá los objetos con los tags "Buscando" y "No buscando", y después llama a "CreadorNiveles"

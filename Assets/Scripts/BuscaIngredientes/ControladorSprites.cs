@@ -1,8 +1,8 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Busca Objetos/Distribución")]
+[CreateAssetMenu(menuName = "Distribución/Sprites")]
 public class ControladorSprites : ScriptableObject
 {
     //Estas son los sprites que se van a utilizar en cada nivel
-    [SerializeField] private Sprite[] sprite;
+    public Sprite[] sprite;
 }
