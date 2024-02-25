@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a4965cbca72ee447ba7bb8ef1da247c, type: 3}
-  m_Name: "To\xF1o"
+  m_Name: Tono
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - "To\xF1o listo"
+  - "To\xF1o in"
   dialogosNpc:
   - 
-  - "BuscaObjetos To\xF1o completado"
+  - "Inicio To\xF1o"
   numTotalDialogos: 2
   numNpc: 2
   ritaHablaPrimero: 0
