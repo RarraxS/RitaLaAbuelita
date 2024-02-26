@@ -288,9 +288,12 @@ public class Cuchillo : MonoBehaviour
             if (ganar >= 4)
             {
                 PatataCorte123.SetActive(false);
-                PatataCorte234.SetActive(false);
                 PatataCorte134.SetActive(false);
+                PatataCorte234.SetActive(false);
                 PatataConCortes.SetActive(true);
+                Destroy(GameObject.FindGameObjectWithTag(_zona));
+                _zona = string.Empty;
+                Debug.Log("Acertaste");
                 Ganaste();
             }
 
@@ -320,13 +323,13 @@ public class Cuchillo : MonoBehaviour
     {
         if (ganar >= 4)
         {
+            canvasWinGame.SetActive(true);
+            Boton.gameObject.SetActive(false);
+
             //Los sonidos de victoria
             StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
             GameManager.Instance.SonidoStop();
             GameManager.Instance.SonidoPlay(13);
-
-            canvasWinGame.SetActive(true);
-            Boton.gameObject.SetActive(false);
         }
     }
 }

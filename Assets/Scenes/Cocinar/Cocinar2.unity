@@ -135,8 +135,8 @@ GameObject:
   - component: {fileID: 27101401}
   - component: {fileID: 27101400}
   m_Layer: 0
-  m_Name: Correcto6
-  m_TagString: Correcto6
+  m_Name: Correcto1
+  m_TagString: Correcto1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158858712}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &27101400
 BoxCollider2D:
@@ -246,8 +246,8 @@ GameObject:
   - component: {fileID: 45331668}
   - component: {fileID: 45331667}
   m_Layer: 0
-  m_Name: Correcto5
-  m_TagString: Correcto5
+  m_Name: Correcto6
+  m_TagString: Correcto6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,7 +265,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158858712}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &45331667
 BoxCollider2D:
@@ -531,12 +531,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 27101399}
   - {fileID: 252970760}
   - {fileID: 285830906}
   - {fileID: 347379230}
   - {fileID: 292011502}
   - {fileID: 45331666}
-  - {fileID: 27101399}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -588,8 +588,8 @@ GameObject:
   - component: {fileID: 252970762}
   - component: {fileID: 252970761}
   m_Layer: 0
-  m_Name: Correcto1
-  m_TagString: Correcto1
+  m_Name: Correcto2
+  m_TagString: Correcto2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -607,7 +607,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158858712}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &252970761
 BoxCollider2D:
@@ -803,8 +803,8 @@ GameObject:
   - component: {fileID: 285830908}
   - component: {fileID: 285830907}
   m_Layer: 0
-  m_Name: Correcto2
-  m_TagString: Correcto2
+  m_Name: Correcto3
+  m_TagString: Correcto3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -822,7 +822,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158858712}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &285830907
 BoxCollider2D:
@@ -914,8 +914,8 @@ GameObject:
   - component: {fileID: 292011504}
   - component: {fileID: 292011503}
   m_Layer: 0
-  m_Name: Correcto4
-  m_TagString: Correcto4
+  m_Name: Correcto5
+  m_TagString: Correcto5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -933,7 +933,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158858712}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &292011503
 BoxCollider2D:
@@ -1025,8 +1025,8 @@ GameObject:
   - component: {fileID: 347379232}
   - component: {fileID: 347379231}
   m_Layer: 0
-  m_Name: Correcto3
-  m_TagString: Correcto3
+  m_Name: Correcto4
+  m_TagString: Correcto4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1044,7 +1044,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 158858712}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &347379231
 BoxCollider2D:
@@ -1828,6 +1828,68 @@ MonoBehaviour:
   canvasGameOver: {fileID: 856378151}
   canvasWinGame: {fileID: 283244969}
   Boton: {fileID: 988770678}
+  ZanahoriaSinCorte: {fileID: 0}
+  ZanahoriaCorte1: {fileID: 0}
+  ZanahoriaCorte2: {fileID: 0}
+  ZanahoriaCorte3: {fileID: 0}
+  ZanahoriaCorte4: {fileID: 0}
+  ZanahoriaCorte5: {fileID: 0}
+  ZanahoriaCorte6: {fileID: 0}
+  ZanahoriaCorte12: {fileID: 0}
+  ZanahoriaCorte13: {fileID: 0}
+  ZanahoriaCorte14: {fileID: 0}
+  ZanahoriaCorte15: {fileID: 0}
+  ZanahoriaCorte16: {fileID: 0}
+  ZanahoriaCorte23: {fileID: 0}
+  ZanahoriaCorte24: {fileID: 0}
+  ZanahoriaCorte25: {fileID: 0}
+  ZanahoriaCorte26: {fileID: 0}
+  ZanahoriaCorte34: {fileID: 0}
+  ZanahoriaCorte35: {fileID: 0}
+  ZanahoriaCorte36: {fileID: 0}
+  ZanahoriaCorte45: {fileID: 0}
+  ZanahoriaCorte46: {fileID: 0}
+  ZanahoriaCorte56: {fileID: 0}
+  ZanahoriaCorte123: {fileID: 0}
+  ZanahoriaCorte124: {fileID: 0}
+  ZanahoriaCorte125: {fileID: 0}
+  ZanahoriaCorte126: {fileID: 0}
+  ZanahoriaCorte134: {fileID: 0}
+  ZanahoriaCorte135: {fileID: 0}
+  ZanahoriaCorte136: {fileID: 0}
+  ZanahoriaCorte145: {fileID: 0}
+  ZanahoriaCorte146: {fileID: 0}
+  ZanahoriaCorte156: {fileID: 0}
+  ZanahoriaCorte234: {fileID: 0}
+  ZanahoriaCorte235: {fileID: 0}
+  ZanahoriaCorte236: {fileID: 0}
+  ZanahoriaCorte245: {fileID: 0}
+  ZanahoriaCorte246: {fileID: 0}
+  ZanahoriaCorte256: {fileID: 0}
+  ZanahoriaCorte345: {fileID: 0}
+  ZanahoriaCorte346: {fileID: 0}
+  ZanahoriaCorte356: {fileID: 0}
+  ZanahoriaCorte456: {fileID: 0}
+  ZanahoriaCorte1234: {fileID: 0}
+  ZanahoriaCorte1235: {fileID: 0}
+  ZanahoriaCorte1236: {fileID: 0}
+  ZanahoriaCorte1245: {fileID: 0}
+  ZanahoriaCorte1246: {fileID: 0}
+  ZanahoriaCorte1256: {fileID: 0}
+  ZanahoriaCorte1345: {fileID: 0}
+  ZanahoriaCorte1346: {fileID: 0}
+  ZanahoriaCorte1356: {fileID: 0}
+  ZanahoriaCorte1456: {fileID: 0}
+  ZanahoriaCorte2345: {fileID: 0}
+  ZanahoriaCorte2346: {fileID: 0}
+  ZanahoriaCorte2356: {fileID: 0}
+  ZanahoriaCorte2456: {fileID: 0}
+  ZanahoriaCorte3456: {fileID: 0}
+  ZanahoriaCorte12345: {fileID: 0}
+  ZanahoriaCorte12346: {fileID: 0}
+  ZanahoriaCorte13456: {fileID: 0}
+  ZanahoriaCorte23456: {fileID: 0}
+  ZanahoriaConCortes: {fileID: 0}
 --- !u!1 &809719109
 GameObject:
   m_ObjectHideFlags: 0
