@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Video;
 
 public class Cuchillo_2 : MonoBehaviour
 {
-    public CocinaManager managerCocina;
     string _zona;
     public int ganar = 0;
     private int num = 0;
+    private int vidas = 6;
 
     [SerializeField] GameObject canvasGameOver;
     [SerializeField] GameObject canvasWinGame;
@@ -160,9 +161,9 @@ public class Cuchillo_2 : MonoBehaviour
         ZanahoriaCorte1234.SetActive(false);
         ZanahoriaCorte1235.SetActive(false);
         ZanahoriaCorte1236.SetActive(false);
-        ZanahoriaCorte1245.SetActive(false);//
-        ZanahoriaCorte1246.SetActive(false);//
-        ZanahoriaCorte1256.SetActive(false);//
+        ZanahoriaCorte1245.SetActive(false);
+        ZanahoriaCorte1246.SetActive(false);
+        ZanahoriaCorte1256.SetActive(false);
         ZanahoriaCorte1345.SetActive(false);
         ZanahoriaCorte1346.SetActive(false);
         ZanahoriaCorte1456.SetActive(false);
@@ -171,7 +172,7 @@ public class Cuchillo_2 : MonoBehaviour
         ZanahoriaCorte2356.SetActive(false);
         ZanahoriaCorte2456.SetActive(false);
         ZanahoriaCorte3456.SetActive(false);
-        ZanahoriaCorte1356.SetActive(false);//
+        ZanahoriaCorte1356.SetActive(false);
 
         //Ganar=5
         ZanahoriaCorte12345.SetActive(false);
@@ -657,9 +658,9 @@ public class Cuchillo_2 : MonoBehaviour
                 }
             }
 
-            if (ganar==4) //Corte 4
+            if (ganar == 4) //Corte 4
             {
-                if(_zona==uno) //Corte num 1
+                if (_zona == uno) //Corte num 1
                 {
                     if (num == 234)
                     {
@@ -883,7 +884,7 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte126.gameObject.SetActive(false);
                         ZanahoriaCorte1256.SetActive(true);
                     }
-                    if(num == 134)
+                    if (num == 134)
                     {
                         ZanahoriaCorte134.gameObject.SetActive(false);
                         ZanahoriaCorte1345.SetActive(true);
@@ -968,9 +969,9 @@ public class Cuchillo_2 : MonoBehaviour
                     }
                 }
             }
-            if (ganar==5)
+            if (ganar == 5)
             {
-                if(_zona==uno) //Corte num 1
+                if (_zona == uno) //Corte num 1
                 {
                     if (num == 2345)
                     {
@@ -1079,6 +1080,10 @@ public class Cuchillo_2 : MonoBehaviour
                     }
                 }
             }
+            Destroy(GameObject.FindGameObjectWithTag(_zona));
+            _zona = string.Empty;
+            //Debug.Log("Acertaste");
+
             if (ganar >= 6)
             {
                 ZanahoriaCorte12345.SetActive(false);
@@ -1086,21 +1091,16 @@ public class Cuchillo_2 : MonoBehaviour
                 ZanahoriaCorte13456.SetActive(false);
                 ZanahoriaCorte23456.SetActive(false);
                 ZanahoriaConCortes.SetActive(false);
-                Destroy(GameObject.FindGameObjectWithTag(_zona));
-                _zona = string.Empty;
-                Debug.Log("Acertaste");
                 Ganaste();
             }
 
-            Destroy(GameObject.FindGameObjectWithTag(_zona));
-            _zona = string.Empty;
-            Debug.Log("Acertaste");
+
         }
         else
         {
-            managerCocina.vidas--;
-            Debug.Log("Fallaste");
-            if (managerCocina.vidas <= 0)
+            vidas--;
+            //Debug.Log("Fallaste");
+            if (vidas <= 0)
             {
                 Morir();
             }
@@ -1108,7 +1108,7 @@ public class Cuchillo_2 : MonoBehaviour
     }
     public void Morir()
     {
-        if (managerCocina.vidas <= 0)
+        if (vidas <= 0)
         {
             canvasGameOver.SetActive(true);
             Boton.gameObject.SetActive(false);
@@ -1116,15 +1116,11 @@ public class Cuchillo_2 : MonoBehaviour
     }
     public void Ganaste()
     {
-        if (ganar >= 6)
-        {
-            //Los sonidos de victoria
-            StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
-            GameManager.Instance.SonidoStop();
-            GameManager.Instance.SonidoPlay(13);
-
-            canvasWinGame.SetActive(true);
-            Boton.gameObject.SetActive(false);
-        }
+        canvasWinGame.SetActive(true);
+        Boton.gameObject.SetActive(false);
+        //Los sonidos de victoria
+        StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
+        GameManager.Instance.SonidoStop();
+        GameManager.Instance.SonidoPlay(13);
     }
 }
