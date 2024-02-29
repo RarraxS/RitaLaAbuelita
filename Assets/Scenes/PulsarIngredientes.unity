@@ -484,6 +484,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4fbb2d24d8249d445803ed85dbd96a90, type: 2}
   numeroObjeto: 0
   image: {fileID: 226790249}
+  objetoBuscar: {fileID: 6392281883984217491, guid: 72ae11cc743b62041bad9a050bbefc2d, type: 3}
 --- !u!1001 &237883622
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2204,7 +2205,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

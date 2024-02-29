@@ -105,8 +105,8 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
             clon.GetComponent<IngredienteBuscaObjetos>().textTiempo = textTiempo;
             objeto = Random.Range(1, (numeroTotalDeIngredientes + 1));
         }
-        distribucion = Random.Range(1, (numeroTotalDeDistribuciones + 1));
-        Debug.Log(distribucion);
+        distribucion = Random.Range(0, numeroTotalDeDistribuciones);
+        //Debug.Log(distribucion);
     }
 
     // Esta función destruirá los objetos con los tags "Buscando" y "No buscando", y después llama a "CreadorNiveles"

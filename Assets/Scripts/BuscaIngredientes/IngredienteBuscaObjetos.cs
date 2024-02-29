@@ -92,9 +92,9 @@ public class IngredienteBuscaObjetos : MonoBehaviour
     private IEnumerator Acertar()
     {
         //Si se acierta el objeto acierto se hace más grande frame a frame
-        _direction *= 0;
         while (transform.localScale.x < 0.1f)
         {
+            _direction *= 0;
             transform.localScale += new Vector3(0.03f, 0.03f, 0.03f) * Time.deltaTime;
             yield return null;
         }

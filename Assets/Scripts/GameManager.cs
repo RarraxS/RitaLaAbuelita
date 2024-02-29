@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource audioSourceMusica, audioSourceSonidos, audioSourceAmbienteSonidos;
 
+    private float volumenMusicaNormal = 0.5f;//Sirve para guardar el valor del slider para cuando se baja el sonido por ganar u otra acción
 
     //----------------------------------------------------------------------------------------------------
 
@@ -72,7 +73,7 @@ public class GameManager : MonoBehaviour
         //Probador de escenas
         //-------------------------------------------------------------------------------------
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("Cocinar1");
+            SceneManager.LoadScene("PulsarIngredientes");
         //-------------------------------------------------------------------------------------
     }
 
@@ -183,20 +184,27 @@ public class GameManager : MonoBehaviour
     public IEnumerator MusicaStopTimer(float timerVolumen)
     {
         //El volumen se baja a 0 hasta que el temporizador haya terminado
-        float volumenNormal = audioSourceMusica.volume;
+        volumenMusicaNormal = audioSourceMusica.volume;
         audioSourceMusica.volume = 0;
         while (timerVolumen >= 0)
         {
             timerVolumen -= Time.deltaTime;
             yield return null;
         }
-        audioSourceMusica.volume = volumenNormal;
+        ReactivarMusica();
+    }
+
+    public void ReactivarMusica()
+    {
+        audioSourceMusica.volume = volumenMusicaNormal;
+        Debug.Log("Actualizado");
     }
 
     public void SliderMusica(float valor)
     {
         //Ajusta el volumen de la música mediante un slider que controla el jugador
         audioSourceMusica.volume = valor;
+        volumenMusicaNormal = valor;
     }
 
     public void SliderSonidos(float valor)
