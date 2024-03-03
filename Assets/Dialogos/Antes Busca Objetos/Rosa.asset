@@ -14,10 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Rosa ok
+  - "Rosita hac\xEDa mucho que no te ve\xEDa"
+  - Si es que en la tienda te tienes que enterar de todo hija.
+  - '*se rie*'
+  - Como quieras amor.
   dialogosNpc:
   - 
-  - Quiz Rosa completado
-  numTotalDialogos: 2
+  - "\xA1Buenos d\xEDaaaas Ritaaaa!"
+  - Rita acercate *susurra* tengo nuevo cotilleo.
+  - "La gente a veces se olvida que estoy o no me, pero yo tengo que poner la oreja
+    \xA1no lo puedo evitar!"
+  - "Te cuento en otro momento que entran clientes *susurrando* el tema es largo
+    luego acercatey te contar\xE9"
+  - "Voy entrando, me alegro de verte *sonr\xEDe*"
+  numTotalDialogos: 9
   numNpc: 5
   ritaHablaPrimero: 0

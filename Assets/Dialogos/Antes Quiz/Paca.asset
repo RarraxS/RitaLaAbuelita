@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Paca in
+  - Jojojoj
+  - eeeeee
   dialogosNpc:
   - 
-  - Inicio Paca
-  numTotalDialogos: 2
+  - kddjkwle
+  numTotalDialogos: 3
   numNpc: 1
-  ritaHablaPrimero: 0
+  ritaHablaPrimero: 1
