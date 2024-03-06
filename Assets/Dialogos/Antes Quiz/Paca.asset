@@ -14,11 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Jojojoj
-  - eeeeee
+  - Ha venido mi nieto de sorpresa
+  - "Mi ni\xF1o esta casi m\xE1s alto que su abuela *sonrie*"
+  - "Ya ver\xE9, primero me toca cocinarle algo al chaval"
+  - "Gracias Paqui \xA1nos vemos!"
   dialogosNpc:
   - 
-  - kddjkwle
-  numTotalDialogos: 3
+  - "Hombre mari \xBFa qu\xE9 sales hoy?"
+  - "\xA1Anda! Hac\xEDa mucho que no ven\xEDa al pueblo. Estar\xE1 hecho un muchacho
+    ya"
+  - Bueno pues traele luego al bar, que te iba a decir de venir con Concha y conmigo
+    a pasar la tarde
+  - '*sorpendida* Si necesitas ayuda en algo puedes decirme'
+  numTotalDialogos: 8
   numNpc: 1
-  ritaHablaPrimero: 1
+  ritaHablaPrimero: 0

@@ -14,19 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - "\xA1Buenos d\xEDas Concha! Ya vuelves del paseo \xBFno?"
-  - Ya le veo *risita*
-  - "Uy pues creo que hoy no cari\xF1o, voy a intentar cocinar algo mi nieto que
-    ha venido hace un rato"
-  - "\xA1Nos vemos! Cuidate bonita"
+  - Concha In
   dialogosNpc:
   - 
-  - "Pues ya ves, Mango no puede estar m\xE1s contento, hemos encontrado un palo
-    en el campo y le ha encantado."
-  - "\xBFQu\xE9 haces hoy Rita? Le he dicho a Paca de ir a jugar unas cartas al bar
-    a la tarde \xBFvienes?"
-  - "Mucha suerte seguro que te sale bueno ya me contar\xE1s"
-  - Lo mismo digo Rita
-  numTotalDialogos: 8
+  - Inicio Concha
+  numTotalDialogos: 2
   numNpc: 3
-  ritaHablaPrimero: 1
+  ritaHablaPrimero: 0

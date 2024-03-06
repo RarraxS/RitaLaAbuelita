@@ -221,7 +221,7 @@ public class Rita : MonoBehaviour
         if (GameManager.Instance.escena == "Pueblo")
         {
             if (!Rita.Instance.canvasDialogo.activeSelf && Input.GetKeyDown(KeyCode.Space) &&
-                collidedObject.tag == "NPC")
+                (collidedObject.tag == "NPC" || collidedObject.tag == "NQuiz"))
             {
                 canvasDialogo.SetActive(true);
                 GameManager.Instance.SonidoStop();

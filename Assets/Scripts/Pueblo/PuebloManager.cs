@@ -28,7 +28,7 @@ public class PuebloManager : MonoBehaviour
     {
         CambioCasaRita();
         CambioBuscaObjetos();
-        CambioQuiz();
+        //CambioQuiz();
     }
 
 
@@ -37,7 +37,7 @@ public class PuebloManager : MonoBehaviour
         //Si se pulsa la tecla de interacción cuando se está frente a la casa de Rita,
         //se guarda la posición de Rita para cuando se vuelva a la escena y se le dice
         //a que escena debe ir tras acabar la pantalla de carga
-        if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioCasaRita &&
+        if (Rita.Instance.collidedObject == cambioCasaRita &&
             Input.GetKeyDown(KeyCode.Space))
         {
             GameManager.Instance.posicionPueblo = Rita.Instance.rita.transform.position;
@@ -47,12 +47,12 @@ public class PuebloManager : MonoBehaviour
         }
     }
 
-    void CambioQuiz()
+    private void CambioQuiz()
     {
         //Si se pulsa la tecla de interacción cuando se está frente al NPC, se guarda la 
         //posición de Rita para cuando se vuelva a la escena y se le dice a que escena
         //debe ir tras acabar la pantalla de carga
-        if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioQuiz &&
+        if (Rita.Instance.collidedObject == cambioQuiz &&
             Input.GetKeyDown(KeyCode.Space) && GameManager.Instance.quizCompletado == false)
         {
             GameManager.Instance.posicionPueblo = Rita.Instance.rita.transform.position;
@@ -67,7 +67,7 @@ public class PuebloManager : MonoBehaviour
         //Si se pulsa la tecla espacio cuando se está frente a la tienda, se guarda la 
         //posición de Rita para cuando se vuelva a la escena y se le dice a que escena
         //debe ir tras acabar la pantalla de carga
-        if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioBuscaObjetos &&
+        if (Rita.Instance.collidedObject == cambioBuscaObjetos &&
             Input.GetKey(KeyCode.Space) && GameManager.Instance.quizCompletado == true && 
             GameManager.Instance.buscaObjetosCompletado == false)
         {

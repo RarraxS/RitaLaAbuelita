@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Enrique in
+  - "\xA1Buenas Enrique!"
+  - Como va la cosecha
+  - 'Ay que alegria entonces *sonrie* '
   dialogosNpc:
   - 
-  - Inicio Enrique
-  numTotalDialogos: 2
+  - "Buenos d\xEDas Rita"
+  - Va, va. Luego te llevo unas pocas olivas a casa.
+  - Me voy al bar, nos vemos.
+  numTotalDialogos: 6
   numNpc: 4
-  ritaHablaPrimero: 0
+  ritaHablaPrimero: 1

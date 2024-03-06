@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UiDialogo : MonoBehaviour
 {
@@ -144,6 +145,15 @@ public class UiDialogo : MonoBehaviour
                 interaccionActualRita = 0;
                 interaccionActualNPC = 0;
                 Rita.Instance.permitirMovimiento = true;
+
+                if(Rita.Instance.collidedObject == PuebloManager.Instance.cambioQuiz &&
+                GameManager.Instance.quizCompletado == false)
+                {
+                    GameManager.Instance.posicionPueblo = Rita.Instance.rita.transform.position;
+                    GameManager.Instance.escena = "Quiz";
+                    GameManager.Instance.AmbienteStop();
+                    SceneManager.LoadScene("PantallaCarga");
+                }
             }
         }
     }
