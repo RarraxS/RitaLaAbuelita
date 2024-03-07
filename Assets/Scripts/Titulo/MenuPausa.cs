@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private Slider[] sliderAudio;
+
+    private Vector3 posicionPuebloBase, posicionCasaBase;
 
     private float timerPausa = 0.55f;
     public bool salidaPausa = false;
@@ -21,6 +25,15 @@ public class MenuPausa : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+
+
+        for (int i = 0; i < sliderAudio.Length; i++)
+        {
+            sliderAudio[i] = sliderAudio[i].GetComponent<Slider>();
+        }
+
+        posicionCasaBase = GameManager.Instance.posicionCasa;
+        posicionPuebloBase = GameManager.Instance.posicionPueblo;
     }
 
     private void Update()
@@ -77,14 +90,21 @@ public class MenuPausa : MonoBehaviour
 
     public void Reiniciar()
     {
+        GameManager.Instance.reiniciando = true;
         GameManager.Instance.canvasPausa.SetActive(false);
         GameManager.Instance.buscaObjetosCompletado = false;
         GameManager.Instance.quizCompletado = false;
+        for (int i = 0; i < sliderAudio.Length; i++)
+        {
+            sliderAudio[i].value = 0.5f;
+        }
         GameManager.Instance.audioSourceMusica.volume = 0.5f;
         GameManager.Instance.audioSourceSonidos.volume = 0.5f;
         GameManager.Instance.audioSourceAmbienteSonidos.volume = 0.5f;
         GameManager.Instance.toggleZurdo.isOn = false;
         GameManager.Instance.toggleDiestro.isOn = true;
+        GameManager.Instance.posicionCasa = posicionCasaBase;
+        GameManager.Instance.posicionPueblo = posicionPuebloBase;
 
         GameManager.Instance.escena = "Titulo";
         SceneManager.LoadScene("PantallaCarga");

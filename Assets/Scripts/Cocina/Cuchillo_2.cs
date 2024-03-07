@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -199,6 +198,8 @@ public class Cuchillo_2 : MonoBehaviour
         if (_zona != string.Empty)
         {
             ganar++;
+
+            //Debug.Log(ganar);
 
             if (ganar == 1)
             {
@@ -1084,8 +1085,9 @@ public class Cuchillo_2 : MonoBehaviour
             _zona = string.Empty;
             //Debug.Log("Acertaste");
 
-            if (ganar >= 6)
+            if (ganar >= 7)
             {
+                //No sale el canvas de ganar porque estas viriables no estan asignadas a ningun objeto
                 ZanahoriaCorte12345.SetActive(false);
                 ZanahoriaCorte12346.SetActive(false);
                 ZanahoriaCorte13456.SetActive(false);

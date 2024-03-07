@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System.Drawing;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -13,9 +12,10 @@ public class GameManager : MonoBehaviour
 
 
     public Vector3 posicionPueblo, posicionCasa;
-    private Vector3 posicionPuebloBase, posicionCasaBase;
 
     public bool buscaObjetosCompletado = false, quizCompletado = false;
+
+    public bool reiniciando = false;
 
     //Audio----------------------------------------------------------------------------------------------
 
@@ -58,9 +58,6 @@ public class GameManager : MonoBehaviour
 
         //Lo inicializamos con controles de diestro
         toggleZurdo.isOn = false;
-
-        posicionPuebloBase = posicionPueblo;
-        posicionCasaBase = posicionCasa;
     }
 
     void Update()
@@ -72,8 +69,8 @@ public class GameManager : MonoBehaviour
 
         //Probador de escenas
         //-------------------------------------------------------------------------------------
-        if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("PulsarIngredientes");
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //    SceneManager.LoadScene("Cocinar2");
         //-------------------------------------------------------------------------------------
     }
 
@@ -197,7 +194,7 @@ public class GameManager : MonoBehaviour
     public void ReactivarMusica()
     {
         audioSourceMusica.volume = volumenMusicaNormal;
-        Debug.Log("Actualizado");
+        //Debug.Log("Actualizado");
     }
 
     public void SliderMusica(float valor)

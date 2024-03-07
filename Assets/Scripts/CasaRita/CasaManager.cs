@@ -20,6 +20,7 @@ public class CasaManager : MonoBehaviour
         {
             GameManager.Instance.escena = "Pueblo";
             GameManager.Instance.AmbienteStop();
+            GameManager.Instance.posicionCasa = Rita.Instance.rita.transform.position;
             SceneManager.LoadScene("PantallaCarga");
         }
     }

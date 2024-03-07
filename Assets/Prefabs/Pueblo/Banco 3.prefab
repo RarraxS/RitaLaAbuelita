@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 688797397000559432}
   - component: {fileID: 1376754430133332497}
   - component: {fileID: 7978157340726815120}
+  - component: {fileID: 8461609604752549946}
   m_Layer: 0
   m_Name: Banco 3
   m_TagString: Untagged
@@ -98,10 +99,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.26801062, y: 0.54345846}
+  m_Offset: {x: -0.26801014, y: 0.6729853}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.23}
+    pivot: {x: 0.5, y: 0.32}
     oldSize: {x: 15, y: 10}
     newSize: {x: 15, y: 10}
     adaptiveTilingThreshold: 0.5
@@ -109,5 +110,17 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.103763, y: 3.687386}
+  m_Size: {x: 8.929848, y: 2.0994017}
   m_EdgeRadius: 0
+--- !u!114 &8461609604752549946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984741106241682429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79fea754662da34c95fb15d41cc6897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

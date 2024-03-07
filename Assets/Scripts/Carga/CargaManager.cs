@@ -18,11 +18,13 @@ public class CargaManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        //Si está sonando algún sonido, que no música a la hora de que empiece a
-        //la pantalla de carga este sonido se para
-        GameManager.Instance.SonidoStop();
-
-        GameManager.Instance.ReactivarMusica();
+        if (GameManager.Instance.reiniciando == false)
+        {
+            //Si está sonando algún sonido, que no música a la hora de que empiece a
+            //la pantalla de carga este sonido se para
+            GameManager.Instance.SonidoStop();
+            GameManager.Instance.ReactivarMusica();
+        }
     }
 
     private void Update()

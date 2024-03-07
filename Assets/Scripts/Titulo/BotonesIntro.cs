@@ -23,6 +23,7 @@ public class BotonesIntro : MonoBehaviour
     public void Jugar()
     {
         //Cuando pulsas el botón en la pantalla de inicio suena el sonido y se reproduce la animación de la pantalla
+        GameManager.Instance.reiniciando = false;
         canvasInicio.SetActive(false);
         GameManager.Instance.SonidoPlay(0);
         FondoInicio.Instance.animator.SetBool("Jugar", true);
@@ -31,6 +32,7 @@ public class BotonesIntro : MonoBehaviour
 
     public void MenuControlesPausa()
     {
+        GameManager.Instance.reiniciando = false;
         GameManager.Instance.AbrirMenuControles();
     }
 
