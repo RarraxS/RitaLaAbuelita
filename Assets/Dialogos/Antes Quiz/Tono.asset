@@ -16,17 +16,17 @@ MonoBehaviour:
   - 
   - "To\xF1o cari\xF1o, pues voy a ver si puedo hacerle algun plato para comer a
     mi nieto"
-  - "Esta vez no... quiero aprendes a hacer algo anque ya este mayor. Quiero sorprender
-    a mi ni\xF1o, su abuela le cocinar\xE1 algo rico aunque no sea de parte de su
-    abuelo."
-  - "Alg\xFAn d\xEDa ir\xE9 al var a ojear como cocinas tus platos. "
+  - "Esta vez no... quiero aprender a cocinar algo aunque ya este mayor. Quiero sorprender
+    a mi ni\xF1o."
+  - "Claro, algun d\xEDa me acerco al bar y ojeo. A ver si aprendo a cocinar de una
+    vez To\xF1o."
   dialogosNpc:
   - 
   - "Hola Rita \xBFqu\xE9 haces por aqu\xED?"
   - Si quereis pasar por el bar os hago alguna comida buena, ya sabes.
   - "Rita... Cualquier cosa yo te puedo ayudar ya sabes. Te puedo ense\xF1ar a hacer
-    mas cosillas."
-  - Cuando quieras
+    alguna cosilla."
+  - Cuando quieras vente, nos vemos Rita.
   numTotalDialogos: 7
   numNpc: 2
   ritaHablaPrimero: 0
