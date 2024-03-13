@@ -1325,7 +1325,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &198248470
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1342,7 +1342,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &209249202
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,7 +3237,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &451192961
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3253,7 +3254,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &460668404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3627,7 +3629,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &484602706
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3644,7 +3646,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &484602707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3689,6 +3692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -6958,7 +6962,7 @@ MonoBehaviour:
   permitirAbrirMenuControles: 1
   permitirTextIndicador: 0
   posicionPueblo: {x: 3.98, y: -1.98, z: -1.98}
-  posicionCasa: {x: 0.046, y: -0.522, z: -5.14}
+  posicionCasa: {x: 1.6, y: 0.39, z: 9.27}
   buscaObjetosCompletado: 0
   quizCompletado: 0
   reiniciando: 0
@@ -10162,7 +10166,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &1540973487
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10179,7 +10183,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1542139764 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1063702553962360855, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
