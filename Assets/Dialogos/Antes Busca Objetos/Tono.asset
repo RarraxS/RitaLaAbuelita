@@ -14,10 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - "To\xF1o in"
+  - "To\xF1o"
+  - "No tendr\xE1s en el bar alguna cosilla que pueda usar para una carne estofada
+    \xBFno?"
+  - No te preocupes amor, iba a la tienda ahora.
+  - No lo dudo *sonrie*
   dialogosNpc:
   - 
-  - "Inicio To\xF1o"
-  numTotalDialogos: 2
+  - Dime que pasa Rita
+  - "Pues... ahora mismo estoy que no me queda gran cosa  \xBFNecesitas algo?"
+  - Bueno, Rosa seguro que te puede ayudar a llevarte de lo mejor
+  - Venga nos vemos *sonrie*
+  numTotalDialogos: 8
   numNpc: 2
-  ritaHablaPrimero: 0
+  ritaHablaPrimero: 1

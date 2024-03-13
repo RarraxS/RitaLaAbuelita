@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Jojojoj
-  - eeeeee
+  - Ya tengo una receta buena para hacer una carne estofada
+  - Claro Paca, lo daba por echo. Ahora m,e voy a acercar a por cosas a la tienda
   dialogosNpc:
   - 
-  - kddjkwle
+  - '*se rie*  Rita  hoy estas que no paras'
+  - "\xA1Que buena! si te queda buena y sobra un poco acercamela a casa"
+  - Que vaya bien, luego nos vemos
   numTotalDialogos: 3
   numNpc: 1
-  ritaHablaPrimero: 1
+  ritaHablaPrimero: 0
