@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -71,7 +72,7 @@ public class Rita : MonoBehaviour
 
 
         Movimiento();
-        LanzarRaycast();
+        //LanzarRaycast();
         Interactuar();
         TextInteraccion();
     }
@@ -221,7 +222,7 @@ public class Rita : MonoBehaviour
         if (GameManager.Instance.escena == "Pueblo")
         {
             if (!Rita.Instance.canvasDialogo.activeSelf && Input.GetKeyDown(KeyCode.Space) &&
-                (collidedObject.tag == "NPC" || collidedObject.tag == "NQuiz"))
+                (collidedObject.tag == "NPC" || collidedObject.tag == "Quiz"))
             {
                 canvasDialogo.SetActive(true);
                 GameManager.Instance.SonidoStop();
@@ -243,5 +244,23 @@ public class Rita : MonoBehaviour
         {
             rita.transform.position = GameManager.Instance.posicionCasa;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Verifica si el raycast colisionó con algo
+        if (collision != null)
+        {
+            // Accede al GameObject con el que ha colisionado
+            collidedObject = collision.gameObject;
+        }
+
+        else
+        {
+            collidedObject = objetoNulo;
+        }
+
+        // Imprime el nombre del GameObject por consola
+        //Debug.Log(PuebloManager.Instance.collidedObject);
     }
 }
