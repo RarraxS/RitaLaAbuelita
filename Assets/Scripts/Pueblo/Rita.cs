@@ -1,6 +1,4 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class Rita : MonoBehaviour
 {
@@ -12,12 +10,6 @@ public class Rita : MonoBehaviour
     public bool permitirMovimiento = true;
     private Rigidbody2D rb;
     private Transform tr;
-
-    //Raycast
-    public RaycastHit2D informacionRaycast;
-    public float distanciaRaycast;
-    [SerializeField] private LayerMask mascara;
-    public Vector2 direccionRaycast = new Vector2(0, 1);
 
    //Animator
    [SerializeField] private Animator animator;
@@ -72,7 +64,6 @@ public class Rita : MonoBehaviour
 
 
         Movimiento();
-        //LanzarRaycast();
         Interactuar();
         TextInteraccion();
     }
@@ -129,7 +120,6 @@ public class Rita : MonoBehaviour
                 (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
             {
                 direccion += new Vector3(tr.up.x, tr.up.y * verticalMultiplier, 0); // Adelante
-                direccionRaycast = new Vector2(0, 1);
                 direccionAnimator = 3;
             }
 
@@ -137,7 +127,6 @@ public class Rita : MonoBehaviour
                 (Input.GetKey(KeyCode.S) && GameManager.Instance.controles == "diestro"))
             {
                 direccion += new Vector3(-tr.up.x, -tr.up.y * verticalMultiplier, 0); // Atrás
-                direccionRaycast = new Vector2(0, -1);
                 direccionAnimator = 1;
             }
 
@@ -145,7 +134,6 @@ public class Rita : MonoBehaviour
                 (Input.GetKey(KeyCode.A) && GameManager.Instance.controles == "diestro"))
             {
                 direccion += new Vector3(-tr.right.x, -tr.right.y, 0); // Izquierda
-                direccionRaycast = new Vector2(-1, 0);
                 direccionAnimator = 4;
             }
 
@@ -153,7 +141,6 @@ public class Rita : MonoBehaviour
                 (Input.GetKey(KeyCode.D) && GameManager.Instance.controles == "diestro"))
             {
                 direccion += new Vector3(tr.right.x, tr.right.y, 0); // Derecha
-                direccionRaycast = new Vector2(1, 0);
                 direccionAnimator = 2;
             }
         }
@@ -164,32 +151,6 @@ public class Rita : MonoBehaviour
         //    direccion.Normalize();
         //}
 
-
-    }
-
-    private void LanzarRaycast()
-    {
-        //Se usa un raycast para poder interactuar con los distintos objetos y NPC del juego
-
-        // Realiza el raycast
-        informacionRaycast = Physics2D.Raycast(transform.position, direccionRaycast, distanciaRaycast, mascara);
-
-        // Dibuja el rayo en la escena para propósitos de depuración
-        //Debug.DrawRay(transform.position, direccionRaycast * distanciaRaycast, Color.red);
-
-        // Verifica si el raycast colisionó con algo
-        if (informacionRaycast.collider != null)
-        {
-            // Accede al GameObject con el que ha colisionado
-            collidedObject = informacionRaycast.collider.gameObject;
-        }
-        else
-        {
-            collidedObject = objetoNulo;
-        }
-
-        // Imprime el nombre del GameObject por consola
-        //Debug.Log(PuebloManager.Instance.collidedObject);
     }
 
     private void TextInteraccion()
@@ -224,6 +185,7 @@ public class Rita : MonoBehaviour
             if (!Rita.Instance.canvasDialogo.activeSelf && Input.GetKeyDown(KeyCode.Space) &&
                 (collidedObject.tag == "NPC" || collidedObject.tag == "Quiz"))
             {
+                moviendose = false;
                 canvasDialogo.SetActive(true);
                 GameManager.Instance.SonidoStop();
                 permitirMovimiento = false;
@@ -248,7 +210,7 @@ public class Rita : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Verifica si el raycast colisionó con algo
+        // Verifica si el Rita ha colisionado con algo
         if (collision != null)
         {
             // Accede al GameObject con el que ha colisionado
