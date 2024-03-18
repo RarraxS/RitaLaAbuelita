@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Concha In
+  - "Gracias amor. Ahora a ver que sale de aqu\xED."
   dialogosNpc:
   - 
-  - Inicio Concha
-  numTotalDialogos: 2
+  - "Sab\xEDa que me pod\xEDas ayudar. Te doy mi receta de carne estofada apuntada,
+    espero que te sirva."
+  - Traeme luego una fiambrera y te digo.
+  numTotalDialogos: 3
   numNpc: 3
   ritaHablaPrimero: 0

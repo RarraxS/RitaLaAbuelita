@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Ya tengo una receta buena para hacer una carne estofada
-  - Claro Paca, lo daba por echo. Ahora m,e voy a acercar a por cosas a la tienda
+  - Ya tengo la receta buena de Concha para hacer una carne estofada.
+  - "Ya lo daba por echo, os llevar\xE9 a todos. Ahora me voy a acercar a por cosas
+    a la tienda"
   dialogosNpc:
   - 
   - '*se rie*  Rita  hoy estas que no paras'
-  - "\xA1Que buena! si te queda buena y sobra un poco acercamela a casa"
-  - Que vaya bien, luego nos vemos
+  - "\xA1Que buena! Si te queda buena y sobra un poco acercamela a casa."
+  - "Que vaya bien \xA1Luego nos vemos!"
   numTotalDialogos: 3
   numNpc: 1
   ritaHablaPrimero: 0
