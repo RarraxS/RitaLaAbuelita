@@ -21,10 +21,10 @@ public class TextInteraccionesCasa : MonoBehaviour
     {
         _zona = string.Empty;
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         _zona = collision.tag;
+        Enter();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -32,7 +32,7 @@ public class TextInteraccionesCasa : MonoBehaviour
         _zona = string.Empty;
     }
 
-    public void Corte()
+    public void Enter()
     {
         if (_zona != string.Empty)
         {

@@ -1325,7 +1325,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &198248470
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1342,7 +1342,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &209249202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2175,11 +2176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1617880735186871228, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -181
+      value: -168
       objectReference: {fileID: 0}
     - target: {fileID: 1617880735186871228, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 26.1
+      value: -6.9017563
       objectReference: {fileID: 0}
     - target: {fileID: 4676577543068719620, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2413,7 +2414,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 889059627524681989, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -128.3
+      value: -141.2
       objectReference: {fileID: 0}
     - target: {fileID: 889059627524681989, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2427,6 +2428,18 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1144826818}
+    - target: {fileID: 1617880735186871228, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1617880735186871228, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -168.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1617880735186871228, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4676577543068719620, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -3236,7 +3249,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &451192961
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3253,7 +3266,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &460668404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3627,7 +3641,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &484602706
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3644,7 +3658,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &484602707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3689,6 +3704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -9380,7 +9396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000026422145, y: 1.101733}
+  m_AnchoredPosition: {x: 0.00002670288, y: 1.101733}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1471055406
@@ -10162,7 +10178,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &1540973487
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10179,7 +10195,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1542139764 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1063702553962360855, guid: bfff2c3866d1d364a8942bd3ca635932, type: 3}
@@ -12195,7 +12212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000026422145, y: -0.09823754}
+  m_AnchoredPosition: {x: 0.00002670288, y: -0.09823754}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1872580745

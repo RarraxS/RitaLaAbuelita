@@ -5,6 +5,7 @@ public class Rita : MonoBehaviour
     [SerializeField] private float velocidad;
     [SerializeField] private GameObject canvasInteracciones, objetoNulo;
     public GameObject canvasDialogo, rita, collidedObject;
+    [SerializeField] private GameObject canvasTextoInteracion;
 
     private Vector3 direccion;
     public bool permitirMovimiento = true;
@@ -45,6 +46,7 @@ public class Rita : MonoBehaviour
         if (GameManager.Instance.escena == "CasaRita")
         {
             canvasInteracciones.SetActive(false);
+            canvasTextoInteracion.SetActive(false);
         }
 
         if (GameManager.Instance.escena == "Pueblo")
@@ -162,6 +164,15 @@ public class Rita : MonoBehaviour
             (collidedObject.tag == "Cocinar" && GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == true))
         {
             canvasInteracciones.SetActive(true);
+        }
+        if(collidedObject.tag == "Encimera" || collidedObject.tag == "Alfombra")
+        {
+            canvasTextoInteracion.SetActive(true);//NO DESAPARECE
+        }
+        
+        if(collidedObject.tag=="SueloCocina")
+        {
+            canvasTextoInteracion.SetActive(false);
         }
 
         else if (!(collidedObject.tag == "NPC" || collidedObject.tag == "Casa"))

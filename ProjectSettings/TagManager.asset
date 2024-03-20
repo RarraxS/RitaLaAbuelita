@@ -20,6 +20,9 @@ TagManager:
   - Quiz
   - Cocinar
   - toolTip
+  - Alfombra
+  - Encimera
+  - SueloCocina
   layers:
   - Default
   - TransparentFX
