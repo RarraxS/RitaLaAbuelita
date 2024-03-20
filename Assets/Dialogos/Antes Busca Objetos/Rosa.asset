@@ -14,10 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Rosa in
+  - He vuelto *se rie* paso a comprar un par de cosillas para cocinar.
+  - Esta mi nieto en el pueblo asi que me toca.
+  - "Claro cari\xF1o *se rie*"
   dialogosNpc:
   - 
-  - Inicio Rosa
-  numTotalDialogos: 2
+  - "\xA1Ritaaaa!"
+  - "*sorprendida* \xA1\xBFEn serio vas a cocinar?! "
+  - Pues nada entra y te ayudo con cualquier cosa, luego hablamos de *susurrado*
+    ya sabas qu.
+  numTotalDialogos: 6
   numNpc: 5
   ritaHablaPrimero: 0

@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Enrique in
+  - "\xBFQu\xE9 haces todavia por aqu\xED?"
   dialogosNpc:
   - 
-  - Inicio Enrique
+  - Pues repartiendo olivas a todos los vecinos, que tengo que dar varios viajes
+    *se va*
   numTotalDialogos: 2
   numNpc: 4
-  ritaHablaPrimero: 0
+  ritaHablaPrimero: 1
