@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Menudefinitivo : MonoBehaviour
+public class BotonesMenuControles : MonoBehaviour
 {
     [SerializeField] GameObject canvasSonido;
     [SerializeField] GameObject canvasControles;
@@ -13,36 +13,36 @@ public class Menudefinitivo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        canvasSonido.SetActive(true);
         canvasControles.SetActive(false);
+        canvasSonido.SetActive(false);
         canvasPersonajes.SetActive(false);
-        canvasSalir.SetActive(false);
+        canvasSalir.SetActive(true);
     }
     public void Sonido()
     {
-        canvasSonido.SetActive(true);
         canvasControles.SetActive(false);
+        canvasSonido.SetActive(true);
         canvasPersonajes.SetActive(false);
         canvasSalir.SetActive(false);
     }
     public void Controles()
     {
-        canvasSonido.SetActive(false);
         canvasControles.SetActive(true);
+        canvasSonido.SetActive(false);
         canvasPersonajes.SetActive(false);
         canvasSalir.SetActive(false);
     }
     public void Personajes()
     {
-        canvasSonido.SetActive(false);
         canvasControles.SetActive(false);
+        canvasSonido.SetActive(false);
         canvasPersonajes.SetActive(true);
         canvasSalir.SetActive(false);
     }
      public void Salir()
     {
-        canvasSonido.SetActive(false);
         canvasControles.SetActive(false);
+        canvasSonido.SetActive(false);
         canvasPersonajes.SetActive(false);
         canvasSalir.SetActive(true);
     }
