@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public string escena = "Titulo", controles;
     public bool permitirAbrirMenuControles = true, permitirTextIndicador = true;
 
+
+    [SerializeField] private GameObject objetoArriba, objetoAbajo, objetoIzquierda, objetoDerecha;
+    [SerializeField] private TMP_Text textArriba, textAbajo, textIzquierda, textDerecha;
 
     public Vector3 posicionPueblo, posicionCasa;
 
@@ -53,6 +56,7 @@ public class GameManager : MonoBehaviour
         {
             posicionCasa.z = posicionCasa.y;
         }
+
         canvasControles.SetActive(false);
         canvasPausa.SetActive(false);
 
@@ -72,6 +76,8 @@ public class GameManager : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.Escape))
         //    SceneManager.LoadScene("Cocinar2");
         //-------------------------------------------------------------------------------------
+
+        ActualizadorTeclas();
     }
 
     public void AbrirMenuControles()
@@ -135,6 +141,26 @@ public class GameManager : MonoBehaviour
             toggleZurdo.isOn = true;
             SonidoPlay(0);
         }
+    }
+
+    private void ActualizadorTeclas()
+    {
+        if (controles == "zurdo")
+        {
+            textArriba.text = "I";
+            textAbajo.text = "K";
+            textIzquierda.text = "J";
+            textDerecha.text = "L";
+        }
+
+        else
+        {
+            textArriba.text = "W";
+            textAbajo.text = "S";
+            textIzquierda.text = "A";
+            textDerecha.text = "D";
+        }
+
     }
 
     private void PermitirMostrarIndicador()

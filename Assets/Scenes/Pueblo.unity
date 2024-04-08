@@ -3103,7 +3103,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &392473815
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3120,8 +3120,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &392473816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32732,7 +32731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -48268,11 +48266,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2110292189}
   - component: {fileID: 2110292188}
-  - component: {fileID: 2110292187}
-  - component: {fileID: 2110292186}
   - component: {fileID: 2110292185}
-  - component: {fileID: 2110292190}
   - component: {fileID: 2110292191}
+  - component: {fileID: 2110292186}
+  - component: {fileID: 2110292187}
+  - component: {fileID: 2110292190}
   m_Layer: 0
   m_Name: Rita
   m_TagString: Rita
@@ -48419,7 +48417,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2110292190
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -48436,8 +48434,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &2110292191
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -48453,7 +48450,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.0000016382367, y: 0}
   serializedVersion: 2
-  m_Radius: 11.915459
+  m_Radius: 9.197569
 --- !u!1001 &2135059803
 PrefabInstance:
   m_ObjectHideFlags: 0
