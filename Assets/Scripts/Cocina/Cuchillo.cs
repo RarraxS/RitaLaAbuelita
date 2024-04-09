@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -10,11 +11,14 @@ public class Cuchillo : MonoBehaviour
     public int ganar = 0;
     private int num = 0;
 
+    float secondsCounter = 0;
+    float secondsToCount = 3;
+
     [SerializeField] GameObject canvasGameOver;
     [SerializeField] GameObject canvasWinGame;
     [SerializeField] GameObject Boton;
 
-    
+
     [SerializeField] GameObject PatataSinCorte;
 
     //Ganar=1
@@ -89,7 +93,7 @@ public class Cuchillo : MonoBehaviour
 
     public void Corte()
     {
-        if(_zona != string.Empty)
+        if (_zona != string.Empty)
         {
             ganar++;
 
@@ -305,7 +309,7 @@ public class Cuchillo : MonoBehaviour
         {
             managerCocina.vidas--;
             Debug.Log("Fallaste");
-            if (managerCocina.vidas <= 0 )
+            if (managerCocina.vidas <= 0)
             {
                 Morir();
             }
@@ -321,6 +325,11 @@ public class Cuchillo : MonoBehaviour
     }
     public void Ganaste()
     {
+        secondsCounter += Time.deltaTime;
+        if (secondsCounter >= secondsToCount)
+        {
+            secondsCounter = 0;
+        }
         if (ganar >= 4)
         {
             canvasWinGame.SetActive(true);
