@@ -222,7 +222,7 @@ public class Rita : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Verifica si el Rita ha colisionado con algo
-        if (collision != null)
+        if (collision != null && collision.gameObject.layer == 6)
         {
             // Accede al GameObject con el que ha colisionado
             collidedObject = collision.gameObject;
