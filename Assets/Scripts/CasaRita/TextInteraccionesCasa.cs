@@ -6,7 +6,7 @@ public class TextInteraccionesCasa : MonoBehaviour
     [SerializeField] private RectTransform textTransformEspacio; //Movimiento Texto
     [SerializeField] private Vector3 VerticalOffset; //Posicion exta
 
-    [SerializeField] GameObject canvasInteraccion;
+    [SerializeField] GameObject canvasSalirInteraccion;
 
     string _zona;
 
@@ -15,11 +15,12 @@ public class TextInteraccionesCasa : MonoBehaviour
 
     void Start()
     {
-        canvasInteraccion.SetActive(false);
+        canvasSalirInteraccion.SetActive(false);
     }
     void Update()
     {
         _zona = string.Empty;
+        Enter();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,6 +31,7 @@ public class TextInteraccionesCasa : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         _zona = string.Empty;
+        Enter();
     }
 
     public void Enter()
@@ -38,7 +40,7 @@ public class TextInteraccionesCasa : MonoBehaviour
         {
             if(_zona== cocina_ || _zona==casa_)
             {
-                canvasInteraccion.SetActive(true);
+                canvasSalirInteraccion.SetActive(true);
 
                 if (targetObjectRita != null)
                 {
@@ -50,6 +52,8 @@ public class TextInteraccionesCasa : MonoBehaviour
                 }
             }
         }
+       
+
     }
 }
 
