@@ -227,13 +227,10 @@ public class Rita : MonoBehaviour
             // Accede al GameObject con el que ha colisionado
             collidedObject = collision.gameObject;
         }
+    }
 
-        else
-        {
-            collidedObject = objetoNulo;
-        }
-
-        // Imprime el nombre del GameObject por consola
-        //Debug.Log(PuebloManager.Instance.collidedObject);
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collidedObject = objetoNulo;
     }
 }
