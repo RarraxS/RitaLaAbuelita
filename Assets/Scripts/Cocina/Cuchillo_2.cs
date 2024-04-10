@@ -85,6 +85,7 @@ public class Cuchillo_2 : MonoBehaviour
     [SerializeField] GameObject ZanahoriaCorte12345;
     [SerializeField] GameObject ZanahoriaCorte12356;
     [SerializeField] GameObject ZanahoriaCorte12346;
+    [SerializeField] GameObject ZanahoriaCorte12456;
     [SerializeField] GameObject ZanahoriaCorte13456;
     [SerializeField] GameObject ZanahoriaCorte23456;
 
@@ -179,6 +180,7 @@ public class Cuchillo_2 : MonoBehaviour
         ZanahoriaCorte12345.SetActive(false);
         ZanahoriaCorte12356.SetActive(false);
         ZanahoriaCorte12346.SetActive(false);
+        ZanahoriaCorte12456.SetActive(false);
         ZanahoriaCorte13456.SetActive(false);
         ZanahoriaCorte23456.SetActive(false);
 
@@ -1205,15 +1207,20 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte2345.gameObject.SetActive(false);
                         ZanahoriaCorte12345.SetActive(true);
                     }
-                    if (num == 236)
-                    {
-                        ZanahoriaCorte1236.gameObject.SetActive(false);
-                        ZanahoriaCorte12356.SetActive(true);
-                    }
                     if (num == 2346)
                     {
                         ZanahoriaCorte2346.gameObject.SetActive(false);
                         ZanahoriaCorte12346.SetActive(true);
+                    }
+                    if (num == 2356)
+                    {
+                        ZanahoriaCorte2356.gameObject.SetActive(false);
+                        ZanahoriaCorte12356.SetActive(true);
+                    }
+                    if (num == 2456)
+                    {
+                        ZanahoriaCorte1256.gameObject.SetActive(false);
+                        ZanahoriaCorte12456.SetActive(true);
                     }
                     if (num == 3456)
                     {
@@ -1228,15 +1235,20 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte1345.gameObject.SetActive(false);
                         ZanahoriaCorte12345.SetActive(true);
                     }
+                    if (num == 1346)
+                    {
+                        ZanahoriaCorte1346.gameObject.SetActive(false);
+                        ZanahoriaCorte12346.SetActive(true);
+                    }
                     if (num == 1356)
                     {
                         ZanahoriaCorte1236.gameObject.SetActive(false);
                         ZanahoriaCorte12356.SetActive(true);
                     }
-                    if (num == 1346)
+                    if (num == 1456)
                     {
-                        ZanahoriaCorte1346.gameObject.SetActive(false);
-                        ZanahoriaCorte12346.SetActive(true);
+                        ZanahoriaCorte1456.gameObject.SetActive(false);
+                        ZanahoriaCorte12456.SetActive(true);
                     }
                     if (num == 3456)
                     {
@@ -1251,15 +1263,20 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte1245.gameObject.SetActive(false);
                         ZanahoriaCorte12345.SetActive(true);
                     }
+                    if (num == 1246)
+                    {
+                        ZanahoriaCorte1246.gameObject.SetActive(false);
+                        ZanahoriaCorte12346.SetActive(true);
+                    }
                     if (num == 1256)
                     {
                         ZanahoriaCorte1236.gameObject.SetActive(false);
                         ZanahoriaCorte12356.SetActive(true);
                     }
-                    if (num == 1246)
+                    if (num == 1356)
                     {
-                        ZanahoriaCorte1246.gameObject.SetActive(false);
-                        ZanahoriaCorte12346.SetActive(true);
+                        ZanahoriaCorte1356.gameObject.SetActive(false);
+                        ZanahoriaCorte13456.SetActive(true);
                     }
                     if (num == 2456)
                     {
@@ -1274,15 +1291,20 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte1235.gameObject.SetActive(false);
                         ZanahoriaCorte12345.SetActive(true);
                     }
-                    if (num == 1256)
-                    {
-                        ZanahoriaCorte1256.gameObject.SetActive(false);
-                        ZanahoriaCorte12356.SetActive(true);
-                    }
                     if (num == 1236)
                     {
                         ZanahoriaCorte1236.gameObject.SetActive(false);
                         ZanahoriaCorte12346.SetActive(true);
+                    }
+                    if (num == 1256)
+                    {
+                        ZanahoriaCorte1256.gameObject.SetActive(false);
+                        ZanahoriaCorte12456.SetActive(true);
+                    }
+                    if (num == 1356)
+                    {
+                        ZanahoriaCorte1356.gameObject.SetActive(false);
+                        ZanahoriaCorte13456.SetActive(true);
                     }
                     if (num == 2356)
                     {
@@ -1302,6 +1324,11 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte1236.gameObject.SetActive(false);
                         ZanahoriaCorte12356.SetActive(true);
                     }
+                    if (num == 1246)
+                    {
+                        ZanahoriaCorte1246.gameObject.SetActive(false);
+                        ZanahoriaCorte12456.SetActive(true);
+                    }
                     if (num == 1346)
                     {
                         ZanahoriaCorte1346.gameObject.SetActive(false);
@@ -1319,6 +1346,11 @@ public class Cuchillo_2 : MonoBehaviour
                     {
                         ZanahoriaCorte1234.gameObject.SetActive(false);
                         ZanahoriaCorte12346.SetActive(true);
+                    }
+                    if (num == 1245)
+                    {
+                        ZanahoriaCorte1245.gameObject.SetActive(false);
+                        ZanahoriaCorte12456.SetActive(true);
                     }
                     if (num == 1235)
                     {
@@ -1346,6 +1378,7 @@ public class Cuchillo_2 : MonoBehaviour
                 ZanahoriaCorte12356.SetActive(false);
                 ZanahoriaCorte13456.SetActive(false);
                 ZanahoriaCorte23456.SetActive(false);
+                ZanahoriaCorte12456.SetActive(false);
                 ZanahoriaConCortes.SetActive(true);
                 Tiempo();
                 Ganaste();
