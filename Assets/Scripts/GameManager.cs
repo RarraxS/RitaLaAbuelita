@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public AudioSource audioSourceMusica, audioSourceSonidos, audioSourceAmbienteSonidos;
 
-    private float volumenMusicaNormal = 0.5f;//Sirve para guardar el valor del slider para cuando se baja el sonido por ganar u otra acción
+    private float volumenMusicaNormal = 0.5f;//Sirve para guardar el valor del slider para cuando se baja el sonido por ganar u otra acciï¿½n
 
     //----------------------------------------------------------------------------------------------------
 
@@ -74,8 +74,8 @@ public class GameManager : MonoBehaviour
 
         //Probador de escenas
         //-------------------------------------------------------------------------------------
-        if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("Cocinar3");
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        //    SceneManager.LoadScene("Cocinar3");
         //-------------------------------------------------------------------------------------
 
         ActualizadorTeclas();
@@ -83,8 +83,8 @@ public class GameManager : MonoBehaviour
 
     public void AbrirMenuControles()
     {
-        //Cuando pulsas el botón controles suena un sonido y se pausan las distintas pruebas
-        //de los minijuegos o el poder andar por el pueblo mientras el menú está activo
+        //Cuando pulsas el botï¿½n controles suena un sonido y se pausan las distintas pruebas
+        //de los minijuegos o el poder andar por el pueblo mientras el menï¿½ estï¿½ activo
         
         SonidoPlay(0);
 
@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
 
     public void CerrarMenuControles()
     {
-        //Este botón cierra el menú controles y lo devuelve todo a la normalidad 
+        //Este botï¿½n cierra el menï¿½ controles y lo devuelve todo a la normalidad 
 
         MenuControles.Instance.salidaControles = true;
         SonidoPlay(0);
@@ -110,14 +110,14 @@ public class GameManager : MonoBehaviour
         //esta activado y hace lo contrario cuando esta desactivado
         if (toggleZurdo.isOn)
         {
-            //El toggle está activado
+            //El toggle estï¿½ activado
             controles = "zurdo";
             toggleDiestro.isOn = false;
             SonidoPlay(0);
         }
         else
         {
-            //El toggle está desactivado
+            //El toggle estï¿½ desactivado
             controles = "diestro";
             toggleDiestro.isOn = true;
             SonidoPlay(0);
@@ -130,14 +130,14 @@ public class GameManager : MonoBehaviour
         //esta activado y hace lo contrario cuando esta desactivado
         if (toggleDiestro.isOn)
         {
-            //El toggle está activado
+            //El toggle estï¿½ activado
             controles = "diestro";
             toggleZurdo.isOn = false;
             SonidoPlay(0);
         }
         else
         {
-            //El toggle está desactivado
+            //El toggle estï¿½ desactivado
             controles = "zurdo";
             toggleZurdo.isOn = true;
             SonidoPlay(0);
@@ -179,7 +179,7 @@ public class GameManager : MonoBehaviour
 
    public void SonidoPlay(int num)
     {
-        //Suena el sonido que se le pase por parámetro
+        //Suena el sonido que se le pase por parï¿½metro
         if(!audioSourceSonidos.isPlaying)
             audioSourceSonidos.PlayOneShot(Sonidos[num]);
     }
@@ -226,7 +226,7 @@ public class GameManager : MonoBehaviour
 
     public void SliderMusica(float valor)
     {
-        //Ajusta el volumen de la música mediante un slider que controla el jugador
+        //Ajusta el volumen de la mï¿½sica mediante un slider que controla el jugador
         audioSourceMusica.volume = valor;
         volumenMusicaNormal = valor;
     }
