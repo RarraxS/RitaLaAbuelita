@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public Vector3 posicionPueblo, posicionCasa;
 
-    public bool buscaObjetosCompletado = false, quizCompletado = false;
+    public bool buscaObjetosCompletado = false, quizCompletado = false, cocinarCompletado = false;
 
     public bool reiniciando = false;
 
@@ -73,8 +74,8 @@ public class GameManager : MonoBehaviour
 
         //Probador de escenas
         //-------------------------------------------------------------------------------------
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //    SceneManager.LoadScene("Cocinar2");
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene("Cocinar3");
         //-------------------------------------------------------------------------------------
 
         ActualizadorTeclas();
