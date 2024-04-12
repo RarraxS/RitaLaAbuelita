@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PuebloManager : MonoBehaviour
 {
@@ -49,6 +50,9 @@ public class PuebloManager : MonoBehaviour
 
     private void CambioQuiz()
     {
+        //Esta función ha sido reemplazada por otra iguak en el script de la UI de diálogo
+        //para que te lleve al minijuego al finalizar el primer diálogo con Concha
+
         //Si se pulsa la tecla de interacción cuando se está frente al NPC, se guarda la 
         //posición de Rita para cuando se vuelva a la escena y se le dice a que escena
         //debe ir tras acabar la pantalla de carga

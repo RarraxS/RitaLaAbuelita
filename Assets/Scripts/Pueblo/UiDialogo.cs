@@ -146,7 +146,7 @@ public class UiDialogo : MonoBehaviour
                 interaccionActualNPC = 0;
                 Rita.Instance.permitirMovimiento = true;
 
-                if(Rita.Instance.collidedObject == PuebloManager.Instance.cambioQuiz &&
+                if (Rita.Instance.collidedObject == PuebloManager.Instance.cambioQuiz &&
                 GameManager.Instance.quizCompletado == false)
                 {
                     GameManager.Instance.posicionPueblo = Rita.Instance.rita.transform.position;
