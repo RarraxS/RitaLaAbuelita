@@ -1380,6 +1380,8 @@ public class Cuchillo_2 : MonoBehaviour
                 ZanahoriaCorte23456.SetActive(false);
                 ZanahoriaCorte12456.SetActive(false);
                 ZanahoriaConCortes.SetActive(true);
+                Destroy(GameObject.FindGameObjectWithTag(_zona));
+                _zona = string.Empty;
                 Tiempo();
                 Ganaste();
             }
