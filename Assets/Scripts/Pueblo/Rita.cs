@@ -62,7 +62,7 @@ public class Rita : MonoBehaviour
     void Update()
     {
         //Actualiza el Z Depth
-        tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.y); 
+        //tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.y); 
 
 
         Movimiento();
