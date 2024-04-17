@@ -25,6 +25,22 @@ public class Rita : MonoBehaviour
         get { return instance; }
     }
 
+
+
+
+
+
+
+    public bool test;
+
+
+
+
+
+
+
+
+
     void Awake()
     {
         if (instance == null)
@@ -63,7 +79,6 @@ public class Rita : MonoBehaviour
     {
         //Actualiza el Z Depth
         //tr.position = new Vector3(tr.position.x, tr.position.y, tr.position.y); 
-
 
         Movimiento();
         Interactuar();
@@ -222,7 +237,17 @@ public class Rita : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Verifica si el Rita ha colisionado con algo
-        if (collision != null && collision.gameObject.layer == 6)
+        if (collision.gameObject.layer == 6)
+        {
+            // Accede al GameObject con el que ha colisionado
+            collidedObject = collision.gameObject;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        // Verifica si el Rita ha colisionado con algo
+        if (collision.gameObject.layer == 6)
         {
             // Accede al GameObject con el que ha colisionado
             collidedObject = collision.gameObject;
@@ -233,4 +258,14 @@ public class Rita : MonoBehaviour
     {
         collidedObject = objetoNulo;
     }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    test = true;
+    //}
+
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    test = false;
+    //}
 }
