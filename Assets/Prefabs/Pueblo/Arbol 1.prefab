@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6715730499065475540}
   - component: {fileID: 6715730499065475563}
-  - component: {fileID: 6715730499065475562}
   - component: {fileID: 6715730499065475561}
+  - component: {fileID: 1373830615}
   m_Layer: 0
   m_Name: Arbol 1
   m_TagString: Untagged
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 499175797
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: db4d37f3446fe95478385529e0570c8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6715730499065475562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6715730499065475560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f79fea754662da34c95fb15d41cc6897, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &6715730499065475561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,3 +112,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7072954, y: 0.8799614}
   m_EdgeRadius: 0
+--- !u!210 &1373830615
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6715730499065475560}
+  m_Enabled: 1
+  m_SortingLayerID: 499175797
+  m_SortingLayer: 1
+  m_SortingOrder: 0

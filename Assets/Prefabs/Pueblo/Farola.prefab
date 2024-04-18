@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8505150502202684174}
   - component: {fileID: 8505150502202684175}
-  - component: {fileID: 8505150502202684168}
   - component: {fileID: 8505150502202684169}
+  - component: {fileID: 198761012}
   m_Layer: 0
   m_Name: Farola
   m_TagString: Untagged
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 499175797
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 885d49910ee43214a97d28dbab1c3442, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8505150502202684168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8505150502202684170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f79fea754662da34c95fb15d41cc6897, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &8505150502202684169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,3 +112,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4473653, y: 0.57771957}
   m_EdgeRadius: 0
+--- !u!210 &198761012
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8505150502202684170}
+  m_Enabled: 1
+  m_SortingLayerID: 499175797
+  m_SortingLayer: 1
+  m_SortingOrder: 0
