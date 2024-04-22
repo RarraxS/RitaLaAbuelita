@@ -287,6 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -381,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "Continua el refr\xE1n: En casa de herrero, ...."
+      value: "Continua el refr\xE1n: En casa de herrero...."
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -736,7 +737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: Velazquez
+      value: "Vel\xE1zquez"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
@@ -825,7 +826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "Comida tipica espa\xF1ola"
+      value: "Comida t\xEDpica espa\xF1ola"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -833,7 +834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: Arepas
+      value: Arepa
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
@@ -998,7 +999,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "Camino de senderismo mas conocido de Espa\xF1a"
+      value: "Sendero m\xE1s conocido de Espa\xF1a"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -1006,7 +1007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: El camino de Santiago
+      value: El Camino de Santiago
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
@@ -1095,7 +1096,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: 'Continua: Sevilla tiene ....'
+      value: 'Continua: Sevilla tiene...'
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -1103,7 +1104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: Una atmosfera especial
+      value: "Una atm\xF3sfera especial"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
@@ -1340,11 +1341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: Luces de bohemia
+      value: Luces de Bohemia
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
-      value: Lazarillo De Tormes
+      value: Lazarillo de Tormes
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
@@ -1667,7 +1668,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "Cual era la moneda que se usaba antes del euro en Espa\xF1a"
+      value: "Cu\xE1l era la moneda que se usaba en Espa\xF1a antes del euro"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -2308,7 +2309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "Estrecho que separa la Pen\xEDnsula Ib\xE9rica del continente Africano"
+      value: "Estrecho que separa la Pen\xEDnsula Ib\xE9rica del continente africano"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -2502,7 +2503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: 'Continua: A palabras necias, ...'
+      value: 'Continua: A palabras necias...'
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -2510,7 +2511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[1].text
-      value: Oidos sordos
+      value: "O\xEDdos sordos"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[2].text
@@ -2518,7 +2519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[3].text
-      value: Oidos abiertos
+      value: "O\xEDdos abiertos"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].correcta
@@ -2863,7 +2864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: 'Continua: De tal palo, ...'
+      value: 'Continua: De tal palo...'
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text
@@ -3544,7 +3545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: text
-      value: "Animal que representa a espa\xF1a"
+      value: "Animal que representa a Espa\xF1a"
       objectReference: {fileID: 0}
     - target: {fileID: 7482178572478466344, guid: a634ad2072e680a4ba21746a03fd6773, type: 3}
       propertyPath: opciones.Array.data[0].text

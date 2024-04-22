@@ -10,8 +10,8 @@ public class TextInteraccionesCasa : MonoBehaviour
 
     string _zona;
 
-    string cocina_ = "Cocinar";
-    string casa_ = "Casa";
+    string cocina_ = "Encimera";
+    string casa_ = "Alfombra";
 
     void Start()
     {
@@ -52,8 +52,8 @@ public class TextInteraccionesCasa : MonoBehaviour
                 }
             }
         }
-       
-
+        else
+            canvasSalirInteraccion.SetActive(false);
     }
 }
 

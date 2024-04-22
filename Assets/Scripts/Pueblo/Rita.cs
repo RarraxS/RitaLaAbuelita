@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Rita : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Rita : MonoBehaviour
     public bool permitirMovimiento = true;
     private Rigidbody2D rb;
     private Transform tr;
+    [SerializeField] private GameObject textoCasa;
 
    //Animator
    [SerializeField] private Animator animator;
@@ -19,28 +21,13 @@ public class Rita : MonoBehaviour
     //En el animator "Direccion" 1 es Alante, 2 es Derecha, 3 es Abajo, 4 es Izquierda
 
 
+
     private static Rita instance;
     public static Rita Instance
     {
         get { return instance; }
     }
-
-
-
-
-
-
-
-    public bool test;
-
-
-
-
-
-
-
-
-
+    
     void Awake()
     {
         if (instance == null)
@@ -52,6 +39,8 @@ public class Rita : MonoBehaviour
     void Start()
     {
         tr = transform;
+
+        textoCasa.SetActive(false);
 
         //Inicializamos todo lo que vamos a necesitar
         if (GameManager.Instance.escena == "Pueblo" || GameManager.Instance.escena == "CasaRita")
@@ -74,7 +63,6 @@ public class Rita : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
     }
-
     void Update()
     {
         //Actualiza el Z Depth
@@ -84,7 +72,8 @@ public class Rita : MonoBehaviour
         Interactuar();
         TextInteraccion();
     }
-
+   
+    
     //Es el update especializado para físicas
     private void FixedUpdate()
     {
@@ -112,7 +101,6 @@ public class Rita : MonoBehaviour
     {
         //Dependiendo de que tecla pulse se moverá en una dirección u otra, y esto tiene sus propias animaciones
 
-        float verticalMultiplier = 1.2f;
         direccion = Vector2.zero;
 
         if (permitirMovimiento == true)
@@ -136,25 +124,25 @@ public class Rita : MonoBehaviour
             if ((Input.GetKey(KeyCode.I) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.W) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector3(tr.up.x, tr.up.y * verticalMultiplier, 0); // Adelante
+                direccion += new Vector3(tr.up.x, tr.up.y, 0); // Adelante
                 direccionAnimator = 3;
             }
 
-            else if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
+            if ((Input.GetKey(KeyCode.K) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.S) && GameManager.Instance.controles == "diestro"))
             {
-                direccion += new Vector3(-tr.up.x, -tr.up.y * verticalMultiplier, 0); // Atrás
+                direccion += new Vector3(-tr.up.x, -tr.up.y, 0); // Atrás
                 direccionAnimator = 1;
             }
 
-            else if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
+            if ((Input.GetKey(KeyCode.J) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.A) && GameManager.Instance.controles == "diestro"))
             {
                 direccion += new Vector3(-tr.right.x, -tr.right.y, 0); // Izquierda
                 direccionAnimator = 4;
             }
 
-            else if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
+            if ((Input.GetKey(KeyCode.L) && GameManager.Instance.controles == "zurdo") ||
                 (Input.GetKey(KeyCode.D) && GameManager.Instance.controles == "diestro"))
             {
                 direccion += new Vector3(tr.right.x, tr.right.y, 0); // Derecha
@@ -163,13 +151,13 @@ public class Rita : MonoBehaviour
         }
 
         // Normalizar el vector de dirección si es diferente de cero
-        //if (direccion != Vector3.zero)
-        //{
-        //    direccion.Normalize();
-        //}
+        if (direccion != Vector3.zero)
+        {
+            direccion.Normalize();
+        }
 
     }
-
+  
     private void TextInteraccion()
     {
         //Si el raycast se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
@@ -197,7 +185,12 @@ public class Rita : MonoBehaviour
 
         if (GameManager.Instance.escena == "CasaRita")
         {
-            canvasInteracciones.transform.SetParent(rita.transform);
+            textoCasa.SetActive(true);
+        }
+
+        if (GameManager.Instance.escena == "CasaRita" && collidedObject == objetoNulo)
+        {
+            textoCasa.SetActive(false);
         }
     }
 
@@ -208,7 +201,7 @@ public class Rita : MonoBehaviour
 
         if (GameManager.Instance.escena == "Pueblo")
         {
-            if (!Rita.Instance.canvasDialogo.activeSelf && Input.GetKeyDown(KeyCode.Space) &&
+            if (!canvasDialogo.activeSelf && Input.GetKeyDown(KeyCode.Space) &&
                 (collidedObject.tag == "NPC" || collidedObject.tag == "Quiz"))
             {
                 moviendose = false;
@@ -258,14 +251,4 @@ public class Rita : MonoBehaviour
     {
         collidedObject = objetoNulo;
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    test = true;
-    //}
-
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    test = false;
-    //}
 }
