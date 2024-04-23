@@ -7,7 +7,7 @@ public class Cuchillo_3 : MonoBehaviour
 {
     public CocinaManager managerCocina;
     string _zona;
-    public int ganar = 0;
+    public int ganar;
 
     [SerializeField] GameObject canvasGameOver;
     [SerializeField] GameObject canvasWinGame;
@@ -31,6 +31,8 @@ public class Cuchillo_3 : MonoBehaviour
 
         HornoTemplado.SetActive(false);
         HornoCaliente.SetActive(false);
+
+        ganar = 0;
 
         _zona = string.Empty;
     }
@@ -60,13 +62,17 @@ public class Cuchillo_3 : MonoBehaviour
             {
                 HornoTemplado.SetActive(false);
                 HornoCaliente.SetActive(true);
+                //Destroy(GameObject.FindGameObjectWithTag(_zona));
+                //_zona = string.Empty;
+                //Debug.Log("Acertaste");
+                //Ganaste();
             }
 
             Destroy(GameObject.FindGameObjectWithTag(_zona));
             _zona = string.Empty;
             Debug.Log("Acertaste");
 
-            if (ganar >= 2)
+            if (ganar == 2)
             {
                 Ganaste();
             }
@@ -91,15 +97,11 @@ public class Cuchillo_3 : MonoBehaviour
     }
     public void Ganaste()
     {
-        if (ganar >= 2)
-        {
-            //Los sonidos de victoria
-            StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
-            GameManager.Instance.SonidoStop();
-            GameManager.Instance.SonidoPlay(13);
-
-            canvasWinGame.SetActive(true);
-            Boton.gameObject.SetActive(false);
-        }
+        canvasWinGame.SetActive(true);
+        Boton.gameObject.SetActive(false);
+        //Los sonidos de victoria
+        StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
+        GameManager.Instance.SonidoStop();
+        GameManager.Instance.SonidoPlay(13);
     }
 }
