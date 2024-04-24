@@ -40,7 +40,10 @@ public class Rita : MonoBehaviour
     {
         tr = transform;
 
-        textoCasa.SetActive(false);
+        if (GameManager.Instance.escena == "CasaRita")
+        {
+            textoCasa.SetActive(false);
+        }
 
         //Inicializamos todo lo que vamos a necesitar
         if (GameManager.Instance.escena == "Pueblo" || GameManager.Instance.escena == "CasaRita")

@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 57a100774b4912342bd7fff9cc496b8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd2c547d001b5fd4f87fd5cacfbf81cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -122,8 +122,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: AbrirMenuControles
+        m_TargetAssemblyTypeName: PausaSalir, Assembly-CSharp
+        m_MethodName: AbrirMenuPausa
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

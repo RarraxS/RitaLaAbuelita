@@ -243,7 +243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8c5e7e59e8dbddd48a55f0aa8dfb4432, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 79859de9073d09c4690fb494e9f5c872, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10478,6 +10478,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: toolTip
       objectReference: {fileID: 0}
+    - target: {fileID: 8408553627430043743, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 57a100774b4912342bd7fff9cc496b8c, type: 3}
     m_RemovedComponents:
     - {fileID: 8408553627430043719, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4d31dec2be64b04b9e8e54b4865299d, type: 3}
