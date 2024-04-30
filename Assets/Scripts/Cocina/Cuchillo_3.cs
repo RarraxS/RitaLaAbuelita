@@ -88,7 +88,7 @@ public class Cuchillo_3 : MonoBehaviour
             vidas--;
             textoContador.text = vidas.ToString();
             Debug.Log("Fallaste");
-            if (managerCocina.vidas <= 0)
+            if (vidas <= 0)
             {
                 Morir();
             }
