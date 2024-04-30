@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using TMPro;
 
 public class Cuchillo_2 : MonoBehaviour
 {
     string _zona;
     public int ganar = 0;
     private int num = 0;
-    private int vidas = 6;
+    private int vidas = 3;
 
     [SerializeField] GameObject canvasGameOver;
     [SerializeField] GameObject canvasWinGame;
@@ -99,13 +100,14 @@ public class Cuchillo_2 : MonoBehaviour
     string cinco = "Correcto5";
     string seis = "Correcto6";
 
+    [SerializeField] public TMP_Text textoContador;
 
     // Start is called before the first frame update
     void Start()
     {
         canvasGameOver.SetActive(false);
         canvasWinGame.SetActive(false);
-
+        textoContador.text = vidas.ToString();
         Boton.gameObject.SetActive(true);
 
         _zona = string.Empty;
@@ -1392,6 +1394,7 @@ public class Cuchillo_2 : MonoBehaviour
         else
         {
             vidas--;
+            textoContador.text = vidas.ToString();
             //Debug.Log("Fallaste");
             if (vidas <= 0)
             {
