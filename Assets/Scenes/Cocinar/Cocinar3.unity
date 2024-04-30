@@ -1705,7 +1705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.13250001, y: 0.7333334}
   m_AnchorMax: {x: 0.19000001, y: 0.8466667}
-  m_AnchoredPosition: {x: -0.1000061, y: -0.3999939}
+  m_AnchoredPosition: {x: -0.099975586, y: -0.3999939}
   m_SizeDelta: {x: -1.9208984, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706997962
@@ -1924,7 +1924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.17875001, y: 0.7333334}
   m_AnchorMax: {x: 0.23375002, y: 0.8466667}
-  m_AnchoredPosition: {x: 0.59976196, y: -0.4000244}
+  m_AnchoredPosition: {x: 0.5997925, y: -0.4000244}
   m_SizeDelta: {x: 0.07910156, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764024738
@@ -2178,7 +2178,7 @@ MonoBehaviour:
   HornoFrio: {fileID: 81443073}
   HornoTemplado: {fileID: 740331145}
   HornoCaliente: {fileID: 879989146}
-  textoContador: {fileID: 0}
+  textoContador: {fileID: 706997962}
 --- !u!1 &809719109
 GameObject:
   m_ObjectHideFlags: 0
