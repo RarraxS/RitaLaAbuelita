@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Rita : MonoBehaviour
 {
@@ -7,12 +8,14 @@ public class Rita : MonoBehaviour
     [SerializeField] private GameObject canvasInteracciones, objetoNulo;
     public GameObject canvasDialogo, rita, collidedObject;
     [SerializeField] private GameObject canvasTextoInteracion;
+    [SerializeField] private TMP_Text textInteraccion;
 
     private Vector3 direccion;
     public bool permitirMovimiento = true;
     private Rigidbody2D rb;
     private Transform tr;
     [SerializeField] private GameObject textoCasa;
+    [SerializeField] private TMP_Text textCasa;
 
    //Animator
    [SerializeField] private Animator animator;
@@ -53,7 +56,6 @@ public class Rita : MonoBehaviour
 
         if (GameManager.Instance.escena == "CasaRita")
         {
-            canvasInteracciones.SetActive(false);
             canvasTextoInteracion.SetActive(false);
         }
 
@@ -163,32 +165,25 @@ public class Rita : MonoBehaviour
   
     private void TextInteraccion()
     {
-        //Si el raycast se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
-        if ((collidedObject.tag == "NPC" || collidedObject.tag == "Casa") ||
-            (collidedObject.tag == "Busca objetos" && GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == false) ||
-            (collidedObject.tag == "Quiz" && GameManager.Instance.quizCompletado == false) ||
-            (collidedObject.tag == "Cocinar" && GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == true))
+        //Si el collider de Rita se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
+        if (((collidedObject.tag == "NPC" || collidedObject.tag == "Casa") ||
+            (collidedObject.tag == "Cocinar" && GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == true)) &&
+            GameManager.Instance.escena == "Pueblo")
         {
             canvasInteracciones.SetActive(true);
-        }
-        if(collidedObject.tag == "Encimera" || collidedObject.tag == "Alfombra")
-        {
-            canvasTextoInteracion.SetActive(true);//NO DESAPARECE
-        }
-        
-        if(collidedObject.tag=="SueloCocina")
-        {
-            canvasTextoInteracion.SetActive(false);
+            textInteraccion.text = collidedObject.name.ToString();
         }
 
-        else if (!(collidedObject.tag == "NPC" || collidedObject.tag == "Casa"))
+        else if (!(collidedObject.tag == "NPC" || collidedObject.tag == "Casa") && GameManager.Instance.escena == "Pueblo")
         {
             canvasInteracciones.SetActive(false);
         }
 
-        if (GameManager.Instance.escena == "CasaRita")
+        if (GameManager.Instance.escena == "CasaRita" && 
+            (collidedObject.tag == "Alfombra" || (collidedObject.tag == "Encimera" && GameManager.Instance.buscaObjetosCompletado == true)))
         {
             textoCasa.SetActive(true);
+            textCasa.text = collidedObject.name.ToString();
         }
 
         if (GameManager.Instance.escena == "CasaRita" && collidedObject == objetoNulo)
