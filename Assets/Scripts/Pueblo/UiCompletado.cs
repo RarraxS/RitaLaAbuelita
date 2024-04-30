@@ -3,20 +3,20 @@ using UnityEngine.UI;
 
 public class UiCompletado : MonoBehaviour
 {
-    [SerializeField] private Toggle toggleQuiz, toggleCocinar;
-    [SerializeField] private Toggle[] toggleBuscaObjetos;
+    [SerializeField] private GameObject toggleQuiz, toggleCocinar;
+    [SerializeField] private GameObject[] toggleBuscaObjetos;
 
     // Start is called before the first frame update
     void Awake()
     {
-        toggleQuiz.isOn = false;
+        toggleQuiz.SetActive(false);
 
         for (int i = 0; i < toggleBuscaObjetos.Length; i++)
         {
-            toggleBuscaObjetos[i].isOn = false;
+            toggleBuscaObjetos[i].SetActive(false);
         }
 
-        toggleCocinar.isOn = false;
+        toggleCocinar.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,12 +31,12 @@ public class UiCompletado : MonoBehaviour
 
         if (GameManager.Instance.quizCompletado == true)
         {
-            toggleQuiz.isOn = true;
+            toggleQuiz.SetActive(true);
         }
 
         else
         {
-            toggleQuiz.isOn = false;
+            toggleQuiz.SetActive(false);
         }
         //-------------------------------------------------------------------------------------
 
@@ -46,7 +46,7 @@ public class UiCompletado : MonoBehaviour
         {
             for (int i = 0; i < toggleBuscaObjetos.Length; i++)
             {
-                toggleBuscaObjetos[i].isOn = true;
+                toggleBuscaObjetos[i].SetActive(true);
             }
         }
 
@@ -54,7 +54,7 @@ public class UiCompletado : MonoBehaviour
         {
             for (int i = 0; i < toggleBuscaObjetos.Length; i++)
             {
-                toggleBuscaObjetos[i].isOn = false;
+                toggleBuscaObjetos[i].SetActive(false);
             }
         }
         //-------------------------------------------------------------------------------------
@@ -63,12 +63,12 @@ public class UiCompletado : MonoBehaviour
 
         if (GameManager.Instance.cocinarCompletado == true)
         {
-            toggleCocinar.isOn = true;
+            toggleCocinar.SetActive(true);
         }
 
         else
         {
-            toggleCocinar.isOn = false;
+            toggleCocinar.SetActive(false);
         }
         //-------------------------------------------------------------------------------------
     }
