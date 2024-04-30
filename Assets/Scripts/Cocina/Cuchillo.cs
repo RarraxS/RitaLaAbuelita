@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Video;
+using TMPro;
 
 public class Cuchillo : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class Cuchillo : MonoBehaviour
     string tres = "Correcto3";
     string cuatro = "Correcto4";
 
+    [SerializeField] public TMP_Text textoContador;
 
     // Start is called before the first frame update
     void Start()
@@ -78,9 +80,13 @@ public class Cuchillo : MonoBehaviour
 
         PatataConCortes.SetActive(false);
 
+        textoContador.text = managerCocina.vidas.ToString();
         _zona = string.Empty;
     }
-
+    void Update()
+    {
+        textoContador.text = managerCocina.vidas.ToString();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         _zona = collision.tag;
@@ -308,6 +314,7 @@ public class Cuchillo : MonoBehaviour
         else
         {
             managerCocina.vidas--;
+            textoContador.text = managerCocina.vidas.ToString();
             Debug.Log("Fallaste");
             if (managerCocina.vidas <= 0)
             {

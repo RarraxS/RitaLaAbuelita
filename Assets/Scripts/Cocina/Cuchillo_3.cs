@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using TMPro;
 
 public class Cuchillo_3 : MonoBehaviour
 {
     public CocinaManager managerCocina;
     string _zona;
     public int ganar;
+    private int vidas = 2;
 
     [SerializeField] GameObject canvasGameOver;
     [SerializeField] GameObject canvasWinGame;
@@ -19,6 +21,8 @@ public class Cuchillo_3 : MonoBehaviour
 
     string uno = "Correcto1";
     string dos = "Correcto2";
+
+    [SerializeField] public TMP_Text textoContador;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +37,8 @@ public class Cuchillo_3 : MonoBehaviour
         HornoCaliente.SetActive(false);
 
         ganar = 0;
+
+        textoContador.text = vidas.ToString();
 
         _zona = string.Empty;
     }
@@ -79,9 +85,10 @@ public class Cuchillo_3 : MonoBehaviour
         }
         else
         {
-            managerCocina.vidas--;
+            vidas--;
+            textoContador.text = vidas.ToString();
             Debug.Log("Fallaste");
-            if (managerCocina.vidas <= 0)
+            if (vidas <= 0)
             {
                 Morir();
             }
@@ -89,7 +96,7 @@ public class Cuchillo_3 : MonoBehaviour
     }
     public void Morir()
     {
-        if (managerCocina.vidas <= 0)
+        if (vidas <= 0)
         {
             canvasGameOver.SetActive(true);
             Boton.gameObject.SetActive(false);
