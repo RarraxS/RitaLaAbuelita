@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Concha lista
+  - "No lo dudes, nos vemos *sonr\xEDe*"
   dialogosNpc:
   - 
-  - BuscaObjetos Concha completado
+  - Espero que te salga bueno el estofado.
   numTotalDialogos: 2
   numNpc: 3
   ritaHablaPrimero: 0

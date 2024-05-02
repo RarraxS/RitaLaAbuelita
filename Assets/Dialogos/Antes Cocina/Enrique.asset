@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Enrique listo
+  - 
   dialogosNpc:
   - 
-  - BuscaObjetos Enrique completado
-  numTotalDialogos: 2
+  - "Esta tarde hay partido, me acercar\xE9 al bar a verlo."
+  numTotalDialogos: 1
   numNpc: 4
   ritaHablaPrimero: 0

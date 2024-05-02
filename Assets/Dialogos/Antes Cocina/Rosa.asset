@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Rosa lista
+  - Muchas gracias por los ingredientes Rosi.
+  - Ay claro, si sale bueno te traigo un poco, ya sabes.
   dialogosNpc:
   - 
-  - BuscaObjetos Rosa completado
-  numTotalDialogos: 2
+  - "Venga ya me contar\xE1s que tal te ha salido todo."
+  - "\xA1Si porfavor! Ya ver\xE1s que de aqu\xED vas a salir hecha una chef."
+  numTotalDialogos: 4
   numNpc: 5
-  ritaHablaPrimero: 0
+  ritaHablaPrimero: 1
