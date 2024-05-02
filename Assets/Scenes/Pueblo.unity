@@ -228,7 +228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4677237}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.83, y: -3.01, z: 0}
+  m_LocalPosition: {x: 11.75, y: -2.19, z: 0}
   m_LocalScale: {x: 0.11006533, y: 0.11006533, z: 0.11006533}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2007,7 +2007,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187197869}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.71, y: -7.83, z: 0}
+  m_LocalPosition: {x: 15.81, y: -7.81, z: 0}
   m_LocalScale: {x: 0.06086574, y: 0.06086574, z: 0.06086574}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4039,7 +4039,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &392473815
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4056,8 +4056,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &392473816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31134,7 +31133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -33256,7 +33254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388783139}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.927, y: -3.064, z: 0}
+  m_LocalPosition: {x: 12.73, y: -14.37, z: 0}
   m_LocalScale: {x: 0.047661904, y: 0.047661904, z: 0.047661904}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33805,7 +33803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467362967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.89, y: -13.35, z: 0}
+  m_LocalPosition: {x: 22.7, y: -7.96, z: 0}
   m_LocalScale: {x: 0.078819074, y: 0.078819074, z: 0.078819074}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35706,7 +35704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636332332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.52, y: -7.08, z: 0}
+  m_LocalPosition: {x: 8.83, y: -7.06, z: 0}
   m_LocalScale: {x: 0.08542411, y: 0.08542411, z: 0.08542411}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51715,7 +51713,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2110292190
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -51732,8 +51730,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!58 &2110292191
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -52360,11 +52357,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3795153116331073576, guid: cfd399f1f945d0a468078ee66fe82613, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 123.9976
+      value: 139.8402
       objectReference: {fileID: 0}
     - target: {fileID: 3795153116331073576, guid: cfd399f1f945d0a468078ee66fe82613, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 210.8441
+      value: 237.7827
       objectReference: {fileID: 0}
     - target: {fileID: 3795153116331073576, guid: cfd399f1f945d0a468078ee66fe82613, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52396,11 +52393,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3795153116331073576, guid: cfd399f1f945d0a468078ee66fe82613, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -61.999786
+      value: -69.92108
       objectReference: {fileID: 0}
     - target: {fileID: 3795153116331073576, guid: cfd399f1f945d0a468078ee66fe82613, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -105.5566
+      value: -119.02586
       objectReference: {fileID: 0}
     - target: {fileID: 3795153116331073576, guid: cfd399f1f945d0a468078ee66fe82613, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
