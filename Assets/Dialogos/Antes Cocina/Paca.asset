@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - Paca lista
+  - Ya tengo todo para el estofado
+  - "Entendidoo, hasta luego bonita *se r\xEDe*"
   dialogosNpc:
   - 
-  - BuscaObjetos Paca completado
-  numTotalDialogos: 2
+  - Ya sabes, manos a la obra. Si necesitas ayuda me puedes avisar.
+  numTotalDialogos: 3
   numNpc: 1
-  ritaHablaPrimero: 0
+  ritaHablaPrimero: 1

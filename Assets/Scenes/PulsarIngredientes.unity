@@ -1162,8 +1162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 20
-  tiempoPerdidoPorFallar: 3
-  tiempoGanadoPorAcertar: 4
+  tiempoPerdidoPorFallar: 4
+  tiempoGanadoPorAcertar: 1
   prefabIngrediente:
   - {fileID: 6392281883984217491, guid: 72ae11cc743b62041bad9a050bbefc2d, type: 3}
   - {fileID: 4341138109417016439, guid: b18c886e24b46cf4c855cf316780cd88, type: 3}
@@ -2347,7 +2347,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

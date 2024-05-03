@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - "To\xF1o listo"
+  - "Si tu lo dices tendr\xE9 que confiar *se r\xEDe*"
   dialogosNpc:
   - 
-  - "BuscaObjetos To\xF1o completado"
+  - Animo Rita que seguro que te sale bueno
   numTotalDialogos: 2
   numNpc: 2
   ritaHablaPrimero: 0
