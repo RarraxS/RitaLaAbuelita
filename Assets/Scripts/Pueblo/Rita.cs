@@ -167,16 +167,34 @@ public class Rita : MonoBehaviour
     {
         //Si el collider de Rita se choca con algo un texto con el botón que hay que pulsar para interactuar con el se hace visible
         if (((collidedObject.tag == "NPC" || collidedObject.tag == "Casa") ||
-            (collidedObject.tag == "Cocinar" && GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == true)) &&
+            (collidedObject.tag == "Cocinar" && 
+            GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == true)) &&
             GameManager.Instance.escena == "Pueblo")
         {
             canvasInteracciones.SetActive(true);
-            textInteraccion.text = collidedObject.name.ToString();
+
+            if (collidedObject.name == "Tono")
+            {
+                textInteraccion.text = "Toño";
+            }
+
+            else
+            {
+                textInteraccion.text = collidedObject.name.ToString();
+            }
         }
 
         else if (!(collidedObject.tag == "NPC" || collidedObject.tag == "Casa") && GameManager.Instance.escena == "Pueblo")
         {
             canvasInteracciones.SetActive(false);
+        }
+
+        if (collidedObject.tag == "Busca objetos" && 
+            (GameManager.Instance.quizCompletado == true && GameManager.Instance.buscaObjetosCompletado == false) 
+            && GameManager.Instance.escena == "Pueblo")
+        {
+            canvasInteracciones.SetActive(true);
+            textInteraccion.text = collidedObject.name.ToString();
         }
 
         if (GameManager.Instance.escena == "CasaRita" && 
