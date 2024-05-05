@@ -43,6 +43,8 @@ public class Rita : MonoBehaviour
     {
         tr = transform;
 
+        collidedObject = objetoNulo;
+
         if (GameManager.Instance.escena == "CasaRita")
         {
             textoCasa.SetActive(false);
