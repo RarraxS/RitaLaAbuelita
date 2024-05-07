@@ -9164,6 +9164,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ControlesSalir, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 679332920442034136, guid: 8ecebe24a0c22b2499279ce2e8ae88b0, type: 3}
+      propertyPath: m_text
+      value: Salir
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ecebe24a0c22b2499279ce2e8ae88b0, type: 3}
 --- !u!224 &1995074475 stripped
