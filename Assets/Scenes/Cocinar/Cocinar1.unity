@@ -540,10 +540,10 @@ RectTransform:
   m_Father: {fileID: 1391792692}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.84375, y: 0.7933336}
-  m_AnchorMax: {x: 0.89875, y: 0.90444446}
-  m_AnchoredPosition: {x: 0.7999878, y: -1.1000061}
-  m_SizeDelta: {x: 0.07910156, y: 0}
+  m_AnchorMin: {x: 0.735, y: 0.8866668}
+  m_AnchorMax: {x: 0.97125006, y: 1}
+  m_AnchoredPosition: {x: 0.20004272, y: 0.25003052}
+  m_SizeDelta: {x: -0.40679932, y: 0.099998474}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195370716
 MonoBehaviour:
@@ -565,7 +565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: /3
+  m_text: 'Intentos:   /3'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -5022,7 +5022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ' '
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -5114,10 +5114,10 @@ RectTransform:
   m_Father: {fileID: 1391792692}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.79875, y: 0.7933336}
-  m_AnchorMax: {x: 0.8525, y: 0.90444446}
-  m_AnchoredPosition: {x: 0.5999756, y: -1.1000061}
-  m_SizeDelta: {x: 1.0791016, y: 0}
+  m_AnchorMin: {x: 0.90375, y: 0.8866668}
+  m_AnchorMax: {x: 0.9575001, y: 1}
+  m_AnchoredPosition: {x: 0.2999878, y: -0.30000305}
+  m_SizeDelta: {x: 1.0791016, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2056451801
 GameObject:
