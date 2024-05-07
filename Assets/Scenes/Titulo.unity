@@ -957,7 +957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5e66cdbb1932b2e45b46c2633d94a85a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2854,7 +2854,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5e66cdbb1932b2e45b46c2633d94a85a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2908,8 +2908,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 118, y: -60.6}
-  m_SizeDelta: {x: 265.0903, y: 90.2622}
+  m_AnchoredPosition: {x: 114.5, y: -57.17}
+  m_SizeDelta: {x: 263.4535, y: 92.1766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630631194
 MonoBehaviour:
@@ -2931,7 +2931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 86fe683e70c2c1b4e940cb118d28fdba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3347,7 +3347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.43137255}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.4627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3792,7 +3792,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5e66cdbb1932b2e45b46c2633d94a85a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5362,27 +5362,12 @@ MonoBehaviour:
   reiniciando: 0
   Sonidos:
   - {fileID: 8300000, guid: 13003e0732f21b241a079ecfaa8585b0, type: 3}
-  - {fileID: 8300000, guid: dc2a837a8a5e27c42a64de58b349404c, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: f465d6747a001f54fadacd600ee60682, type: 3}
+  - {fileID: 8300000, guid: c85185caf069acd44bbe5d59b5a07cc2, type: 3}
+  - {fileID: 8300000, guid: 5d7588b752b91c1499b2dd5be77a9d4a, type: 3}
   - {fileID: 8300000, guid: f783aa7d234e7604ea1cf8e68b97e09e, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 6a62684b329b0794097ae4107ae1289a, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 0f642a805a695ca45871eb4cd7e3aa53, type: 3}
-  - {fileID: 8300000, guid: 57533d81e76f3a04ba11b10fd4f5884a, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
-  - {fileID: 8300000, guid: 8351f4524591a5b4d9f78fdb5c15dfd0, type: 3}
+  - {fileID: 8300000, guid: 939961a09f7c7a84ab891d8c4ee378cf, type: 3}
+  - {fileID: 8300000, guid: fc99d7b7d95d87f4ab2c9cd32d8fd094, type: 3}
+  - {fileID: 8300000, guid: 20c21be165716ae4e80e00c972655773, type: 3}
   toggleZurdo: {fileID: 1542139764}
   toggleDiestro: {fileID: 403477936}
   audioSourceMusica: {fileID: 1144826820}
@@ -5396,7 +5381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144826817}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.204888, y: -2.3331208, z: -5.4379935}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5416,7 +5401,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d632c537d0ae52a459f548a7b4a749d2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d60f139bfc7b2fd4f98e558c6f82eaf9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -6478,7 +6463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 5e66cdbb1932b2e45b46c2633d94a85a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

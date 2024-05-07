@@ -71,13 +71,6 @@ public class GameManager : MonoBehaviour
         
         PermitirMostrarIndicador();
 
-
-        //Probador de escenas
-        //-------------------------------------------------------------------------------------
-        //if (Input.GetKeyDown(KeyCode.Escape))
-        //    SceneManager.LoadScene("Cocinar3");
-        //-------------------------------------------------------------------------------------
-
         ActualizadorTeclas();
     }
 
@@ -221,7 +214,6 @@ public class GameManager : MonoBehaviour
     public void ReactivarMusica()
     {
         audioSourceMusica.volume = volumenMusicaNormal;
-        //Debug.Log("Actualizado");
     }
 
     public void SliderMusica(float valor)

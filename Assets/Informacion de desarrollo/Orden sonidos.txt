@@ -1,19 +1,7 @@
 0 - Click
-1 - Pasos rita suelo duro 
-2 - Pasos rita suelo casa
-3 - Ambiente sonido casa Rita
-4 - Ambiente exterior
-5 - Diálogo sonido
-6 - Sonido Rita
-7 - Sonido Paca
-8 - Sonido Concha
-9 - Sonido Toño
-10 - Sonido Chari
-11 - Sonido Rosa 
-12 - Sonido Enrique
-13 - Ganar minijuego
-14 - Reiniciar minijuego
-15 - Acertar Minijuego
-16 - Fallar Minijuego
-17 - Sonido libro
-18 - Sonido onírico abrir libro
+1 - Pasos pueblo 
+2 - Pasos casa
+3 - Ambiente exterior
+4 - Ganar minijuego
+5 - Acertar Minijuego
+6 - Fallar Minijuego

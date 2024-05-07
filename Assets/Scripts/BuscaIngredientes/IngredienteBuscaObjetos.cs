@@ -55,7 +55,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
             MinijuegoManagerBuscaIngredientes.Instance.timer += MinijuegoManagerBuscaIngredientes.Instance.tiempoGanadoPorAcertar;
             MinijuegoManagerBuscaIngredientes.Instance.DestruirNivelEnabled = true;
             MinijuegoManagerBuscaIngredientes.Instance.timerEsperaEnabled = true;
-            GameManager.Instance.SonidoPlay(15);
+            GameManager.Instance.SonidoPlay(5);
             StartCoroutine(Acertar());
         }
 
@@ -63,7 +63,7 @@ public class IngredienteBuscaObjetos : MonoBehaviour
         if (tag == "No buscando" && MinijuegoManagerBuscaIngredientes.Instance.jugar == true)
         {
             MinijuegoManagerBuscaIngredientes.Instance.timer -= MinijuegoManagerBuscaIngredientes.Instance.tiempoPerdidoPorFallar;
-            GameManager.Instance.SonidoPlay(16);
+            GameManager.Instance.SonidoPlay(6);
             StartCoroutine(Fallar());
         }
     }

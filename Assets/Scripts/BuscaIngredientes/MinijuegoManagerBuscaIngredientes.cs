@@ -106,7 +106,6 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
             objeto = Random.Range(1, (numeroTotalDeIngredientes + 1));
         }
         distribucion = Random.Range(0, numeroTotalDeDistribuciones);
-        //Debug.Log(distribucion);
     }
 
     // Esta función destruirá los objetos con los tags "Buscando" y "No buscando", y después llama a "CreadorNiveles"
@@ -178,7 +177,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
         if(sonarVictoria == false)
         {
             StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
-            GameManager.Instance.SonidoPlay(13);
+            GameManager.Instance.SonidoPlay(4);
             sonarVictoria = true;
         }
 
