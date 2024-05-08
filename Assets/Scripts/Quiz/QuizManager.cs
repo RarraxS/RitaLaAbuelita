@@ -71,7 +71,7 @@ public class QuizManager : MonoBehaviour
             {
                 StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
                 GameManager.Instance.SonidoStop();
-                GameManager.Instance.SonidoPlay(13);
+                GameManager.Instance.SonidoPlay(4);
                 sonarVictoria = true;
             }
             canvasWinGame.SetActive(true);
@@ -102,7 +102,7 @@ public class QuizManager : MonoBehaviour
         if (optionbutton.Opciones.correcta)
         {
             Debug.Log("Acertaste " + optionbutton.name);
-            GameManager.Instance.SonidoPlay(15);
+            GameManager.Instance.SonidoPlay(5);
             permitirTemp = true;
         }
 
@@ -110,7 +110,7 @@ public class QuizManager : MonoBehaviour
         {
             vidas -= 1;
             Debug.Log("Fallaste" + optionbutton.name);
-            GameManager.Instance.SonidoPlay(16);
+            GameManager.Instance.SonidoPlay(6);
             if (vidas <= 0)
             {
                 canvasGameOver.SetActive(true);

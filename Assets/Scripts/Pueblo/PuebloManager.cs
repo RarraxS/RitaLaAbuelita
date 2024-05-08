@@ -22,7 +22,7 @@ public class PuebloManager : MonoBehaviour
     private void Start()
     {
         //Al iniciarse la escena empiezan a sonar los sonidos de ambiente del pueblo
-        GameManager.Instance.AmbientePlay(4);
+        GameManager.Instance.AmbientePlay(3);
     }
 
     private void Update()

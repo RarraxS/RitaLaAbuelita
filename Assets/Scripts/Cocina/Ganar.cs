@@ -12,17 +12,19 @@ public class Ganar : MonoBehaviour
         Debug.Log("Cambio de escena");
         GameManager.Instance.cocinarCompletado = true;
         GameManager.Instance.escena = "CasaRita";
-        SceneManager.LoadScene("CasaRita");
+        SceneManager.LoadScene("PantallaCarga");
     }
     public void Nivel2()
     {
         Debug.Log("Cambio de escena");
-        SceneManager.LoadScene("Cocinar2");
+        GameManager.Instance.escena = "Cocinar2";
+        SceneManager.LoadScene("PantallaCarga");
     }
     public void Nivel3()
     {
         Debug.Log("Cambio de escena");
-        SceneManager.LoadScene("Cocinar3");
+        GameManager.Instance.escena = "Cocinar3";
+        SceneManager.LoadScene("PantallaCarga");
     }
 
 }

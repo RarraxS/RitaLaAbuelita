@@ -117,9 +117,21 @@ public class Rita : MonoBehaviour
                 (((Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) ||
                 (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)) || (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))) && GameManager.Instance.controles == "diestro"))
             {
-                GameManager.Instance.SonidoPlay(1);
                 parar = true;
                 moviendose = true;
+
+                
+                if (GameManager.Instance.escena == "Pueblo")
+                {
+                    //El sonido de andar cuando Rita está en el pueblo
+                    GameManager.Instance.SonidoPlay(1);
+                }
+
+                if (GameManager.Instance.escena == "CasaRita")
+                {
+                    //El sonido de andar cuando Rita está en su casa
+                    GameManager.Instance.SonidoPlay(2);
+                }
             }
 
             else if(!GameManager.Instance.canvasPausa.activeSelf)

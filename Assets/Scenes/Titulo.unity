@@ -5368,6 +5368,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 939961a09f7c7a84ab891d8c4ee378cf, type: 3}
   - {fileID: 8300000, guid: fc99d7b7d95d87f4ab2c9cd32d8fd094, type: 3}
   - {fileID: 8300000, guid: 20c21be165716ae4e80e00c972655773, type: 3}
+  - {fileID: 8300000, guid: 336b6514d3aeec3449133955b09bb065, type: 3}
   toggleZurdo: {fileID: 1542139764}
   toggleDiestro: {fileID: 403477936}
   audioSourceMusica: {fileID: 1144826820}

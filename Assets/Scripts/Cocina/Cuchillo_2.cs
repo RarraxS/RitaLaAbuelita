@@ -202,6 +202,13 @@ public class Cuchillo_2 : MonoBehaviour
 
     public void Corte()
     {
+        //Sonidos -------------------------------------------------------------
+
+        GameManager.Instance.SonidoStop();
+        GameManager.Instance.SonidoPlay(7);
+
+        //---------------------------------------------------------------------
+
         if (_zona != string.Empty)
         {
             ganar++;
@@ -1406,6 +1413,13 @@ public class Cuchillo_2 : MonoBehaviour
     {
         if (vidas <= 0)
         {
+            //Sonidos --------------------------------------------------
+
+            GameManager.Instance.SonidoStop();
+            GameManager.Instance.SonidoPlay(6);
+
+            //----------------------------------------------------------
+
             canvasGameOver.SetActive(true);
             Boton.gameObject.SetActive(false);
         }
@@ -1417,7 +1431,7 @@ public class Cuchillo_2 : MonoBehaviour
         //Los sonidos de victoria
         StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
         GameManager.Instance.SonidoStop();
-        GameManager.Instance.SonidoPlay(13);
+        GameManager.Instance.SonidoPlay(5);
     }
     IEnumerable Tiempo()
     {

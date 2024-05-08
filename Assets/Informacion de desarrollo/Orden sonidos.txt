@@ -5,3 +5,4 @@
 4 - Ganar minijuego
 5 - Acertar Minijuego
 6 - Fallar Minijuego
+7 - Corte de cuchillo
