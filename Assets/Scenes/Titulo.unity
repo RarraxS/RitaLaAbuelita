@@ -780,7 +780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Habitantes del pueblo:'
+  m_text: 'Vecinos:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -1082,7 +1082,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &198248470
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1099,8 +1099,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &271015017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,9 +1158,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Paca es residente del pueblo desde que sus padres llegaron desde el pueblo
-    m\xE1s cercano para vivir mejor.\nEs viuda desde hace veinte a\xF1os por lo que
-    actualmente comprende la situaci\xF3n de Rita mejor que nadie del pueblo.\n"
+  m_text: "Paca es una mujer independiente de unos 80 a\xF1os  que ha vivido toda
+    la vida en el pueblo y conoce a todos sus vecinos a fondo. Su relaci\xF3n con
+    Rita es casi de hermanas, ya que siempre han estado muy unidas y suelen compartir
+    mucho tiempo juntas.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8.35
+  m_fontSize: 8.25
   m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1879,7 +1879,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &451192961
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1896,8 +1896,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &460668404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2106,9 +2105,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Rita es conocida por ser una mujer sencilla, amable y atenta entre los
-    vecinos. \nEl mayor reto de Rita es aprender a cocinar ahora que su marido, el
-    encargado de esta tarea ya no est\xE1."
+  m_text: "Rita es una mujer sencilla, amable y atenta de 70 a\xF1os que siempre
+    tiene ganas de ayudar a los dem\xE1s y de ser una persona de confianza para todos
+    sus conocidos.\r \n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -2135,7 +2134,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.3
+  m_fontSize: 10.35
   m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2273,7 +2272,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &484602706
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2290,8 +2289,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &484602707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2336,7 +2334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -3083,9 +3080,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Rosa lleva la \xFAnica tienda del pueblo, donde vende todos los esenciales
-    necesarios para los habitantes del pueblo.\nEs conocida por ser muy entrometida
-    en la vida de los dem\xE1s."
+  m_text: "Rosa es la encargada de la unica tienda del pueblo. Es una mujer alegre
+    y espont\xE1nea encargada de entretener a todo el que se cruza un rato a hablar
+    con ella. Es conocida por ser demasiado entrometida."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -3112,7 +3109,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8.75
+  m_fontSize: 9.25
   m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7214,8 +7211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -132.09998, y: -31.900002}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -137.19926, y: -31.900002}
+  m_SizeDelta: {x: 189.8015, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471055408
 MonoBehaviour:
@@ -7237,9 +7234,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "To\xF1o es un hombre honrado y dispuesto a dar todo por el bar que lleva.\nEst\xE1
-    muy metido en el mundo del pueblo y los vecinos, por lo que siempre que hay una
-    festividad se asegura de que su idea entra en el plan."
+  m_text: "To\xF1o tiene una personalidad muy cercana y de car\xE1cter tranquilo
+    de cara al p\xFAblico.\r\nEs un hombre honrado y dispuesto a dar todo por el
+    bar que lleva.\r\nSiempre ha tenido una gran amistad con Rita, pero dado a su
+    viudez es una persona que la puede entender y ayudar en lo que necesite.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -7266,7 +7264,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8.25
+  m_fontSize: 6.85
   m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7828,7 +7826,7 @@ Canvas:
   m_TargetDisplay: 0
 --- !u!95 &1540973487
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -7845,8 +7843,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1540973488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9189,8 +9186,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enrique es el marido de Concha. Tiene una actitud reservada y tranquila.\_\nSe
-    dedica desde siempre al trabajo de tierras en los olivos cercanos al pueblo. "
+  m_text: "Enrique es el marido de Concha. Tiene car\xE1cter reservado y callado
+    y se dedica al trabajo de tierras en los olivos cercanos al pueblo. Sus aficiones
+    son el f\xFAtbol y las pel\xEDculas del lejano oeste."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -9217,7 +9215,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.35
+  m_fontSize: 9.5
   m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9824,9 +9822,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Concha es una mujer muy tranquila que vive con su marido Enrique y su
-    perrito Mango, que adora con toda su alma. \_\nEs amiga de Rita y Paca pero no
-    tiene muchos m\xE1s amigos ya que su personalidad no es f\xE1cil para mucha gente."
+  m_text: "Concha es una mujer muy tranquila y perfeccionista que vive con su perrito
+    Mango y su marido Enrique. Es amiga de siempre de Rita y Paca pero no tiene m\xE1s
+    amigos cercanos dado a su dif\xEDcil personalidad .\r "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
   m_sharedMaterial: {fileID: -5044291768048983304, guid: 80ded3e164b750345bb76e15274352fb, type: 2}
@@ -9853,7 +9851,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8.25
+  m_fontSize: 9.3
   m_fontSizeBase: 21
   m_fontWeight: 400
   m_enableAutoSizing: 1
