@@ -12,8 +12,8 @@ public class Animatica : MonoBehaviour
     {
         canvasAnimatica1.SetActive(true);
         canvasAnimatica2.SetActive(false);
-        canvasAnimatica2.SetActive(false);
         canvasAnimatica3.SetActive(false);
+        canvasAnimatica4.SetActive(false);
     }
     public void Animatica2()
     {
@@ -34,6 +34,7 @@ public class Animatica : MonoBehaviour
 
     public void Fin() 
     {
-        SceneManager.LoadScene("CasaRita");
+        GameManager.Instance.escena = "CasaRita";
+        SceneManager.LoadScene("PantallaCarga");
     }
 }
