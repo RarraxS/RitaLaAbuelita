@@ -196,9 +196,10 @@ public class Cuchillo_2 : MonoBehaviour
         if (_zona != string.Empty)
         {
             ganar++;
-
+            ZanahoriaConCortes.SetActive(false);
             if (ganar == 1)
             {
+                ZanahoriaConCortes.SetActive(false);
                 if (_zona == uno)
                 {
                     ZanahoriaSinCorte.gameObject.SetActive(false);
@@ -235,10 +236,12 @@ public class Cuchillo_2 : MonoBehaviour
                     ZanahoriaCorte6.SetActive(true);
                     num = 6;
                 }
+
             }
 
             if (ganar == 2)
             {
+                ZanahoriaConCortes.SetActive(false);
                 if (_zona == uno)
                 {
                     if (num == 2)
@@ -441,6 +444,7 @@ public class Cuchillo_2 : MonoBehaviour
 
             if (ganar == 3)
             {
+                ZanahoriaConCortes.SetActive(false);
                 if (_zona == uno) 
                 {
                     if (num == 23)
@@ -822,6 +826,7 @@ public class Cuchillo_2 : MonoBehaviour
 
             if (ganar == 4) 
             {
+                ZanahoriaConCortes.SetActive(false);
                 if (_zona == uno) 
                 {
                     if (num == 234)
