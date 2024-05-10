@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void Perder()
     {
         SceneManager.LoadScene("Quiz");

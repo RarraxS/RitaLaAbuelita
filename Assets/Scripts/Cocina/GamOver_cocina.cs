@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GamOver_cocina : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void PerderNivel1()
     {
         GameManager.Instance.escena = "Cocinar1";

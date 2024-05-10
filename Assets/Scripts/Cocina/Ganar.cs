@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Ganar : MonoBehaviour
 {
-    // Start is called before the first frame update
     public void GanarCocina()
     {
-        //Ganar el minijuego
         Debug.Log("Cambio de escena");
         GameManager.Instance.cocinarCompletado = true;
         GameManager.Instance.escena = "Victoria";

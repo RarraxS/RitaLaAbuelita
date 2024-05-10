@@ -19,12 +19,8 @@ public class Cuchillo_3 : MonoBehaviour
     [SerializeField] GameObject HornoTemplado;
     [SerializeField] GameObject HornoCaliente;
 
-    string uno = "Correcto1";
-    string dos = "Correcto2";
 
     [SerializeField] public TMP_Text textoContador;
-
-    // Start is called before the first frame update
     void Start()
     {
         canvasGameOver.SetActive(false);
@@ -55,12 +51,9 @@ public class Cuchillo_3 : MonoBehaviour
 
     public void Corte()
     {
-        //Sonidos -------------------------------------------------------------
 
         GameManager.Instance.SonidoStop();
         GameManager.Instance.SonidoPlay(7);
-
-        //---------------------------------------------------------------------
 
 
         if (_zona != string.Empty)
@@ -76,10 +69,6 @@ public class Cuchillo_3 : MonoBehaviour
             {
                 HornoTemplado.SetActive(false);
                 HornoCaliente.SetActive(true);
-                //Destroy(GameObject.FindGameObjectWithTag(_zona));
-                //_zona = string.Empty;
-                //Debug.Log("Acertaste");
-                //Ganaste();
             }
 
             Destroy(GameObject.FindGameObjectWithTag(_zona));
@@ -106,12 +95,9 @@ public class Cuchillo_3 : MonoBehaviour
     {
         if (vidas <= 0)
         {
-            //Sonidos --------------------------------------------------
 
             GameManager.Instance.SonidoStop();
             GameManager.Instance.SonidoPlay(6);
-
-            //----------------------------------------------------------
 
             canvasGameOver.SetActive(true);
             Boton.gameObject.SetActive(false);
@@ -121,7 +107,6 @@ public class Cuchillo_3 : MonoBehaviour
     {
         canvasWinGame.SetActive(true);
         Boton.gameObject.SetActive(false);
-        //Los sonidos de victoria
         StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
         GameManager.Instance.SonidoStop();
         GameManager.Instance.SonidoPlay(5);

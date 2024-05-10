@@ -22,13 +22,11 @@ public class Cuchillo : MonoBehaviour
 
     [SerializeField] GameObject PatataSinCorte;
 
-    //Ganar=1
     [SerializeField] GameObject PatataCorte1;
     [SerializeField] GameObject PatataCorte2;
     [SerializeField] GameObject PatataCorte3;
     [SerializeField] GameObject PatataCorte4;
 
-    //Ganar=2
     [SerializeField] GameObject PatataCorte12;
     [SerializeField] GameObject PatataCorte13;
     [SerializeField] GameObject PatataCorte14;
@@ -36,13 +34,11 @@ public class Cuchillo : MonoBehaviour
     [SerializeField] GameObject PatataCorte24;
     [SerializeField] GameObject PatataCorte34;
 
-    //Ganar=3
     [SerializeField] GameObject PatataCorte123;
     [SerializeField] GameObject PatataCorte124;
     [SerializeField] GameObject PatataCorte234;
     [SerializeField] GameObject PatataCorte134;
 
-    //Ganar=4
     [SerializeField] GameObject PatataConCortes;
 
     string uno = "Correcto1";
@@ -52,7 +48,6 @@ public class Cuchillo : MonoBehaviour
 
     [SerializeField] public TMP_Text textoContador;
 
-    // Start is called before the first frame update
     void Start()
     {
         canvasGameOver.SetActive(false);
@@ -99,12 +94,10 @@ public class Cuchillo : MonoBehaviour
 
     public void Corte()
     {
-        //Sonidos -------------------------------------------------------------
 
         GameManager.Instance.SonidoStop();
         GameManager.Instance.SonidoPlay(7);
 
-        //---------------------------------------------------------------------
 
 
         if (_zona != string.Empty)
@@ -141,7 +134,7 @@ public class Cuchillo : MonoBehaviour
 
             if (ganar == 2)
             {
-                if (_zona == uno) //Corte num 1
+                if (_zona == uno) 
                 {
                     if (num == 2)
                     {
@@ -162,7 +155,7 @@ public class Cuchillo : MonoBehaviour
                         num = 14;
                     }
                 }
-                if (_zona == dos) //Corte num 2
+                if (_zona == dos) 
                 {
                     if (num == 1)
                     {
@@ -183,7 +176,7 @@ public class Cuchillo : MonoBehaviour
                         num = 24;
                     }
                 }
-                if (_zona == tres) //Corte num 3
+                if (_zona == tres) 
                 {
                     if (num == 1)
                     {
@@ -204,7 +197,7 @@ public class Cuchillo : MonoBehaviour
                         num = 34;
                     }
                 }
-                if (_zona == cuatro) //Corte num 4
+                if (_zona == cuatro)
                 {
                     if (num == 1)
                     {
@@ -229,7 +222,7 @@ public class Cuchillo : MonoBehaviour
 
             if (ganar == 3)
             {
-                if (_zona == uno) //Corte num 1
+                if (_zona == uno) 
                 {
                     if (num == 23)
                     {
@@ -247,7 +240,7 @@ public class Cuchillo : MonoBehaviour
                         PatataCorte134.SetActive(true);
                     }
                 }
-                if (_zona == dos) //Corte num 2
+                if (_zona == dos) 
                 {
                     if (num == 13)
                     {
@@ -265,7 +258,7 @@ public class Cuchillo : MonoBehaviour
                         PatataCorte234.SetActive(true);
                     }
                 }
-                if (_zona == tres) //Corte num 3
+                if (_zona == tres)
                 {
                     if (num == 12)
                     {
@@ -283,7 +276,7 @@ public class Cuchillo : MonoBehaviour
                         PatataCorte234.SetActive(true);
                     }
                 }
-                if (_zona == cuatro) //Corte num 4
+                if (_zona == cuatro) 
                 {
                     if (num == 12)
                     {
@@ -334,12 +327,10 @@ public class Cuchillo : MonoBehaviour
     {
         if (managerCocina.vidas <= 0)
         {
-            //Sonidos --------------------------------------------------
 
             GameManager.Instance.SonidoStop();
             GameManager.Instance.SonidoPlay(6);
 
-            //----------------------------------------------------------
 
             canvasGameOver.SetActive(true);
             Boton.gameObject.SetActive(false);
@@ -357,7 +348,6 @@ public class Cuchillo : MonoBehaviour
             canvasWinGame.SetActive(true);
             Boton.gameObject.SetActive(false);
 
-            //Los sonidos de victoria
             StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
             GameManager.Instance.SonidoStop();
             GameManager.Instance.SonidoPlay(5);

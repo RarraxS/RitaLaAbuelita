@@ -1506,7 +1506,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2270141909548981586, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 67.366
+      value: 58.5561
       objectReference: {fileID: 0}
     - target: {fileID: 2270141909548981586, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1542,7 +1542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2270141909548981586, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -75.6
+      value: -77.3
       objectReference: {fileID: 0}
     - target: {fileID: 2270141909548981586, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1568,6 +1568,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MinijuegoManagerBuscaIngredientes, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 2270141909548981588, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bbe7b7372535d354d819cb3a9a5d9006, type: 3}
     - target: {fileID: 5031268373858476563, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
       propertyPath: m_SizeDelta.x
       value: 160

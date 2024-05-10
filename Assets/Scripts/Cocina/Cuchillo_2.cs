@@ -18,7 +18,6 @@ public class Cuchillo_2 : MonoBehaviour
 
     [SerializeField] GameObject ZanahoriaSinCorte;
 
-    //Ganar=1
     [SerializeField] GameObject ZanahoriaCorte1;
     [SerializeField] GameObject ZanahoriaCorte2;
     [SerializeField] GameObject ZanahoriaCorte3;
@@ -26,7 +25,6 @@ public class Cuchillo_2 : MonoBehaviour
     [SerializeField] GameObject ZanahoriaCorte5;
     [SerializeField] GameObject ZanahoriaCorte6;
 
-    //Ganar=2
     [SerializeField] GameObject ZanahoriaCorte12;
     [SerializeField] GameObject ZanahoriaCorte13;
     [SerializeField] GameObject ZanahoriaCorte14;
@@ -43,7 +41,6 @@ public class Cuchillo_2 : MonoBehaviour
     [SerializeField] GameObject ZanahoriaCorte46;
     [SerializeField] GameObject ZanahoriaCorte56;
 
-    //Ganar=3
     [SerializeField] GameObject ZanahoriaCorte123;
     [SerializeField] GameObject ZanahoriaCorte124;
     [SerializeField] GameObject ZanahoriaCorte125;
@@ -65,7 +62,6 @@ public class Cuchillo_2 : MonoBehaviour
     [SerializeField] GameObject ZanahoriaCorte356;
     [SerializeField] GameObject ZanahoriaCorte456;
 
-    //Ganar=4
     [SerializeField] GameObject ZanahoriaCorte1234;
     [SerializeField] GameObject ZanahoriaCorte1235;
     [SerializeField] GameObject ZanahoriaCorte1236;
@@ -82,7 +78,6 @@ public class Cuchillo_2 : MonoBehaviour
     [SerializeField] GameObject ZanahoriaCorte2456;
     [SerializeField] GameObject ZanahoriaCorte3456;
 
-    //Ganar=4
     [SerializeField] GameObject ZanahoriaCorte12345;
     [SerializeField] GameObject ZanahoriaCorte12356;
     [SerializeField] GameObject ZanahoriaCorte12346;
@@ -90,7 +85,6 @@ public class Cuchillo_2 : MonoBehaviour
     [SerializeField] GameObject ZanahoriaCorte13456;
     [SerializeField] GameObject ZanahoriaCorte23456;
 
-    //Ganar=6
     [SerializeField] GameObject ZanahoriaConCortes;
 
     string uno = "Correcto1";
@@ -102,7 +96,6 @@ public class Cuchillo_2 : MonoBehaviour
 
     [SerializeField] public TMP_Text textoContador;
 
-    // Start is called before the first frame update
     void Start()
     {
         canvasGameOver.SetActive(false);
@@ -114,7 +107,6 @@ public class Cuchillo_2 : MonoBehaviour
 
         ZanahoriaSinCorte.SetActive(true);
 
-        //Ganar=1
         ZanahoriaCorte1.SetActive(false);
         ZanahoriaCorte2.SetActive(false);
         ZanahoriaCorte3.SetActive(false);
@@ -122,7 +114,6 @@ public class Cuchillo_2 : MonoBehaviour
         ZanahoriaCorte5.SetActive(false);
         ZanahoriaCorte6.SetActive(false);
 
-        //Ganar=2
         ZanahoriaCorte12.SetActive(false);
         ZanahoriaCorte13.SetActive(false);
         ZanahoriaCorte14.SetActive(false);
@@ -139,7 +130,6 @@ public class Cuchillo_2 : MonoBehaviour
         ZanahoriaCorte46.SetActive(false);
         ZanahoriaCorte56.SetActive(false);
 
-        //Ganar=3
         ZanahoriaCorte123.SetActive(false);
         ZanahoriaCorte124.SetActive(false);
         ZanahoriaCorte125.SetActive(false);
@@ -161,7 +151,6 @@ public class Cuchillo_2 : MonoBehaviour
         ZanahoriaCorte356.SetActive(false);
         ZanahoriaCorte456.SetActive(false);
 
-        //Ganar=4
         ZanahoriaCorte1234.SetActive(false);
         ZanahoriaCorte1235.SetActive(false);
         ZanahoriaCorte1236.SetActive(false);
@@ -178,7 +167,6 @@ public class Cuchillo_2 : MonoBehaviour
         ZanahoriaCorte3456.SetActive(false);
         ZanahoriaCorte1356.SetActive(false);
 
-        //Ganar=5
         ZanahoriaCorte12345.SetActive(false);
         ZanahoriaCorte12356.SetActive(false);
         ZanahoriaCorte12346.SetActive(false);
@@ -186,7 +174,6 @@ public class Cuchillo_2 : MonoBehaviour
         ZanahoriaCorte13456.SetActive(false);
         ZanahoriaCorte23456.SetActive(false);
 
-        //Ganar=6
         ZanahoriaConCortes.SetActive(false);
     }
 
@@ -202,18 +189,13 @@ public class Cuchillo_2 : MonoBehaviour
 
     public void Corte()
     {
-        //Sonidos -------------------------------------------------------------
 
         GameManager.Instance.SonidoStop();
         GameManager.Instance.SonidoPlay(7);
 
-        //---------------------------------------------------------------------
-
         if (_zona != string.Empty)
         {
             ganar++;
-
-            //Debug.Log(ganar);
 
             if (ganar == 1)
             {
@@ -257,7 +239,7 @@ public class Cuchillo_2 : MonoBehaviour
 
             if (ganar == 2)
             {
-                if (_zona == uno) //Corte num 1
+                if (_zona == uno)
                 {
                     if (num == 2)
                     {
@@ -290,7 +272,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 16;
                     }
                 }
-                if (_zona == dos) //Corte num 2
+                if (_zona == dos)
                 {
                     if (num == 1)
                     {
@@ -323,7 +305,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 26;
                     }
                 }
-                if (_zona == tres) //Corte num 3
+                if (_zona == tres)
                 {
                     if (num == 1)
                     {
@@ -356,7 +338,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 36;
                     }
                 }
-                if (_zona == cuatro) //Corte num 4
+                if (_zona == cuatro)
                 {
                     if (num == 1)
                     {
@@ -389,7 +371,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 46;
                     }
                 }
-                if (_zona == cinco) //Corte num 5
+                if (_zona == cinco)
                 {
                     if (num == 1)
                     {
@@ -422,7 +404,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 56;
                     }
                 }
-                if (_zona == seis) //Corte num 6
+                if (_zona == seis) 
                 {
                     if (num == 1)
                     {
@@ -459,7 +441,7 @@ public class Cuchillo_2 : MonoBehaviour
 
             if (ganar == 3)
             {
-                if (_zona == uno) //Corte num 1
+                if (_zona == uno) 
                 {
                     if (num == 23)
                     {
@@ -522,7 +504,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 156;
                     }
                 }
-                if (_zona == dos) //Corte num 2
+                if (_zona == dos) 
                 {
                     if (num == 13)
                     {
@@ -584,7 +566,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 256;
                     }
                 }
-                if (_zona == tres) //Corte num 3
+                if (_zona == tres)
                 {
                     if (num == 12)
                     {
@@ -647,7 +629,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 356;
                     }
                 }
-                if (_zona == cuatro) //Corte num 4
+                if (_zona == cuatro) 
                 {
                     if (num == 12)
                     {
@@ -710,7 +692,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 456;
                     }
                 }
-                if (_zona == cinco) //Corte num 5
+                if (_zona == cinco)
                 {
                     if (num == 12)
                     {
@@ -773,7 +755,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 456;
                     }
                 }
-                if (_zona == seis) //Corte num 6
+                if (_zona == seis)
                 {
                     if (num == 12)
                     {
@@ -838,9 +820,9 @@ public class Cuchillo_2 : MonoBehaviour
                 }
             }
 
-            if (ganar == 4) //Corte 4
+            if (ganar == 4) 
             {
-                if (_zona == uno) //Corte num 1
+                if (_zona == uno) 
                 {
                     if (num == 234)
                     {
@@ -903,7 +885,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 1456;
                     }
                 }
-                if (_zona == dos) //Corte num 1
+                if (_zona == dos) 
                 {
                     if (num == 134)
                     {
@@ -966,7 +948,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 2456;
                     }
                 }
-                if (_zona == tres) //Corte num 3
+                if (_zona == tres)
                 {
                     if (num == 124)
                     {
@@ -1029,7 +1011,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 3456;
                     }
                 }
-                if (_zona == cuatro) //Corte num 4
+                if (_zona == cuatro) 
                 {
                     if (num == 123)
                     {
@@ -1086,7 +1068,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 3456;
                     }
                 }
-                if (_zona == cinco) //Corte num 5
+                if (_zona == cinco)
                 {
                     if (num == 123)
                     {
@@ -1143,7 +1125,7 @@ public class Cuchillo_2 : MonoBehaviour
                         num = 3456;
                     }
                 }
-                if (_zona == seis) //Corte num 6
+                if (_zona == seis)
                 {
                     if (num == 123)
                     {
@@ -1209,7 +1191,7 @@ public class Cuchillo_2 : MonoBehaviour
             }
             if (ganar == 5)
             {
-                if (_zona == uno) //Corte num 1
+                if (_zona == uno)
                 {
                     if (num == 2345)
                     {
@@ -1237,7 +1219,7 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte13456.SetActive(true);
                     }
                 }
-                if (_zona == dos) //Corte num 2
+                if (_zona == dos) 
                 {
                     if (num == 1345)
                     {
@@ -1265,7 +1247,7 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte23456.SetActive(true);
                     }
                 }
-                if (_zona == tres) //Corte num 3
+                if (_zona == tres)
                 {
                     if (num == 1245)
                     {
@@ -1293,7 +1275,7 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte23456.SetActive(true);
                     }
                 }
-                if (_zona == cuatro) //Corte num 4
+                if (_zona == cuatro)
                 {
                     if (num == 1235)
                     {
@@ -1321,7 +1303,7 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte23456.SetActive(true);
                     }
                 }
-                if (_zona == cinco) //Corte num 4
+                if (_zona == cinco)
                 {
                     if (num == 1234)
                     {
@@ -1349,7 +1331,7 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte23456.SetActive(true);
                     }
                 }
-                if (_zona == seis) //Corte num 6
+                if (_zona == seis)
                 {
                     if (num == 1234)
                     {
@@ -1381,7 +1363,6 @@ public class Cuchillo_2 : MonoBehaviour
             
             if (ganar >= 6)
             {
-                //No sale el canvas de ganar porque estas viriables no estan asignadas a ningun objeto
                 ZanahoriaCorte12345.SetActive(false);
                 ZanahoriaCorte12346.SetActive(false);
                 ZanahoriaCorte12356.SetActive(false);
@@ -1396,13 +1377,11 @@ public class Cuchillo_2 : MonoBehaviour
             }
             Destroy(GameObject.FindGameObjectWithTag(_zona));
             _zona = string.Empty;
-            //Debug.Log("Acertaste");
         }
         else
         {
             vidas--;
             textoContador.text = vidas.ToString();
-            //Debug.Log("Fallaste");
             if (vidas <= 0)
             {
                 Morir();
@@ -1413,12 +1392,10 @@ public class Cuchillo_2 : MonoBehaviour
     {
         if (vidas <= 0)
         {
-            //Sonidos --------------------------------------------------
 
             GameManager.Instance.SonidoStop();
             GameManager.Instance.SonidoPlay(6);
 
-            //----------------------------------------------------------
 
             canvasGameOver.SetActive(true);
             Boton.gameObject.SetActive(false);
@@ -1428,7 +1405,6 @@ public class Cuchillo_2 : MonoBehaviour
     {
         canvasWinGame.SetActive(true);
         Boton.gameObject.SetActive(false);
-        //Los sonidos de victoria
         StartCoroutine(GameManager.Instance.MusicaStopTimer(2.088f));
         GameManager.Instance.SonidoStop();
         GameManager.Instance.SonidoPlay(5);

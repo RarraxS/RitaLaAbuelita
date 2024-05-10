@@ -18,7 +18,6 @@ public class Termometro : MonoBehaviour
         moverHacia = endPoint.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Cuchillo.transform.position = Vector3.MoveTowards(Cuchillo.transform.position, moverHacia, velocidad *Time.deltaTime);

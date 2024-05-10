@@ -9,7 +9,6 @@ public class QuizManager : MonoBehaviour
     [SerializeField] private Color colorcorrecto = Color.black;
     [SerializeField] private Color colorincorrecto = Color.black;
 
-    //[SerializeField] private float esperartiempo = 0.0f;
     [SerializeField] public int vidas = 1;
 
     public bool preguntacorrecta = true;
@@ -20,12 +19,8 @@ public class QuizManager : MonoBehaviour
     [SerializeField] GameObject canvasWinGame;
     [SerializeField] GameObject Continuar;
 
-    //[SerializeField] private AudioClip sonidocorrecto = null;
-    //[SerializeField] private AudioClip sonidoincorrecto = null;
-
     public int VolverAlPueblo = 0;
     public TMP_Text textoContador;
-    //[SerializeField] private List<Preguntas> preguntas = null;
 
     private Quiz quizDB = null;
     private QuizUI quizUI = null;
@@ -89,8 +84,6 @@ public class QuizManager : MonoBehaviour
     }
     public void GiveAnswer(BotonOpcion optionbutton)
     {
-        //StartCoroutine(GiveAnswerRoutine(optionbutton));
-
         Comprobar(optionbutton);
     }
 
@@ -118,57 +111,4 @@ public class QuizManager : MonoBehaviour
             }
         }
     }
-
-
-
-
-
-    //private IEnumerator GiveAnswerRoutine(BotonOpcion optionbutton)
-    //{
-    //    if (quizAudioSource.isPlaying)
-    //    {
-    //        quizAudioSource.Stop();
-    //    }
-
-    //    quizAudioSource.clip = optionbutton.Opciones.correcta ? sonidocorrecto : sonidoincorrecto;
-
-    //    optionbutton.SetColor(optionbutton.Opciones.correcta ? colorcorrecto : colorincorrecto);
-
-    //    yield return new WaitForSeconds(esperartiempo);
-    //    //NextQuestion();
-
-    //    if (optionbutton.Opciones.correcta)
-    //    {
-    //        Debug.Log("Acertaste " + optionbutton.name);
-    //        NextQuestion();
-    //        //GameManager.Instance.SonidoPlay(15);
-    //        VolverAlPueblo++;
-    //    }
-    //    else
-    //    {
-    //        vidas -= 1;
-    //        Debug.Log("Fallaste" + optionbutton.name);
-    //        //GameManager.Instance.SonidoPlay(16);
-    //        if (vidas <= 0)
-    //        {
-    //            canvasGameOver.SetActive(true);
-    //            Reiniciar.gameObject.SetActive(true);
-    //        }
-
-    //    }
-    //    if (VolverAlPueblo == 7) 
-    //    {
-    //        canvasWinGame.SetActive(true);
-    //        Continuar.gameObject.SetActive(true);
-    //        //GameManager.Instance.SonidoStop();
-    //        //GameManager.Instance.SonidoPlay(13);
-    //    }
-
-    //    //public void CambiarEscena()
-    //    //{
-    //    //    Debug.Log("Cambio de escena");
-    //    //    SceneManager.LoadScene("Pueblo");
-    //    //}
-
-    //}
 }

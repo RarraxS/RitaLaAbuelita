@@ -2487,8 +2487,8 @@ MonoBehaviour:
   PatataCorte34: {fileID: 2056451801}
   PatataCorte123: {fileID: 1162582345}
   PatataCorte124: {fileID: 232240939}
-  PatataCorte234: {fileID: 94536896}
-  PatataCorte134: {fileID: 1097843000}
+  PatataCorte234: {fileID: 1097843000}
+  PatataCorte134: {fileID: 94536896}
   PatataConCortes: {fileID: 667804451}
   textoContador: {fileID: 2055876855}
 --- !u!50 &802348041

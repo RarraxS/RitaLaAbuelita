@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-[RequireComponent(typeof(Button))] //Obligo al objeto ser una imagen y un botón
+[RequireComponent(typeof(Button))]
 [RequireComponent(typeof(Image))]
 public class BotonOpcion : MonoBehaviour
 {
@@ -27,11 +27,6 @@ public class BotonOpcion : MonoBehaviour
         imagen.color = colorOGimagen;
 
         Opciones = opciones;
-
-        //boton.onClick.AddListener(delegate //Se borro por error
-        //{
-        //    callback(this); // Cuando selecionemos esta opcion le estamos mandando este a opciones para ver si es la correcta
-        //});
     }
 
     public void SetColor(Color color)
