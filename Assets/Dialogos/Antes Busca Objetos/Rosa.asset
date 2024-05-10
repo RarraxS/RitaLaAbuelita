@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - He vuelto *se rie* paso a comprar un par de cosillas para cocinar.
-  - Esta mi nieto en el pueblo asi que me toca.
-  - "Claro cari\xF1o *se rie*"
+  - "He vuelto *sonr\xEDe* paso a comprar un par de cosillas para cocinar."
+  - "Esta mi nieto en el pueblo as\xED que me toca."
+  - "Claro cari\xF1o *se r\xEDe*"
   dialogosNpc:
   - 
   - "\xA1Ritaaaa!"
   - "*sorprendida* \xA1\xBFEn serio vas a cocinar?! "
-  - "Pues nada entra y te ayudo con cualquier cosa, luego hablamos ya sabes de qu\xE9 "
+  - "Pues nada entra y te ayudo con cualquier cosa, luego hablamos ya sabes de qu\xE9
+    *se r\xEDe*"
   numTotalDialogos: 6
   numNpc: 5
   ritaHablaPrimero: 0

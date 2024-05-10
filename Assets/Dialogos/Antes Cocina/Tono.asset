@@ -17,7 +17,7 @@ MonoBehaviour:
   - "Si tu lo dices tendr\xE9 que confiar *se r\xEDe*"
   dialogosNpc:
   - 
-  - Animo Rita que seguro que te sale bueno
+  - "\xC1nimo Rita que seguro que te sale bueno."
   numTotalDialogos: 2
   numNpc: 2
   ritaHablaPrimero: 0

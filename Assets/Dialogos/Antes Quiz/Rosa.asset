@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogosRita:
   - 
-  - "Rosita hac\xEDa mucho que no te ve\xEDa"
+  - "Rosita hac\xEDa mucho que no te ve\xEDa."
   - Si es que en la tienda te tienes que enterar de todo hija.
-  - '*se rie*'
+  - "*se r\xEDe*"
   - Como quieras amor.
   dialogosNpc:
   - 
-  - "\xA1Buenos d\xEDaaaas Ritaaaa!"
-  - Rita acercate *susurra* tengo nuevo cotilleo.
+  - "\xA1Buenos d\xEDaaaas Rita!"
+  - "Rita ac\xE9rcate *susurra* tengo nuevo cotilleo."
   - "La gente se olvida de que estoy y ya saben como soy \xA1No puedo evitar poner
-    el oido!"
+    el o\xEDdo!"
   - Te cuento en otro momento que entran clientes *susurrando* el tema es largo luego
     ven y te cuento.
   - "Voy entrando, me alegro de verte *sonr\xEDe*"
