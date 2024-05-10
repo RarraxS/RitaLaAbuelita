@@ -230,6 +230,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2270141909548981587, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1937856558}
+    - target: {fileID: 2270141909548981587, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: VolverTitulo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2270141909548981587, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BotonGanarJuego, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5031268373858476563, guid: abaedd38cc976ba41a9bfebc104fa951, type: 3}
       propertyPath: m_SizeDelta.x
       value: 204.1907
@@ -1215,6 +1227,7 @@ GameObject:
   - component: {fileID: 1937856556}
   - component: {fileID: 1937856555}
   - component: {fileID: 1937856554}
+  - component: {fileID: 1937856558}
   m_Layer: 0
   m_Name: Canvas Victoria
   m_TagString: Untagged
@@ -1304,3 +1317,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1937856558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937856553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b5725990610c3e4ea8cf44a6b459b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

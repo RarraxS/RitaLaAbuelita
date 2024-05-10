@@ -11,7 +11,7 @@ public class Ganar : MonoBehaviour
         //Ganar el minijuego
         Debug.Log("Cambio de escena");
         GameManager.Instance.cocinarCompletado = true;
-        GameManager.Instance.escena = "CasaRita";
+        GameManager.Instance.escena = "Victoria";
         SceneManager.LoadScene("PantallaCarga");
     }
     public void Nivel2()
