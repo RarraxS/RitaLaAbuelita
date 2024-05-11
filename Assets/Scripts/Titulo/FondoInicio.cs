@@ -38,8 +38,8 @@ public class FondoInicio : MonoBehaviour
 
         if (timer <= 0)
         {
+            GameManager.Instance.escena = "EscenaInicio";
             SceneManager.LoadScene("PantallaCarga");
-            GameManager.Instance.escena = "CasaRita";
         }
     }
 }
