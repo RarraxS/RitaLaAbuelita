@@ -36525,8 +36525,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532723802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.354, y: 4.755, z: 0}
-  m_LocalScale: {x: 0.17741871, y: 0.17741871, z: 0.17741871}
+  m_LocalPosition: {x: 3.978, y: 5.128, z: 0}
+  m_LocalScale: {x: 0.3611609, y: 0.3611609, z: 0.3611609}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1076248140}
@@ -36556,18 +36556,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.2195623}
+  m_Offset: {x: 0, y: -1.4460571}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 15.82, y: 10.58}
+    oldSize: {x: 8.66, y: 6.95}
     newSize: {x: 2.2857144, y: 2.2857144}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.155541, y: 5.417743}
+  m_Size: {x: 8.230734, y: 3.8707314}
   m_EdgeRadius: 0
 --- !u!212 &1532723806
 SpriteRenderer:
@@ -36610,7 +36610,7 @@ SpriteRenderer:
   m_SortingLayerID: 499175797
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f7f3df7e0abf2ae4885a34e7b7ea8754, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c17e4cddbe8bd944a434e52b1d1a79d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -37069,11 +37069,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6715730499065475540, guid: aaa08344495e5d548ae2424ddbe32434, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.73
+      value: -7.95
       objectReference: {fileID: 0}
     - target: {fileID: 6715730499065475540, guid: aaa08344495e5d548ae2424ddbe32434, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.56
+      value: 3.89
       objectReference: {fileID: 0}
     - target: {fileID: 6715730499065475540, guid: aaa08344495e5d548ae2424ddbe32434, type: 3}
       propertyPath: m_LocalPosition.z
