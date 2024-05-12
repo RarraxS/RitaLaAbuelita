@@ -86,10 +86,12 @@ public class MenuPausa : MonoBehaviour
     public void Reanudar()
     {
         salidaPausa = true;
+        GameManager.Instance.SonidoPlay(0);
     }
 
     public void Reiniciar()
     {
+        GameManager.Instance.SonidoPlay(0);
         GameManager.Instance.reiniciando = true;
         GameManager.Instance.canvasPausa.SetActive(false);
         GameManager.Instance.buscaObjetosCompletado = false;
@@ -114,5 +116,6 @@ public class MenuPausa : MonoBehaviour
     {
         //Permite abrir el menú de controles mediante un botón
         GameManager.Instance.AbrirMenuControles();
+        GameManager.Instance.SonidoPlay(0);
     }
 }

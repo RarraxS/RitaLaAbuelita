@@ -19,17 +19,20 @@ public class Animatica : MonoBehaviour
     {
         canvasAnimatica1.SetActive(false);
         canvasAnimatica2.SetActive(true);
+        GameManager.Instance.SonidoPlay(0);
     }
     public void Animatica3()
     {
         canvasAnimatica2.SetActive(false);
         canvasAnimatica3.SetActive(true);
+        GameManager.Instance.SonidoPlay(0);
     }
 
     public void Animatica4()
     {
         canvasAnimatica3.SetActive(false);
         canvasAnimatica4.SetActive(true);
+        GameManager.Instance.SonidoPlay(0);
     }
 
     public void Fin() 

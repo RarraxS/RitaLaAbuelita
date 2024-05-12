@@ -39,5 +39,6 @@ public class BotonesIntro : MonoBehaviour
     public void MenuSalirPausa()
     {
         SalirJuego.Instance.PulsarSalir();
+        GameManager.Instance.SonidoPlay(0);
     }
 }

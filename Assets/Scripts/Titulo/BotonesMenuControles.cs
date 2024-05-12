@@ -21,23 +21,27 @@ public class BotonesMenuControles : MonoBehaviour
         canvasControles.SetActive(false);
         canvasSonido.SetActive(true);
         canvasPersonajes.SetActive(false);
+        GameManager.Instance.SonidoPlay(0);
     }
     public void Controles()
     {
         canvasControles.SetActive(true);
         canvasSonido.SetActive(false);
         canvasPersonajes.SetActive(false);
+        GameManager.Instance.SonidoPlay(0);
     }
     public void Personajes()
     {
         canvasControles.SetActive(false);
         canvasSonido.SetActive(false);
         canvasPersonajes.SetActive(true);
+        GameManager.Instance.SonidoPlay(0);
     }
      public void Salir()
     {
         canvasControles.SetActive(false);
         canvasSonido.SetActive(false);
         canvasPersonajes.SetActive(false);
+        GameManager.Instance.SonidoPlay(0);
     }
 }

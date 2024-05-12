@@ -155,6 +155,8 @@ public class UiDialogo : MonoBehaviour
                     SceneManager.LoadScene("PantallaCarga");
                 }
             }
+
+            GameManager.Instance.SonidoPlay(0);
         }
     }
 }

@@ -32,5 +32,6 @@ public class SalirJuego : MonoBehaviour
     public void Quedarse()
     {
         MenuSalir.Instance.salidaSalir = true;
+        GameManager.Instance.SonidoPlay(0);
     }
 }

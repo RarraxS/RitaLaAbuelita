@@ -5,6 +5,9 @@ public class PausaSalir : MonoBehaviour
 {
     public void AbrirMenuPausa()
     {
+        GameManager.Instance.SonidoStop();
+        GameManager.Instance.SonidoPlay(0);
+
         //Permite abrir el menú de pausa
         GameManager.Instance.canvasPausa.SetActive(true);
         MenuPausa.Instance.salidaPausa = false;
@@ -17,6 +20,7 @@ public class PausaSalir : MonoBehaviour
         if (GameManager.Instance.escena == "Pueblo" || GameManager.Instance.escena == "CasaRita")
         {
             Rita.Instance.permitirMovimiento = false;
+            Rita.Instance.moviendose = false;
         }
 
         if (GameManager.Instance.escena == "PulsarIngredientes")
@@ -28,10 +32,14 @@ public class PausaSalir : MonoBehaviour
         {
             GameManager.Instance.canvasQuiz.SetActive(false);
         }
+
+        GameManager.Instance.SonidoPlay(0);
     }
 
     public void VolverPueblo()
     {
+        GameManager.Instance.SonidoPlay(0);
+
         //Para las escenas de cocinar te saca a la casa de Rita
         if (GameManager.Instance.escena == "Cocinar1" || GameManager.Instance.escena == "Cocinar2" ||
             GameManager.Instance.escena == "Cocinar3")

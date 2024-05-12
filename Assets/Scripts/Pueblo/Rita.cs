@@ -19,7 +19,8 @@ public class Rita : MonoBehaviour
 
    //Animator
    [SerializeField] private Animator animator;
-    private bool parar, moviendose;
+    private bool parar;
+    public bool moviendose;
     private int direccionAnimator;
     //En el animator "Direccion" 1 es Alante, 2 es Derecha, 3 es Abajo, 4 es Izquierda
 
@@ -236,6 +237,7 @@ public class Rita : MonoBehaviour
                 GameManager.Instance.SonidoStop();
                 permitirMovimiento = false;
                 UiDialogo.Instance.accesoInicial = false;
+                GameManager.Instance.SonidoPlay(0);
             }
         }
     }

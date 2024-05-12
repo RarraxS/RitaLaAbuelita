@@ -15,6 +15,7 @@ public class AnimaticaFinal : MonoBehaviour
     {
         canvasAnimatica1.SetActive(false);
         canvasVictoria.SetActive(true);
+        GameManager.Instance.SonidoPlay(0);
     }
 }
    

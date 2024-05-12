@@ -167,6 +167,7 @@ public class MinijuegoManagerBuscaIngredientes : MonoBehaviour
     public void Reintentar()
     {
         //Recarga la escena desde cero
+        GameManager.Instance.SonidoPlay(0);
         SceneManager.LoadScene("PulsarIngredientes");
     }
 
