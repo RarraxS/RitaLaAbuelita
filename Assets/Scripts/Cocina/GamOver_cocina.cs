@@ -21,6 +21,13 @@ public class GamOver_cocina : MonoBehaviour
     public void Pueblo()
     {
         Debug.Log("Cambio de escena");
+        GameManager.Instance.escena = "CasaRita";
+        SceneManager.LoadScene("PantallaCarga");
+    }
+
+    public void Ganar()
+    {
+        Debug.Log("Cambio de escena");
         GameManager.Instance.escena = "Victoria";
         SceneManager.LoadScene("PantallaCarga");
     }

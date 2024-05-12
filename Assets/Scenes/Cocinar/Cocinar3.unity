@@ -1251,7 +1251,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 142786600}
         m_TargetAssemblyTypeName: GamOver_cocina, Assembly-CSharp
-        m_MethodName: Pueblo
+        m_MethodName: Ganar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
