@@ -8,7 +8,7 @@ public class Cuchillo_2 : MonoBehaviour
 {
     string _zona;
     public int ganar = 0;
-    private int num = 0;
+    public int num = 0;
     private int vidas = 3;
 
     [SerializeField] GameObject canvasGameOver;
@@ -538,6 +538,7 @@ public class Cuchillo_2 : MonoBehaviour
                     {
                         ZanahoriaCorte34.gameObject.SetActive(false);
                         ZanahoriaCorte234.SetActive(true);
+                        num = 234;
                     }
                     if (num == 35)
                     {
@@ -1116,6 +1117,12 @@ public class Cuchillo_2 : MonoBehaviour
                         ZanahoriaCorte236.gameObject.SetActive(false);
                         ZanahoriaCorte2356.SetActive(true);
                         num = 2356;
+                    }
+                    if (num == 234)
+                    {
+                        ZanahoriaCorte234.gameObject.SetActive(false);
+                        ZanahoriaCorte2345.SetActive(true);
+                        num = 2345;
                     }
                     if (num == 246)
                     {
